@@ -1,0 +1,1182 @@
+﻿﻿<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<script>
+		// Redirect to splash screen on first visit
+		if (!sessionStorage.getItem('splashSeen')) {
+			window.location.href = 'splash.html';
+		}
+	</script>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>RFIDIA - Solutions de Traçabilité et Identification Automatique | RFID, IoT, Codes-Barres</title>
+	<meta name="description"
+		content="RFIDIA, leader tunisien en solutions de traçabilité intelligente. Expertise en RFID, IoT, codes-barres et systèmes embarqués pour l'industrie, la logistique et la distribution.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/z_rfid/logo-RFIDIA2.ico">
+
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<!-- animated-text CSS -->
+	<link rel="stylesheet" href="assets/css/animated-text.css" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- bootstrap icons CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css?v=3" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- ScrollCue CSS -->
+	<link rel="stylesheet" href="assets/css/scrollCue.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/dark.css" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+
+	<!-- loder -->
+	<!-- <div class="loader-wrapper">
+		<span class="loader"></span>
+		<div class="loder-section left-section"></div>
+		<div class="loder-section right-section"></div>
+	</div> -->
+
+
+	<div class="dark">
+		<div class="dark-button">
+			<input type="checkbox" class="toggle-switch">
+		</div>
+	</div>
+
+
+
+
+	<!--==================================================-->
+	<!-- Start Royella Header Area -->
+	<!--==================================================-->
+	<div class="header-area inner" id="sticky-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-2">
+					<div class="header-logo">
+						<a href="index.html"><img src="assets/images/z_rfid/logo-RFIDIA-final.png" alt="RFIDIA"></a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="header-menu">
+						<ul>
+							<li><a href="index.html">Accueil</a></li>
+							<li><a href="about.html">À Propos</a></li>
+							<li class="menu-item-has-children"><a href="index.html#">Solutions<i
+										class="fas fa-chevron-down"></i></a>
+								<ul class="simple-dropdown">
+									<li><a href="solution-actifs.html"><i class="bi bi-box-seam"></i> Gestion des
+											Actifs</a></li>
+									<li><a href="solution-industrie.html"><i class="bi bi-tools"></i> Industrie</a></li>
+									<li><a href="solution-textile.html"><i class="bi bi-layers"></i> Industrie
+											Textile</a></li>
+									<li><a href="solution-sante.html"><i class="bi bi-hospital"></i> Santé</a></li>
+									<li><a href="solution-agriculture.html"><i class="bi bi-tree"></i> Agriculture</a>
+									</li>
+									<li><a href="solution-presence.html"><i class="bi bi-person-bounding-box"></i>
+											Système de Présence</a></li>
+									<li><a href="solution-ecole.html"><i class="bi bi-backpack"></i> Gestion d'école</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="use-cases.html">Cas d'usage</a></li>
+							<li><a href="#">Actualités</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Royella Header Area -->
+	<!--==================================================-->
+
+
+
+
+	<!--==================================================-->
+	<!-- Start Main Menu Area -->
+	<!--==================================================-->
+	<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+		<div class="mobile-menu">
+			<nav class="header-menu">
+				<ul class="nav_scroll">
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="about.html">À Propos</a></li>
+					<li class="menu-item-has-children"><a href="index.html#">Solutions</a>
+						<ul class="sub-menu">
+							<li><a href="solution-actifs.html">Gestion des Actifs</a></li>
+							<li><a href="solution-industrie.html">Industrie</a></li>
+							<li><a href="solution-textile.html">Industrie Textile</a></li>
+							<li><a href="solution-ecole.html">Gestion d'école</a></li>
+							<li><a href="solution-sante.html">Santé</a></li>
+							<li><a href="solution-agriculture.html">Agriculture</a></li>
+							<li><a href="solution-presence.html">Système de Présence</a></li>
+						</ul>
+					</li>
+					<li><a href="use-cases.html">Cas d'usage</a></li>
+					<li><a href="#">Actualités</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Main Menu Area -->
+	<!--==================================================-->
+
+
+
+
+	<!--==================================================-->
+	<!-- Start Royella Hero Area -->
+	<!--==================================================-->
+	<div class="hero-slider owl-carousel">
+		<div class="hero-area home-1 align-items-center d-flex">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12">
+
+						<div class="hero-content">
+							<h4>Solutions de Traçabilité Intelligente</h4>
+							<h1>Technologie RFID & IoT pour</h1>
+							<h1>Votre Entreprise</h1>
+						</div>
+						<div class="luxury-button">
+							<a href="about.html">Découvrir Nos Solutions</a>
+						</div>
+						<div class="hero-contact">
+							<a href="tel:+21671234567"><i class="bi bi-telephone-fill"></i>+216 71 234 567</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-area home-1 style-two align-items-center d-flex">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12">
+
+						<div class="hero-content">
+							<h4>Leader en Identification Automatique</h4>
+							<h1>Optimisez vos Processus</h1>
+							<h1>avec nos Solutions sur Mesure</h1>
+						</div>
+						<div class="luxury-button">
+							<a href="about.html">Demander un Devis</a>
+						</div>
+						<div class="hero-contact">
+							<a href="tel:+21671234567"><i class="bi bi-telephone-fill"></i>+216 71 234 567</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Royella Hero Area -->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Start Trust Badges Area (Replaces Booking Form) -->
+	<!--==================================================-->
+	<div class="booking-area home-1">
+		<div class="container">
+			<div class="row add-bg align-items-center justify-content-between p-4 px-md-5 rounded-4 shadow">
+
+				<div class="col-lg-3 col-md-6 text-center text-white mb-4 mb-lg-0 mt-3 mt-lg-0" data-cue="slideInUp">
+					<i class="bi bi-award fs-1 mb-3 d-block"
+						style="color: #0db8b2; text-shadow: 0px 4px 10px rgba(13,184,178,0.4);"></i>
+					<h5 class="fw-bold mb-2">14+ Ans d'Expérience</h5>
+					<p class="small mb-0" style="color: #e2e8f0; font-family: 'Rajdhani', sans-serif; font-size: 16px;">
+						Expertise prouvée en traçabilité</p>
+				</div>
+
+				<div class="col-lg-3 col-md-6 text-center text-white mb-4 mb-lg-0 mt-3 mt-lg-0" data-cue="slideInUp"
+					data-duration="1200">
+					<i class="bi bi-shield-check fs-1 mb-3 d-block"
+						style="color: #0db8b2; text-shadow: 0px 4px 10px rgba(13,184,178,0.4);"></i>
+					<h5 class="fw-bold mb-2">Sécurité Militaire</h5>
+					<p class="small mb-0" style="color: #e2e8f0; font-family: 'Rajdhani', sans-serif; font-size: 16px;">
+						Protection maximale de vos flux</p>
+				</div>
+
+				<div class="col-lg-3 col-md-6 text-center text-white mb-4 mb-md-0 mt-3 mt-lg-0" data-cue="slideInUp"
+					data-duration="1400">
+					<i class="bi bi-gear-wide-connected fs-1 mb-3 d-block"
+						style="color: #0db8b2; text-shadow: 0px 4px 10px rgba(13,184,178,0.4);"></i>
+					<h5 class="fw-bold mb-2">Solutions Sur-Mesure</h5>
+					<p class="small mb-0" style="color: #e2e8f0; font-family: 'Rajdhani', sans-serif; font-size: 16px;">
+						Parfaitement adaptées à votre SI</p>
+				</div>
+
+				<div class="col-lg-3 col-md-6 text-center text-white mt-3 mt-lg-0" data-cue="slideInUp"
+					data-duration="1600">
+					<i class="bi bi-headset fs-1 mb-3 d-block"
+						style="color: #0db8b2; text-shadow: 0px 4px 10px rgba(13,184,178,0.4);"></i>
+					<h5 class="fw-bold mb-2">Support Dédié</h5>
+					<p class="small mb-0" style="color: #e2e8f0; font-family: 'Rajdhani', sans-serif; font-size: 16px;">
+						Assistance technique garantie</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End Trust Badges Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start Royella Room Area -->
+	<!--==================================================-->
+	<div class="room-title-area2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="section-title center" data-cue="zoomIn">
+						<div class="section-thumb">
+							<img src="assets/images/z_rfid/logo-RFIDIA2.ico" alt="">
+						</div>
+						<h1>Nos Solutions</h1>
+						<p class="section-desc-1">RFIDIA commercialise des lecteurs, des tags et conçoit des solutions
+							innovantes destinées aux marchés de la sécurité et de la traçabilité. Nos solutions vous
+							fournissent des informations utiles et efficaces sur l'état ou le statut de vos produits où
+							qu'ils se trouvent.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--room-area-->
+	<div class="room-area">
+		<div class="container">
+			<div class="row margin-top" data-cue="zoomIn">
+				<div class="room_list owl-carousel">
+					<div class="col-lg-12">
+						<div class="room-single-box">
+							<div class="room-thumb">
+								<img src="assets/images/z_rfid/rfid23.png" alt="">
+								<div class="room-details-button">
+									<a href="room-details.html">Voir Details<i class="fas fa-arrow-right"></i></a>
+								</div>
+							</div>
+							<div class="room-pricing">
+								<span class="dolar">RFID</span>
+								<span>Solution</span>
+							</div>
+							<div class="room-content">
+								<h4>Technologie RFID</h4>
+								<a href="room.html">Identification par RadioFrequence</a>
+								<p>Tracabilite en Temps Reel</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="room-single-box">
+							<div class="room-thumb">
+								<img src="assets/images/z_rfid/rfid13.png" alt="">
+								<div class="room-details-button">
+									<a href="room-details.html">Voir Details<i class="fas fa-arrow-right"></i></a>
+								</div>
+							</div>
+							<div class="room-pricing">
+								<span class="dolar">IoT</span>
+								<span>Solution</span>
+							</div>
+							<div class="room-content">
+								<h4>Internet des Objets</h4>
+								<a href="room.html">Systemes IoT Connectes</a>
+								<p>Gestion Intelligente et Connectee</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="room-single-box">
+							<div class="room-thumb">
+								<img src="assets/images/z_rfid/rfid19.png" alt="">
+								<div class="room-details-button">
+									<a href="room-details.html">Voir Details<i class="fas fa-arrow-right"></i></a>
+								</div>
+							</div>
+							<div class="room-pricing">
+								<span class="dolar">CODE</span>
+								<span>Solution</span>
+							</div>
+							<div class="room-content">
+								<h4>Codes-Barres</h4>
+								<a href="room.html">Systemes de Code-Barres</a>
+								<p>Identification Fiable et Economique</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="room-single-box">
+							<div class="room-thumb">
+								<img src="assets/images/z_rfid/rfid22.png" alt="">
+								<div class="room-details-button">
+									<a href="room-details.html">Voir Details<i class="fas fa-arrow-right"></i></a>
+								</div>
+							</div>
+							<div class="room-pricing">
+								<span class="dolar">IoT</span>
+								<span>Solution</span>
+							</div>
+							<div class="room-content">
+								<h4>Supervision & Alertes</h4>
+								<a href="room.html">Suivi en Temps Réel</a>
+								<p>Tableaux de bord et notifications sur l’état de vos actifs.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--==================================================-->
+	<!-- End RFIDIA Solutions Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA About Area -->
+	<!--==================================================-->
+	<div class="about-area">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 col-md-12">
+					<div class="row" data-cue="zoomIn">
+						<div class="about_list owl-carousel">
+							<div class="col-md-12">
+								<div class="about-thumb">
+									<img src="assets/images/z_rfid/rfid5.png" alt="">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="about-thumb">
+									<img src="assets/images/z_rfid/rfid6.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12  upper">
+					<div class="section-title two" data-cue="zoomIn">
+						<h4>Expert en Tracabilite</h4>
+						<h1>Leader Tunisien des Solutions</h1>
+						<h1>RFID et IoT</h1>
+						<p class="section-desc-2">RFIDIA est une entreprise tunisienne specialisee dans les solutions
+							d'identification automatique et de tracabilite. Nous offrons des systemes RFID, IoT,
+							codes-barres et embarques innovants pour optimiser vos processus industriels et logistiques
+							avec une expertise locale reconnue.</p>
+					</div>
+					<div class="about-conuter-box" data-cue="zoomIn">
+						<div class="about-counter-content">
+							<h4 class="counter">500</h4>
+							<span>+</span>
+							<p>Projets Realises</p>
+						</div>
+					</div>
+					<div class="about-conuter-box" data-cue="zoomIn">
+						<div class="about-counter-content">
+							<h4 class="counter">15</h4>
+							<p>Ans d'Experience</p>
+						</div>
+					</div>
+					<div class="animation-bar" data-cue="zoomIn">
+					</div>
+					<div class="luxury-button" data-cue="zoomIn">
+						<a href="about.html">About More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA About Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Advantages Area -->
+	<!--==================================================-->
+	<div class="feature-area partners-feature-area">
+		<div class="container">
+
+
+
+			<!-- Partners logos row -->
+			<div class="row margin-top" data-cue="zoomIn">
+				<div class="col-md-12 text-center">
+					<div class="section-title center partners-section-title">
+						<h2>Approuvé par nos Partenaires</h2>
+						<p class="section-desc-1">
+							Confidoo, Visus Groupe et Tagstream unissent leurs expertises pour proposer des solutions
+							innovantes. Ensemble, nous renforçons l'impact technologique pour l'avenir de votre
+							entreprise.rformance
+							des entreprises.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center partners-row" data-cue="zoomIn">
+				<div class="col-lg-3 col-md-4 col-sm-6 text-center">
+					<div class="single-feature-box partner-box">
+						<div class="feature-icon">
+							<img class="partner-logo" src="assets/images/z_rfid/confidoo.png" alt="Confidoo">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 text-center">
+					<div class="single-feature-box partner-box">
+						<div class="feature-icon">
+							<img class="partner-logo" src="assets/images/z_rfid/tagstream.png" alt="Tagstream">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 text-center">
+					<div class="single-feature-box partner-box">
+						<div class="feature-icon">
+							<img class="partner-logo" src="assets/images/z_rfid/visus.png" alt="Visus Groupe">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Advantages Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Call Do Action Area -->
+	<!--==================================================-->
+	<div class="call-do-action-area">
+		<div class="container">
+			<div class="row align-items-center call-do-action-bg">
+				<div class="col-lg-6 col-md-12">
+					<div class="section-title two" data-cue="zoomIn">
+						<h4>Directeur Général</h4>
+						<h1>Votre Partenaire de Confiance</h1>
+						<h1>en Traçabilité Industrielle</h1>
+						<p class="section-desc-2">Chez RFIDIA, nous comprenons les défis de la traçabilité moderne. Nos
+							solutions innovantes combinent expertise technique et accompagnement personnalisé pour
+							garantir le succès de votre transformation digitale.</p>
+					</div>
+					<div class="call-do-action-text" data-cue="zoomIn">
+						<a href="index.html#">" Notre mission est de fournir des solutions de traçabilité innovantes qui
+							transforment les défis opérationnels en opportunités de croissance pour nos clients.
+							L'excellence technologique au service de votre performance. "</a>
+					</div>
+					<div class="call-do-action-author" data-cue="zoomIn">
+						<div class="call-do-action-author-thumb">
+							<img src="assets/images/z_rfid/logo-RFIDIA2.png" alt="Directeur Général RFIDIA"
+								style="width: 80px; height: 80px; border-radius: 50%; object-fit: contain; background: white; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+						</div>
+						<div class="call-do-action-content">
+							<h4>BECHIR CHOWIETTE</h4>
+							<p>Directeur Général</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="call-do-action-video-wrapper" data-cues="zoomIn">
+						<a href="https://www.youtube.com/watch?v=Ukfpq71BoMo" target="_blank"
+							class="youtube-video-link">
+							<div class="youtube-video-container">
+								<img src="https://img.youtube.com/vi/Ukfpq71BoMo/maxresdefault.jpg"
+									alt="RFID Explained Video" class="youtube-thumbnail">
+								<div class="video-play-overlay">
+									<svg class="play-icon" viewBox="0 0 68 48" width="68" height="48">
+										<path class="play-icon-bg"
+											d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+											fill="#f00"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Call Do Action Area -->
+	<!--==================================================-->
+
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Sectors Area -->
+	<!--==================================================-->
+	<div class="facilities-area">
+		<div class="container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="section-title center" data-cue="zoomIn">
+							<div class="section-thumb">
+								<img src="assets/images/z_rfid/logo-RFIDIA2.ico" alt="">
+							</div>
+							<h1>Secteurs & Cas d’Usage</h1>
+							<p class="section-desc-1">Découvrez comment nos solutions s'adaptent à vos processus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row add-boder">
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-images-box" data-cue="zoomIn">
+						<div class="facilities-thumb">
+							<img src="assets/images/z_rfid/rfid7.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-box" data-cue="zoomIn">
+						<div class="facilities-content">
+							<h4>Industrie</h4>
+							<h1>Secteur Industriel</h1>
+							<p>Solutions de tracabilite pour l'industrie manufacturiere, automobile et aeronautique.
+								Optimisez votre chaine de production avec nos systemes RFID et IoT pour un suivi en
+								temps reel.</p>
+							<a href="use-case-industrie.html" class="use-case-link">En savoir plus <i
+									class="bi bi-arrow-right"></i></a>
+						</div>
+						<div class="facilities-number">
+							<h1>01</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row add-boder">
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-box two" data-cue="zoomIn">
+						<div class="facilities-content">
+							<h4>Logistique</h4>
+							<h1>Supply Chain et Logistique</h1>
+							<p>Gestion complete de la chaine logistique avec tracabilite des marchandises, gestion
+								d'entrepot automatisee et optimisation des flux. Reduisez les erreurs et ameliorez
+								l'efficacite operationnelle.</p>
+							<a href="use-case-logistique.html" class="use-case-link">En savoir plus <i
+									class="bi bi-arrow-right"></i></a>
+						</div>
+						<div class="facilities-number two">
+							<h1>02</h1>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-images-box" data-cue="zoomIn">
+						<div class="facilities-thumb">
+							<img src="assets/images/z_rfid/rfid8.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row add-boder">
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-images-box" data-cue="zoomIn">
+						<div class="facilities-thumb">
+							<img src="assets/images/z_rfid/rfid9.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-box" data-cue="zoomIn">
+						<div class="facilities-content">
+							<h4>Sante</h4>
+							<h1>Secteur de la Sante</h1>
+							<p>Tracabilite medicale pour hopitaux et cliniques. Suivi des patients, equipements medicaux
+								et produits pharmaceutiques. Conformite aux normes sanitaires avec une securite maximale
+								des donnees.</p>
+							<a href="use-case-sante.html" class="use-case-link">En savoir plus <i
+									class="bi bi-arrow-right"></i></a>
+						</div>
+						<div class="facilities-number">
+							<h1>03</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row add-boder">
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-box two" data-cue="zoomIn">
+						<div class="facilities-content">
+							<h4>Distribution</h4>
+							<h1>Commerce et Distribution</h1>
+							<p>Solutions pour retail et grande distribution. Gestion des stocks, anti-vol RFID,
+								tracabilite des produits et experience client amelioree. Augmentez vos ventes et
+								reduisez les pertes.</p>
+							<a href="use-case-distribution.html" class="use-case-link">En savoir plus <i
+									class="bi bi-arrow-right"></i></a>
+						</div>
+						<div class="facilities-number two">
+							<h1>04</h1>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="single-facilities-images-box" data-cue="zoomIn">
+						<div class="facilities-thumb">
+							<img src="assets/images/z_rfid/rfid10.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Sectors Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Services Area -->
+	<!--==================================================-->
+	<div class="room-title-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="section-title center" data-cue="zoomIn">
+						<div class="section-thumb">
+							<img src="assets/images/z_rfid/logo-RFIDIA2.ico" alt="">
+						</div>
+						<h1>Des services pour accélérer votre réussite</h1>
+						<p class="section-desc-1">Notre expertise en conseil, intégration et accompagnement vous permet
+							de déployer des solutions de traçabilité performantes et durables.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="offers-area">
+			<div class="container">
+				<div class="row g-4 services-row" data-cue="zoomIn">
+					<div class="col-lg-4 col-md-6">
+						<div class="single-offers-box service-card">
+							<div class="offers-thumb">
+								<img src="assets/images/z_rfid/rfid11.png" alt="Conseil et accompagnement stratégique">
+							</div>
+							<div class="offers-content">
+								<h4>Repenser vos processus</h4>
+								<p>Nous analysons vos flux métiers et concevons des architectures RFID, IoT et
+									codes-barres adaptées à vos enjeux.</p>
+								<a class="service-link" href="service.html">En savoir plus</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="single-offers-box service-card">
+							<div class="offers-thumb">
+								<img src="assets/images/z_rfid/rfid12.png" alt="Intégration et déploiement">
+							</div>
+							<div class="offers-content">
+								<h4>Intégrer nos solutions</h4>
+								<p>Nous assurons l’intégration complète des lecteurs, tags et logiciels dans vos
+									systèmes existants, du pilote au déploiement global.</p>
+								<a class="service-link" href="service.html">En savoir plus</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="single-offers-box service-card">
+							<div class="offers-thumb">
+								<img src="assets/images/z_rfid/rfid13.png" alt="Support et amélioration continue">
+							</div>
+							<div class="offers-content">
+								<h4>Innover en continu</h4>
+								<p>Nous accompagnons vos équipes dans la maintenance, le support et l’évolution de vos
+									plateformes de traçabilité dans la durée.</p>
+								<a class="service-link" href="service.html">En savoir plus</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Services Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Testimonial Area -->
+	<!--==================================================-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="section-title center" data-cue="zoomIn">
+					<div class="section-thumb">
+						<img src="assets/images/z_rfid/logo-RFIDIA2.ico" alt="">
+					</div>
+					<h1>Témoignages</h1>
+					<p class="section-desc-1">Découvrez le retour d'expérience de nos clients sur l'accompagnement
+						RFIDIA en traçabilité, automatisation et transformation numérique.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="testimonial-area">
+		<div class="container">
+
+			<div class="row" data-cue="zoomIn">
+				<div class="testi-list owl-carousel">
+					<div class="col-lg-12">
+						<div class="single-testi-box">
+							<div class="testi-quote-icon">
+								<img src="assets/images/home-1/testi-quote.png" alt="">
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+								</ul>
+							</div>
+							<div class="testi-content">
+								<p>“RFIDIA nous accompagne depuis plus de trois ans. Leur approche au cas par cas et
+									leurs solutions sur mesure se sont parfaitement intégrées à notre environnement.
+									Nous avons réduit nos coûts et gagné en agilité, grâce à la sécurisation de nos flux
+									logistiques et l'automatisation des tâches chronophages.”</p>
+							</div>
+							<div class="testi-author">
+								<div class="testi-author-thumb">
+									<img src="assets/images/home-1/testi-author.png" alt="">
+								</div>
+								<div class="testi-author-title">
+									<h4>Mohamed Ben Ali</h4>
+									<p>Directeur de la Production</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-testi-box">
+							<div class="testi-quote-icon">
+								<img src="assets/images/home-1/testi-quote.png" alt="">
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star-half-alt"></i></li>
+								</ul>
+							</div>
+							<div class="testi-content">
+								<p>“RFIDIA nous accompagne depuis plus de trois ans. Leur approche au cas par cas et
+									leurs solutions sur mesure se sont parfaitement intégrées à notre environnement.
+									Nous avons réduit nos coûts et gagné en agilité, grâce à la sécurisation de nos flux
+									logistiques et l'automatisation des tâches chronophages.”</p>
+							</div>
+							<div class="testi-author">
+								<div class="testi-author-thumb">
+									<img src="assets/images/home-1/testi-author-2.png" alt="">
+								</div>
+								<div class="testi-author-title">
+									<h4>Samia Ben Mahmoud</h4>
+									<p>Responsable Logistique</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-testi-box">
+							<div class="testi-quote-icon">
+								<img src="assets/images/home-1/testi-quote.png" alt="">
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+								</ul>
+							</div>
+							<div class="testi-content">
+								<p>« Leurs solutions, entièrement paramétrables, correspondent parfaitement à nos
+									exigences. L'interfaçage avec notre système d'information s'est fait sans adaptation
+									de notre côté. Diagnostic personnalisé, déploiement sur site et contrat de
+									maintenance : un accompagnement sur mesure. »</p>
+							</div>
+							<div class="testi-author">
+								<div class="testi-author-thumb">
+									<img src="assets\images\home6\testi-thumb.png" alt="">
+								</div>
+								<div class="testi-author-title">
+									<h4>Amira Ben Saleh</h4>
+									<p>Directrice des Systèmes d'Information</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Testimonial Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA FAQ Area -->
+	<!--==================================================-->
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="section-title center" data-cue="zoomIn">
+					<div class="section-thumb">
+						<img src="assets/images/z_rfid/logo-RFIDIA2.ico" alt="">
+					</div>
+					<h1>Questions fréquentes</h1>
+					<p class="section-desc-1">Besoin de réponses sur nos<br>solutions RFID ?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="faq-area-accordion">
+		<div class="container">
+			<div class="row align-items-center">
+				<!-- Left side: FAQ Accordion -->
+				<div class="col-lg-7 col-md-12" data-cue="fadeIn">
+					<div class="faq-accordion-wrapper">
+
+						<div class="accordion-faq" id="faqAccordion">
+							<!-- FAQ Item 1 -->
+							<div class="accordion-faq-item">
+								<div class="accordion-faq-header" data-bs-toggle="collapse" data-bs-target="#faq1">
+									<span class="accordion-question">Quelles sont les solutions RFID proposées par
+										RFIDIA ?</span>
+									<span class="accordion-icon">+</span>
+								</div>
+								<div id="faq1" class="accordion-faq-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-faq-body">
+										RFIDIA fournit des solutions RFID avancées pour optimiser la gestion des actifs,
+										le suivi logistique et l'automatisation, assurant une traçabilité précise et
+										efficace.
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ Item 2 -->
+							<div class="accordion-faq-item">
+								<div class="accordion-faq-header" data-bs-toggle="collapse" data-bs-target="#faq2">
+									<span class="accordion-question">Comment les tags RFID améliorent-ils la gestion des
+										stocks ?</span>
+									<span class="accordion-icon">+</span>
+								</div>
+								<div id="faq2" class="accordion-faq-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-faq-body">
+										Les tags RFID permettent une identification automatique et en temps réel des
+										produits, réduisant les erreurs, améliorant la précision des inventaires et
+										accélérant les processus logistiques.
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ Item 3 -->
+							<div class="accordion-faq-item">
+								<div class="accordion-faq-header" data-bs-toggle="collapse" data-bs-target="#faq3">
+									<span class="accordion-question">Les solutions RFIDIA sont-elles adaptées à mon
+										secteur ?</span>
+									<span class="accordion-icon">+</span>
+								</div>
+								<div id="faq3" class="accordion-faq-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-faq-body">
+										Nos solutions s'adaptent à divers secteurs : industrie, logistique, santé,
+										distribution. Nous personnalisons chaque implémentation selon vos besoins
+										spécifiques et processus métiers.
+									</div>
+								</div>
+							</div>
+
+							<!-- FAQ Item 4 -->
+							<div class="accordion-faq-item">
+								<div class="accordion-faq-header" data-bs-toggle="collapse" data-bs-target="#faq4">
+									<span class="accordion-question">Comment RFIDIA assure-t-il la sécurité des données
+										RFID ?</span>
+									<span class="accordion-icon">+</span>
+								</div>
+								<div id="faq4" class="accordion-faq-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-faq-body">
+										Nous utilisons un cryptage avancé, des protocoles de sécurité robustes et des
+										audits réguliers pour garantir la confidentialité et l'intégrité de vos données
+										RFID.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right side: Image -->
+				<div class="col-lg-5 col-md-12" data-cue="fadeIn">
+					<div class="faq-image-wrapper">
+						<img src="assets/images/z_rfid/rfid14.png" alt="Support RFIDIA">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA FAQ Area -->
+	<!--==================================================-->
+
+
+
+
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Footer Area -->
+	<!--==================================================-->
+	<div class="footer-area" data-cue="zoomIn">
+		<div class="container">
+			<div class="row align-items-start">
+
+				<!-- Logo & Contact Info -->
+				<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+					<div class="footer-widget-logo">
+						<a href="index.html"><img src="assets/images/z_rfid/logo-RFIDIA-final.png"
+								alt="RFIDIA Technology"></a>
+					</div>
+					<p class="footer-widget-desc">Spécialiste de la traçabilité intelligente, RFIDIA accompagne les
+						entreprises dans leur transformation digitale avec des solutions RFID, IoT et Codes-Barres
+						innovantes.</p>
+					<div class="footer-widget-contact-info">
+						<ul>
+							<li><i class="bi bi-geo-alt"></i>Avenue de la République, Tunis 1002</li>
+							<li><i class="bi bi-envelope"></i>contact@rfidia.com</li>
+							<li><i class="bi bi-telephone"></i>+216 71 234 567</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="col-lg-3 col-md-6 mb-5 mb-lg-0 offset-lg-1">
+					<div class="footer-widget-title">
+						<h4>Liens Utiles</h4>
+					</div>
+					<div class="footer-widget-menu">
+						<ul>
+							<li><a href="about.html">À Propos de Nous</a></li>
+							<li><a href="room.html">Nos Solutions</a></li>
+							<li><a href="room-details.html">Secteurs d'Activité</a></li>
+							<li><a href="blog.html">Actualités & Réalisations</a></li>
+							<li><a href="contact.html">Nous Contacter</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Newsletter & Social -->
+				<div class="col-lg-4 col-md-12">
+					<div class="footer-widget-title">
+						<h4>Restez Informé</h4>
+					</div>
+					<p class="newsletter-desc">Abonnez-vous à notre newsletter pour recevoir nos dernières actualités
+						sur les technologies de traçabilité.</p>
+					<form action="#" class="newsletter-form">
+						<div class="newsletter-input-group">
+							<input type="email" name="Email" placeholder="Votre adresse E-Mail" required>
+							<button type="submit"><i class="bi bi-send"></i></button>
+						</div>
+					</form>
+
+					<!-- Social Media -->
+					<div class="footer-widget-social-icon mt-4">
+						<h5 class="social-title">Suivez-nous</h5>
+						<ul>
+							<li><a href="https://www.linkedin.com/in/rfidtunisie/"><i
+										class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61569189391534"><i
+										class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Footer Area -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start RFIDIA Footer Bottom Area -->
+	<!--==================================================-->
+	<div class="footer-bottom-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="footer-bottom-content">
+						<h4>© 2026, RFIDIA. Tous Droits Reserves.</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End RFIDIA Footer Bottom Area -->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Start Curser Section Here -->
+	<!--==================================================-->
+	<div class="curser"></div>
+	<div class="curser2"></div>
+	<!--==================================================-->
+	<!-- Ends Curser Section Here -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Start scrollup section Section -->
+	<!--==================================================-->
+	<div class="prgoress_indicator active-progress">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+				style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;">
+			</path>
+		</svg>
+	</div>
+	<!--==================================================-->
+	<!-- Start scrollup section Section -->
+	<!--==================================================-->
+
+
+	<!-- jquery js -->
+	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- counterup js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- waypoints js -->
+	<script src="assets/js/waypoints.min.js"></script>
+	<!-- wow js -->
+	<script src="assets/js/wow.js"></script>
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+
+	<!--  animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+	<!-- isotope js -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- jquery meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.js"></script>
+
+	<!-- jquery scrollup js -->
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<!-- theme js -->
+	<script src="assets/js/theme.js"></script>
+	<!-- coustom js -->
+	<script src="assets/js/coustom.js"></script>
+	<!-- barfiller -->
+	<script src="assets/js/jquery.barfiller.js"></script>
+	<!-- barfiller -->
+	<script src="assets/js/scrollCue.min.js"></script>
+
+	<!-- FAQ Accordion Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const collapses = document.querySelectorAll('.accordion-faq-collapse');
+			collapses.forEach(collapse => {
+				collapse.addEventListener('show.bs.collapse', function () {
+					const header = document.querySelector(`[data-bs-target="#${this.id}"]`);
+					if (header) {
+						const icon = header.querySelector('.accordion-icon');
+						if (icon) icon.textContent = '−';
+					}
+				});
+				collapse.addEventListener('hide.bs.collapse', function () {
+					const header = document.querySelector(`[data-bs-target="#${this.id}"]`);
+					if (header) {
+						const icon = header.querySelector('.accordion-icon');
+						if (icon) icon.textContent = '+';
+					}
+				});
+			});
+		});
+	</script>
+	<!-- Force initial animation trigger on load -->
+	<script>
+		window.addEventListener('load', function () {
+			setTimeout(function () {
+				window.dispatchEvent(new Event('scroll'));
+				if (typeof scrollCue !== 'undefined') { scrollCue.update(); }
+			}, 200);
+		});
+	</script>
+</body>
+
+</html>
