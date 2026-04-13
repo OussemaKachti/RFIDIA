@@ -13,58 +13,53 @@ const stats = [
 
 const solutions = [
   {
-    title: "RFID",
-    description:
-      "Identification automatique longue portée pour le suivi temps réel des actifs, équipements et flux.",
-    image: "/a_rfidia/z_rfid/rfid19.png",
+    title: "Traçabilité & Identification",
+    description: "Identification fiable et traçabilité continue de vos produits, équipements et flux, du point d'entrée au point de sortie.",
+    image: "/a_rfidia/z_rfid/rfid14.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="sol-icon">
-        <rect x="2" y="7" width="20" height="10" rx="2" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M7 12h10M12 9v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+        <rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3 8h18M9 12h6M6 16h4M14 16h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
     accent: "#2563eb",
   },
   {
-    title: "IoT Industriel",
-    description:
-      "Capteurs et connectivité pour monitorer vos opérations, anticiper les incidents et améliorer la performance.",
-    image: "/a_rfidia/z_rfid/rfid20.png",
+    title: "Gestion des Actifs",
+    description: "Pilotage intelligent de vos actifs avec localisation, inventaire automatisé et réduction des pertes opérationnelles.",
+    image: "/a_rfidia/z_rfid/rfid11.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="sol-icon">
-        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M4.93 4.93a10 10 0 0 0 0 14.14M19.07 4.93a10 10 0 0 1 0 14.14M7.76 7.76a6 6 0 0 0 0 8.49M16.24 7.76a6 6 0 0 1 0 8.49" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M5 3v18M19 3v18M3 9h18M3 15h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="2" fill="currentColor" />
       </svg>
     ),
     accent: "#0ea5e9",
   },
   {
-    title: "Codes-Barres",
-    description:
-      "Solutions robustes de lecture, impression et mobilité pour les environnements logistiques exigeants.",
-    image: "/a_rfidia/z_rfid/rfid8.png",
+    title: "Visibilité temps réel (IoT)",
+    description: "Suivi en temps réel de vos opérations grâce aux capteurs IoT, tableaux de bord live et alertes instantanées.",
+    image: "/a_rfidia/z_rfid/rfid10.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="sol-icon">
-        <path d="M3 5v14M7 5v14M11 5v14M13 5v14M17 5v14M21 5v14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 7v10M9 10h6M9 14h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
     accent: "#7c3aed",
   },
   {
-    title: "Systèmes Embarqués",
-    description:
-      "Conception d'outils sur mesure adaptés à vos processus métiers et à vos contraintes terrain.",
-    image: "/a_rfidia/z_rfid/Gemini_Generated_Image_vi02j7vi02j7vi02.png",
+    title: "Contrôle d'accès",
+    description: "Sécurisation des accès physiques avec règles personnalisées, journalisation des passages et contrôle centralisé.",
+    image: "/a_rfidia/z_rfid/rfid22.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="sol-icon">
-        <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.8" />
-        <circle cx="7.5" cy="12" r="1.5" fill="currentColor" />
-        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
-        <circle cx="16.5" cy="12" r="1.5" fill="currentColor" />
+        <rect x="4" y="6" width="6" height="10" rx="1" stroke="currentColor" strokeWidth="1.8" />
+        <rect x="14" y="6" width="6" height="10" rx="1" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M4 4h6M14 4h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
-    accent: "#059669",
+    accent: "#f59e0b",
   },
 ];
 
@@ -79,7 +74,7 @@ const sectors = [
   },
   {
     id: "02",
-    title: "Supply Chain & Logistique",
+    title: "Chaîne Logistique",
     description:
       "Visibilité de bout en bout des flux, inventaires fiables et réduction des pertes sur la chaîne logistique.",
     image: "/a_rfidia/z_logistique/z_logistique.png",
@@ -90,7 +85,7 @@ const sectors = [
     title: "Santé",
     description:
       "Suivi des dispositifs médicaux, sécurisation des stocks sensibles et amélioration des parcours internes.",
-    image: "/a_rfidia/z_medical/z_medical.png",
+    image: "/a_rfidia/z_medical/z_medical3.png",
     tag: "Médical",
   },
   {
@@ -103,31 +98,67 @@ const sectors = [
   },
 ];
 
-const services = [
+const virtualizationServices = [
   {
     num: "01",
-    title: "Audit de vos processus",
-    desc: "Analyse complète de vos flux et cadrage technique pour identifier les leviers d'amélioration.",
-    image: "/a_rfidia/z_rfid/z_assets.png",
+    title: "Évaluation et Planification",
+    desc: "Audit de vos besoins en performance et capacité pour choisir la bonne architecture et planifier vos ressources.",
+    image: "/a_rfidia/z_rfid/rfid11.png",
   },
   {
     num: "02",
-    title: "Intégration matérielle & logicielle",
-    desc: "Déploiement de lecteurs, tags, capteurs et interfaçage avec vos systèmes existants.",
-    image: "/a_rfidia/z_rfid/Gemini_Generated_Image_rtupeartupeartup.png",
+    title: "Conception de l'Architecture Virtualisée",
+    desc: "Configuration des hôtes et des VM avec allocation optimale CPU, mémoire, stockage et réseau.",
+    image: "/a_rfidia/z_rfid/rfid22.png",
   },
   {
     num: "03",
-    title: "Développement sur mesure",
-    desc: "Applications métiers, tableaux de bord et connecteurs développés selon vos exigences spécifiques.",
-    image: "/a_rfidia/z_rfid/rfid10.png",
+    title: "Migration et Déploiement",
+    desc: "Migration de vos applications, tests de validation et ajustements pour un déploiement fiable.",
+    image: "/a_rfidia/z_rfid/rfid8.png",
   },
   {
     num: "04",
-    title: "Formation & support continu",
-    desc: "Montée en compétence de vos équipes, maintenance proactive et accompagnement post-déploiement.",
-    image: "/a_rfidia/z_rfid/rfid2.png",
+    title: "Gestion et Maintenance",
+    desc: "Supervision continue, sauvegarde, reprise après sinistre et maintenance proactive pour éviter les interruptions.",
+    image: "/a_rfidia/z_rfid/rfid23.png",
   },
+];
+
+const consultingServices = [
+  {
+    title: "Évaluation personnalisée des infrastructures IT",
+    desc: "Audit complet de vos systèmes, identification des goulots d'étranglement et recommandations alignées avec vos objectifs métier.",
+  },
+  {
+    title: "Implémentation de solutions technologiques innovantes",
+    desc: "Conseil et déploiement de plateformes logicielles, cloud et matériel de pointe dans le respect des délais et du budget.",
+  },
+  {
+    title: "Gestion de projets IT complexes",
+    desc: "Pilotage de bout en bout avec coordination des équipes, gestion proactive des risques et communication transparente.",
+  },
+  {
+    title: "Optimisation des processus et automatisation",
+    desc: "Amélioration des flux de travail et automatisation des tâches répétitives pour accroître l'efficacité opérationnelle et réduire les coûts.",
+  },
+  {
+    title: "Formation continue et support technique",
+    desc: "Accompagnement de vos équipes pour une adoption rapide des outils et support continu pour protéger vos investissements.",
+  },
+  {
+    title: "Maintenance proactive",
+    desc: "Surveillance continue pour identifier et corriger les incidents avant impact, afin de maintenir la disponibilité de vos systèmes.",
+  },
+];
+
+const warehouseBenefits = [
+  "Mise en stock et suivi des flux en temps réel",
+  "Suppression des écarts entre stock théorique et stock réel",
+  "Vérification immédiate de la conformité des commandes à expédier",
+  "Lecture groupée et automatisée des articles à stocker",
+  "Monitoring et historisation des expéditions",
+  "Réduction des erreurs logistiques et traçabilité renforcée",
 ];
 
 const partners = [
@@ -154,7 +185,7 @@ const testimonials = [
   {
     quote:
       "Les résultats sont immédiats : meilleure visibilité sur les stocks, moins d'erreurs et une traçabilité complète sur toute la chaîne.",
-    name: "Responsable Supply Chain",
+    name: "Responsable Chaîne Logistique",
     company: "Distribution",
     initials: "RS",
   },
@@ -188,9 +219,23 @@ const ItSolution = () => {
 
   const toggleFaq = (idx) => setOpenFaq(openFaq === idx ? null : idx);
 
+  const SectionDivider = () => (
+    <div className="rl-section-divider-wrap">
+      <div className="rl-section-divider">
+        <span className="rl-section-divider__line" />
+        <img
+          src="/a_rfidia/z_rfid/logo-RFIDIA2.png"
+          alt="RFIDIA"
+          className="rl-section-divider__logo"
+        />
+        <span className="rl-section-divider__line" />
+      </div>
+    </div>
+  );
+
   return (
     <Layout
-      title="RFIDIA — Solutions RFID & IoT pour l'entreprise"
+      title="RFIDIA"
       desc="RFIDIA, leader tunisien en solutions de traçabilité intelligente: RFID, IoT, codes-barres et systèmes embarqués."
     >
       <Navbar />
@@ -244,20 +289,20 @@ const ItSolution = () => {
               <div className="col-lg-6">
                 <div className="rl-hero__visual">
                   <img
-                    src="/a_rfidia/z_rfid/rfid.png"
+                    src="/a_rfidia/z_rfid/rfid7.png"
                     alt="Technologie RFID en entreprise"
                     className="rl-hero__img"
                   />
                   <div className="rl-hero__float rl-hero__float--tl">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <span>Traçabilité temps réel</span>
                   </div>
                   <div className="rl-hero__float rl-hero__float--br">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="#0ea5e9" strokeWidth="2"/>
-                      <path d="M12 6v6l4 2" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round"/>
+                      <circle cx="12" cy="12" r="10" stroke="#0ea5e9" strokeWidth="2" />
+                      <path d="M12 6v6l4 2" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                     <span>Déploiement rapide</span>
                   </div>
@@ -267,47 +312,188 @@ const ItSolution = () => {
           </div>
         </section>
 
-        {/* ── PARTNERS BAR ── */}
-        <section className="rl-partners">
-          <div className="container">
-            <div className="rl-partners__head">
-              <span className="rl-eyebrow">Partenaires technologiques</span>
-              <h2 className="rl-partners__title">Ils nous font confiance</h2>
-              <p className="rl-partners__sub">
-                RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions
-                technologiques de premier plan.
-              </p>
-            </div>
+      {/* ── ABOUT ── */}
+<section className="rl-section rl-about">
+  <div className="container">
+    <div className="rl-section-head">
+      <SectionDivider />
+      <h2>À propos</h2>
+    </div>
+    <div className="row align-items-center g-5">
 
-            <div className="rl-partners__grid">
-              {partners.map((p) => (
-                <div className="rl-partner-item" key={p.name}>
-                  <div className="rl-partner-item__logo-wrap">
-                    <img src={p.logo} alt={p.name} />
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* ── Colonne gauche : visuels ── */}
+      <div className="col-lg-6">
+        <div style={{ position: 'relative', padding: '2.5rem 1rem 2.5rem 2rem' }}>
 
-            <div className="rl-partners__divider" aria-hidden />
+          {/* Image principale */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '1.5rem',
+            overflow: 'hidden',
+            height: '480px',
+            border: '1px solid rgba(255,255,255,0.1)',
+            boxShadow: '0 25px 50px rgba(0,0,0,0.2)'
+          }}>
+            <img
+              src="/a_rfidia/z_rfid/rfid4.png"
+              alt="Équipe RFIDIA"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block'
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(135deg, rgba(17,22,56,0.4) 0%, transparent 60%)'
+            }} />
           </div>
-        </section>
+
+          {/* Carte flottante haut-gauche — Actif / 32+ */}
+          <div style={{
+            position: 'absolute',
+            top: '8px',
+            left: '-8px',
+            background: '#111638',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: '1rem',
+            padding: '1rem 1.25rem',
+            width: '176px',
+            boxShadow: '0 8px 32px rgba(26,33,80,0.3)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+              <span style={{
+                width: '8px', height: '8px', borderRadius: '50%',
+                background: '#4ECDC4', display: 'inline-block', flexShrink: 0
+              }} />
+              <span style={{
+                color: '#4ECDC4', fontSize: '11px',
+                fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase'
+              }}>Actif</span>
+            </div>
+            <p style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, margin: 0, lineHeight: 1 }}>32+</p>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '4px 0 0' }}>Experts & ingénieurs</p>
+          </div>
+
+          {/* Carte flottante bas-droite — Excellence */}
+          <div style={{
+            position: 'absolute',
+            bottom: '8px',
+            right: '-8px',
+            background: '#fff',
+            borderRadius: '1rem',
+            padding: '1.25rem',
+            width: '210px',
+            boxShadow: '0 12px 40px rgba(26,33,80,0.14)',
+            border: '1px solid #E2E6F0'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+              <div style={{
+                width: '36px', height: '36px', borderRadius: '10px',
+                background: 'rgba(232,93,117,0.1)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85D75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#1A2150' }}>Excellence</span>
+            </div>
+            <p style={{ fontSize: '12px', color: '#5A6282', lineHeight: 1.5, margin: 0 }}>
+              Certifiés par les standards RFID internationaux GS1 et ISO 18000.
+            </p>
+          </div>
+
+          {/* Badge bas-centre — Équipe RFIDIA de confiance */}
+          <div style={{
+            position: 'absolute',
+            bottom: '56px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: '#1A2150',
+            color: '#fff',
+            fontSize: '13px',
+            fontWeight: 600,
+            padding: '8px 20px',
+            borderRadius: '999px',
+            whiteSpace: 'nowrap',
+            boxShadow: '0 4px 16px rgba(26,33,80,0.3)'
+          }}>
+            Équipe RFIDIA de confiance
+          </div>
+
+        </div>
+      </div>
+
+      {/* ── Colonne droite : contenu ── */}
+      <div className="col-lg-6">
+        <div className="rl-about-content">
+          <h2>
+            Là où les services IT rencontrent l'
+            <span className="rl-gradient-text">innovation</span>
+          </h2>
+          <p>
+            RFIDIA accompagne les entreprises dans leur transformation digitale grâce à
+            des solutions RFID, IoT et logicielles fiables, évolutives et orientées
+            résultats.
+          </p>
+          <p>
+            Notre équipe combine expertise métier, intégration système et accompagnement
+            opérationnel pour transformer vos processus en avantages compétitifs durables.
+          </p>
+
+          <div className="rl-about-actions rl-about-actions--inline">
+            <Link href="/about-us" passHref>
+              <a className="rl-btn rl-btn--primary">En savoir plus</a>
+            </Link>
+            <Link href="/contact-us" passHref>
+              <a className="rl-btn rl-btn--outline-dark">Parlons de votre projet</a>
+            </Link>
+          </div>
+
+          <div className="rl-about-points">
+            <div className="rl-about-point">
+              <h4>Intégration fluide</h4>
+              <p>Connexion native avec ERP, WMS et outils existants.</p>
+            </div>
+            <div className="rl-about-point">
+              <h4>Visibilité temps réel</h4>
+              <p>Suivi des actifs, audits et indicateurs décisionnels instantanés.</p>
+            </div>
+            <div className="rl-about-point">
+              <h4>Support dédié</h4>
+              <p>Accompagnement continu, maintenance proactive et montée en compétence.</p>
+            </div>
+            <div className="rl-about-point">
+              <h4>Scalabilité</h4>
+              <p>Architecture pensée pour accompagner votre croissance future.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* ── SOLUTIONS ── */}
         <section className="rl-section">
           <div className="container">
             <div className="rl-section-head">
-              <span className="rl-eyebrow">Notre offre technologique</span>
-              <h2>Nos Solutions</h2>
+              <SectionDivider />
+              <h2>Nos Solutions Clés</h2>
               <p>
-                RFIDIA commercialise des lecteurs, des tags et conçoit des solutions innovantes
-                destinées aux marchés de la sécurité et de la traçabilité.
+                Quatre solutions stratégiques pour renforcer votre performance : identification,
+                gestion des actifs, visibilité temps réel et contrôle d'accès.
               </p>
             </div>
 
             <div className="row g-4">
               {solutions.map((item) => (
-                <div className="col-md-6 col-xl-3" key={item.title}>
+                <div className="col-md-6 col-xl-6" key={item.title}>
                   <article className="rl-sol-card">
                     <div className="rl-sol-card__header">
                       <div className="rl-sol-card__img-wrap">
@@ -336,38 +522,41 @@ const ItSolution = () => {
           </div>
         </section>
 
-        {/* ── ABOUT ── */}
-        <section className="rl-section rl-about">
+        {/* ── SERVICES ── */}
+        <section className="rl-section rl-services">
           <div className="container">
-            <div className="row align-items-center g-5">
-              <div className="col-lg-5">
-                <div className="rl-img-frame">
-                  <img
-                    src="/a_rfidia/z_rfid/rfid17.png"
-                    alt="RFIDIA expertise RFID et IoT"
-                    className="rl-img-frame__img"
-                  />
-                  <div className="rl-img-frame__badge">
-                    <strong>10+</strong>
-                    <span>ans d'expertise</span>
+            <div className="rl-section-head">
+              <SectionDivider />
+              <h2>Nos Services de Virtualisation</h2>
+              <p>
+                De l'évaluation à la maintenance, nous optimisons votre infrastructure IT avec une
+                approche fiable et évolutive.
+              </p>
+            </div>
+            <div className="row g-4">
+              {virtualizationServices.map((item) => (
+                <div className="col-lg-3 col-md-6" key={item.num}>
+                  <div className="single-article rounded-custom h-100 mt-0">
+                    <a className="article-img">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="img-fluid w-100"
+                        style={{ height: '224px', objectFit: 'cover' }}
+                      />
+                    </a>
+                    <div className="article-content p-4">
+                      <div className="article-category mb-4 d-block">
+                        <span className="d-inline-block text-dark badge bg-primary-soft">
+                          Étape {item.num}
+                        </span>
+                      </div>
+                      <h2 className="h5 article-title">{item.title}</h2>
+                      <p>{item.desc}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-7">
-                <span className="rl-eyebrow">À propos de RFIDIA</span>
-                <h2>Leader tunisien des solutions RFID et IoT</h2>
-                <p>
-                  RFIDIA est une entreprise tunisienne spécialisée dans les solutions de
-                  traçabilité intelligente. Notre mission est de fournir des réponses concrètes
-                  aux enjeux de performance, de sécurité et de visibilité opérationnelle.
-                </p>
-                <ul className="rl-checklist">
-                  <li>Approche conseil orientée résultats</li>
-                  <li>Déploiements adaptés à chaque secteur</li>
-                  <li>Accompagnement de bout en bout</li>
-                  <li>Support et maintenance proactive</li>
-                </ul>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -376,62 +565,38 @@ const ItSolution = () => {
         <section className="rl-section">
           <div className="container">
             <div className="rl-section-head">
-              <span className="rl-eyebrow">Expertises sectorielles</span>
+              <SectionDivider />
               <h2>Secteurs & Cas d'Usage</h2>
               <p>Découvrez comment nos solutions s'adaptent à vos processus métiers.</p>
             </div>
-            <div className="row g-4">
-              {sectors.map((item) => (
-                <div className="col-md-6" key={item.id}>
-                  <article className="rl-sector-card">
-                    <div className="rl-sector-card__img-wrap">
-                      <img src={item.image} alt={item.title} className="rl-sector-card__img" />
-                    </div>
-                    <div className="rl-sector-card__content">
-                      <span className="rl-sector-card__tag">{item.tag}</span>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                    <div className="rl-sector-card__num">{item.id}</div>
-                  </article>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── SERVICES ── */}
-        <section className="rl-section rl-services">
-          <div className="container">
-            <div className="rl-section-head">
-              <span className="rl-eyebrow">Notre méthodologie</span>
-              <h2>Des services pour accélérer votre réussite</h2>
-              <p>
-                Nous combinons expertise technique et accompagnement opérationnel pour déployer
-                des solutions performantes et durables.
-              </p>
-            </div>
-            <div className="rl-services-list">
-              {services.map((item, idx) => (
-                <div className={`rl-service-row ${idx % 2 !== 0 ? "rl-service-row--reverse" : ""}`} key={item.num}>
-                  <div className="rl-service-row__visual">
-                    <div className="rl-service-row__img-frame">
-                      <img src={item.image} alt={item.title} />
-                    </div>
-                  </div>
-                  <div className="rl-service-row__content">
-                    <span className="rl-service-row__num">{item.num}</span>
+            <div className="rl-case-stack">
+              {sectors.map((item, idx) => (
+                <article
+                  className={`rl-case-card${idx % 2 === 1 ? " rl-case-card--reverse" : ""}`}
+                  key={item.id}
+                  style={{ "--case-index": idx }}
+                >
+                  <div className="rl-case-card__body">
+                    <span className="rl-case-card__overline">Cas d'usage {item.id}</span>
                     <h3>{item.title}</h3>
-                    <p>{item.desc}</p>
-                    <div className="rl-service-row__action">
-                      <span>Découvrir</span>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
+                    <div className="rl-case-card__chips">
+                      <span>{item.tag}</span>
+                      <span>Solutions RFIDIA</span>
+                    </div>
+                    <p>{item.description}</p>
+                    <br />
+                    <br />
+                    <br />
+                    <div className="rl-case-card__action-btn">
+                      <Link href="/contact-us" passHref>
+                        <a className="rl-btn rl-btn--primary" style={{ borderRadius: "8px", fontSize: "0.95rem" }}>Découvrir</a>
+                      </Link>
                     </div>
                   </div>
-                </div>
+                  <div className="rl-case-card__media">
+                    <img src={item.image} alt={item.title} className="rl-case-card__img" />
+                  </div>
+                </article>
               ))}
             </div>
           </div>
@@ -441,7 +606,7 @@ const ItSolution = () => {
         <section className="rl-section rl-testi">
           <div className="container">
             <div className="rl-section-head">
-              <span className="rl-eyebrow">Ce qu'ils disent</span>
+              <SectionDivider />
               <h2>Témoignages clients</h2>
               <p>Ils nous font confiance pour leurs projets de traçabilité et d'automatisation.</p>
             </div>
@@ -465,12 +630,38 @@ const ItSolution = () => {
           </div>
         </section>
 
+         {/* ── PARTNERS BAR ── */}
+        <section className="rl-partners">
+          <div className="container">
+            <div className="rl-partners__head">
+              <SectionDivider />
+              <h2 className="rl-partners__title">Ils nous font confiance</h2>
+              <p className="rl-partners__sub">
+                RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions
+                technologiques de premier plan.
+              </p>
+            </div>
+
+            <div className="rl-partners__grid">
+              {partners.map((p) => (
+                <div className="rl-partner-item" key={p.name}>
+                  <div className="rl-partner-item__logo-wrap">
+                    <img src={p.logo} alt={p.name} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="rl-partners__divider" aria-hidden />
+          </div>
+        </section>
+
         {/* ── FAQ ── */}
         <section className="rl-section rl-faq">
           <div className="container">
             <div className="row g-5 align-items-start">
-              <div className="col-lg-4">
-                <span className="rl-eyebrow">Support</span>
+              <div className="col-lg-4 text-center">
+                <SectionDivider />
                 <h2>Questions fréquentes</h2>
                 <p>Besoin de plus d'info sur nos solutions RFID et IoT ?</p>
                 <Link href="/contact-us" passHref>
@@ -500,34 +691,6 @@ const ItSolution = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CTA ── */}
-        <section className="rl-cta">
-          <div className="container">
-            <div className="rl-cta-inner">
-              <div className="rl-cta__glow" aria-hidden />
-              <span className="rl-badge rl-badge--light">Prêt à démarrer ?</span>
-              <h2>Votre partenaire de confiance en traçabilité industrielle</h2>
-              <p>
-                Discutons de votre besoin et construisons ensemble une solution adaptée à votre
-                activité.
-              </p>
-              <div className="rl-cta__actions">
-                <Link href="/contact-us" passHref>
-                  <a className="rl-btn rl-btn--white">
-                    Demander une consultation
-                    <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </Link>
-                <Link href="/contact-us" passHref>
-                  <a className="rl-btn rl-btn--ghost-white">En savoir plus</a>
-                </Link>
               </div>
             </div>
           </div>

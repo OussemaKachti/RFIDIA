@@ -28,12 +28,11 @@ const Footer = ({ footerLight, style, footerGradient }) => {
               <div className="col-lg-4 col-xl-4">
                 <div className="rfidia-footer-brand">
                   <div className="mb-4">
-                    <Image
-                      width={220}
-                      height={64}
+                    <img
                       src="/a_rfidia/z_rfid/logo-RFIDIA-final.png"
                       alt="RFIDIA Technology"
                       className="img-fluid"
+                      style={{ maxHeight: '55px', width: 'auto' }}
                     />
                   </div>
                   <p className="rfidia-footer-desc">

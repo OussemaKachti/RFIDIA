@@ -46,20 +46,18 @@ const Navbar = ({ navDark, insurance, classOption }) => {
           <Link href="/">
             <a className="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
               {scroll > headerTop || !navDark ? (
-                <Image
-                  width={180}
-                  height={52}
+                <img
                   src="/a_rfidia/z_rfid/logo-RFIDIA-final.png"
                   alt="logo"
                   className="img-fluid logo-color"
+                  style={{ maxHeight: '42px', width: 'auto' }}
                 />
               ) : (
-                <Image
-                  width={113}
-                  height={36}
+                <img
                   src="/logo-white.png"
                   alt="logo"
                   className="img-fluid logo-white"
+                  style={{ maxHeight: '36px', width: 'auto' }}
                 />
               )}
             </a>
@@ -218,12 +216,11 @@ const Navbar = ({ navDark, insurance, classOption }) => {
             <div className="offcanvas-header d-flex align-items-center mt-4">
               <Link href="/">
                 <a className="d-flex align-items-center mb-md-0 text-decoration-none">
-                  <Image
-                    width={180}
-                    height={52}
+                  <img
                     src="/a_rfidia/z_rfid/logo-RFIDIA-final.png"
                     alt="logo"
                     className="img-fluid ps-2"
+                    style={{ maxHeight: '42px', width: 'auto' }}
                   />
                 </a>
               </Link>
