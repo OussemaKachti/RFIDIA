@@ -16,18 +16,17 @@ const ContactCard = () => {
                 <BsFillChatSquareTextFill />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Chat with us</h5>
+                <h5>Échangez avec nous</h5>
                 <p>
-                  We have got live Social Experts waiting to help you{' '}
-                  <strong>monday to friday</strong> from
-                  <strong>9am to 5pm EST.</strong>
+                  Notre équipe est disponible pour vous accompagner du{' '}
+                  <strong>lundi au vendredi</strong>.
                 </p>
               </div>
               <a
-                href="mailto:hellothemetags@gmail.com"
+                href="mailto:contact@rfidia.tn"
                 className="btn btn-link mt-auto"
               >
-                Chat with us
+                Nous écrire
               </a>
             </div>
           </div>
@@ -37,18 +36,16 @@ const ContactCard = () => {
                 <BsFillEnvelopeFill />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Email Us</h5>
+                <h5>Envoyez un email</h5>
                 <p>
-                  Simple drop us an email at{' '}
-                  <strong>hellothemetags@gmail.com</strong>
-                  and you will receive a reply within 24 hours
+                  Écrivez-nous pour discuter de votre projet et recevoir une réponse rapide.
                 </p>
               </div>
               <a
-                href="mailto:hellothemetags@gmail.com"
+                href="mailto:contact@rfidia.tn"
                 className="btn btn-primary mt-auto"
               >
-                Email Us
+                contact@rfidia.tn
               </a>
             </div>
           </div>
@@ -58,15 +55,13 @@ const ContactCard = () => {
                 <BsTelephoneInbound />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Give us a call</h5>
+                <h5>Appelez-nous</h5>
                 <p>
-                  Give us a ring.Our Experts are standing by{' '}
-                  <strong>monday to friday</strong> from
-                  <strong>9am to 5pm EST.</strong>
+                  Besoin d’un échange direct ? Appelez-nous pour parler de votre besoin.
                 </p>
               </div>
-              <a href="tel:00-976-561-008" className="btn btn-link mt-auto">
-                00-976-561-008
+              <a href="tel:+21600000000" className="btn btn-link mt-auto">
+                +216 94 103 351
               </a>
             </div>
           </div>

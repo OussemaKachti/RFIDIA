@@ -18,12 +18,12 @@ const OffCanvasMenu = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Home
+            Accueil
           </a>
           <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
             <div className="dropdown-grid rounded-custom width-half">
               <div className="dropdown-grid-item">
-                <h6 className="drop-heading">Different Home</h6>
+                <h6 className="drop-heading">Accueil</h6>
                 {offcanvasMenuData.map((navH, i) => (
                   <span key={i + 1}>
                     <Link href={navH.href}>
@@ -49,7 +49,7 @@ const OffCanvasMenu = () => {
         </li>
         <li data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/about-us">
-            <a className="nav-link">About</a>
+            <a className="nav-link">À propos</a>
           </Link>
         </li>
         <li data-bs-dismiss="offcanvas" aria-label="Close">
@@ -59,8 +59,8 @@ const OffCanvasMenu = () => {
         </li>
 
         <li data-bs-dismiss="offcanvas" aria-label="Close">
-          <Link href="/pricing">
-            <a className="nav-link">Pricing</a>
+          <Link href="/contact-us">
+            <a className="nav-link">Contactez-nous</a>
           </Link>
         </li>
         <li className="nav-item dropdown">
@@ -71,12 +71,12 @@ const OffCanvasMenu = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Company
+            Entreprise
           </a>
           <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
             <div className="dropdown-grid rounded-custom width-full">
               <div className="dropdown-grid-item">
-                <h6 className="drop-heading">Useful Links</h6>
+                <h6 className="drop-heading">Liens utiles</h6>
                 {navCompanyLinks.map((navLink, i) => (
                   <span key={i + 1}>
                     <Link href={navLink.href}>
@@ -95,7 +95,7 @@ const OffCanvasMenu = () => {
                 ))}
               </div>
               <div className="dropdown-grid-item radius-right-side bg-light">
-                <h6 className="drop-heading">Utility Pages</h6>
+                <h6 className="drop-heading">Pages utiles</h6>
                 {navCompanyPage.map((navPage, i) => (
                   <span key={i + 1}>
                     <Link href={navPage.href}>
@@ -121,13 +121,13 @@ const OffCanvasMenu = () => {
         <span data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/login">
             <a className="btn btn-outline-primary text-decoration-none me-2">
-              Sign In
+              Connexion
             </a>
           </Link>
         </span>
         <span data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/request-demo">
-            <a className="btn btn-primary">Get Started</a>
+            <a className="btn btn-primary">Démarrer</a>
           </Link>
         </span>
       </div>

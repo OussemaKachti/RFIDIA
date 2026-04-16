@@ -86,12 +86,12 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Home
+                  Accueil
                 </a>
                 <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
                   <div className="dropdown-grid rounded-custom width-full">
                     <div className="dropdown-grid-item">
-                      <h6 className="drop-heading">Different Home</h6>
+                      <h6 className="drop-heading">Accueil</h6>
                       {navHomeOne.map((navH, i) => (
                         <span key={i + 1}>
                           <Link href={navH.href}>
@@ -109,7 +109,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                       ))}
                     </div>
                     <div className="dropdown-grid-item radius-right-side bg-light">
-                      <h6 className="drop-heading">Different Home</h6>
+                      <h6 className="drop-heading">Accueil</h6>
                       {navHomeTwo.map((navH, i) => (
                         <span key={i + 10}>
                           <Link href={navH.href}>
@@ -131,7 +131,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
               </li>
               <li>
                 <Link href="about-us">
-                  <a className="nav-link">About</a>
+                  <a className="nav-link">À propos</a>
                 </Link>
               </li>
               <li>
@@ -141,8 +141,8 @@ const Navbar = ({ navDark, insurance, classOption }) => {
               </li>
 
               <li>
-                <Link href="pricing">
-                  <a className="nav-link">Pricing</a>
+                <Link href="/contact-us">
+                  <a className="nav-link">Contactez-nous</a>
                 </Link>
               </li>
               <li className="nav-item dropdown">
@@ -153,12 +153,12 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Company
+                  Entreprise
                 </a>
                 <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
                   <div className="dropdown-grid rounded-custom width-full">
                     <div className="dropdown-grid-item">
-                      <h6 className="drop-heading">Useful Links</h6>
+                      <h6 className="drop-heading">Liens utiles</h6>
                       {navCompanyLinks.map((navLink, i) => (
                         <div key={i + 1}>
                           <Link href={navLink.href}>
@@ -173,7 +173,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                       ))}
                     </div>
                     <div className="dropdown-grid-item radius-right-side bg-light">
-                      <h6 className="drop-heading">Utility Pages</h6>
+                      <h6 className="drop-heading">Pages utiles</h6>
                       {navCompanyPage.map((navPage, i) => (
                         <div key={i + 1}>
                           <Link href={navPage.href}>
@@ -195,7 +195,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
 
           <div className="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
             <Link href="login">
-              <a className="btn btn-link text-decoration-none me-2">Sign In</a>
+              <a className="btn btn-link text-decoration-none me-2">Connexion</a>
             </Link>
             <Link href="request-demo">
               <a
@@ -203,7 +203,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   insurance ? 'ins-btn ins-primary-btn' : 'btn btn-primary'
                 }
               >
-                Get Started
+                Démarrer
               </a>
             </Link>
           </div>

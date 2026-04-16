@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const ContactForm = () => {
   return (
@@ -11,19 +10,19 @@ const ContactForm = () => {
     >
       <div className="container">
         <div className="row justify-content-lg-between align-items-center">
-          <div className="col-lg-6 col-md-8">
+          <div className="col-lg-5 col-md-8">
             <div className="section-heading">
-              <h2>Talk to Our Sales & Marketing Department Team</h2>
+              <h2>Parlez-nous de votre projet</h2>
               <p>
-                Collaboratively promote client-focused convergence vis-a-vis
-                customer directed alignments via standardized infrastructures.
+                Dites-nous ce que vous souhaitez optimiser. Nous vous répondrons avec une
+                proposition adaptée à votre activité et à vos objectifs.
               </p>
             </div>
             <form action="#" className="register-form">
               <div className="row">
                 <div className="col-sm-6">
                   <label htmlFor="firstName" className="mb-1">
-                    First name <span className="text-danger">*</span>
+                    Prénom <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -31,28 +30,28 @@ const ContactForm = () => {
                       className="form-control"
                       id="firstName"
                       required
-                      placeholder="First name"
-                      aria-label="First name"
+                      placeholder="Prénom"
+                      aria-label="Prénom"
                     />
                   </div>
                 </div>
                 <div className="col-sm-6 ">
                   <label htmlFor="lastName" className="mb-1">
-                    Last name
+                    Nom
                   </label>
                   <div className="input-group mb-3">
                     <input
                       type="text"
                       className="form-control"
                       id="lastName"
-                      placeholder="Last name"
-                      aria-label="Last name"
+                      placeholder="Nom"
+                      aria-label="Nom"
                     />
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <label htmlFor="phone" className="mb-1">
-                    Phone <span className="text-danger">*</span>
+                    Téléphone <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -60,14 +59,14 @@ const ContactForm = () => {
                       className="form-control"
                       id="phone"
                       required
-                      placeholder="Phone"
-                      aria-label="Phone"
+                      placeholder="Téléphone"
+                      aria-label="Téléphone"
                     />
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <label htmlFor="email" className="mb-1">
-                    Email<span className="text-danger">*</span>
+                    Email <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -89,25 +88,37 @@ const ContactForm = () => {
                       className="form-control"
                       id="yourMessage"
                       required
-                      placeholder="How can we help you?"
+                      placeholder="Expliquez-nous votre besoin"
                       style={{ height: '120px' }}
                     ></textarea>
                   </div>
                 </div>
               </div>
               <button type="submit" className="btn btn-primary mt-4">
-                Get in Touch
+                Envoyer le message
               </button>
             </form>
           </div>
-          <div className="col-lg-5 col-md-10">
-            <div className="contact-us-img">
-              <Image
-                width={526}
-                height={406}
-                src="/contact-us-img-2.svg"
-                alt="contact us"
-                className="img-fluid"
+          <div className="col-lg-7 col-md-10 mt-5 mt-lg-0">
+            <div
+              className="rounded-custom custom-shadow overflow-hidden position-relative"
+              style={{
+                minHeight: '640px',
+                border: '1px solid #dbe7fb',
+                borderRadius: '28px',
+                boxShadow: '0 28px 80px rgba(15, 23, 42, 0.12)',
+                background: '#fff',
+              }}
+            >
+              <iframe
+                title="RFIDIA - Africa Mall Ariana"
+                src="https://www.google.com/maps?q=Africa%20Mall%20Ariana%20Tunisie&z=16&output=embed"
+                width="100%"
+                height="640"
+                style={{ border: 0, display: 'block', width: '100%', minHeight: '640px' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>

@@ -8,11 +8,11 @@ import ContactForm from '@components/contact-us/ContactForm';
 
 const ContactUs = () => {
   return (
-    <Layout title="Contact Us" desc="This is contact us page">
+    <Layout title="Contactez-nous" desc="Contactez RFIDIA pour découvrir nos solutions RFID innovantes et optimiser vos processus.">
       <Navbar classOption="navbar-light" />
       <PageHeader
-        title="Contact Us"
-        desc="Seamlessly actualize client-based users after out-of-the-box value data through frictionless expertise. Proactively coordinate quality quality vectors vis-a-vis supply chains. Quickly engage client-centric web services."
+        title="Contactez-nous"
+        desc="Chez RFIDIA, nous créons des solutions RFID innovantes pour optimiser vos processus et renforcer votre efficacité."
       />
       <ContactCard />
       <ContactForm />
