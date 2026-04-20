@@ -1,6 +1,21 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactForm = ({ content }) => {
+  const t =
+    content ||
+    {
+      heading: 'Parlez-nous de votre projet',
+      desc:
+        'Dites-nous ce que vous souhaitez optimiser. Nous vous repondrons avec une proposition adaptee a votre activite et a vos objectifs.',
+      firstName: 'Prenom',
+      lastName: 'Nom',
+      phone: 'Telephone',
+      email: 'Email',
+      message: 'Message',
+      messagePlaceholder: 'Expliquez-nous votre besoin',
+      submit: 'Envoyer le message',
+    };
+
   return (
     <section
       className="contact-us-form pt-60 pb-120"
@@ -12,17 +27,16 @@ const ContactForm = () => {
         <div className="row justify-content-lg-between align-items-center">
           <div className="col-lg-5 col-md-8">
             <div className="section-heading">
-              <h2>Parlez-nous de votre projet</h2>
+              <h2>{t.heading}</h2>
               <p>
-                Dites-nous ce que vous souhaitez optimiser. Nous vous répondrons avec une
-                proposition adaptée à votre activité et à vos objectifs.
+                {t.desc}
               </p>
             </div>
             <form action="#" className="register-form">
               <div className="row">
                 <div className="col-sm-6">
                   <label htmlFor="firstName" className="mb-1">
-                    Prénom <span className="text-danger">*</span>
+                    {t.firstName} <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -30,28 +44,28 @@ const ContactForm = () => {
                       className="form-control"
                       id="firstName"
                       required
-                      placeholder="Prénom"
-                      aria-label="Prénom"
+                      placeholder={t.firstName}
+                      aria-label={t.firstName}
                     />
                   </div>
                 </div>
                 <div className="col-sm-6 ">
                   <label htmlFor="lastName" className="mb-1">
-                    Nom
+                    {t.lastName}
                   </label>
                   <div className="input-group mb-3">
                     <input
                       type="text"
                       className="form-control"
                       id="lastName"
-                      placeholder="Nom"
-                      aria-label="Nom"
+                      placeholder={t.lastName}
+                      aria-label={t.lastName}
                     />
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <label htmlFor="phone" className="mb-1">
-                    Téléphone <span className="text-danger">*</span>
+                    {t.phone} <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -59,14 +73,14 @@ const ContactForm = () => {
                       className="form-control"
                       id="phone"
                       required
-                      placeholder="Téléphone"
-                      aria-label="Téléphone"
+                      placeholder={t.phone}
+                      aria-label={t.phone}
                     />
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <label htmlFor="email" className="mb-1">
-                    Email <span className="text-danger">*</span>
+                    {t.email} <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <input
@@ -74,28 +88,28 @@ const ContactForm = () => {
                       className="form-control"
                       id="email"
                       required
-                      placeholder="Email"
-                      aria-label="Email"
+                      placeholder={t.email}
+                      aria-label={t.email}
                     />
                   </div>
                 </div>
                 <div className="col-12">
                   <label htmlFor="yourMessage" className="mb-1">
-                    Message <span className="text-danger">*</span>
+                    {t.message} <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <textarea
                       className="form-control"
                       id="yourMessage"
                       required
-                      placeholder="Expliquez-nous votre besoin"
+                      placeholder={t.messagePlaceholder}
                       style={{ height: '120px' }}
                     ></textarea>
                   </div>
                 </div>
               </div>
               <button type="submit" className="btn btn-primary mt-4">
-                Envoyer le message
+                {t.submit}
               </button>
             </form>
           </div>

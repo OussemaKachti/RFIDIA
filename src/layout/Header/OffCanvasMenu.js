@@ -6,7 +6,31 @@ import {
   offcanvasMenuData,
 } from "../../utils/data";
 
-const OffCanvasMenu = () => {
+const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
+  const navLabels =
+    labels ||
+    {
+      home: 'Accueil',
+      about: 'A propos',
+      services: 'Services',
+      contact: 'Contactez-nous',
+      company: 'Entreprise',
+      usefulLinks: 'Liens utiles',
+      usefulPages: 'Pages utiles',
+      language: 'Langue',
+      french: 'Francais',
+      english: 'English',
+      italian: 'Italiano',
+    };
+
+  const languageOptions = [
+    { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
+    { key: 'en', label: navLabels.english, flagSrc: '/a_rfidia/z_rfid/am.png' },
+    { key: 'it', label: navLabels.italian, flagSrc: '/a_rfidia/z_rfid/it.png' },
+  ];
+
+  const selectedLanguage = languageOptions.find((opt) => opt.key === language) || languageOptions[0];
+
   return (
     <div className="offcanvas-body">
       <ul className="nav col-12 col-md-auto justify-content-center main-menu">
@@ -18,12 +42,12 @@ const OffCanvasMenu = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Accueil
+            {navLabels.home}
           </a>
           <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
             <div className="dropdown-grid rounded-custom width-half">
               <div className="dropdown-grid-item">
-                <h6 className="drop-heading">Accueil</h6>
+                <h6 className="drop-heading">{navLabels.home}</h6>
                 {offcanvasMenuData.map((navH, i) => (
                   <span key={i + 1}>
                     <Link href={navH.href}>
@@ -49,18 +73,18 @@ const OffCanvasMenu = () => {
         </li>
         <li data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/about-us">
-            <a className="nav-link">À propos</a>
+            <a className="nav-link">{navLabels.about}</a>
           </Link>
         </li>
         <li data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/services">
-            <a className="nav-link">Services</a>
+            <a className="nav-link">{navLabels.services}</a>
           </Link>
         </li>
 
         <li data-bs-dismiss="offcanvas" aria-label="Close">
           <Link href="/contact-us">
-            <a className="nav-link">Contactez-nous</a>
+            <a className="nav-link">{navLabels.contact}</a>
           </Link>
         </li>
         <li className="nav-item dropdown">
@@ -71,12 +95,12 @@ const OffCanvasMenu = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Entreprise
+            {navLabels.company}
           </a>
           <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
             <div className="dropdown-grid rounded-custom width-full">
               <div className="dropdown-grid-item">
-                <h6 className="drop-heading">Liens utiles</h6>
+                <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
                 {navCompanyLinks.map((navLink, i) => (
                   <span key={i + 1}>
                     <Link href={navLink.href}>
@@ -95,7 +119,7 @@ const OffCanvasMenu = () => {
                 ))}
               </div>
               <div className="dropdown-grid-item radius-right-side bg-light">
-                <h6 className="drop-heading">Pages utiles</h6>
+                <h6 className="drop-heading">{navLabels.usefulPages}</h6>
                 {navCompanyPage.map((navPage, i) => (
                   <span key={i + 1}>
                     <Link href={navPage.href}>
@@ -118,18 +142,41 @@ const OffCanvasMenu = () => {
         </li>
       </ul>
       <div className="action-btns mt-4 ps-3">
-        <span data-bs-dismiss="offcanvas" aria-label="Close">
-          <Link href="/login">
-            <a className="btn btn-outline-primary text-decoration-none me-2">
-              Connexion
-            </a>
-          </Link>
-        </span>
-        <span data-bs-dismiss="offcanvas" aria-label="Close">
-          <Link href="/request-demo">
-            <a className="btn btn-primary">Démarrer</a>
-          </Link>
-        </span>
+        <div className="dropdown rfidia-lang-dropdown">
+          <button
+            className="btn btn-primary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span className="rfidia-lang-current">
+              <img
+                src={selectedLanguage.flagSrc}
+                alt={selectedLanguage.label}
+                className="rfidia-lang-flag-img"
+              />
+              <span>{navLabels.language}: {selectedLanguage.key.toUpperCase()}</span>
+            </span>
+          </button>
+          <ul className="dropdown-menu shadow border-0 rounded-custom rfidia-lang-menu">
+            {languageOptions.map((option) => (
+              <li key={option.key}>
+                <button
+                  type="button"
+                  className={`dropdown-item rfidia-lang-item${language === option.key ? ' active' : ''}`}
+                  onClick={() => onLanguageChange && onLanguageChange(option.key)}
+                >
+                  <img
+                    src={option.flagSrc}
+                    alt={option.label}
+                    className="rfidia-lang-flag-img"
+                  />
+                  <span>{option.label}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

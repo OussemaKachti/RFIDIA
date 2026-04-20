@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
@@ -23,18 +23,6 @@ const solutions = [
       </svg>
     ),
     accent: "#2563eb",
-  },
-  {
-    title: "Gestion des Actifs",
-    description: "Pilotage intelligent de vos actifs avec localisation, inventaire automatisé et réduction des pertes opérationnelles.",
-    image: "/a_rfidia/z_rfid/rfid11.png",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="sol-icon">
-        <path d="M5 3v18M19 3v18M3 9h18M3 15h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="2" fill="currentColor" />
-      </svg>
-    ),
-    accent: "#0ea5e9",
   },
   {
     title: "Visibilité temps réel (IoT)",
@@ -169,25 +157,25 @@ const partners = [
 
 const testimonials = [
   {
+    image: "/a_rfidia/z_rfid/amr.jfif",
     quote:
-      "RFIDIA nous accompagne depuis plus de trois ans. Leur approche sur mesure s'est parfaitement intégrée à notre environnement industriel.",
-    name: "Responsable Opérations",
-    company: "Secteur Logistique",
-    initials: "RO",
+      "Leurs solutions, entièrement paramétrables, correspondent parfaitement à nos exigences. L'interfaçage avec notre système d'information s'est fait sans adaptation de notre côté. Diagnostic personnalisé, déploiement sur site et contrat de maintenance : un accompagnement sur mesure.",
+    name: "Amira Ben Saleh",
+    company: "Directrice des Systèmes d'Information",
   },
   {
+    image: "/a_rfidia/z_rfid/img1.jfif",
     quote:
-      "L'équipe a su comprendre nos contraintes industrielles et livrer une solution fiable, rapide à déployer et simple à exploiter.",
-    name: "Directeur Technique",
-    company: "Industrie Manufacturière",
-    initials: "DT",
+      "RFIDIA nous accompagne depuis plus de trois ans. Leur approche au cas par cas et leurs solutions sur mesure se sont parfaitement intégrées à notre environnement. Nous avons réduit nos coûts et gagné en agilité, grâce à la sécurisation de nos flux logistiques et l'automatisation des tâches chronophages.",
+    name: "Mohamed Ben Ali",
+    company: "Directeur de la Production",
   },
   {
+    image: "/a_rfidia/z_rfid/samia.jfif",
     quote:
-      "Les résultats sont immédiats : meilleure visibilité sur les stocks, moins d'erreurs et une traçabilité complète sur toute la chaîne.",
-    name: "Responsable Chaîne Logistique",
-    company: "Distribution",
-    initials: "RS",
+      "RFIDIA nous accompagne depuis plus de trois ans. Leur approche au cas par cas et leurs solutions sur mesure se sont parfaitement intégrées à notre environnement. Nous avons réduit nos coûts et gagné en agilité, grâce à la sécurisation de nos flux logistiques et l'automatisation des tâches chronophages.",
+    name: "Samia Ben Mahmoud",
+    company: "Responsable Logistique",
   },
 ];
 
@@ -214,8 +202,559 @@ const faqs = [
   },
 ];
 
+const i18nContent = {
+  fr: {
+    navbar: {
+      home: "Accueil",
+      about: "A propos",
+      services: "Services",
+      contact: "Contactez-nous",
+      company: "Entreprise",
+      usefulLinks: "Liens utiles",
+      usefulPages: "Pages utiles",
+      language: "Langue",
+      french: "Francais",
+      english: "English",
+      italian: "Italiano",
+    },
+    footer: {
+      followUs: "Suivez-nous :",
+      companyTitle: "Notre Entreprise",
+      about: "A Propos",
+      solutions: "Nos Solutions",
+      sectors: "Secteurs d'Activite",
+      projects: "Nos Realisations",
+      contact: "Contact",
+      contactTitle: "Contactez-nous",
+      address: "Adresse",
+      email: "Email",
+      phone: "Telephone",
+      newsletter: "Newsletter",
+      newsletterDesc: "Restez informe sur les dernieres innovations en tracabilite et IoT.",
+      newsletterPlaceholder: "Votre adresse email",
+      newsletterAria: "S'abonner",
+      copyright: "Tous droits reserves.",
+      privacy: "Politique de confidentialite",
+      legal: "Mentions legales",
+      brandDesc:
+        "Leader tunisien de la tracabilite intelligente. Nous accompagnons les entreprises dans leur transformation digitale grace a nos solutions RFID, IoT et codes-barres haute performance.",
+    },
+    pageTitle: "RFIDIA",
+    pageDesc:
+      "RFIDIA, leader tunisien en solutions de tracabilite intelligente: RFID, IoT, codes-barres et systemes embarques.",
+    heroBadge: "Solutions de Tracabilite Intelligente",
+    heroTitlePrefix: "Technologie",
+    heroTitleAccent: "RFID & IoT",
+    heroTitleSuffix: "pour votre entreprise",
+    heroSub:
+      "RFIDIA accompagne les entreprises dans leur transformation digitale avec des solutions fiables, evolutives et adaptees a la realite terrain.",
+    heroBtnPrimary: "Decouvrir nos solutions",
+    heroBtnGhost: "Nous contacter",
+    heroFloatRealtime: "Tracabilite temps reel",
+    heroFloatFast: "Deploiement rapide",
+    sectionAbout: "A propos",
+    sectionAboutTitle: "La ou les services IT rencontrent l'",
+    sectionAboutAccent: "innovation",
+    sectionAboutP1:
+      "RFIDIA accompagne les entreprises dans leur transformation digitale grace a des solutions RFID, IoT et logicielles fiables, evolutives et orientees resultats.",
+    sectionAboutP2:
+      "Notre equipe combine expertise metier, integration systeme et accompagnement operationnel pour transformer vos processus en avantages competitifs durables.",
+    aboutBtn1: "En savoir plus",
+    aboutBtn2: "Parlons de votre projet",
+    aboutPoint1Title: "Integration fluide",
+    aboutPoint1Desc: "Connexion native avec ERP, WMS et outils existants.",
+    aboutPoint2Title: "Visibilite temps reel",
+    aboutPoint2Desc: "Suivi des actifs, audits et indicateurs decisionnels instantanes.",
+    aboutPoint3Title: "Support dedie",
+    aboutPoint3Desc: "Accompagnement continu, maintenance proactive et montee en competence.",
+    aboutPoint4Title: "Scalabilite",
+    aboutPoint4Desc: "Architecture pensee pour accompagner votre croissance future.",
+    sections: {
+      solutionsTitle: "Nos Solutions Cles",
+      solutionsDesc:
+        "Trois piliers complementaires pour renforcer votre performance : identification, visibilite temps reel et controle d'acces.",
+      servicesTitle: "Nos Services de Virtualisation",
+      servicesDesc:
+        "De l'evaluation a la maintenance, nous optimisons votre infrastructure IT avec une approche fiable et evolutive.",
+      sectorsTitle: "Secteurs & Cas d'Usage",
+      sectorsDesc: "Decouvrez comment nos solutions s'adaptent a vos processus metiers.",
+      testimonialsTitle: "Temoignages clients",
+      testimonialsDesc:
+        "Ils nous font confiance pour leurs projets de tracabilite et d'automatisation.",
+      partnersTitle: "Ils nous font confiance",
+      partnersDesc:
+        "RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions technologiques de premier plan.",
+      faqTitle: "Questions frequentes",
+      faqDesc: "Besoin de plus d'info sur nos solutions RFID et IoT ?",
+      faqBtn: "Contactez-nous",
+    },
+    misc: {
+      solutionLabel: "Solution",
+      viewSolution: "Voir la solution",
+      stepLabel: "Etape",
+      caseUsage: "Cas d'usage",
+      rfidiaSolutions: "Solutions RFIDIA",
+      discover: "Decouvrir",
+    },
+    statsLabels: stats.map((s) => s.label),
+    solutionTexts: solutions.map((s) => ({ title: s.title, description: s.description })),
+    sectorTexts: sectors.map((s) => ({ title: s.title, description: s.description, tag: s.tag })),
+    virtualizationTexts: virtualizationServices.map((s) => ({ title: s.title, desc: s.desc })),
+    testimonialTexts: testimonials.map((t) => ({ quote: t.quote, name: t.name, company: t.company })),
+    faqTexts: faqs.map((f) => ({ question: f.question, answer: f.answer })),
+  },
+  en: {
+    navbar: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      contact: "Contact us",
+      company: "Company",
+      usefulLinks: "Useful links",
+      usefulPages: "Useful pages",
+      language: "Language",
+      french: "Francais",
+      english: "English",
+      italian: "Italiano",
+    },
+    footer: {
+      followUs: "Follow us:",
+      companyTitle: "Our Company",
+      about: "About",
+      solutions: "Our Solutions",
+      sectors: "Industry Sectors",
+      projects: "Our Projects",
+      contact: "Contact",
+      contactTitle: "Contact us",
+      address: "Address",
+      email: "Email",
+      phone: "Phone",
+      newsletter: "Newsletter",
+      newsletterDesc: "Stay informed about the latest RFID and IoT innovations.",
+      newsletterPlaceholder: "Your email address",
+      newsletterAria: "Subscribe",
+      copyright: "All rights reserved.",
+      privacy: "Privacy Policy",
+      legal: "Legal Notice",
+      brandDesc:
+        "Tunisian leader in smart traceability. We support companies in their digital transformation through high-performance RFID, IoT and barcode solutions.",
+    },
+    pageTitle: "RFIDIA",
+    pageDesc:
+      "RFIDIA, Tunisian leader in smart traceability solutions: RFID, IoT, barcodes and embedded systems.",
+    heroBadge: "Smart Traceability Solutions",
+    heroTitlePrefix: "Technology",
+    heroTitleAccent: "RFID & IoT",
+    heroTitleSuffix: "for your business",
+    heroSub:
+      "RFIDIA helps companies accelerate digital transformation with reliable, scalable solutions adapted to real field operations.",
+    heroBtnPrimary: "Discover our solutions",
+    heroBtnGhost: "Contact us",
+    heroFloatRealtime: "Real-time traceability",
+    heroFloatFast: "Fast deployment",
+    sectionAbout: "About",
+    sectionAboutTitle: "Where IT services meet",
+    sectionAboutAccent: "innovation",
+    sectionAboutP1:
+      "RFIDIA supports companies in their digital transformation with reliable, scalable and result-driven RFID, IoT and software solutions.",
+    sectionAboutP2:
+      "Our team combines domain expertise, system integration and operational support to turn your processes into sustainable competitive advantages.",
+    aboutBtn1: "Learn more",
+    aboutBtn2: "Discuss your project",
+    aboutPoint1Title: "Seamless integration",
+    aboutPoint1Desc: "Native connectivity with ERP, WMS and existing tools.",
+    aboutPoint2Title: "Real-time visibility",
+    aboutPoint2Desc: "Asset tracking, audits and instant decision-making indicators.",
+    aboutPoint3Title: "Dedicated support",
+    aboutPoint3Desc: "Continuous guidance, proactive maintenance and skills development.",
+    aboutPoint4Title: "Scalability",
+    aboutPoint4Desc: "Architecture designed to support your future growth.",
+    sections: {
+      solutionsTitle: "Our Key Solutions",
+      solutionsDesc:
+        "Three complementary pillars to improve your performance: identification, real-time visibility and access control.",
+      servicesTitle: "Our Virtualization Services",
+      servicesDesc:
+        "From assessment to maintenance, we optimize your IT infrastructure with a reliable and scalable approach.",
+      sectorsTitle: "Sectors & Use Cases",
+      sectorsDesc: "Discover how our solutions adapt to your business processes.",
+      testimonialsTitle: "Client testimonials",
+      testimonialsDesc: "They trust us for their traceability and automation projects.",
+      partnersTitle: "Trusted by leading organizations",
+      partnersDesc:
+        "RFIDIA works with recognized partners to deliver top-tier technology solutions.",
+      faqTitle: "Frequently asked questions",
+      faqDesc: "Need more information about our RFID and IoT solutions?",
+      faqBtn: "Contact us",
+    },
+    misc: {
+      solutionLabel: "Solution",
+      viewSolution: "View solution",
+      stepLabel: "Step",
+      caseUsage: "Use case",
+      rfidiaSolutions: "RFIDIA Solutions",
+      discover: "Discover",
+    },
+    statsLabels: ["Deployed projects", "Years of experience", "Client satisfaction", "Covered sectors"],
+    solutionTexts: [
+      {
+        title: "Traceability & Identification",
+        description:
+          "Reliable identification and continuous traceability of your products, assets and flows from entry point to exit point.",
+      },
+      {
+        title: "Real-time Visibility (IoT)",
+        description:
+          "Real-time monitoring of operations through IoT sensors, live dashboards and instant alerts.",
+      },
+      {
+        title: "Access Control",
+        description:
+          "Secure physical access with custom rules, access logs and centralized control.",
+      },
+    ],
+    sectorTexts: [
+      {
+        title: "Industrial Sector",
+        description:
+          "Production traceability, equipment tracking, quality control and operations management in factories.",
+        tag: "Industry",
+      },
+      {
+        title: "Supply Chain",
+        description:
+          "End-to-end flow visibility, reliable inventory and reduced losses across the supply chain.",
+        tag: "Logistics",
+      },
+      {
+        title: "Healthcare",
+        description:
+          "Medical device tracking, sensitive stock protection and improved internal workflows.",
+        tag: "Medical",
+      },
+      {
+        title: "Education & Schools",
+        description:
+          "Access management, attendance and asset tracking, and safer student journeys.",
+        tag: "Education",
+      },
+    ],
+    virtualizationTexts: [
+      {
+        title: "Assessment and Planning",
+        desc: "Audit your performance and capacity needs to choose the right architecture and plan resources.",
+      },
+      {
+        title: "Virtualized Architecture Design",
+        desc: "Configure hosts and VMs with optimal allocation of CPU, memory, storage and network.",
+      },
+      {
+        title: "Migration and Deployment",
+        desc: "Migrate your applications, validate with tests and fine-tune for reliable deployment.",
+      },
+      {
+        title: "Management and Maintenance",
+        desc: "Continuous monitoring, backup, disaster recovery and proactive maintenance to avoid disruptions.",
+      },
+    ],
+    testimonialTexts: [
+      {
+        quote:
+          "Their fully customizable solutions perfectly match our requirements. Integration with our information system required no adaptation on our side. Personalized diagnostics, on-site deployment and maintenance contract: a tailor-made support.",
+        name: "Amira Ben Saleh",
+        company: "Information Systems Director",
+      },
+      {
+        quote:
+          "RFIDIA has supported us for over three years. Their case-by-case approach and tailored solutions integrated perfectly into our environment. We reduced costs and gained agility by securing our logistics flows and automating time-consuming tasks.",
+        name: "Mohamed Ben Ali",
+        company: "Production Director",
+      },
+      {
+        quote:
+          "RFIDIA has supported us for over three years. Their case-by-case approach and tailored solutions integrated perfectly into our environment. We reduced costs and gained agility by securing our logistics flows and automating time-consuming tasks.",
+        name: "Samia Ben Mahmoud",
+        company: "Logistics Manager",
+      },
+    ],
+    faqTexts: [
+      {
+        question: "What solutions does RFIDIA provide?",
+        answer:
+          "We provide RFID, IoT, barcode and embedded solutions for traceability, automation and operational performance. Each solution is tailored to your sector-specific needs.",
+      },
+      {
+        question: "Are your solutions suitable for my business?",
+        answer:
+          "Yes. Our deployments are custom-designed according to your sector, field constraints and business goals. We work across industry, logistics, healthcare, retail and more.",
+      },
+      {
+        question: "How does a project with RFIDIA work?",
+        answer:
+          "We start with a detailed process audit, then handle design, hardware/software integration, go-live and post-deployment support. You are guided at each stage.",
+      },
+      {
+        question: "Do you ensure data security?",
+        answer:
+          "Yes. We apply security best practices at every stage: secure architecture, access control, encrypted data exchange and regular maintenance for service continuity.",
+      },
+    ],
+  },
+  it: {
+    navbar: {
+      home: "Home",
+      about: "Chi siamo",
+      services: "Servizi",
+      contact: "Contattaci",
+      company: "Azienda",
+      usefulLinks: "Link utili",
+      usefulPages: "Pagine utili",
+      language: "Lingua",
+      french: "Francais",
+      english: "English",
+      italian: "Italiano",
+    },
+    footer: {
+      followUs: "Seguici:",
+      companyTitle: "La nostra azienda",
+      about: "Chi siamo",
+      solutions: "Le nostre soluzioni",
+      sectors: "Settori",
+      projects: "I nostri progetti",
+      contact: "Contatto",
+      contactTitle: "Contattaci",
+      address: "Indirizzo",
+      email: "Email",
+      phone: "Telefono",
+      newsletter: "Newsletter",
+      newsletterDesc: "Resta aggiornato sulle ultime innovazioni RFID e IoT.",
+      newsletterPlaceholder: "Il tuo indirizzo email",
+      newsletterAria: "Iscriviti",
+      copyright: "Tutti i diritti riservati.",
+      privacy: "Politica sulla privacy",
+      legal: "Note legali",
+      brandDesc:
+        "Leader tunisino nella tracciabilita intelligente. Supportiamo le aziende nella trasformazione digitale con soluzioni RFID, IoT e codici a barre ad alte prestazioni.",
+    },
+    pageTitle: "RFIDIA",
+    pageDesc:
+      "RFIDIA, leader tunisino nelle soluzioni di tracciabilita intelligente: RFID, IoT, codici a barre e sistemi embedded.",
+    heroBadge: "Soluzioni di Tracciabilita Intelligente",
+    heroTitlePrefix: "Tecnologia",
+    heroTitleAccent: "RFID & IoT",
+    heroTitleSuffix: "per la tua azienda",
+    heroSub:
+      "RFIDIA accompagna le aziende nella trasformazione digitale con soluzioni affidabili, scalabili e adatte alla realta operativa.",
+    heroBtnPrimary: "Scopri le nostre soluzioni",
+    heroBtnGhost: "Contattaci",
+    heroFloatRealtime: "Tracciabilita in tempo reale",
+    heroFloatFast: "Implementazione rapida",
+    sectionAbout: "Chi siamo",
+    sectionAboutTitle: "Dove i servizi IT incontrano",
+    sectionAboutAccent: "l'innovazione",
+    sectionAboutP1:
+      "RFIDIA supporta le aziende nella trasformazione digitale con soluzioni RFID, IoT e software affidabili, scalabili e orientate ai risultati.",
+    sectionAboutP2:
+      "Il nostro team combina competenze di settore, integrazione di sistemi e supporto operativo per trasformare i processi in vantaggi competitivi duraturi.",
+    aboutBtn1: "Scopri di piu",
+    aboutBtn2: "Parliamo del tuo progetto",
+    aboutPoint1Title: "Integrazione fluida",
+    aboutPoint1Desc: "Connessione nativa con ERP, WMS e strumenti esistenti.",
+    aboutPoint2Title: "Visibilita in tempo reale",
+    aboutPoint2Desc: "Tracciamento asset, audit e indicatori decisionali immediati.",
+    aboutPoint3Title: "Supporto dedicato",
+    aboutPoint3Desc: "Affiancamento continuo, manutenzione proattiva e crescita delle competenze.",
+    aboutPoint4Title: "Scalabilita",
+    aboutPoint4Desc: "Architettura progettata per sostenere la crescita futura.",
+    sections: {
+      solutionsTitle: "Le nostre soluzioni chiave",
+      solutionsDesc:
+        "Tre pilastri complementari per migliorare le performance: identificazione, visibilita in tempo reale e controllo accessi.",
+      servicesTitle: "I nostri servizi di virtualizzazione",
+      servicesDesc:
+        "Dalla valutazione alla manutenzione, ottimizziamo la tua infrastruttura IT con un approccio affidabile e scalabile.",
+      sectorsTitle: "Settori e casi d'uso",
+      sectorsDesc: "Scopri come le nostre soluzioni si adattano ai tuoi processi aziendali.",
+      testimonialsTitle: "Testimonianze clienti",
+      testimonialsDesc: "Ci scelgono per progetti di tracciabilita e automazione.",
+      partnersTitle: "Si fidano di noi",
+      partnersDesc:
+        "RFIDIA collabora con partner riconosciuti per offrirti soluzioni tecnologiche di alto livello.",
+      faqTitle: "Domande frequenti",
+      faqDesc: "Hai bisogno di maggiori informazioni sulle nostre soluzioni RFID e IoT?",
+      faqBtn: "Contattaci",
+    },
+    misc: {
+      solutionLabel: "Soluzione",
+      viewSolution: "Vedi soluzione",
+      stepLabel: "Fase",
+      caseUsage: "Caso d'uso",
+      rfidiaSolutions: "Soluzioni RFIDIA",
+      discover: "Scopri",
+    },
+    statsLabels: ["Progetti implementati", "Anni di esperienza", "Soddisfazione clienti", "Settori coperti"],
+    solutionTexts: [
+      {
+        title: "Tracciabilita e identificazione",
+        description:
+          "Identificazione affidabile e tracciabilita continua di prodotti, asset e flussi dal punto di ingresso al punto di uscita.",
+      },
+      {
+        title: "Visibilita in tempo reale (IoT)",
+        description:
+          "Monitoraggio in tempo reale delle operazioni tramite sensori IoT, dashboard live e avvisi istantanei.",
+      },
+      {
+        title: "Controllo accessi",
+        description:
+          "Messa in sicurezza degli accessi fisici con regole personalizzate, registri passaggi e controllo centralizzato.",
+      },
+    ],
+    sectorTexts: [
+      {
+        title: "Settore industriale",
+        description:
+          "Tracciabilita della produzione, monitoraggio delle attrezzature, controllo qualita e gestione operativa in fabbrica.",
+        tag: "Industria",
+      },
+      {
+        title: "Catena logistica",
+        description:
+          "Visibilita end-to-end dei flussi, inventari affidabili e riduzione delle perdite lungo la supply chain.",
+        tag: "Logistica",
+      },
+      {
+        title: "Sanita",
+        description:
+          "Tracciamento dei dispositivi medici, protezione delle scorte sensibili e miglioramento dei processi interni.",
+        tag: "Medicale",
+      },
+      {
+        title: "Istruzione e scuole",
+        description:
+          "Gestione degli accessi, monitoraggio presenze e materiali, maggiore sicurezza nel percorso studente.",
+        tag: "Istruzione",
+      },
+    ],
+    virtualizationTexts: [
+      {
+        title: "Valutazione e pianificazione",
+        desc: "Analisi di performance e capacita per scegliere l'architettura corretta e pianificare le risorse.",
+      },
+      {
+        title: "Progettazione architettura virtualizzata",
+        desc: "Configurazione host e VM con allocazione ottimale di CPU, memoria, storage e rete.",
+      },
+      {
+        title: "Migrazione e deployment",
+        desc: "Migrazione applicazioni, test di validazione e ottimizzazioni per un rilascio affidabile.",
+      },
+      {
+        title: "Gestione e manutenzione",
+        desc: "Monitoraggio continuo, backup, disaster recovery e manutenzione proattiva per evitare interruzioni.",
+      },
+    ],
+    testimonialTexts: [
+      {
+        quote:
+          "Le loro soluzioni, totalmente configurabili, rispondono perfettamente alle nostre esigenze. L'integrazione con il nostro sistema informativo e avvenuta senza adattamenti da parte nostra. Diagnosi personalizzata, deployment on-site e contratto di manutenzione: un supporto su misura.",
+        name: "Amira Ben Saleh",
+        company: "Direttrice Sistemi Informativi",
+      },
+      {
+        quote:
+          "RFIDIA ci supporta da oltre tre anni. Il loro approccio caso per caso e le soluzioni su misura si sono integrate perfettamente nel nostro ambiente. Abbiamo ridotto i costi e migliorato l'agilita grazie alla sicurezza dei flussi logistici e all'automazione delle attivita ripetitive.",
+        name: "Mohamed Ben Ali",
+        company: "Direttore di Produzione",
+      },
+      {
+        quote:
+          "RFIDIA ci supporta da oltre tre anni. Il loro approccio caso per caso e le soluzioni su misura si sono integrate perfettamente nel nostro ambiente. Abbiamo ridotto i costi e migliorato l'agilita grazie alla sicurezza dei flussi logistici e all'automazione delle attivita ripetitive.",
+        name: "Samia Ben Mahmoud",
+        company: "Responsabile Logistica",
+      },
+    ],
+    faqTexts: [
+      {
+        question: "Quali soluzioni offre RFIDIA?",
+        answer:
+          "Offriamo soluzioni RFID, IoT, codici a barre e sistemi embedded per tracciabilita, automazione e performance operative. Ogni soluzione e personalizzata in base al settore.",
+      },
+      {
+        question: "Le soluzioni sono adatte alla mia attivita?",
+        answer:
+          "Si. I nostri progetti sono su misura in base a settore, vincoli operativi e obiettivi aziendali. Operiamo in industria, logistica, sanita, retail e altri ambiti.",
+      },
+      {
+        question: "Come si svolge un progetto con RFIDIA?",
+        answer:
+          "Partiamo da un audit approfondito dei processi, poi seguiamo progettazione, integrazione hardware/software, messa in produzione e supporto post-go-live.",
+      },
+      {
+        question: "Garantite la sicurezza dei dati?",
+        answer:
+          "Si. Applichiamo best practice di sicurezza in ogni fase: architettura sicura, controllo accessi, cifratura degli scambi e manutenzione regolare.",
+      },
+    ],
+  },
+};
+
 const ItSolution = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const [language, setLanguage] = useState('fr');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const saved = window.localStorage.getItem('rfidia_lang');
+    if (saved && ['fr', 'en', 'it'].includes(saved)) {
+      setLanguage(saved);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem('rfidia_lang', language);
+    document.documentElement.lang = language;
+  }, [language]);
+
+  const t = i18nContent[language] || i18nContent.fr;
+
+  const localizedStats = stats.map((item, idx) => ({
+    ...item,
+    label: t.statsLabels[idx] || item.label,
+  }));
+
+  const localizedSolutions = solutions.map((item, idx) => ({
+    ...item,
+    title: t.solutionTexts[idx]?.title || item.title,
+    description: t.solutionTexts[idx]?.description || item.description,
+  }));
+
+  const localizedSectors = sectors.map((item, idx) => ({
+    ...item,
+    title: t.sectorTexts[idx]?.title || item.title,
+    description: t.sectorTexts[idx]?.description || item.description,
+    tag: t.sectorTexts[idx]?.tag || item.tag,
+  }));
+
+  const localizedVirtualizationServices = virtualizationServices.map((item, idx) => ({
+    ...item,
+    title: t.virtualizationTexts[idx]?.title || item.title,
+    desc: t.virtualizationTexts[idx]?.desc || item.desc,
+  }));
+
+  const localizedTestimonials = testimonials.map((item, idx) => ({
+    ...item,
+    quote: t.testimonialTexts[idx]?.quote || item.quote,
+    name: t.testimonialTexts[idx]?.name || item.name,
+    company: t.testimonialTexts[idx]?.company || item.company,
+  }));
+
+  const localizedFaqs = faqs.map((item, idx) => ({
+    ...item,
+    question: t.faqTexts[idx]?.question || item.question,
+    answer: t.faqTexts[idx]?.answer || item.answer,
+  }));
 
   const toggleFaq = (idx) => setOpenFaq(openFaq === idx ? null : idx);
 
@@ -235,10 +774,10 @@ const ItSolution = () => {
 
   return (
     <Layout
-      title="RFIDIA"
-      desc="RFIDIA, leader tunisien en solutions de traçabilité intelligente: RFID, IoT, codes-barres et systèmes embarqués."
+      title={t.pageTitle}
+      desc={t.pageDesc}
     >
-      <Navbar />
+      <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="rl">
 
@@ -253,31 +792,30 @@ const ItSolution = () => {
               <div className="col-lg-6">
                 <span className="rl-badge">
                   <span className="rl-badge__dot" />
-                  Solutions de Traçabilité Intelligente
+                  {t.heroBadge}
                 </span>
                 <h1 className="rl-hero__title">
-                  Technologie <span className="rl-gradient-text">RFID & IoT</span><br />
-                  pour votre entreprise
+                  {t.heroTitlePrefix} <span className="rl-gradient-text">{t.heroTitleAccent}</span><br />
+                  {t.heroTitleSuffix}
                 </h1>
                 <p className="rl-hero__sub">
-                  RFIDIA accompagne les entreprises dans leur transformation digitale avec des
-                  solutions fiables, évolutives et adaptées à la réalité terrain.
+                  {t.heroSub}
                 </p>
                 <div className="rl-hero__actions">
                   <Link href="/contact-us" passHref>
                     <a className="rl-btn rl-btn--primary">
-                      Découvrir nos solutions
+                      {t.heroBtnPrimary}
                       <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </a>
                   </Link>
                   <Link href="/contact-us" passHref>
-                    <a className="rl-btn rl-btn--ghost">Nous contacter</a>
+                    <a className="rl-btn rl-btn--ghost">{t.heroBtnGhost}</a>
                   </Link>
                 </div>
                 <div className="rl-hero__chips">
-                  {stats.map((s) => (
+                  {localizedStats.map((s) => (
                     <div className="rl-chip" key={s.label}>
                       <strong>{s.value}</strong>
                       <span>{s.label}</span>
@@ -297,14 +835,14 @@ const ItSolution = () => {
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span>Traçabilité temps réel</span>
+                    <span>{t.heroFloatRealtime}</span>
                   </div>
                   <div className="rl-hero__float rl-hero__float--br">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <circle cx="12" cy="12" r="10" stroke="#0ea5e9" strokeWidth="2" />
                       <path d="M12 6v6l4 2" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" />
                     </svg>
-                    <span>Déploiement rapide</span>
+                    <span>{t.heroFloatFast}</span>
                   </div>
                 </div>
               </div>
@@ -317,7 +855,7 @@ const ItSolution = () => {
   <div className="container">
     <div className="rl-section-head">
       <SectionDivider />
-      <h2>À propos</h2>
+      <h2>{t.sectionAbout}</h2>
     </div>
     <div className="row align-items-center g-5">
 
@@ -431,44 +969,41 @@ const ItSolution = () => {
       <div className="col-lg-6">
         <div className="rl-about-content">
           <h2>
-            Là où les services IT rencontrent l'
-            <span className="rl-gradient-text">innovation</span>
+            {t.sectionAboutTitle}
+            <span className="rl-gradient-text">{t.sectionAboutAccent}</span>
           </h2>
           <p>
-            RFIDIA accompagne les entreprises dans leur transformation digitale grâce à
-            des solutions RFID, IoT et logicielles fiables, évolutives et orientées
-            résultats.
+            {t.sectionAboutP1}
           </p>
           <p>
-            Notre équipe combine expertise métier, intégration système et accompagnement
-            opérationnel pour transformer vos processus en avantages compétitifs durables.
+            {t.sectionAboutP2}
           </p>
 
           <div className="rl-about-actions rl-about-actions--inline">
             <Link href="/about-us" passHref>
-              <a className="rl-btn rl-btn--primary">En savoir plus</a>
+              <a className="rl-btn rl-btn--primary">{t.aboutBtn1}</a>
             </Link>
             <Link href="/contact-us" passHref>
-              <a className="rl-btn rl-btn--outline-dark">Parlons de votre projet</a>
+              <a className="rl-btn rl-btn--outline-dark">{t.aboutBtn2}</a>
             </Link>
           </div>
 
           <div className="rl-about-points">
             <div className="rl-about-point">
-              <h4>Intégration fluide</h4>
-              <p>Connexion native avec ERP, WMS et outils existants.</p>
+              <h4>{t.aboutPoint1Title}</h4>
+              <p>{t.aboutPoint1Desc}</p>
             </div>
             <div className="rl-about-point">
-              <h4>Visibilité temps réel</h4>
-              <p>Suivi des actifs, audits et indicateurs décisionnels instantanés.</p>
+              <h4>{t.aboutPoint2Title}</h4>
+              <p>{t.aboutPoint2Desc}</p>
             </div>
             <div className="rl-about-point">
-              <h4>Support dédié</h4>
-              <p>Accompagnement continu, maintenance proactive et montée en compétence.</p>
+              <h4>{t.aboutPoint3Title}</h4>
+              <p>{t.aboutPoint3Desc}</p>
             </div>
             <div className="rl-about-point">
-              <h4>Scalabilité</h4>
-              <p>Architecture pensée pour accompagner votre croissance future.</p>
+              <h4>{t.aboutPoint4Title}</h4>
+              <p>{t.aboutPoint4Desc}</p>
             </div>
           </div>
 
@@ -484,39 +1019,36 @@ const ItSolution = () => {
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
-              <h2>Nos Solutions Clés</h2>
+              <h2>{t.sections.solutionsTitle}</h2>
               <p>
-                Quatre solutions stratégiques pour renforcer votre performance : identification,
-                gestion des actifs, visibilité temps réel et contrôle d'accès.
+                {t.sections.solutionsDesc}
               </p>
             </div>
 
-            <div className="row g-4">
-              {solutions.map((item) => (
-                <div className="col-md-6 col-xl-6" key={item.title}>
-                  <article className="rl-sol-card">
-                    <div className="rl-sol-card__header">
-                      <div className="rl-sol-card__img-wrap">
-                        <img src={item.image} alt={item.title} className="rl-sol-card__img" />
-                        <div className="rl-sol-card__overlay" />
-                      </div>
-                      <div className="rl-sol-card__icon" style={{ "--accent": item.accent }}>
-                        {item.icon}
-                      </div>
+            <div className="rl-solutions-grid">
+              {localizedSolutions.map((item, idx) => (
+                <article
+                  className="rl-solutions-grid__card"
+                  key={item.title}
+                  style={{ "--accent": item.accent, "--accent-soft": `${item.accent}1A` }}
+                >
+                  <div className="rl-solutions-grid__media">
+                    <img src={item.image} alt={item.title} className="rl-solutions-grid__img" />
+                    <span className="rl-solutions-grid__badge">{t.misc.solutionLabel} 0{idx + 1}</span>
+                    <div className="rl-solutions-grid__icon">{item.icon}</div>
+                  </div>
+
+                  <div className="rl-solutions-grid__body">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <div className="rl-solutions-grid__footer">
+                      <span>{t.misc.viewSolution}</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
                     </div>
-                    <div className="rl-sol-card__body">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                      
-                      <div className="rl-sol-card__action">
-                        <span>Découvrir</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                  </article>
-                </div>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
@@ -527,14 +1059,13 @@ const ItSolution = () => {
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
-              <h2>Nos Services de Virtualisation</h2>
+              <h2>{t.sections.servicesTitle}</h2>
               <p>
-                De l'évaluation à la maintenance, nous optimisons votre infrastructure IT avec une
-                approche fiable et évolutive.
+                {t.sections.servicesDesc}
               </p>
             </div>
             <div className="row g-4">
-              {virtualizationServices.map((item) => (
+              {localizedVirtualizationServices.map((item) => (
                 <div className="col-lg-3 col-md-6" key={item.num}>
                   <div className="single-article rounded-custom h-100 mt-0">
                     <a className="article-img">
@@ -548,7 +1079,7 @@ const ItSolution = () => {
                     <div className="article-content p-4">
                       <div className="article-category mb-4 d-block">
                         <span className="d-inline-block text-dark badge bg-primary-soft">
-                          Étape {item.num}
+                          {t.misc.stepLabel} {item.num}
                         </span>
                       </div>
                       <h2 className="h5 article-title">{item.title}</h2>
@@ -566,22 +1097,22 @@ const ItSolution = () => {
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
-              <h2>Secteurs & Cas d'Usage</h2>
-              <p>Découvrez comment nos solutions s'adaptent à vos processus métiers.</p>
+              <h2>{t.sections.sectorsTitle}</h2>
+              <p>{t.sections.sectorsDesc}</p>
             </div>
             <div className="rl-case-stack">
-              {sectors.map((item, idx) => (
+              {localizedSectors.map((item, idx) => (
                 <article
                   className={`rl-case-card${idx % 2 === 1 ? " rl-case-card--reverse" : ""}`}
                   key={item.id}
                   style={{ "--case-index": idx }}
                 >
                   <div className="rl-case-card__body">
-                    <span className="rl-case-card__overline">Cas d'usage {item.id}</span>
+                    <span className="rl-case-card__overline">{t.misc.caseUsage} {item.id}</span>
                     <h3>{item.title}</h3>
                     <div className="rl-case-card__chips">
                       <span>{item.tag}</span>
-                      <span>Solutions RFIDIA</span>
+                      <span>{t.misc.rfidiaSolutions}</span>
                     </div>
                     <p>{item.description}</p>
                     <br />
@@ -589,7 +1120,7 @@ const ItSolution = () => {
                     <br />
                     <div className="rl-case-card__action-btn">
                       <Link href="/contact-us" passHref>
-                        <a className="rl-btn rl-btn--primary" style={{ borderRadius: "8px", fontSize: "0.95rem" }}>Découvrir</a>
+                        <a className="rl-btn rl-btn--primary" style={{ borderRadius: "8px", fontSize: "0.95rem" }}>{t.misc.discover}</a>
                       </Link>
                     </div>
                   </div>
@@ -607,17 +1138,19 @@ const ItSolution = () => {
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
-              <h2>Témoignages clients</h2>
-              <p>Ils nous font confiance pour leurs projets de traçabilité et d'automatisation.</p>
+              <h2>{t.sections.testimonialsTitle}</h2>
+              <p>{t.sections.testimonialsDesc}</p>
             </div>
             <div className="row g-4">
-              {testimonials.map((item) => (
+              {localizedTestimonials.map((item) => (
                 <div className="col-lg-4" key={item.name}>
                   <blockquote className="rl-testi-card">
                     <div className="rl-testi-card__quote">"</div>
                     <p>{item.quote}</p>
                     <footer className="rl-testi-card__footer">
-                      <div className="rl-testi-card__avatar">{item.initials}</div>
+                      <div className="rl-testi-card__avatar">
+                        <img src={item.image} alt={item.name} />
+                      </div>
                       <div>
                         <strong>{item.name}</strong>
                         <span>{item.company}</span>
@@ -635,10 +1168,9 @@ const ItSolution = () => {
           <div className="container">
             <div className="rl-partners__head">
               <SectionDivider />
-              <h2 className="rl-partners__title">Ils nous font confiance</h2>
+              <h2 className="rl-partners__title">{t.sections.partnersTitle}</h2>
               <p className="rl-partners__sub">
-                RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions
-                technologiques de premier plan.
+                {t.sections.partnersDesc}
               </p>
             </div>
 
@@ -662,14 +1194,14 @@ const ItSolution = () => {
             <div className="row g-5 align-items-start">
               <div className="col-lg-4 text-center">
                 <SectionDivider />
-                <h2>Questions fréquentes</h2>
-                <p>Besoin de plus d'info sur nos solutions RFID et IoT ?</p>
+                <h2>{t.sections.faqTitle}</h2>
+                <p>{t.sections.faqDesc}</p>
                 <Link href="/contact-us" passHref>
-                  <a className="rl-btn rl-btn--primary mt-3">Contactez-nous</a>
+                  <a className="rl-btn rl-btn--primary mt-3">{t.sections.faqBtn}</a>
                 </Link>
               </div>
               <div className="col-lg-8">
-                {faqs.map((item, idx) => (
+                {localizedFaqs.map((item, idx) => (
                   <div
                     key={item.question}
                     className={`rl-faq-item${openFaq === idx ? " rl-faq-item--open" : ""}`}
@@ -697,7 +1229,7 @@ const ItSolution = () => {
         </section>
       </main>
 
-      <Footer footerGradient />
+      <Footer footerGradient translations={t.footer} />
     </Layout>
   );
 };

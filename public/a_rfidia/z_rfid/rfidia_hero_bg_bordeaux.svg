@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 1200 750" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Background hero bordeaux RFIDIA</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Background hero avec fond bordeaux, texture points et effets lumineux radiaux</desc>
+
+  <defs>
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#C2185B" opacity="0.25"/>
+    </pattern>
+    <radialGradient id="glowLeft" cx="20%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#C2185B" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1E2A4A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="85%" cy="55%" r="40%">
+      <stop offset="0%" stop-color="#253764" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1E2A4A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTop" cx="60%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="#2D3F6D" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1E2A4A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fond de base bordeaux -->
+  <rect width="1200" height="650" fill="#17254A" style="fill:rgb(23, 37, 74);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Couche bordeaux principale légèrement plus claire -->
+  <rect width="1200" height="650" fill="#1E2A4A" opacity="0.75" style="fill:rgb(30, 42, 74);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.75;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Texture pointillée -->
+  <rect width="1200" height="650" fill="url(#dots)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Glow gauche (comme le reflet bleu à gauche dans l'original) -->
+  <rect width="1200" height="650" fill="url(#glowLeft)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Glow droite bas (zone plus sombre comme l'original) -->
+  <rect width="1200" height="650" fill="url(#glowRight)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Glow top centre -->
+  <rect width="1200" height="650" fill="url(#glowTop)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Forme décorative cercle haut gauche partiel -->
+  <circle cx="-30" cy="180" r="200" fill="none" stroke="#2D3F6D" stroke-width="60" opacity="0.15" style="fill:none;stroke:rgb(45, 63, 109);color:rgb(0, 0, 0);stroke-width:60px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.15;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Forme décorative cercle bas droite partiel -->
+  <circle cx="1230" cy="520" r="220" fill="none" stroke="#253764" stroke-width="80" opacity="0.3" style="fill:none;stroke:rgb(37, 55, 100);color:rgb(0, 0, 0);stroke-width:80px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Petite forme cercle milieu haut -->
+  <circle cx="600" cy="-40" r="130" fill="none" stroke="#2D3F6D" stroke-width="50" opacity="0.12" style="fill:none;stroke:rgb(45, 63, 109);color:rgb(0, 0, 0);stroke-width:50px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.12;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Ligne diagonale décorative subtile -->
+  <line x1="0" y1="650" x2="1200" y2="200" stroke="#2D3F6D" stroke-width="1" opacity="0.08" style="fill:rgb(0, 0, 0);stroke:rgb(45, 63, 109);color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.08;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="0" y1="500" x2="900" y2="0" stroke="#2D3F6D" stroke-width="1" opacity="0.06" style="fill:rgb(0, 0, 0);stroke:rgb(45, 63, 109);color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.06;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Vignette bords sombres -->
+  <rect width="1200" height="650" fill="#101A33" opacity="0.18" style="fill:rgb(16, 26, 51);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Re-lighten centre -->
+  <ellipse cx="600" cy="325" rx="500" ry="280" fill="#2D3F6D" opacity="0.08" style="fill:rgb(45, 63, 109);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.08;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</svg>

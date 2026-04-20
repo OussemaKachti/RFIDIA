@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { HiMenu, HiOutlineX } from 'react-icons/hi';
 
@@ -12,9 +11,33 @@ import {
 } from '../../utils/data';
 import dynamic from 'next/dynamic';
 
-const Navbar = ({ navDark, insurance, classOption }) => {
+const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageChange, labels }) => {
   const [scroll, setScroll] = useState(0);
   const [headerTop, setHeaderTop] = useState(0);
+
+  const navLabels =
+    labels ||
+    {
+      home: 'Accueil',
+      about: 'A propos',
+      services: 'Services',
+      contact: 'Contactez-nous',
+      company: 'Entreprise',
+      usefulLinks: 'Liens utiles',
+      usefulPages: 'Pages utiles',
+      language: 'Langue',
+      french: 'Francais',
+      english: 'English',
+      italian: 'Italiano',
+    };
+
+  const languageOptions = [
+    { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
+    { key: 'en', label: navLabels.english, flagSrc: '/a_rfidia/z_rfid/am.png' },
+    { key: 'it', label: navLabels.italian, flagSrc: '/a_rfidia/z_rfid/it.png' },
+  ];
+
+  const selectedLanguage = languageOptions.find((opt) => opt.key === language) || languageOptions[0];
 
   useEffect(() => {
     const stickyheader = document.querySelector('.main-header');
@@ -50,14 +73,14 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   src="/a_rfidia/z_rfid/logo-RFIDIA-final.png"
                   alt="logo"
                   className="img-fluid logo-color"
-                  style={{ maxHeight: '42px', width: 'auto' }}
+                  style={{ maxHeight: '54px', width: 'auto' }}
                 />
               ) : (
                 <img
                   src="/logo-white.png"
                   alt="logo"
                   className="img-fluid logo-white"
-                  style={{ maxHeight: '36px', width: 'auto' }}
+                  style={{ maxHeight: '48px', width: 'auto' }}
                 />
               )}
             </a>
@@ -86,12 +109,12 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Accueil
+                  {navLabels.home}
                 </a>
                 <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
                   <div className="dropdown-grid rounded-custom width-full">
                     <div className="dropdown-grid-item">
-                      <h6 className="drop-heading">Accueil</h6>
+                      <h6 className="drop-heading">{navLabels.home}</h6>
                       {navHomeOne.map((navH, i) => (
                         <span key={i + 1}>
                           <Link href={navH.href}>
@@ -109,7 +132,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                       ))}
                     </div>
                     <div className="dropdown-grid-item radius-right-side bg-light">
-                      <h6 className="drop-heading">Accueil</h6>
+                      <h6 className="drop-heading">{navLabels.home}</h6>
                       {navHomeTwo.map((navH, i) => (
                         <span key={i + 10}>
                           <Link href={navH.href}>
@@ -131,18 +154,18 @@ const Navbar = ({ navDark, insurance, classOption }) => {
               </li>
               <li>
                 <Link href="about-us">
-                  <a className="nav-link">À propos</a>
+                  <a className="nav-link">{navLabels.about}</a>
                 </Link>
               </li>
               <li>
                 <Link href="services">
-                  <a className="nav-link">Services</a>
+                  <a className="nav-link">{navLabels.services}</a>
                 </Link>
               </li>
 
               <li>
                 <Link href="/contact-us">
-                  <a className="nav-link">Contactez-nous</a>
+                  <a className="nav-link">{navLabels.contact}</a>
                 </Link>
               </li>
               <li className="nav-item dropdown">
@@ -153,12 +176,12 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Entreprise
+                  {navLabels.company}
                 </a>
                 <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
                   <div className="dropdown-grid rounded-custom width-full">
                     <div className="dropdown-grid-item">
-                      <h6 className="drop-heading">Liens utiles</h6>
+                      <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
                       {navCompanyLinks.map((navLink, i) => (
                         <div key={i + 1}>
                           <Link href={navLink.href}>
@@ -173,7 +196,7 @@ const Navbar = ({ navDark, insurance, classOption }) => {
                       ))}
                     </div>
                     <div className="dropdown-grid-item radius-right-side bg-light">
-                      <h6 className="drop-heading">Pages utiles</h6>
+                      <h6 className="drop-heading">{navLabels.usefulPages}</h6>
                       {navCompanyPage.map((navPage, i) => (
                         <div key={i + 1}>
                           <Link href={navPage.href}>
@@ -194,18 +217,41 @@ const Navbar = ({ navDark, insurance, classOption }) => {
           </div>
 
           <div className="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
-            <Link href="login">
-              <a className="btn btn-link text-decoration-none me-2">Connexion</a>
-            </Link>
-            <Link href="request-demo">
-              <a
-                className={
-                  insurance ? 'ins-btn ins-primary-btn' : 'btn btn-primary'
-                }
+            <div className="dropdown rfidia-lang-dropdown">
+              <button
+                className={insurance ? 'ins-btn ins-primary-btn dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                Démarrer
-              </a>
-            </Link>
+                <span className="rfidia-lang-current">
+                  <img
+                    src={selectedLanguage.flagSrc}
+                    alt={selectedLanguage.label}
+                    className="rfidia-lang-flag-img"
+                  />
+                  <span>{navLabels.language}: {selectedLanguage.key.toUpperCase()}</span>
+                </span>
+              </button>
+              <ul className="dropdown-menu dropdown-menu-end shadow border-0 rounded-custom rfidia-lang-menu">
+                {languageOptions.map((option) => (
+                  <li key={option.key}>
+                    <button
+                      type="button"
+                      className={`dropdown-item rfidia-lang-item${language === option.key ? ' active' : ''}`}
+                      onClick={() => onLanguageChange && onLanguageChange(option.key)}
+                    >
+                      <img
+                        src={option.flagSrc}
+                        alt={option.label}
+                        className="rfidia-lang-flag-img"
+                      />
+                      <span>{option.label}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div
@@ -234,7 +280,11 @@ const Navbar = ({ navDark, insurance, classOption }) => {
               </button>
             </div>
 
-            <OffCanvasMenu />
+            <OffCanvasMenu
+              language={language}
+              onLanguageChange={onLanguageChange}
+              labels={navLabels}
+            />
           </div>
         </div>
       </nav>

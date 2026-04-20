@@ -2,14 +2,17 @@
 import React from 'react';
 import Link from 'next/link';
 
-const PageHeader = ({ title, desc, integration, blogtags }) => {
+const PageHeader = ({ title, desc, integration, blogtags, backgroundImage }) => {
+  const pageBackground = backgroundImage || '/page-header-bg.svg';
+
   return (
     <>
       {integration ? (
         <section
           className="page-header position-relative overflow-hidden ptb-120 bg-dark"
           style={{
-            background: "url('/page-header-bg.svg')no-repeat bottom left",
+            background: `url('${pageBackground}') no-repeat center center`,
+            backgroundSize: 'cover',
           }}
         >
           <div className="container">
@@ -45,9 +48,13 @@ const PageHeader = ({ title, desc, integration, blogtags }) => {
         </section>
       ) : (
         <section
-          className="page-header position-relative overflow-hidden ptb-120 bg-dark"
+          className="page-header position-relative overflow-hidden bg-dark"
           style={{
-            background: "url('/page-header-bg.svg')no-repeat bottom left",
+            background: `url('${pageBackground}') no-repeat center top`,
+            backgroundSize: 'cover',
+            minHeight: '480px',
+            paddingTop: '80px',
+            paddingBottom: '120px',
           }}
         >
           <div className="container">

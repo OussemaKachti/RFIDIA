@@ -144,7 +144,7 @@
 }
 
 .rfidia-footer {
-  background: linear-gradient(135deg, #0b1a45 0%, #0d2258 50%, #173d8a 100%);
+  background: linear-gradient(135deg, #101A33 0%, #17254A 50%, #1E2A4A 100%);
   color: rgba(255, 255, 255, 0.7);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -154,7 +154,7 @@
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(30, 42, 74, 0.22) 0%, transparent 70%);
     top: -200px;
     right: -200px;
     pointer-events: none;
@@ -183,7 +183,7 @@
       width: 40px;
       height: 3px;
       border-radius: 2px;
-      background: linear-gradient(90deg, #2563eb, #0ea5e9);
+      background: linear-gradient(90deg, #4EC8C8, #7ADDDD);
     }
   }
 
@@ -193,7 +193,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      color: #38bdf8;
+      color: #4EC8C8;
     }
   }
 
@@ -229,8 +229,8 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background: #2563eb;
-        border-color: #2563eb;
+        background: #4EC8C8;
+        border-color: #4EC8C8;
         transform: translateY(-3px);
       }
     }
@@ -249,7 +249,7 @@
         &::before {
           content: '›';
           margin-right: 8px;
-          color: #38bdf8;
+          color: #4EC8C8;
           font-size: 1.2rem;
           line-height: 1;
         }
@@ -277,8 +277,8 @@
         height: 36px;
         flex-shrink: 0;
         border-radius: 8px;
-        background: rgba(37, 99, 235, 0.15);
-        color: #38bdf8;
+        background: rgba(78, 200, 200, 0.18);
+        color: #4EC8C8;
         font-size: 1.1rem;
       }
 
@@ -317,7 +317,7 @@
         transition: border-color 0.3s;
 
         &:focus-within {
-          border-color: rgba(37, 99, 235, 0.5);
+          border-color: rgba(78, 200, 200, 0.55);
           background: rgba(255, 255, 255, 0.08);
         }
 
@@ -340,7 +340,7 @@
         }
 
         button {
-          background: #2563eb;
+          background: #4EC8C8;
           color: #ffffff;
           border: none;
           border-radius: 6px;
@@ -352,7 +352,7 @@
           transition: all 0.3s ease;
 
           &:hover {
-            background: #1d4ed8;
+            background: #36B8B8;
           }
         }
       }

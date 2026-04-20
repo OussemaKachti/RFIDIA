@@ -209,20 +209,73 @@
   padding: 0;
 }
 .btn-soft-primary {
-  color: $white;
-  background-color: rgba($primary, 0.15);
-  border-color: rgba($primary, 0.15);
+  color: #4EC8C8;
+  background-color: rgba(78, 200, 200, 0.16);
+  border-color: rgba(78, 200, 200, 0.2);
 }
 
 .btn-outline-primary {
-  color: $primary;
-  border-color: $primary;
+  color: #4EC8C8;
+  border-color: #4EC8C8;
 }
 .btn-soft-primary:hover,
 .btn-outline-primary:hover {
   color: $white;
-  background-color: $primary;
-  border-color: $primary;
+  background-color: #4EC8C8;
+  border-color: #4EC8C8;
+}
+
+// RFIDIA button palette override
+.btn-primary,
+.btn-outline-primary,
+.btn-soft-primary {
+  --rfidia-btn: #4EC8C8;
+  --rfidia-btn-hover: #36B8B8;
+}
+
+.btn-primary {
+  background-color: var(--rfidia-btn);
+  border-color: var(--rfidia-btn);
+  color: $white !important;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active,
+  &.show {
+    background-color: var(--rfidia-btn-hover) !important;
+    border-color: var(--rfidia-btn-hover) !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--rfidia-btn);
+  border-color: var(--rfidia-btn);
+
+  &:hover,
+  &:active,
+  &.active,
+  &.show {
+    background-color: var(--rfidia-btn);
+    border-color: var(--rfidia-btn);
+    color: $white !important;
+  }
+}
+
+.btn-soft-primary {
+  background-color: rgba(78, 200, 200, 0.16);
+  border-color: rgba(78, 200, 200, 0.2);
+  color: var(--rfidia-btn);
+
+  &:hover,
+  &:active,
+  &.active,
+  &.show {
+    background-color: var(--rfidia-btn);
+    border-color: var(--rfidia-btn);
+    color: $white;
+  }
 }
 .btn-soft-info {
   color: $info;

@@ -1,0 +1,28 @@
+<svg width="100%" viewBox="0 0 1200 425" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Background banner RFIDIA rose foncé sans texte</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Banner avec fond #1E2A4A et formes décoratives circulaires</desc>
+
+  <defs>
+    <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="1" fill="#C2185B" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background principal -->
+  <rect width="1200" height="280" fill="#1E2A4A" style="fill:rgb(30, 42, 74);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Dotted texture overlay -->
+  <rect width="1200" height="280" fill="url(#dots)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cercle décoratif haut droite (grand C) -->
+  <circle cx="1060" cy="60" r="95" fill="none" stroke="#253764" stroke-width="90" opacity="0.85" style="fill:none;stroke:rgb(37, 55, 100);color:rgb(0, 0, 0);stroke-width:90px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cercle décoratif bas centre-droite -->
+  <circle cx="740" cy="310" r="105" fill="none" stroke="#253764" stroke-width="85" opacity="0.8" style="fill:none;stroke:rgb(37, 55, 100);color:rgb(0, 0, 0);stroke-width:85px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.8;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cercle décoratif bas droite partiel -->
+  <circle cx="1155" cy="260" r="70" fill="none" stroke="#253764" stroke-width="60" opacity="0.7" style="fill:none;stroke:rgb(37, 55, 100);color:rgb(0, 0, 0);stroke-width:60px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Reflet subtil gauche -->
+  <ellipse cx="0" cy="140" rx="120" ry="120" fill="#B91C5E" opacity="0.18" style="fill:rgb(185, 28, 94);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</svg>

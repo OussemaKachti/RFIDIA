@@ -5,7 +5,20 @@ import {
   BsTelephoneInbound,
 } from 'react-icons/bs';
 
-const ContactCard = () => {
+const ContactCard = ({ content }) => {
+  const t =
+    content ||
+    {
+      chatTitle: 'Echangez avec nous',
+      chatDescPrefix: 'Notre equipe est disponible pour vous accompagner du',
+      chatDescStrong: 'lundi au vendredi',
+      writeToUs: 'Nous ecrire',
+      emailTitle: 'Envoyez un email',
+      emailDesc: 'Ecrivez-nous pour discuter de votre projet et recevoir une reponse rapide.',
+      callTitle: 'Appelez-nous',
+      callDesc: "Besoin d'un echange direct ? Appelez-nous pour parler de votre besoin.",
+    };
+
   return (
     <section className="contact-promo ptb-120">
       <div className="container">
@@ -16,17 +29,17 @@ const ContactCard = () => {
                 <BsFillChatSquareTextFill />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Échangez avec nous</h5>
+                <h5>{t.chatTitle}</h5>
                 <p>
-                  Notre équipe est disponible pour vous accompagner du{' '}
-                  <strong>lundi au vendredi</strong>.
+                  {t.chatDescPrefix}{' '}
+                  <strong>{t.chatDescStrong}</strong>.
                 </p>
               </div>
               <a
                 href="mailto:contact@rfidia.tn"
                 className="btn btn-link mt-auto"
               >
-                Nous écrire
+                {t.writeToUs}
               </a>
             </div>
           </div>
@@ -36,9 +49,9 @@ const ContactCard = () => {
                 <BsFillEnvelopeFill />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Envoyez un email</h5>
+                <h5>{t.emailTitle}</h5>
                 <p>
-                  Écrivez-nous pour discuter de votre projet et recevoir une réponse rapide.
+                  {t.emailDesc}
                 </p>
               </div>
               <a
@@ -55,9 +68,9 @@ const ContactCard = () => {
                 <BsTelephoneInbound />
               </span>
               <div className="contact-promo-info mb-4">
-                <h5>Appelez-nous</h5>
+                <h5>{t.callTitle}</h5>
                 <p>
-                  Besoin d’un échange direct ? Appelez-nous pour parler de votre besoin.
+                  {t.callDesc}
                 </p>
               </div>
               <a href="tel:+21600000000" className="btn btn-link mt-auto">
