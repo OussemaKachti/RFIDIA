@@ -206,95 +206,128 @@ const i18nContent = {
   fr: {
     navbar: {
       home: "Accueil",
-      about: "A propos",
+      about: "À propos",
       services: "Services",
       contact: "Contactez-nous",
       company: "Entreprise",
       usefulLinks: "Liens utiles",
       usefulPages: "Pages utiles",
       language: "Langue",
-      french: "Francais",
+      french: "Français",
       english: "English",
       italian: "Italiano",
     },
     footer: {
       followUs: "Suivez-nous :",
       companyTitle: "Notre Entreprise",
-      about: "A Propos",
+      about: "À Propos",
       solutions: "Nos Solutions",
-      sectors: "Secteurs d'Activite",
-      projects: "Nos Realisations",
+      sectors: "Secteurs d'Activité",
+      projects: "Nos Réalisations",
       contact: "Contact",
       contactTitle: "Contactez-nous",
       address: "Adresse",
       email: "Email",
-      phone: "Telephone",
+      phone: "Téléphone",
       newsletter: "Newsletter",
-      newsletterDesc: "Restez informe sur les dernieres innovations en tracabilite et IoT.",
+      newsletterDesc: "Restez informé sur les dernières innovations en traçabilité et IoT.",
       newsletterPlaceholder: "Votre adresse email",
       newsletterAria: "S'abonner",
-      copyright: "Tous droits reserves.",
-      privacy: "Politique de confidentialite",
-      legal: "Mentions legales",
+      copyright: "Tous droits réservés.",
+      privacy: "Politique de confidentialité",
+      legal: "Mentions légales",
       brandDesc:
-        "Leader tunisien de la tracabilite intelligente. Nous accompagnons les entreprises dans leur transformation digitale grace a nos solutions RFID, IoT et codes-barres haute performance.",
+        "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     },
     pageTitle: "RFIDIA",
     pageDesc:
-      "RFIDIA, leader tunisien en solutions de tracabilite intelligente: RFID, IoT, codes-barres et systemes embarques.",
-    heroBadge: "Solutions de Tracabilite Intelligente",
+      "RFIDIA, leader tunisien en solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.",
+    heroBadge: "Solutions de Traçabilité Intelligente",
     heroTitlePrefix: "Technologie",
     heroTitleAccent: "RFID & IoT",
     heroTitleSuffix: "pour votre entreprise",
     heroSub:
-      "RFIDIA accompagne les entreprises dans leur transformation digitale avec des solutions fiables, evolutives et adaptees a la realite terrain.",
-    heroBtnPrimary: "Decouvrir nos solutions",
+      "RFIDIA accompagne les entreprises dans leur transformation digitale avec des solutions fiables, évolutives et adaptées à la réalité terrain.",
+    heroBtnPrimary: "Découvrir nos solutions",
     heroBtnGhost: "Nous contacter",
-    heroFloatRealtime: "Tracabilite temps reel",
-    heroFloatFast: "Deploiement rapide",
-    sectionAbout: "A propos",
-    sectionAboutTitle: "La ou les services IT rencontrent l'",
+    heroFloatRealtime: "Traçabilité temps réel",
+    heroFloatFast: "Déploiement rapide",
+    sectionAbout: "À propos",
+    sectionAboutTitle: "Là où les services IT rencontrent l'",
     sectionAboutAccent: "innovation",
     sectionAboutP1:
-      "RFIDIA accompagne les entreprises dans leur transformation digitale grace a des solutions RFID, IoT et logicielles fiables, evolutives et orientees resultats.",
+      "RFIDIA accompagne les entreprises dans leur transformation digitale grâce à des solutions RFID, IoT et logicielles fiables, évolutives et orientées résultats.",
     sectionAboutP2:
-      "Notre equipe combine expertise metier, integration systeme et accompagnement operationnel pour transformer vos processus en avantages competitifs durables.",
+      "Notre équipe combine expertise métier, intégration système et accompagnement opérationnel pour transformer vos processus en avantages compétitifs durables.",
     aboutBtn1: "En savoir plus",
     aboutBtn2: "Parlons de votre projet",
-    aboutPoint1Title: "Integration fluide",
+    aboutPoint1Title: "Intégration fluide",
     aboutPoint1Desc: "Connexion native avec ERP, WMS et outils existants.",
-    aboutPoint2Title: "Visibilite temps reel",
-    aboutPoint2Desc: "Suivi des actifs, audits et indicateurs decisionnels instantanes.",
-    aboutPoint3Title: "Support dedie",
-    aboutPoint3Desc: "Accompagnement continu, maintenance proactive et montee en competence.",
-    aboutPoint4Title: "Scalabilite",
-    aboutPoint4Desc: "Architecture pensee pour accompagner votre croissance future.",
+    aboutPoint2Title: "Visibilité temps réel",
+    aboutPoint2Desc: "Suivi des actifs, audits et indicateurs décisionnels instantanés.",
+    aboutPoint3Title: "Support dédié",
+    aboutPoint3Desc: "Accompagnement continu, maintenance proactive et montée en compétence.",
+    aboutPoint4Title: "Scalabilité",
+    aboutPoint4Desc: "Architecture pensée pour accompagner votre croissance future.",
     sections: {
-      solutionsTitle: "Nos Solutions Cles",
+      solutionsTitle: "Nos Solutions Clés",
       solutionsDesc:
-        "Trois piliers complementaires pour renforcer votre performance : identification, visibilite temps reel et controle d'acces.",
+        "Trois piliers complémentaires pour renforcer votre performance : identification, visibilité temps réel et contrôle d'accès.",
       servicesTitle: "Nos Services de Virtualisation",
       servicesDesc:
-        "De l'evaluation a la maintenance, nous optimisons votre infrastructure IT avec une approche fiable et evolutive.",
+        "De l'évaluation à la maintenance, nous optimisons votre infrastructure IT avec une approche fiable et évolutive.",
       sectorsTitle: "Secteurs & Cas d'Usage",
-      sectorsDesc: "Decouvrez comment nos solutions s'adaptent a vos processus metiers.",
-      testimonialsTitle: "Temoignages clients",
+      sectorsDesc: "Découvrez comment nos solutions s'adaptent à vos processus métiers.",
+      testimonialsTitle: "Témoignages clients",
       testimonialsDesc:
-        "Ils nous font confiance pour leurs projets de tracabilite et d'automatisation.",
+        "Ils nous font confiance pour leurs projets de traçabilité et d'automatisation.",
       partnersTitle: "Ils nous font confiance",
       partnersDesc:
         "RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions technologiques de premier plan.",
-      faqTitle: "Questions frequentes",
+      faqTitle: "Questions fréquentes",
       faqDesc: "Besoin de plus d'info sur nos solutions RFID et IoT ?",
       faqBtn: "Contactez-nous",
     },
     misc: {
       solutionLabel: "Solution",
       viewSolution: "Voir la solution",
-      stepLabel: "Etape",
+      stepLabel: "Étape",
       caseUsage: "Cas d'usage",
       rfidiaSolutions: "Solutions RFIDIA",
-      discover: "Decouvrir",
+      discover: "Découvrir",
+    },
+    showcaseSolutions: [
+      {
+        title: "Solution École",
+        description: "Sécurisez les parcours et suivez intelligemment les actifs pédagogiques.",
+      },
+      {
+        title: "Système Entrepôt",
+        description: "Inventaire en temps réel et pilotage des flux pour une logistique performante.",
+      },
+      {
+        title: "Textile",
+        description: "Traçabilité de bout en bout des vêtements, de la production à la vente.",
+      },
+      {
+        title: "Hôtellerie",
+        description: "Opérations intelligentes et excellence de service pour l'hôtellerie.",
+      },
+      {
+        title: "Gestion des Actifs",
+        description: "Suivi de précision de vos équipements critiques et réduction des pertes.",
+      },
+      {
+        title: "Santé",
+        description: "Traite des cas d'usage médicaux avec traçabilité et sécurisation des stocks sensibles.",
+      },
+    ],
+    aboutCards: {
+      active: "Actif",
+      experts: "Experts et ingénieurs",
+      excellence: "Excellence",
+      excellenceDesc: "Certifiés par les standards RFID internationaux GS1 et ISO 18000.",
+      trustedTeam: "Équipe RFIDIA de confiance",
     },
     statsLabels: stats.map((s) => s.label),
     solutionTexts: solutions.map((s) => ({ title: s.title, description: s.description })),
@@ -394,6 +427,39 @@ const i18nContent = {
       caseUsage: "Use case",
       rfidiaSolutions: "RFIDIA Solutions",
       discover: "Discover",
+    },
+    showcaseSolutions: [
+      {
+        title: "School Solution",
+        description: "Secure student journeys and track educational assets intelligently.",
+      },
+      {
+        title: "Warehouse System",
+        description: "Real-time inventory and flow control for modern logistics operations.",
+      },
+      {
+        title: "Textile",
+        description: "End-to-end garment traceability from production to retail.",
+      },
+      {
+        title: "Hospitality",
+        description: "Smart operations and service excellence for hospitality businesses.",
+      },
+      {
+        title: "Asset Management",
+        description: "Precision tracking of critical equipment and loss reduction.",
+      },
+      {
+        title: "Healthcare",
+        description: "Medical use cases with traceability and protection of sensitive inventories.",
+      },
+    ],
+    aboutCards: {
+      active: "Active",
+      experts: "Experts and engineers",
+      excellence: "Excellence",
+      excellenceDesc: "Certified with international RFID standards GS1 and ISO 18000.",
+      trustedTeam: "Trusted RFIDIA team",
     },
     statsLabels: ["Deployed projects", "Years of experience", "Client satisfaction", "Covered sectors"],
     solutionTexts: [
@@ -592,6 +658,39 @@ const i18nContent = {
       rfidiaSolutions: "Soluzioni RFIDIA",
       discover: "Scopri",
     },
+    showcaseSolutions: [
+      {
+        title: "Soluzione Scuola",
+        description: "Proteggi i percorsi degli studenti e traccia in modo intelligente gli asset educativi.",
+      },
+      {
+        title: "Sistema Magazzino",
+        description: "Inventario in tempo reale e gestione dei flussi per una logistica moderna.",
+      },
+      {
+        title: "Tessile",
+        description: "Tracciabilita end-to-end dei capi dalla produzione alla vendita.",
+      },
+      {
+        title: "Ospitalita",
+        description: "Operazioni intelligenti ed eccellenza del servizio nel settore hospitality.",
+      },
+      {
+        title: "Gestione Asset",
+        description: "Tracciamento di precisione delle attrezzature critiche e riduzione delle perdite.",
+      },
+      {
+        title: "Sanita",
+        description: "Casi d'uso medicali con tracciabilita e protezione delle scorte sensibili.",
+      },
+    ],
+    aboutCards: {
+      active: "Attivo",
+      experts: "Esperti e ingegneri",
+      excellence: "Eccellenza",
+      excellenceDesc: "Certificati secondo gli standard RFID internazionali GS1 e ISO 18000.",
+      trustedTeam: "Team RFIDIA di fiducia",
+    },
     statsLabels: ["Progetti implementati", "Anni di esperienza", "Soddisfazione clienti", "Settori coperti"],
     solutionTexts: [
       {
@@ -703,6 +802,39 @@ const ItSolution = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [language, setLanguage] = useState('fr');
 
+  const showcaseSolutionsBase = [
+    {
+      id: "school",
+      image: "/a_rfidia/z_school/school.png",
+      accent: "#f59e0b",
+    },
+    {
+      id: "warehouse",
+      image: "/a_rfidia/z_logistique/z_logistique.png",
+      accent: "#2563eb",
+    },
+    {
+      id: "textile",
+      image: "/a_rfidia/z_rfid/rfid6.png",
+      accent: "#0ea5e9",
+    },
+    {
+      id: "hotellerie",
+      image: "/a_rfidia/z_rfid/rfid14.png",
+      accent: "#6366f1",
+    },
+    {
+      id: "assets",
+      image: "/a_rfidia/z_rfid/z_assets.png",
+      accent: "#10b981",
+    },
+    {
+      id: "healthcare",
+      image: "/a_rfidia/z_medical/z_medical3.png",
+      accent: "#a855f7",
+    },
+  ];
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const saved = window.localStorage.getItem('rfidia_lang');
@@ -754,6 +886,14 @@ const ItSolution = () => {
     ...item,
     question: t.faqTexts[idx]?.question || item.question,
     answer: t.faqTexts[idx]?.answer || item.answer,
+  }));
+
+  const localizedShowcaseSolutions = showcaseSolutionsBase.map((item, idx) => ({
+    ...item,
+    title: t.showcaseSolutions?.[idx]?.title || i18nContent.fr.showcaseSolutions[idx]?.title,
+    description:
+      t.showcaseSolutions?.[idx]?.description ||
+      i18nContent.fr.showcaseSolutions[idx]?.description,
   }));
 
   const toggleFaq = (idx) => setOpenFaq(openFaq === idx ? null : idx);
@@ -850,6 +990,147 @@ const ItSolution = () => {
           </div>
         </section>
 
+        {/* ── NEW WHITE SOLUTIONS ── */}
+        <section className="solutions-section-white">
+          <div className="container">
+            <div className="solutions-white-header rl-section-head">
+              <SectionDivider />
+              <h2>{t.sections.solutionsTitle}</h2>
+              <p>{t.sections.solutionsDesc}</p>
+            </div>
+
+            <div className="solutions-white-grid">
+              {localizedShowcaseSolutions.map((item) => (
+                <Link href="/contact-us" key={item.id} passHref>
+                  <a 
+                    className="solution-card-w"
+                    style={{ "--accent": item.accent }}
+                  >
+                    <img src={item.image} alt={item.title} className="solution-w-img" />
+                    <div className="solution-w-content">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <style jsx>{`
+            .solutions-section-white {
+              position: relative;
+              padding: 4rem 0;
+              background: #FFFFFF; /* blanc comme les autres */
+            }
+
+            .solutions-white-header {
+              text-align: center;
+              margin-bottom: 3.5rem;
+            }
+
+            .solutions-white-header h2 {
+              font-family: 'Manrope', sans-serif;
+              font-size: clamp(1.75rem, 3vw, 2.5rem);
+              font-weight: 700;
+              color: var(--rl-navy);
+              margin-bottom: 1rem;
+              line-height: 1.2;
+            }
+
+            .solutions-white-header p {
+              color: #5A6282;
+              font-size: 1.1rem;
+              max-width: 600px;
+              margin: 0 auto;
+            }
+
+            .solutions-white-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 1.5rem;
+            }
+
+            .solution-card-w {
+              background: #fff;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 4px 6px -1px rgba(26, 33, 80, 0.05), 0 2px 4px -1px rgba(26, 33, 80, 0.03);
+              transition: all 0.3s ease;
+              text-decoration: none;
+              display: flex;
+              flex-direction: column;
+              border: 1px solid #E2E6F0;
+              position: relative;
+            }
+
+            .solution-card-w:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 20px 25px -5px rgba(26, 33, 80, 0.1), 0 10px 10px -5px rgba(26, 33, 80, 0.04);
+            }
+
+            .solution-card-w::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 4px;
+              background: var(--accent);
+              transition: width 0.3s ease;
+            }
+
+            .solution-card-w:hover::after {
+              width: 100%;
+            }
+
+            .solution-w-img {
+              height: 160px;
+              width: 100%;
+              object-fit: cover;
+              border-bottom: 1px solid #E2E6F0;
+            }
+
+            .solution-w-content {
+              padding: 1.5rem;
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+            }
+
+            .solution-w-content h3 {
+              color: #1A2150;
+              font-size: 1.25rem;
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+              transition: color 0.3s;
+            }
+
+            .solution-w-content p {
+              color: #5A6282;
+              font-size: 0.95rem;
+              line-height: 1.5;
+              margin: 0;
+            }
+
+            .solution-card-w:hover .solution-w-content h3 {
+              color: var(--accent);
+            }
+
+            @media (max-width: 991px) {
+              .solutions-white-grid {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+
+            @media (max-width: 576px) {
+              .solutions-white-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+          `}</style>
+        </section>
+
       {/* ── ABOUT ── */}
 <section className="rl-section rl-about">
   <div className="container">
@@ -909,10 +1190,10 @@ const ItSolution = () => {
               <span style={{
                 color: '#4ECDC4', fontSize: '11px',
                 fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase'
-              }}>Actif</span>
+              }}>{t.aboutCards.active}</span>
             </div>
             <p style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, margin: 0, lineHeight: 1 }}>32+</p>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '4px 0 0' }}>Experts & ingénieurs</p>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '4px 0 0' }}>{t.aboutCards.experts}</p>
           </div>
 
           {/* Carte flottante bas-droite — Excellence */}
@@ -937,10 +1218,10 @@ const ItSolution = () => {
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                 </svg>
               </div>
-              <span style={{ fontSize: '14px', fontWeight: 600, color: '#1A2150' }}>Excellence</span>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#1A2150' }}>{t.aboutCards.excellence}</span>
             </div>
             <p style={{ fontSize: '12px', color: '#5A6282', lineHeight: 1.5, margin: 0 }}>
-              Certifiés par les standards RFID internationaux GS1 et ISO 18000.
+              {t.aboutCards.excellenceDesc}
             </p>
           </div>
 
@@ -959,7 +1240,7 @@ const ItSolution = () => {
             whiteSpace: 'nowrap',
             boxShadow: '0 4px 16px rgba(26,33,80,0.3)'
           }}>
-            Équipe RFIDIA de confiance
+            {t.aboutCards.trustedTeam}
           </div>
 
         </div>
@@ -1013,46 +1294,6 @@ const ItSolution = () => {
     </div>
   </div>
 </section>
-
-        {/* ── SOLUTIONS ── */}
-        <section className="rl-section">
-          <div className="container">
-            <div className="rl-section-head">
-              <SectionDivider />
-              <h2>{t.sections.solutionsTitle}</h2>
-              <p>
-                {t.sections.solutionsDesc}
-              </p>
-            </div>
-
-            <div className="rl-solutions-grid">
-              {localizedSolutions.map((item, idx) => (
-                <article
-                  className="rl-solutions-grid__card"
-                  key={item.title}
-                  style={{ "--accent": item.accent, "--accent-soft": `${item.accent}1A` }}
-                >
-                  <div className="rl-solutions-grid__media">
-                    <img src={item.image} alt={item.title} className="rl-solutions-grid__img" />
-                    <span className="rl-solutions-grid__badge">{t.misc.solutionLabel} 0{idx + 1}</span>
-                    <div className="rl-solutions-grid__icon">{item.icon}</div>
-                  </div>
-
-                  <div className="rl-solutions-grid__body">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <div className="rl-solutions-grid__footer">
-                      <span>{t.misc.viewSolution}</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ── SERVICES ── */}
         <section className="rl-section rl-services">
