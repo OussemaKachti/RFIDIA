@@ -31,6 +31,7 @@ const ContactUs = () => {
       navbar: {
         home: 'Accueil',
         about: 'A propos',
+        solutions: 'Solutions',
         services: 'Services',
         contact: 'Contactez-nous',
         company: 'Entreprise',
@@ -96,6 +97,7 @@ const ContactUs = () => {
       navbar: {
         home: 'Home',
         about: 'About',
+        solutions: 'Solutions',
         services: 'Services',
         contact: 'Contact Us',
         company: 'Company',
@@ -161,6 +163,7 @@ const ContactUs = () => {
       navbar: {
         home: 'Home',
         about: 'Chi siamo',
+        solutions: 'Soluzioni',
         services: 'Servizi',
         contact: 'Contattaci',
         company: 'Azienda',

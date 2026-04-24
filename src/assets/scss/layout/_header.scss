@@ -334,3 +334,78 @@
   position: relative;
   z-index: 3;
 }
+
+/* —— RFIDIA : mega-menu Solutions (2 × 3) —— */
+.dropdown-grid.width-solutions {
+  grid-template-columns: 1fr 1fr;
+  width: min(880px, 96vw);
+  max-width: 880px;
+}
+
+.rfidia-solutions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px !important;
+}
+
+.rfidia-solution-dd-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: $body-color;
+  transition: background 0.22s ease, transform 0.22s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: rgba($primary, 0.06);
+    border-color: rgba($primary, 0.12);
+    transform: translateX(2px);
+  }
+}
+
+.rfidia-solution-dd-img {
+  width: 56px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.rfidia-solution-dd-title {
+  display: block;
+  font-family: $headings-font-family;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: $dark;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.rfidia-solution-dd-desc {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba($body-color, 0.88);
+  margin: 0;
+}
+
+.rfidia-solution-dd-link:hover .rfidia-solution-dd-title {
+  color: $primary;
+}
+
+.offcanvas-body .rfidia-solutions-col {
+  padding: 8px 0 !important;
+}
+
+.offcanvas-body .rfidia-solution-dd-link {
+  padding: 10px 8px;
+}
+
+.offcanvas-body .width-solutions {
+  width: 100%;
+}

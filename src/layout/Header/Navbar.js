@@ -9,6 +9,7 @@ import {
   navCompanyLinks,
   navCompanyPage,
 } from '../../utils/data';
+import { getSolutionsNavItems } from '../../utils/solutionsNavData';
 import dynamic from 'next/dynamic';
 
 const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageChange, labels }) => {
@@ -20,6 +21,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
     {
       home: 'Accueil',
       about: 'A propos',
+      solutions: 'Solutions',
       services: 'Services',
       contact: 'Contactez-nous',
       company: 'Entreprise',
@@ -30,6 +32,10 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
       english: 'English',
       italian: 'Italiano',
     };
+
+  const solutionsNavItems = getSolutionsNavItems(language);
+  const solutionsColLeft = solutionsNavItems.slice(0, 3);
+  const solutionsColRight = solutionsNavItems.slice(3, 6);
 
   const languageOptions = [
     { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
@@ -156,6 +162,59 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 <Link href="about-us">
                   <a className="nav-link">{navLabels.about}</a>
                 </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {navLabels.solutions ?? 'Solutions'}
+                </a>
+                <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
+                  <div className="dropdown-grid rounded-custom width-solutions">
+                    <div className="dropdown-grid-item rfidia-solutions-col">
+                      {solutionsColLeft.map((item) => (
+                        <Link href={item.href} key={item.title}>
+                          <a className="rfidia-solution-dd-link">
+                            <img
+                              src={item.image}
+                              alt=""
+                              className="rfidia-solution-dd-img"
+                              width={56}
+                              height={44}
+                            />
+                            <div>
+                              <span className="rfidia-solution-dd-title">{item.title}</span>
+                              <span className="rfidia-solution-dd-desc">{item.description}</span>
+                            </div>
+                          </a>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="dropdown-grid-item rfidia-solutions-col radius-right-side bg-light">
+                      {solutionsColRight.map((item) => (
+                        <Link href={item.href} key={item.title}>
+                          <a className="rfidia-solution-dd-link">
+                            <img
+                              src={item.image}
+                              alt=""
+                              className="rfidia-solution-dd-img"
+                              width={56}
+                              height={44}
+                            />
+                            <div>
+                              <span className="rfidia-solution-dd-title">{item.title}</span>
+                              <span className="rfidia-solution-dd-desc">{item.description}</span>
+                            </div>
+                          </a>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
                 <Link href="services">

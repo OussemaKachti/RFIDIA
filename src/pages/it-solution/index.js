@@ -207,6 +207,7 @@ const i18nContent = {
     navbar: {
       home: "Accueil",
       about: "À propos",
+      solutions: "Solutions",
       services: "Services",
       contact: "Contactez-nous",
       company: "Entreprise",
@@ -340,6 +341,7 @@ const i18nContent = {
     navbar: {
       home: "Home",
       about: "About",
+      solutions: "Solutions",
       services: "Services",
       contact: "Contact us",
       company: "Company",
@@ -570,6 +572,7 @@ const i18nContent = {
     navbar: {
       home: "Home",
       about: "Chi siamo",
+      solutions: "Soluzioni",
       services: "Servizi",
       contact: "Contattaci",
       company: "Azienda",
@@ -894,6 +897,16 @@ const ItSolution = () => {
     description:
       t.showcaseSolutions?.[idx]?.description ||
       i18nContent.fr.showcaseSolutions[idx]?.description,
+    href:
+      item.id === "school"
+        ? "/it-solution/solution-ecole"
+        : item.id === "warehouse"
+          ? "/it-solution/solution-entrepot"
+          : item.id === "textile"
+            ? "/it-solution/solution-textile"
+          : item.id === "hotellerie"
+            ? "/it-solution/solution-hotellerie"
+          : "/contact-us",
   }));
 
   const toggleFaq = (idx) => setOpenFaq(openFaq === idx ? null : idx);
@@ -1001,7 +1014,7 @@ const ItSolution = () => {
 
             <div className="solutions-white-grid">
               {localizedShowcaseSolutions.map((item) => (
-                <Link href="/contact-us" key={item.id} passHref>
+                <Link href={item.href} key={item.id} passHref>
                   <a 
                     className="solution-card-w"
                     style={{ "--accent": item.accent }}
