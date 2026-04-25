@@ -6,12 +6,12 @@ import Link from "next/link";
 
 const i18nContent = {
   fr: {
-    metaTitle: "A propos | RFIDIA",
+    metaTitle: "À propos | RFIDIA",
     metaDesc:
-      "RFIDIA accompagne les entreprises depuis plus de 14 ans avec des solutions RFID et IoT sur mesure pour la tracabilite, la securite et l'automatisation.",
+      "RFIDIA accompagne les entreprises depuis 2011 avec des solutions RFID et IoT sur mesure pour la traçabilité, la sécurité et l'automatisation.",
     navbar: {
       home: "Accueil",
-      about: "A propos",
+      about: "À propos",
       solutions: "Solutions",
       services: "Services",
       contact: "Contactez-nous",
@@ -19,94 +19,264 @@ const i18nContent = {
       usefulLinks: "Liens utiles",
       usefulPages: "Pages utiles",
       language: "Langue",
-      french: "Francais",
+      french: "Français",
       english: "English",
       italian: "Italiano",
     },
     footer: {
       followUs: "Suivez-nous :",
       companyTitle: "Notre Entreprise",
-      about: "A Propos",
+      about: "À propos",
       solutions: "Nos Solutions",
-      sectors: "Secteurs d'Activite",
-      projects: "Nos Realisations",
+      sectors: "Secteurs d'Activité",
+      projects: "Nos Réalisations",
       contact: "Contact",
       contactTitle: "Contactez-nous",
       address: "Adresse",
       email: "Email",
-      phone: "Telephone",
+      phone: "Téléphone",
       newsletter: "Newsletter",
-      newsletterDesc: "Restez informe sur les dernieres innovations en tracabilite et IoT.",
+      newsletterDesc: "Restez informé sur les dernières innovations en traçabilité et IoT.",
       newsletterPlaceholder: "Votre adresse email",
       newsletterAria: "S'abonner",
-      copyright: "Tous droits reserves.",
-      privacy: "Politique de confidentialite",
-      legal: "Mentions legales",
+      copyright: "Tous droits réservés.",
+      privacy: "Politique de confidentialité",
+      legal: "Mentions légales",
       brandDesc:
-        "Leader tunisien de la tracabilite intelligente. Nous accompagnons les entreprises dans leur transformation digitale grace a nos solutions RFID, IoT et codes-barres haute performance.",
+        "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     },
     heroTag: "Qui sommes-nous ?",
-    heroTitle: "RFIDIA, partenaire de votre transformation digitale",
+    heroTitleStart: "RFIDIA transforme vos défis tech en",
+    heroTitleAccent: "leviers de croissance",
     heroDesc:
-      "Depuis 2011, nous transformons les defis technologiques en leviers de croissance avec des solutions RFID et IoT sur mesure, fiables et adaptees a votre environnement.",
-    heroPrimary: "Parler de votre projet",
-    heroSecondary: "Voir nos solutions",
-    stats: [
-      { value: "+14 ans", label: "d'experience dans l'innovation tech" },
-      { value: "2011", label: "annee de specialisation RFID" },
-      { value: "100%", label: "accompagnement sur mesure" },
-    ],
-    missionTitle: "Notre mission",
-    missionText:
-      "Chez RFIDIA, nous sommes dedies a transformer les enjeux technologiques en avantages competitifs. Nous concevons des solutions IT personnalisees qui optimisent et securisent votre parc, vos marchandises et votre personnel, tout en respectant vos contraintes metier.",
-    expertiseTitle: "Notre expertise",
-    expertiseText:
-      "Specialiste RFID depuis 2011, RFIDIA developpe des solutions cles en main : suivi intelligent des actifs, gestion du stationnement, tracabilite logistique, sante et autres cas d'usage sectoriels. Nous exploitons pleinement la RFID et l'IoT pour accelerer vos projets de transformation numerique et d'automatisation.",
-    solutionsTitle: "Nos solutions",
-    solutionsText:
-      "RFIDIA commercialise des lecteurs, des tags et conçoit des solutions innovantes destinees aux marches de la securite et de la tracabilite. Nos plateformes vous offrent des donnees fiables et immediates sur l'etat et la localisation de vos produits, ou qu'ils se trouvent.",
-    engagementTitle: "Notre engagement",
-    engagementText:
-      "En tant que maitre d'oeuvre, nous prenons en charge l'ensemble du projet : evaluation de l'existant, conseil, POC, conception de la solution RFID adaptee, selection des composants, developpement, installation et mise en service sur site.",
-    activityTitle: "Notre activite",
-    activityText:
-      "Depuis plus de 14 ans, nous accompagnons les entreprises dans la digitalisation de la production, la gestion d'inventaires, la logistique, le transport et le suivi des operations de maintenance. Nos solutions permettent de reduire les couts, renforcer la securisation des flux et automatiser les taches chronophages et sujettes aux erreurs.",
-    knowHowTitle: "Notre savoir-faire",
-    knowHowText:
-      "Notre savoir-faire repose sur la competence de nos developpeurs et techniciens, combinee a plus de 14 ans d'experience terrain dans la securisation et l'optimisation des flux par radio-identification. Nos solutions, entierement parametrables, s'integrent a vos systemes existants, proposent une connexion utilisateur unique et un support de mise en oeuvre complet.",
-    valuesTitle: "Nos valeurs",
-    values: [
-      {
-        title: "Innovation",
-        desc: "Nous developpons des solutions RFID innovantes, deja alignees avec l'industrie 4.0 et l'integration de l'IA.",
-      },
-      {
-        title: "Fiabilite",
-        desc: "Nous respectons nos engagements et garantissons des solutions robustes pour nos clients et partenaires.",
-      },
-      {
-        title: "Ecoute",
-        desc: "Chaque entreprise est unique. Nous adaptons nos solutions a vos besoins reels et a vos contraintes propres.",
-      },
-      {
-        title: "Souplesse et flexibilite",
-        desc: "Nous mettons en oeuvre les moyens necessaires pour nous adapter rapidement a votre contexte operationnel.",
-      },
-    ],
-    qualityTitle: "Nos engagements qualite",
-    qualityItems: [
-      "Diagnostic et etude technique et commerciale personnalisee",
-      "Conception et parametrage selon vos specifications",
-      "Interfaçage avec votre systeme d'information sans adaptation lourde",
-      "Installation et deploiement sur votre site",
-      "Formation des utilisateurs",
-      "Contrat de maintenance et hotline telephonique",
-    ],
+      "Depuis 2011, nous concevons des solutions RFID et IoT sur mesure pour optimiser et sécuriser votre parc, vos marchandises et votre personnel, avec un accompagnement de bout en bout.",
+    heroBtnPrimary: "Parler à un expert",
+    heroBtnSecondary: "Découvrir nos solutions",
+    kpi1: "d'expérience dans l'innovation tech",
+    kpi2: "année de spécialisation RFID",
+    kpi3: "prise en charge projet : audit, POC, déploiement, support",
+    sectionMissionTag: "Notre mission & notre expertise",
+    sectionMissionTitle: "Une expertise RFID/IoT orientée résultats",
+    sectionMissionDesc:
+      "Chez RFIDIA, notre mission est de convertir les contraintes opérationnelles en gains mesurables. Nous développons des solutions clés en main : suivi intelligent des actifs, traçabilité logistique, gestion du stationnement, santé et autres cas d'usage sectoriels.",
+    missionPoint1: "Solutions sur mesure adaptées à votre contexte et vos contraintes",
+    missionPoint2: "Intégration aux systèmes existants sans disruption lourde",
+    missionPoint3: "Approche progressive : diagnostic, POC, déploiement, optimisation",
+    processTag: "Notre activité",
+    processTitleStart: "Experts en traçabilité pour",
+    processTitleAccent: "production, inventaires et logistique",
+    processDesc:
+      "Depuis plus de 14 ans, nous accompagnons les entreprises dans leurs projets de transformation numérique et d'automatisation. Nos solutions permettent de réduire les coûts, sécuriser les flux logistiques et automatiser les tâches chronophages et sujettes aux erreurs.",
+    processBtn: "Voir nos services",
+    step1: "Étape 1",
+    step1Title: "Diagnostic & étude personnalisée",
+    step1Desc: "Analyse de l'existant, des flux et des objectifs métier.",
+    step2: "Étape 2",
+    step2Title: "Conception, paramétrage & POC",
+    step2Desc: "Validation terrain avec une solution ajustée à vos besoins.",
+    step3: "Étape 3",
+    step3Title: "Déploiement, formation & maintenance",
+    step3Desc: "Installation sur site, conduite du changement et support continu.",
+    valuesTag: "Savoir-faire RFIDIA",
+    valuesTitle: "Nos valeurs & engagements qualité",
+    valuesCardTitle: "Nos valeurs",
+    val1: "Innovation : solutions RFID alignées industrie 4.0 et IA",
+    val2: "Fiabilité : respect des engagements clients & partenaires",
+    val3: "Écoute : adaptation aux spécificités de chaque entreprise",
+    val4: "Souplesse & flexibilité : exécution selon vos contraintes terrain",
+    qualityCardTitle: "Nos engagements qualité",
+    q1: "Diagnostic technique et commercial personnalisé",
+    q2: "Conception et paramétrage selon vos spécifications",
+    q3: "Interfaçage avec votre SI sans adaptation lourde",
+    q4: "Installation, déploiement, formation utilisateurs",
+    q5: "Contrat de maintenance et hotline téléphonique",
     ctaTitle: "Construisons votre solution RFID sur mesure",
-    ctaText:
-      "Parlez-nous de votre contexte, de vos objectifs et de vos contraintes. Nous vous proposons une feuille de route claire, progressive et orientee resultats.",
+    ctaDesc:
+      "Nous vous accompagnons au cas par cas pour déployer une solution fiable, paramétrée selon vos exigences métier et orientée résultat.",
     ctaPrimary: "Contactez RFIDIA",
-    ctaSecondary: "Decouvrir les solutions",
+    ctaSecondary: "Nos solutions",
+  },
+  en: {
+    metaTitle: "About Us | RFIDIA",
+    metaDesc:
+      "RFIDIA has supported companies since 2011 with tailored RFID and IoT solutions for traceability, security and automation.",
+    navbar: {
+      home: "Home",
+      about: "About",
+      solutions: "Solutions",
+      services: "Services",
+      contact: "Contact us",
+      company: "Company",
+      usefulLinks: "Useful links",
+      usefulPages: "Useful pages",
+      language: "Language",
+      french: "French",
+      english: "English",
+      italian: "Italian",
+    },
+    footer: {
+      followUs: "Follow us:",
+      companyTitle: "Our Company",
+      about: "About",
+      solutions: "Our Solutions",
+      sectors: "Industry Sectors",
+      projects: "Our Projects",
+      contact: "Contact",
+      contactTitle: "Contact us",
+      address: "Address",
+      email: "Email",
+      phone: "Phone",
+      newsletter: "Newsletter",
+      newsletterDesc: "Stay informed about the latest RFID and IoT innovations.",
+      newsletterPlaceholder: "Your email address",
+      newsletterAria: "Subscribe",
+      copyright: "All rights reserved.",
+      privacy: "Privacy Policy",
+      legal: "Legal Notice",
+      brandDesc:
+        "Tunisian leader in smart traceability. We support companies in their digital transformation through high-performance RFID, IoT and barcode solutions.",
+    },
+    heroTag: "Who are we?",
+    heroTitleStart: "RFIDIA turns your tech challenges into",
+    heroTitleAccent: "growth drivers",
+    heroDesc:
+      "Since 2011, we have designed tailored RFID and IoT solutions to optimize and secure your assets, goods and teams, with end-to-end support.",
+    heroBtnPrimary: "Talk to an expert",
+    heroBtnSecondary: "Discover our solutions",
+    kpi1: "of innovation experience",
+    kpi2: "RFID specialization year",
+    kpi3: "end-to-end delivery: audit, POC, deployment, support",
+    sectionMissionTag: "Our mission & expertise",
+    sectionMissionTitle: "RFID/IoT expertise focused on results",
+    sectionMissionDesc:
+      "At RFIDIA, our mission is to convert operational constraints into measurable gains. We build turnkey solutions: smart asset tracking, logistics traceability, parking management, healthcare and other sector-focused use cases.",
+    missionPoint1: "Tailored solutions adapted to your context and constraints",
+    missionPoint2: "Integration with existing systems without heavy disruption",
+    missionPoint3: "Progressive approach: assessment, POC, deployment, optimization",
+    processTag: "Our activity",
+    processTitleStart: "Traceability experts for",
+    processTitleAccent: "production, inventory and logistics",
+    processDesc:
+      "For more than 14 years, we have supported companies in digital transformation and automation projects. Our solutions help reduce costs, secure logistics flows and automate repetitive, error-prone tasks.",
+    processBtn: "View our services",
+    step1: "Step 1",
+    step1Title: "Assessment & tailored study",
+    step1Desc: "Analysis of current systems, flows and business goals.",
+    step2: "Step 2",
+    step2Title: "Design, configuration & POC",
+    step2Desc: "Field validation with a solution tailored to your needs.",
+    step3: "Step 3",
+    step3Title: "Deployment, training & maintenance",
+    step3Desc: "On-site implementation, change management and ongoing support.",
+    valuesTag: "RFIDIA know-how",
+    valuesTitle: "Our values & quality commitments",
+    valuesCardTitle: "Our values",
+    val1: "Innovation: RFID solutions aligned with Industry 4.0 and AI",
+    val2: "Reliability: strong commitment to clients and partners",
+    val3: "Listening: adaptation to each company's specific needs",
+    val4: "Flexibility: execution aligned with your operational constraints",
+    qualityCardTitle: "Our quality commitments",
+    q1: "Personalized technical and business diagnosis",
+    q2: "Design and configuration according to your specifications",
+    q3: "Integration with your IS without heavy adaptation",
+    q4: "Installation, deployment and user training",
+    q5: "Maintenance contract and phone hotline",
+    ctaTitle: "Let's build your custom RFID solution",
+    ctaDesc:
+      "We support each client case-by-case to deploy reliable solutions configured for your business requirements and focused on measurable outcomes.",
+    ctaPrimary: "Contact RFIDIA",
+    ctaSecondary: "Our solutions",
+  },
+  it: {
+    metaTitle: "Chi siamo | RFIDIA",
+    metaDesc:
+      "RFIDIA supporta le aziende dal 2011 con soluzioni RFID e IoT su misura per tracciabilità, sicurezza e automazione.",
+    navbar: {
+      home: "Home",
+      about: "Chi siamo",
+      solutions: "Soluzioni",
+      services: "Servizi",
+      contact: "Contattaci",
+      company: "Azienda",
+      usefulLinks: "Link utili",
+      usefulPages: "Pagine utili",
+      language: "Lingua",
+      french: "Francese",
+      english: "Inglese",
+      italian: "Italiano",
+    },
+    footer: {
+      followUs: "Seguici:",
+      companyTitle: "La nostra azienda",
+      about: "Chi siamo",
+      solutions: "Le nostre soluzioni",
+      sectors: "Settori",
+      projects: "I nostri progetti",
+      contact: "Contatto",
+      contactTitle: "Contattaci",
+      address: "Indirizzo",
+      email: "Email",
+      phone: "Telefono",
+      newsletter: "Newsletter",
+      newsletterDesc: "Resta aggiornato sulle ultime innovazioni RFID e IoT.",
+      newsletterPlaceholder: "Il tuo indirizzo email",
+      newsletterAria: "Iscriviti",
+      copyright: "Tutti i diritti riservati.",
+      privacy: "Politica sulla privacy",
+      legal: "Note legali",
+      brandDesc:
+        "Leader tunisino nella tracciabilità intelligente. Supportiamo le aziende nella trasformazione digitale con soluzioni RFID, IoT e codici a barre ad alte prestazioni.",
+    },
+    heroTag: "Chi siamo?",
+    heroTitleStart: "RFIDIA trasforma le sfide tech in",
+    heroTitleAccent: "leve di crescita",
+    heroDesc:
+      "Dal 2011 progettiamo soluzioni RFID e IoT su misura per ottimizzare e proteggere asset, merci e personale, con supporto end-to-end.",
+    heroBtnPrimary: "Parla con un esperto",
+    heroBtnSecondary: "Scopri le nostre soluzioni",
+    kpi1: "di esperienza nell'innovazione",
+    kpi2: "anno di specializzazione RFID",
+    kpi3: "copertura completa: audit, POC, deploy, supporto",
+    sectionMissionTag: "Missione & competenze",
+    sectionMissionTitle: "Competenza RFID/IoT orientata ai risultati",
+    sectionMissionDesc:
+      "In RFIDIA convertiamo vincoli operativi in risultati misurabili. Sviluppiamo soluzioni chiavi in mano: asset tracking intelligente, tracciabilità logistica, gestione parcheggi, sanità e altri use case di settore.",
+    missionPoint1: "Soluzioni su misura per il tuo contesto e i tuoi vincoli",
+    missionPoint2: "Integrazione con sistemi esistenti senza forti discontinuità",
+    missionPoint3: "Approccio progressivo: analisi, POC, deploy, ottimizzazione",
+    processTag: "La nostra attività",
+    processTitleStart: "Esperti di tracciabilità per",
+    processTitleAccent: "produzione, inventari e logistica",
+    processDesc:
+      "Da oltre 14 anni supportiamo le aziende nella trasformazione digitale e nell'automazione. Le nostre soluzioni riducono i costi, proteggono i flussi logistici e automatizzano attività ripetitive soggette a errore.",
+    processBtn: "Scopri i nostri servizi",
+    step1: "Fase 1",
+    step1Title: "Diagnosi & studio personalizzato",
+    step1Desc: "Analisi dell'esistente, dei flussi e degli obiettivi di business.",
+    step2: "Fase 2",
+    step2Title: "Progettazione, configurazione & POC",
+    step2Desc: "Validazione sul campo con soluzione calibrata sui tuoi bisogni.",
+    step3: "Fase 3",
+    step3Title: "Deploy, formazione & manutenzione",
+    step3Desc: "Installazione on-site, change management e supporto continuo.",
+    valuesTag: "Know-how RFIDIA",
+    valuesTitle: "Valori & impegni qualità",
+    valuesCardTitle: "I nostri valori",
+    val1: "Innovazione: soluzioni RFID allineate a Industry 4.0 e IA",
+    val2: "Affidabilità: rispetto degli impegni verso clienti e partner",
+    val3: "Ascolto: adattamento alle specificità di ogni azienda",
+    val4: "Flessibilità: esecuzione in base ai vincoli operativi",
+    qualityCardTitle: "I nostri impegni qualità",
+    q1: "Diagnosi tecnica e commerciale personalizzata",
+    q2: "Progettazione e configurazione secondo specifiche",
+    q3: "Integrazione con il tuo SI senza adattamenti pesanti",
+    q4: "Installazione, deploy e formazione utenti",
+    q5: "Contratto di manutenzione e hotline telefonica",
+    ctaTitle: "Costruiamo la tua soluzione RFID su misura",
+    ctaDesc:
+      "Accompagniamo ogni cliente caso per caso con soluzioni affidabili, configurate sulle esigenze di business e orientate ai risultati.",
+    ctaPrimary: "Contatta RFIDIA",
+    ctaSecondary: "Le nostre soluzioni",
   },
 };
 
@@ -114,134 +284,203 @@ const AboutUs = () => {
   const [language, setLanguage] = useState("fr");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const saved = window.localStorage.getItem("rfidia_lang");
-      if (saved && ["fr", "en", "it"].includes(saved)) setLanguage(saved);
-    }
+    if (typeof window === "undefined") return;
+    const saved = window.localStorage.getItem("rfidia_lang");
+    if (saved && ["fr", "en", "it"].includes(saved)) setLanguage(saved);
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("rfidia_lang", language);
-      document.documentElement.lang = language;
-    }
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem("rfidia_lang", language);
+    document.documentElement.lang = language;
   }, [language]);
 
-  const t = i18nContent.fr;
+  const t = i18nContent[language] || i18nContent.fr;
 
   return (
     <Layout title={t.metaTitle} desc={t.metaDesc}>
       <Navbar classOption="navbar-light" language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
-      <main className="about-rfidia">
-        <section className="about-hero">
+      <main className="rf-about">
+        <section className="digi-hero ptb-120 rf-about-hero">
           <div className="container">
-            <div className="row align-items-center g-5">
+            <div className="row align-items-center">
               <div className="col-lg-7">
-                <span className="about-tag">{t.heroTag}</span>
-                <h1>{t.heroTitle}</h1>
-                <p>{t.heroDesc}</p>
-                <div className="about-hero-actions">
-                  <Link href="/contact-us" passHref>
-                    <a className="about-btn about-btn--primary">{t.heroPrimary}</a>
-                  </Link>
-                  <Link href="/it-solution" passHref>
-                    <a className="about-btn about-btn--ghost">{t.heroSecondary}</a>
-                  </Link>
+                <div className="digi-hero-text mt-5 mt-lg-0">
+                  <div>
+                    <span className="span-arrow">{t.heroTag}</span>
+                    <img src="/arro-right.svg" alt="arrow" />
+                  </div>
+                  <h1 className="display-5 fw-bold mb-3">
+                    {t.heroTitleStart}
+                    <span className="text-orange fw-bold"> {t.heroTitleAccent}</span>
+                  </h1>
+                  <p className="m-0">{t.heroDesc}</p>
+                  <div className="action-btns mt-4 d-flex flex-wrap align-items-center">
+                    <Link href="/contact-us">
+                      <a className="btn rounded-pill bg-orange me-3">{t.heroBtnPrimary}</a>
+                    </Link>
+                    <Link href="/it-solution">
+                      <a className="btn rounded-pill btn-outline-primary">{t.heroBtnSecondary}</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-5">
-                <div className="about-hero-card">
-                  {t.stats.map((s) => (
-                    <div key={s.label} className="about-stat">
-                      <strong>{s.value}</strong>
-                      <span>{s.label}</span>
-                    </div>
-                  ))}
+                <div className="rf-about-kpi-card">
+                  <div className="rf-kpi-item">
+                    <h3>+14 ans</h3>
+                    <p>{t.kpi1}</p>
+                  </div>
+                  <div className="rf-kpi-item">
+                    <h3>2011</h3>
+                    <p>{t.kpi2}</p>
+                  </div>
+                  <div className="rf-kpi-item">
+                    <h3>360°</h3>
+                    <p>{t.kpi3}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="about-section">
+        <section className="digi-why pt-120">
           <div className="container">
-            <div className="about-grid-2">
-              <article className="about-panel">
-                <h2>{t.missionTitle}</h2>
-                <p>{t.missionText}</p>
-              </article>
-              <article className="about-panel">
-                <h2>{t.expertiseTitle}</h2>
-                <p>{t.expertiseText}</p>
-              </article>
-              <article className="about-panel">
-                <h2>{t.solutionsTitle}</h2>
-                <p>{t.solutionsText}</p>
-              </article>
-              <article className="about-panel">
-                <h2>{t.engagementTitle}</h2>
-                <p>{t.engagementText}</p>
-              </article>
+            <div className="row align-content-center justify-content-between">
+              <div className="col-lg-6 col-md-12">
+                <div className="digi-why-left">
+                  <img src="/a_rfidia/z_rfid/rfid19.png" className="img-fluid" alt="RFIDIA team" />
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-12">
+                <div className="digi-why-right pt-4">
+                  <div>
+                    <span className="span-arrow">{t.sectionMissionTag}</span>
+                    <img src="/arro-right.svg" className="img-fluid" alt="arrow" />
+                  </div>
+                  <h2>{t.sectionMissionTitle}</h2>
+                  <p>{t.sectionMissionDesc}</p>
+                  <ul className="rf-check-list">
+                    <li>{t.missionPoint1}</li>
+                    <li>{t.missionPoint2}</li>
+                    <li>{t.missionPoint3}</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="about-section about-section--soft">
+        <section className="digi-how-works ptb-120 rf-about-soft">
           <div className="container">
-            <div className="about-block">
-              <h2>{t.activityTitle}</h2>
-              <p>{t.activityText}</p>
-            </div>
-            <div className="about-block">
-              <h2>{t.knowHowTitle}</h2>
-              <p>{t.knowHowText}</p>
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <div className="digi-how-works-left">
+                  <div>
+                    <span className="span-arrow">{t.processTag}</span>
+                    <img src="/arro-right.svg" className="img-fluid" alt="arrow" />
+                  </div>
+                  <h2>
+                    {t.processTitleStart}
+                    <span className="text-orange"> {t.processTitleAccent}</span>
+                  </h2>
+                  <p>{t.processDesc}</p>
+                  <Link href="/services">
+                    <a className="btn rounded-pill bg-orange mt-3">{t.processBtn}</a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="digi-how-works-right mt-5 mt-lg-0">
+                  <div className="dig-how-steps rf-steps-card">
+                    <ul className="list-unstyled mb-0">
+                      <li className="d-md-flex justify-content-between align-items-center mb-3">
+                        <div className="me-3">
+                          <img src="/a_rfidia/z_school/etape.png" className="img-fluid mb-3 mb-md-0 rf-step-image" alt="Étape 1" />
+                        </div>
+                        <div>
+                          <span className="text-orange fw-bold">{t.step1}</span>
+                          <h6>{t.step1Title}</h6>
+                          <p className="m-0">{t.step1Desc}</p>
+                        </div>
+                      </li>
+                      <li className="d-md-flex justify-content-between align-items-center mb-3">
+                        <div className="me-3">
+                          <img src="/a_rfidia/z_school/etape2.png" className="img-fluid mb-3 mb-md-0 rf-step-image" alt="Étape 2" />
+                        </div>
+                        <div>
+                          <span className="text-orange fw-bold">{t.step2}</span>
+                          <h6>{t.step2Title}</h6>
+                          <p className="m-0">{t.step2Desc}</p>
+                        </div>
+                      </li>
+                      <li className="d-md-flex justify-content-between align-items-center">
+                        <div className="me-3">
+                          <img src="/a_rfidia/z_school/etape3.png" className="img-fluid mb-3 mb-md-0 rf-step-image" alt="Étape 3" />
+                        </div>
+                        <div>
+                          <span className="text-orange fw-bold">{t.step3}</span>
+                          <h6>{t.step3Title}</h6>
+                          <p className="m-0">{t.step3Desc}</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="about-section">
+        <section className="ptb-120">
           <div className="container">
-            <div className="about-section-head">
-              <h2>{t.valuesTitle}</h2>
+            <div className="text-center mb-5">
+              <span className="span-arrow">{t.valuesTag}</span>
+              <h2 className="mt-2">{t.valuesTitle}</h2>
             </div>
-            <div className="about-values-grid">
-              {t.values.map((v) => (
-                <article key={v.title} className="about-value-card">
-                  <h3>{v.title}</h3>
-                  <p>{v.desc}</p>
-                </article>
-              ))}
+            <div className="row g-4">
+              <div className="col-lg-6">
+                <div className="rf-card h-100">
+                  <h4>{t.valuesCardTitle}</h4>
+                  <ul className="rf-check-list">
+                    <li>{t.val1}</li>
+                    <li>{t.val2}</li>
+                    <li>{t.val3}</li>
+                    <li>{t.val4}</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="rf-card h-100">
+                  <h4>{t.qualityCardTitle}</h4>
+                  <ul className="rf-check-list">
+                    <li>{t.q1}</li>
+                    <li>{t.q2}</li>
+                    <li>{t.q3}</li>
+                    <li>{t.q4}</li>
+                    <li>{t.q5}</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="about-section about-section--soft">
+        <section className="ptb-120 rf-about-cta">
           <div className="container">
-            <div className="about-section-head">
-              <h2>{t.qualityTitle}</h2>
-            </div>
-            <ul className="about-quality-list">
-              {t.qualityItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="about-cta">
-          <div className="container">
-            <div className="about-cta-inner">
+            <div className="rf-about-cta-inner">
               <div>
                 <h2>{t.ctaTitle}</h2>
-                <p>{t.ctaText}</p>
+                <p>{t.ctaDesc}</p>
               </div>
-              <div className="about-cta-actions">
-                <Link href="/contact-us" passHref>
-                  <a className="about-btn about-btn--light">{t.ctaPrimary}</a>
+              <div className="d-flex flex-wrap gap-2">
+                <Link href="/contact-us">
+                  <a className="btn rounded-pill bg-orange">{t.ctaPrimary}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
-                  <a className="about-btn about-btn--outline">{t.ctaSecondary}</a>
+                <Link href="/it-solution">
+                  <a className="btn rounded-pill btn-outline-light">{t.ctaSecondary}</a>
                 </Link>
               </div>
             </div>
@@ -252,258 +491,171 @@ const AboutUs = () => {
       <Footer translations={t.footer} />
 
       <style jsx>{`
-        .about-rfidia {
-          --navy: #1e2a4a;
-          --cyan: #4dc8c4;
-          --violet: #7b5ea7;
-          --rose: #e0305a;
-          --line: #dfe7f6;
-          --text: #0f1a3d;
-          --muted: #5a6488;
-          font-family: "Manrope", sans-serif;
-          color: var(--text);
-          background: #fff;
+        .rf-about {
+          color: #0f1a3d;
         }
-        .about-hero {
-          padding: 110px 0 72px;
-          background: radial-gradient(980px 420px at 18% 12%, rgba(77, 200, 196, 0.14), transparent 60%),
+        .rf-about :global(.ptb-120) {
+          padding-top: 84px !important;
+          padding-bottom: 84px !important;
+        }
+        .rf-about :global(.pt-120) {
+          padding-top: 84px !important;
+        }
+        .rf-about-hero {
+          background: radial-gradient(980px 420px at 18% 12%, rgba(77, 200, 196, 0.16), transparent 60%),
             radial-gradient(900px 420px at 82% 20%, rgba(123, 94, 167, 0.1), transparent 58%), #fff;
           border-bottom: 1px solid rgba(30, 42, 74, 0.08);
         }
-        .about-tag {
-          display: inline-flex;
-          padding: 10px 14px;
-          border-radius: 999px;
-          background: rgba(77, 200, 196, 0.14);
-          border: 1px solid rgba(77, 200, 196, 0.28);
-          color: var(--navy);
-          font-size: 0.8rem;
-          font-weight: 800;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          margin-bottom: 16px;
-        }
-        .about-hero h1 {
-          font-size: clamp(2rem, 4.6vw, 3.8rem);
-          line-height: 1.1;
-          margin-bottom: 16px;
-          font-weight: 900;
-          letter-spacing: -0.02em;
-          color: var(--navy);
-        }
-        .about-hero p {
-          font-size: 1.05rem;
-          line-height: 1.75;
-          color: var(--muted);
-          margin-bottom: 24px;
-          max-width: 690px;
-        }
-        .about-hero-actions,
-        .about-cta-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-        }
-        .about-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 12px;
-          padding: 12px 20px;
-          font-weight: 700;
-          text-decoration: none;
-          border: 1px solid transparent;
-          transition: all 0.25s ease;
-        }
-        .about-btn--primary {
-          background: linear-gradient(120deg, var(--rose), #b61f42);
-          color: #fff;
-          box-shadow: 0 14px 32px rgba(224, 48, 90, 0.24);
-        }
-        .about-btn--primary:hover {
-          color: #fff;
-          transform: translateY(-2px);
-        }
-        .about-btn--ghost {
+        .rf-about-kpi-card {
           background: #fff;
-          border-color: rgba(30, 42, 74, 0.18);
-          color: var(--navy);
-        }
-        .about-btn--ghost:hover {
-          color: var(--navy);
-          transform: translateY(-2px);
-          border-color: rgba(30, 42, 74, 0.28);
-        }
-        .about-hero-card {
-          background: #fff;
-          border: 1px solid var(--line);
-          border-radius: 22px;
-          padding: 18px;
-          box-shadow: 0 18px 42px rgba(22, 35, 80, 0.08);
-          display: grid;
-          gap: 12px;
-        }
-        .about-stat {
-          border: 1px solid var(--line);
-          border-radius: 14px;
-          padding: 12px 14px;
-          background: #fff;
-        }
-        .about-stat strong {
-          display: block;
-          font-size: 1.2rem;
-          color: var(--navy);
-          margin-bottom: 2px;
-        }
-        .about-stat span {
-          color: var(--muted);
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-        .about-section {
-          padding: 74px 0;
-        }
-        .about-section--soft {
-          background: linear-gradient(180deg, rgba(245, 248, 255, 0.9), rgba(245, 248, 255, 0.52));
-          border-top: 1px solid rgba(30, 42, 74, 0.08);
-          border-bottom: 1px solid rgba(30, 42, 74, 0.08);
-        }
-        .about-grid-2 {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
-        }
-        .about-panel,
-        .about-block,
-        .about-value-card {
-          background: #fff;
-          border: 1px solid var(--line);
-          border-radius: 18px;
-          padding: 20px;
-          box-shadow: 0 14px 36px rgba(22, 35, 80, 0.06);
-        }
-        .about-panel h2,
-        .about-block h2,
-        .about-section-head h2 {
-          margin: 0 0 10px;
-          color: var(--navy);
-          font-size: clamp(1.35rem, 2.2vw, 1.95rem);
-          font-weight: 800;
-          letter-spacing: -0.01em;
-        }
-        .about-panel p,
-        .about-block p,
-        .about-value-card p {
-          margin: 0;
-          color: var(--muted);
-          line-height: 1.75;
-          font-size: 0.98rem;
-        }
-        .about-block + .about-block {
-          margin-top: 16px;
-        }
-        .about-section-head {
-          text-align: center;
-          margin-bottom: 24px;
-        }
-        .about-values-grid {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
-        }
-        .about-value-card h3 {
-          margin: 0 0 8px;
-          color: var(--navy);
-          font-size: 1.12rem;
-          font-weight: 800;
-        }
-        .about-quality-list {
-          margin: 0 auto;
-          padding: 0;
-          list-style: none;
-          max-width: 900px;
+          border: 1px solid #dfe7f6;
+          border-radius: 20px;
+          padding: 16px;
+          box-shadow: 0 18px 44px rgba(22, 35, 80, 0.08);
           display: grid;
           gap: 10px;
         }
-        .about-quality-list li {
-          position: relative;
+        .rf-kpi-item {
+          border: 1px solid #e6ecfa;
           border-radius: 12px;
-          border: 1px solid var(--line);
-          padding: 12px 14px 12px 44px;
-          background: #fff;
-          color: var(--text);
-          line-height: 1.6;
+          padding: 12px;
         }
-        .about-quality-list li::before {
+        .rf-kpi-item h3 {
+          margin: 0 0 3px;
+          color: #1e2a4a;
+        }
+        .rf-kpi-item p {
+          margin: 0;
+          font-size: 0.9rem;
+          color: #5b678f;
+          line-height: 1.5;
+        }
+        .rf-about-soft {
+          background: linear-gradient(180deg, rgba(245, 248, 255, 0.9), rgba(245, 248, 255, 0.5));
+          border-top: 1px solid rgba(30, 42, 74, 0.08);
+          border-bottom: 1px solid rgba(30, 42, 74, 0.08);
+        }
+        .rf-about :global(.digi-why-left img) {
+          width: 100%;
+          max-height: 340px;
+          object-fit: cover;
+          border-radius: 14px;
+          border: 1px solid #dfe7f6;
+          box-shadow: 0 14px 34px rgba(22, 35, 80, 0.08);
+        }
+        .rf-about :global(.digi-why-right h2) {
+          font-size: clamp(1.85rem, 3vw, 2.6rem);
+          line-height: 1.2;
+          margin-bottom: 12px;
+        }
+        .rf-about :global(.digi-why-right p) {
+          font-size: 1.02rem;
+          line-height: 1.72;
+          color: #4f5d86;
+        }
+        .rf-check-list {
+          margin: 18px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px 12px;
+        }
+        .rf-check-list li {
+          position: relative;
+          padding-left: 12px;
+          color: #5b678f;
+          line-height: 1.6;
+          background: #fff;
+          border: 1px solid #eef2fb;
+          border-radius: 8px;
+          padding-top: 7px;
+          padding-right: 10px;
+          padding-bottom: 7px;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 8px rgba(30, 42, 74, 0.04);
+        }
+        .rf-check-list li:hover {
+          border-color: #d8e6fb;
+          box-shadow: 0 8px 18px rgba(30, 42, 74, 0.08);
+          transform: translateY(-1px);
+        }
+        .rf-check-list li::before {
+          content: none;
+        }
+        .rf-check-list li::after {
           content: "";
           position: absolute;
-          left: 16px;
-          top: 18px;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: var(--cyan);
-          box-shadow: 0 0 0 4px rgba(77, 200, 196, 0.18);
+          inset: 0 auto 0 0;
+          width: 3px;
+          border-radius: 8px 0 0 8px;
+          background: linear-gradient(180deg, #4dc8c4 0%, #7b5ea7 100%);
+          opacity: 0.85;
         }
-        .about-cta {
-          padding: 62px 0 86px;
+        .rf-step-image {
+          width: 72px;
+          height: 72px;
+          object-fit: cover;
+          border-radius: 10px;
+          border: 1px solid #e6ecfa;
         }
-        .about-cta-inner {
-          border-radius: 26px;
-          padding: clamp(2rem, 4vw, 3rem);
+        .rf-steps-card {
+          background: #fff;
+          border: 1px solid #dfe7f6;
+          border-radius: 18px;
+          box-shadow: 0 18px 44px rgba(22, 35, 80, 0.08);
+          padding: 18px;
+        }
+        .rf-card {
+          background: #fff;
+          border: 1px solid #dfe7f6;
+          border-radius: 18px;
+          box-shadow: 0 14px 34px rgba(22, 35, 80, 0.07);
+          padding: 22px;
+        }
+        .rf-card h4 {
+          color: #1e2a4a;
+          margin-bottom: 10px;
+          font-weight: 800;
+        }
+        .rf-about-cta {
+          background: #fff;
+        }
+        .rf-about-cta-inner {
           background: radial-gradient(900px 420px at 20% 20%, rgba(224, 48, 90, 0.2), transparent 58%),
             radial-gradient(900px 420px at 80% 15%, rgba(77, 200, 196, 0.16), transparent 58%),
             linear-gradient(125deg, #1e2a4a 0%, #2a3760 70%, #1e2a4a 100%);
           border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 24px;
+          padding: clamp(1.8rem, 4vw, 2.8rem);
           box-shadow: 0 26px 70px rgba(22, 35, 80, 0.2);
           display: flex;
           flex-wrap: wrap;
-          align-items: center;
           justify-content: space-between;
-          gap: 18px;
+          align-items: center;
+          gap: 16px;
         }
-        .about-cta-inner h2 {
+        .rf-about-cta-inner h2 {
           color: #fff;
           margin: 0 0 8px;
-          font-size: clamp(1.45rem, 2.4vw, 2.1rem);
           font-weight: 900;
         }
-        .about-cta-inner p {
+        .rf-about-cta-inner p {
           color: rgba(255, 255, 255, 0.86);
           margin: 0;
-          line-height: 1.7;
           max-width: 560px;
-        }
-        .about-btn--light {
-          background: #fff;
-          color: var(--navy);
-        }
-        .about-btn--light:hover {
-          color: var(--navy);
-          transform: translateY(-2px);
-        }
-        .about-btn--outline {
-          border-color: rgba(255, 255, 255, 0.35);
-          color: #fff;
-          background: rgba(255, 255, 255, 0.08);
-        }
-        .about-btn--outline:hover {
-          color: #fff;
-          transform: translateY(-2px);
+          line-height: 1.7;
         }
         @media (max-width: 991px) {
-          .about-grid-2,
-          .about-values-grid {
+          .rf-about :global(.ptb-120) {
+            padding-top: 64px !important;
+            padding-bottom: 64px !important;
+          }
+          .rf-about :global(.pt-120) {
+            padding-top: 64px !important;
+          }
+          .rf-check-list {
             grid-template-columns: 1fr;
-          }
-          .about-hero {
-            padding: 96px 0 58px;
-          }
-          .about-cta {
-            padding: 52px 0 70px;
-          }
-          .about-stat strong {
-            font-size: 1.1rem;
           }
         }
       `}</style>
@@ -512,3 +664,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+

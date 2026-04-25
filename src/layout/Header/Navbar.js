@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiOutlineX } from 'react-icons/hi';
+import { FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
 import OffCanvasMenu from './OffCanvasMenu';
 import {
@@ -66,6 +68,35 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
         insurance && 'ins-header main-header w-100 z-10'
       }`}
     >
+      <div className="rfidia-topbar d-none d-xl-block">
+        <div className="container">
+          <div className="rfidia-topbar__inner">
+            <div className="rfidia-topbar__left">
+              <a href="https://maps.google.com/?q=Ariana+1002+Tunisie" target="_blank" rel="noreferrer" className="rfidia-topbar__item">
+                <FaMapMarkerAlt />
+                <span>
+                Africa Mall Avenue Mustapha Hjeij Ariana 1002, Tunisie</span>
+              </a>
+              <a href="mailto:commercial@rfidia.com.tn" className="rfidia-topbar__item">
+                <HiOutlineMail />
+                <span>commercial@rfidia.com.tn</span>
+              </a>
+              <a href="tel:+21694103351" className="rfidia-topbar__item">
+                <FaPhoneAlt />
+                <span>+216 94 103 351</span>
+              </a>
+            </div>
+            <div className="rfidia-topbar__right">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">
+                <FaFacebookF />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rfidia-topbar__social">
+                <FaLinkedinIn />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav
         className={`navbar navbar-expand-xl z-50 ${
           navDark ? 'navbar-dark' : 'navbar-light'
