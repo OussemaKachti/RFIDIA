@@ -25,14 +25,14 @@ const NAV_BASE = [
     accent: "#6366f1",
   },
   {
-    slug: null,
+    slug: "solution-gestion-actifs",
     image: "/a_rfidia/z_rfid/z_assets.png",
-    accent: "#10b981",
+    accent: "#3B5FA0",
   },
   {
-    slug: null,
+    slug: "solution-sante",
     image: "/a_rfidia/z_medical/z_medical3.png",
-    accent: "#a855f7",
+    accent: "#4DC8C4",
   },
 ];
 

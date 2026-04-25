@@ -819,22 +819,22 @@ const ItSolution = () => {
     {
       id: "textile",
       image: "/a_rfidia/z_rfid/rfid6.png",
-      accent: "#0ea5e9",
+      accent: "#E0305A",
     },
     {
       id: "hotellerie",
       image: "/a_rfidia/z_rfid/rfid14.png",
-      accent: "#6366f1",
+      accent: "#7B5EA7",
     },
     {
       id: "assets",
       image: "/a_rfidia/z_rfid/z_assets.png",
-      accent: "#10b981",
+      accent: "#3B5FA0",
     },
     {
       id: "healthcare",
       image: "/a_rfidia/z_medical/z_medical3.png",
-      accent: "#a855f7",
+      accent: "#4DC8C4",
     },
   ];
 
@@ -906,6 +906,10 @@ const ItSolution = () => {
             ? "/it-solution/solution-textile"
           : item.id === "hotellerie"
             ? "/it-solution/solution-hotellerie"
+            : item.id === "assets"
+              ? "/it-solution/solution-gestion-actifs"
+              : item.id === "healthcare"
+                ? "/it-solution/solution-sante"
           : "/contact-us",
   }));
 
