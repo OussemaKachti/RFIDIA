@@ -1171,7 +1171,7 @@ const ItSolution = () => {
             boxShadow: '0 25px 50px rgba(0,0,0,0.2)'
           }}>
             <img
-              src="/a_rfidia/z_rfid/rfid4.png"
+              src="/a_rfidia/z_rfid/rfid19.png"
               alt="Équipe RFIDIA"
               style={{
                 width: '100%',

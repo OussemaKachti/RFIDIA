@@ -87,10 +87,10 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
               </a>
             </div>
             <div className="rfidia-topbar__right">
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">
+              <a href="https://www.linkedin.com/in/rfidtunisie/" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">
                 <FaFacebookF />
               </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rfidia-topbar__social">
+              <a href="https://www.linkedin.com/in/rfidtunisie/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rfidia-topbar__social">
                 <FaLinkedinIn />
               </a>
             </div>
