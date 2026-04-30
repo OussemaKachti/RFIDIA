@@ -400,9 +400,11 @@ const SolutionHotellerie = () => {
             <div className="htl-stack">
               {t.stack.map((s) => (
                 <article className="htl-card" key={s.title}>
-                  <div className="htl-card__top" />
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
+                  <div className="htl-card__accent" aria-hidden />
+                  <div className="htl-card__content">
+                    <h3>{s.title}</h3>
+                    <p>{s.desc}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -412,14 +414,14 @@ const SolutionHotellerie = () => {
         {/* FLOW */}
         <section className="htl-section htl-section--soft">
           <div className="container">
-            <div className="row g-5 align-items-start">
-              <div className="col-lg-5">
-                <div className="htl-head htl-head--left">
-                  <h2>{t.flowTitle}</h2>
-                  <p>{t.flowDesc}</p>
-                </div>
+            <div className="htl-head htl-head--wide">
+              <h2>{t.flowTitle}</h2>
+              <p>{t.flowDesc}</p>
+            </div>
 
-                <div className="htl-highlight">
+            <div className="row g-5 align-items-stretch htl-flow-grid">
+              <div className="col-lg-5">
+                <div className="htl-highlight htl-highlight--panel">
                   <div className="htl-highlight__title">{t.highlightTitle}</div>
                   <div className="htl-highlight__desc">{t.highlightDesc}</div>
                   <ul className="htl-list">
@@ -444,7 +446,7 @@ const SolutionHotellerie = () => {
               </div>
 
               <div className="col-lg-7">
-                <div className="htl-flow">
+                <div className="htl-flow htl-flow--panel">
                   {t.flow.map((f, idx) => (
                     <div className="htl-flow__row" key={f.n}>
                       <div className="htl-flow__n">{f.n}</div>
@@ -679,6 +681,10 @@ const SolutionHotellerie = () => {
           margin: 0 0 22px;
           max-width: 520px;
         }
+        .htl-head--wide {
+          max-width: 740px;
+          margin: 0 auto 34px;
+        }
         .htl-head h2 {
           font-size: clamp(1.65rem, 2.8vw, 2.35rem);
           font-weight: 900;
@@ -695,7 +701,16 @@ const SolutionHotellerie = () => {
         .htl-stack {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
+          gap: 24px;
+          align-items: stretch;
+        }
+        .htl-stack > * {
+          height: 100%;
+        }
+        @media (max-width: 991px) {
+          .htl-stack {
+            grid-template-columns: 1fr;
+          }
         }
         @media (max-width: 991px) {
           .htl-stack {
@@ -713,46 +728,68 @@ const SolutionHotellerie = () => {
         }
 
         .htl-card {
-          border-radius: 22px;
+          border-radius: 16px;
           background: #fff;
-          border: 1px solid rgba(18, 23, 39, 0.10);
-          box-shadow: 0 18px 46px rgba(18, 23, 39, 0.08);
-          padding: 18px 18px 16px;
+          border: 1px solid rgba(18, 23, 39, 0.06);
+          box-shadow: 0 12px 30px rgba(18, 23, 39, 0.06);
+          padding: 22px 20px;
           position: relative;
           overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+          transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+          display: flex;
+          gap: 12px;
+          align-items: stretch;
+          height: 100%;
         }
-        .htl-card__top {
-          position: absolute;
-          inset: 0 0 auto 0;
-          height: 3px;
-          background: linear-gradient(90deg, rgba(123, 94, 167, 0.95), rgba(78, 200, 200, 0.55));
+        .htl-card__accent {
+          width: 6px;
+          height: 56px;
+          border-radius: 8px;
+          flex: 0 0 auto;
+          background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
+          box-shadow: 0 6px 18px rgba(123, 94, 167, 0.12);
+        }
+        .htl-card__content {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         .htl-card:hover {
           transform: translateY(-6px);
-          border-color: rgba(123, 94, 167, 0.28);
-          box-shadow: 0 26px 70px rgba(18, 23, 39, 0.10);
+          border-color: rgba(123, 94, 167, 0.16);
+          box-shadow: 0 28px 70px rgba(18, 23, 39, 0.10);
         }
         .htl-card h3 {
-          font-size: 1.06rem;
+          font-size: 1.02rem;
           font-weight: 900;
-          margin: 10px 0 8px;
+          margin: 0 0 8px;
           letter-spacing: -0.01em;
         }
         .htl-card p {
           margin: 0;
-          color: rgba(18, 23, 39, 0.68);
-          line-height: 1.65;
-          font-size: 0.98rem;
+          color: rgba(18, 23, 39, 0.74);
+          line-height: 1.6;
+          font-size: 0.975rem;
         }
 
         .htl-highlight {
-          margin-top: 18px;
+          margin: 0;
           border-radius: 22px;
-          background: rgba(255, 255, 255, 0.8);
-          border: 1px solid rgba(18, 23, 39, 0.10);
-          padding: 18px 18px;
-          box-shadow: 0 18px 50px rgba(18, 23, 39, 0.08);
+          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(18, 23, 39, 0.08);
+          padding: 22px 20px;
+          box-shadow: 0 16px 42px rgba(18, 23, 39, 0.08);
+          align-self: stretch;
+          width: 100%;
+          min-height: 360px;
+        }
+        .htl-highlight--panel,
+        .htl-flow--panel {
+          height: 100%;
+        }
+        .htl-flow-grid > [class*="col-"] {
+          display: flex;
         }
         .htl-highlight__title {
           font-weight: 900;
@@ -795,31 +832,48 @@ const SolutionHotellerie = () => {
         }
 
         .htl-flow {
-          border-radius: 26px;
-          background: rgba(255, 255, 255, 0.7);
-          border: 1px solid rgba(18, 23, 39, 0.10);
-          box-shadow: 0 24px 70px rgba(18, 23, 39, 0.10);
-          padding: 18px 16px;
+          border-radius: 22px;
+          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(18, 23, 39, 0.08);
+          box-shadow: 0 16px 44px rgba(18, 23, 39, 0.08);
+          padding: 22px 20px;
           position: relative;
+          align-self: stretch;
+          width: 100%;
+          min-height: 360px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        @media (max-width: 991px) {
+          .htl-highlight {
+            margin-top: 18px;
+            min-height: auto;
+          }
+
+          .htl-flow {
+            min-height: auto;
+          }
         }
         .htl-flow__row {
           display: grid;
-          grid-template-columns: 70px 1fr;
+          grid-template-columns: 64px 1fr;
           gap: 14px;
-          padding: 14px 10px 18px;
+          padding: 12px 10px 16px;
           position: relative;
+          align-items: start;
         }
         .htl-flow__n {
-          width: 52px;
-          height: 52px;
-          border-radius: 16px;
+          width: 54px;
+          height: 54px;
+          border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 900;
           background: linear-gradient(135deg, rgba(123, 94, 167, 0.95), rgba(181, 154, 217, 0.88));
           color: rgba(255, 255, 255, 0.96);
-          box-shadow: 0 14px 34px rgba(123, 94, 167, 0.20);
+          box-shadow: 0 10px 26px rgba(123, 94, 167, 0.16);
         }
         .htl-flow__body h3 {
           margin: 2px 0 6px;
@@ -834,10 +888,10 @@ const SolutionHotellerie = () => {
         .htl-flow__line {
           position: absolute;
           left: 36px;
-          top: 64px;
-          bottom: 0;
+          top: 52px;
+          bottom: 8px;
           width: 2px;
-          background: linear-gradient(180deg, rgba(123, 94, 167, 0.40), rgba(123, 94, 167, 0));
+          background: linear-gradient(180deg, rgba(123, 94, 167, 0.42), rgba(123, 94, 167, 0));
         }
 
         .htl-cta {

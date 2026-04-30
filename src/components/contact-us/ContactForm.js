@@ -11,10 +11,20 @@ const ContactForm = ({ content }) => {
       lastName: 'Nom',
       phone: 'Telephone',
       email: 'Email',
+      projectType: 'Type de projet',
+      projectTypePlaceholder: 'Selectionnez',
+      projectTypeOptions: ['Site web', 'Application mobile', 'Solution RFID / IoT', 'Autre'],
+      budget: 'Budget approximatif',
+      budgetPlaceholder: 'Votre budget',
+      buildQuestion: "Qu'est-ce que vous voulez construire?",
+      buildPlaceholder: 'Decrivez votre besoin',
       message: 'Message',
       messagePlaceholder: 'Expliquez-nous votre besoin',
       submit: 'Envoyer le message',
     };
+
+  const messageLabel = t.buildQuestion || t.message;
+  const messagePlaceholder = t.buildPlaceholder || t.messagePlaceholder;
 
   return (
     <section
@@ -93,16 +103,54 @@ const ContactForm = ({ content }) => {
                     />
                   </div>
                 </div>
+                <div className="col-sm-6">
+                  <label htmlFor="projectType" className="mb-1">
+                    {t.projectType} <span className="text-danger">*</span>
+                  </label>
+                  <div className="input-group mb-3">
+                    <select
+                      className="form-control"
+                      id="projectType"
+                      required
+                      aria-label={t.projectType}
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        {t.projectTypePlaceholder}
+                      </option>
+                      {(t.projectTypeOptions || []).map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="col-sm-6">
+                  <label htmlFor="budget" className="mb-1">
+                    {t.budget} <span className="text-danger">*</span>
+                  </label>
+                  <div className="input-group mb-3">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="budget"
+                      required
+                      placeholder={t.budgetPlaceholder || t.budget}
+                      aria-label={t.budget}
+                    />
+                  </div>
+                </div>
                 <div className="col-12">
                   <label htmlFor="yourMessage" className="mb-1">
-                    {t.message} <span className="text-danger">*</span>
+                    {messageLabel} <span className="text-danger">*</span>
                   </label>
                   <div className="input-group mb-3">
                     <textarea
                       className="form-control"
                       id="yourMessage"
                       required
-                      placeholder={t.messagePlaceholder}
+                      placeholder={messagePlaceholder}
                       style={{ height: '120px' }}
                     ></textarea>
                   </div>

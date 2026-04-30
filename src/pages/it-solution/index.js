@@ -254,6 +254,7 @@ const i18nContent = {
     heroFloatRealtime: "Traçabilité temps réel",
     heroFloatFast: "Déploiement rapide",
     sectionAbout: "À propos",
+    sectionAboutSubtitle: "Votre partenaire de confiance pour transformer vos défis technologiques en opportunités de croissance.",
     sectionAboutTitle: "Là où les services IT rencontrent l'",
     sectionAboutAccent: "innovation",
     sectionAboutP1:
@@ -388,6 +389,7 @@ const i18nContent = {
     heroFloatRealtime: "Real-time traceability",
     heroFloatFast: "Fast deployment",
     sectionAbout: "About",
+    sectionAboutSubtitle: "Your trusted partner to transform technological challenges into growth opportunities.",
     sectionAboutTitle: "Where IT services meet",
     sectionAboutAccent: "innovation",
     sectionAboutP1:
@@ -619,6 +621,7 @@ const i18nContent = {
     heroFloatRealtime: "Tracciabilita in tempo reale",
     heroFloatFast: "Implementazione rapida",
     sectionAbout: "Chi siamo",
+    sectionAboutSubtitle: "Il tuo partner di fiducia per trasformare le sfide tecnologiche in opportunità di crescita.",
     sectionAboutTitle: "Dove i servizi IT incontrano",
     sectionAboutAccent: "l'innovazione",
     sectionAboutP1:
@@ -1154,6 +1157,7 @@ const ItSolution = () => {
     <div className="rl-section-head">
       <SectionDivider />
       <h2>{t.sectionAbout}</h2>
+      <p>{t.sectionAboutSubtitle}</p>
     </div>
     <div className="row align-items-center g-5">
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import "flag-icons/css/flag-icons.min.css";
 import {
   navCompanyLinks,
   navCompanyPage,
@@ -31,7 +32,7 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
 
   const languageOptions = [
     { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
-    { key: 'en', label: navLabels.english, flagSrc: '/a_rfidia/z_rfid/am.png' },
+    { key: 'en', label: navLabels.english, flagClass: 'fi fi-us' },
     { key: 'it', label: navLabels.italian, flagSrc: '/a_rfidia/z_rfid/it.png' },
   ];
 
@@ -217,11 +218,15 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
             aria-expanded="false"
           >
             <span className="rfidia-lang-current">
-              <img
-                src={selectedLanguage.flagSrc}
-                alt={selectedLanguage.label}
-                className="rfidia-lang-flag-img"
-              />
+              {selectedLanguage.flagClass ? (
+                <span className={`${selectedLanguage.flagClass} rfidia-lang-flag-img`}></span>
+              ) : (
+                <img
+                  src={selectedLanguage.flagSrc}
+                  alt={selectedLanguage.label}
+                  className="rfidia-lang-flag-img"
+                />
+              )}
               <span>{navLabels.language}: {selectedLanguage.key.toUpperCase()}</span>
             </span>
           </button>
@@ -233,11 +238,15 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
                   className={`dropdown-item rfidia-lang-item${language === option.key ? ' active' : ''}`}
                   onClick={() => onLanguageChange && onLanguageChange(option.key)}
                 >
-                  <img
-                    src={option.flagSrc}
-                    alt={option.label}
-                    className="rfidia-lang-flag-img"
-                  />
+                  {option.flagClass ? (
+                    <span className={`${option.flagClass} rfidia-lang-flag-img`}></span>
+                  ) : (
+                    <img
+                      src={option.flagSrc}
+                      alt={option.label}
+                      className="rfidia-lang-flag-img"
+                    />
+                  )}
                   <span>{option.label}</span>
                 </button>
               </li>

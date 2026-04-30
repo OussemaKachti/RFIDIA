@@ -52,9 +52,9 @@ const PageHeader = ({ title, desc, integration, blogtags, backgroundImage }) => 
           style={{
             background: `url('${pageBackground}') no-repeat center top`,
             backgroundSize: 'cover',
-            minHeight: '480px',
-            paddingTop: '80px',
-            paddingBottom: '120px',
+            minHeight: '280px',
+            paddingTop: '60px',
+            paddingBottom: '60px',
           }}
         >
           <div className="container">

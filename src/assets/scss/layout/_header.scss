@@ -365,9 +365,10 @@
 .rfidia-lang-flag-img {
   width: 20px;
   height: 14px;
+  display: block;
+  flex: 0 0 auto;
   object-fit: cover;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba($dark, 0.08);
 }
 
 .rfidia-lang-menu {
