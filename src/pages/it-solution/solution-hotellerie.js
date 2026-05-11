@@ -978,7 +978,7 @@ const SolutionHotellerie = () => {
           box-shadow: 0 12px 30px rgba(18, 23, 39, 0.06);
           padding: 22px 20px;
           position: relative;
-          overflow: hidden;
+          overflow: visible;
           transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
           display: flex;
           gap: 12px;
@@ -987,7 +987,7 @@ const SolutionHotellerie = () => {
         }
         .htl-card__accent {
           width: 6px;
-          height: 56px;
+          height: 100%;
           border-radius: 8px;
           flex: 0 0 auto;
           background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);

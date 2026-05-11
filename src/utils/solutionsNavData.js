@@ -21,7 +21,7 @@ const NAV_BASE = [
   },
   {
     slug: "solution-hotellerie",
-    image: "/a_rfidia/z_rfid/rfid14.png",
+    image: "/a_rfidia/hotellerie.png",
     accent: "#6366f1",
   },
   {
