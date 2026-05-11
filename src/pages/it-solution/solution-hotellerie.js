@@ -439,7 +439,7 @@ const SolutionHotellerie = () => {
               <div className="col-lg-6">
                 <div className="htl-visual">
                   <div className="htl-visual__frame">
-                    <img src="/a_rfidia/z_rfid/rfid14.png" alt="" />
+                    <img src="/a_rfidia/hotellerie.png" alt="" />
                   </div>
                   <div className="htl-chip htl-chip--tl">
                     <span className="htl-chip__dot" />
