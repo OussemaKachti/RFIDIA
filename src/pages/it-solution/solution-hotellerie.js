@@ -149,6 +149,28 @@ const i18n = {
       "Partagez votre typologie d’hôtel, vos volumes linge et vos flux : nous proposons un plan clair, réaliste et adapté.",
     ctaBtn: "Contactez RFIDIA",
     ctaAlt: "Retour à l’accueil solutions",
+    realSolutionTitle: "Une Plateforme de Pilotage Intuitive",
+    realSolutionSub: "Gérez l’ensemble de vos opérations (linge, équipements, inventaires) via une interface unifiée, pensée pour la performance hôtelière.",
+    realSolutionBadge: "Aperçu Plateforme",
+    modulesTitle: "Modules complémentaires",
+    modulesDesc: "Étendez vos capacités avec nos solutions spécialisées pour l'hôtellerie moderne.",
+    moduleProductsTitle: "Produits pour l'hôtel",
+    moduleProductsBadge: "Bientôt disponible",
+    moduleProductsDesc: "Une gamme complète d'équipements et consommables RFID pour votre établissement.",
+    moduleCashlessTitle: "RFIDIA CASHLESS",
+    moduleCashlessBadge: "Smart Platform",
+    moduleCashlessSub: "Smart Cashless Experience Platform",
+    moduleCashlessDesc: "Une plateforme cloud de paiement sans espèces conçue pour transformer l'expérience client dans vos restaurants, bars, piscines et spas.",
+    moduleCashlessFeatures: ["Wallet RFID sécurisé", "Paiement sans contact", "Dashboard temps réel", "Gestion POS centralisée", "Mobile App", "Analytics & Reporting"],
+    moduleCashlessJourneyTitle: "Parcours client fluide",
+    moduleCashlessSteps: ["Création du compte & liaison bracelet", "Recharge du portefeuille électronique", "Paiement instantané par simple contact", "Suivi des dépenses en temps réel"],
+    moduleCashlessBenefitsTitle: "Bénéfices hôteliers",
+    moduleCashlessBenefits: ["Expérience client premium & moderne", "Réduction drastique de la fraude", "Contrôle financier total en temps réel", "Augmentation du chiffre d'affaires moyen"],
+    moduleCashlessSectorsTitle: "Secteurs d'application",
+    moduleCashlessSectors: ["Hôtels & Resorts", "Clubs & Spas", "Festivals & Événements", "Parcs de loisirs"],
+    moduleCashlessModelTitle: "Accompagnement & Modèle SaaS",
+    moduleCashlessModelDesc: "Une solution clé en main incluant maintenance et support local.",
+    moduleCashlessModelItems: ["Cloud sécurisé", "Abonnement flexible", "Multi-sites", "Support technique local"],
   },
   en: {
     metaTitle: "Hospitality Solution | RFIDIA",
@@ -225,6 +247,28 @@ const i18n = {
       "Share your hotel profile, linen volumes and flows — we’ll provide a clear, realistic plan.",
     ctaBtn: "Contact RFIDIA",
     ctaAlt: "Back to solutions hub",
+    realSolutionTitle: "An Intuitive Management Platform",
+    realSolutionSub: "Manage all your operations (linen, equipment, inventory) through a unified interface designed for hospitality performance.",
+    realSolutionBadge: "Platform Overview",
+    modulesTitle: "Complementary Modules",
+    modulesDesc: "Extend your capabilities with our specialized solutions for modern hospitality.",
+    moduleProductsTitle: "Hotel Products",
+    moduleProductsBadge: "Coming Soon",
+    moduleProductsDesc: "A complete range of RFID equipment and consumables for your establishment.",
+    moduleCashlessTitle: "RFIDIA CASHLESS",
+    moduleCashlessBadge: "Smart Platform",
+    moduleCashlessSub: "Smart Cashless Experience Platform",
+    moduleCashlessDesc: "A cloud-based cashless payment platform designed to transform the guest experience in your restaurants, bars, pools, and spas.",
+    moduleCashlessFeatures: ["Secure RFID Wallet", "Contactless Payment", "Real-time Dashboard", "Centralized POS Management", "Mobile App", "Analytics & Reporting"],
+    moduleCashlessJourneyTitle: "Seamless Guest Journey",
+    moduleCashlessSteps: ["Account creation & wristband link", "Electronic wallet top-up", "Instant payment by simple contact", "Real-time expense tracking"],
+    moduleCashlessBenefitsTitle: "Hotel Benefits",
+    moduleCashlessBenefits: ["Premium & modern guest experience", "Drastic reduction in fraud", "Total financial control in real-time", "Increase in average revenue per guest"],
+    moduleCashlessSectorsTitle: "Target Sectors",
+    moduleCashlessSectors: ["Hotels & Resorts", "Clubs & Spas", "Festivals & Events", "Leisure Parks"],
+    moduleCashlessModelTitle: "SaaS Model & Support",
+    moduleCashlessModelDesc: "A turnkey solution including maintenance and local support.",
+    moduleCashlessModelItems: ["Secure Cloud", "Flexible Subscription", "Multi-site Support", "Local Technical Support"],
   },
   it: {
     metaTitle: "Soluzione Ospitalità | RFIDIA",
@@ -301,6 +345,28 @@ const i18n = {
       "Condividi profilo hotel, volumi biancheria e flussi: proponiamo un piano chiaro e realistico.",
     ctaBtn: "Contatta RFIDIA",
     ctaAlt: "Torna alle soluzioni",
+    realSolutionTitle: "Una piattaforma di gestione intuitiva",
+    realSolutionSub: "Gestisci tutte le tue operazioni (biancheria, attrezzature, inventario) attraverso un'interfaccia unificata progettata per le prestazioni alberghiere.",
+    realSolutionBadge: "Panoramica della piattaforma",
+    modulesTitle: "Moduli complementari",
+    modulesDesc: "Estendi le tue capacità con le nostre soluzioni specializzate per l'ospitalità moderna.",
+    moduleProductsTitle: "Prodotti per l'hotel",
+    moduleProductsBadge: "Prossimamente",
+    moduleProductsDesc: "Una gamma completa di attrezzature e consumabili RFID per la tua struttura.",
+    moduleCashlessTitle: "RFIDIA CASHLESS",
+    moduleCashlessBadge: "Smart Platform",
+    moduleCashlessSub: "Smart Cashless Experience Platform",
+    moduleCashlessDesc: "Una piattaforma cloud di pagamento senza contanti progettata per trasformare l'esperienza dell'ospite nei tuoi ristoranti, bar, piscine e spa.",
+    moduleCashlessFeatures: ["Wallet RFID sicuro", "Pagamento contactless", "Dashboard in tempo reale", "Gestione POS centralizzata", "Mobile App", "Analytics & Reporting"],
+    moduleCashlessJourneyTitle: "Percorso ospite fluido",
+    moduleCashlessSteps: ["Creazione account & collegamento braccialetto", "Ricarica del portafoglio elettronico", "Pagamento istantaneo tramite contatto", "Monitoraggio delle spese in tempo reale"],
+    moduleCashlessBenefitsTitle: "Vantaggi per l'hotel",
+    moduleCashlessBenefits: ["Esperienza ospite premium e moderna", "Riduzione drastica delle frodi", "Controllo finanziario totale in tempo reale", "Aumento del fatturato medio per ospite"],
+    moduleCashlessSectorsTitle: "Settori target",
+    moduleCashlessSectors: ["Hotel & Resort", "Club & Spa", "Festival & Eventi", "Parchi divertimento"],
+    moduleCashlessModelTitle: "Modello SaaS & Supporto",
+    moduleCashlessModelDesc: "Una soluzione chiavi in mano con manutenzione e supporto locale inclusi.",
+    moduleCashlessModelItems: ["Cloud sicuro", "Abbonamento flessibile", "Multi-sito", "Supporto tecnico locale"],
   },
 };
 
@@ -411,7 +477,60 @@ const SolutionHotellerie = () => {
           </div>
         </section>
 
-        {/* FLOW */}
+        {/* REAL SOLUTION SECTION - REDESIGNED */}
+        <section className="htl-section htl-showcase-section">
+          <div className="container">
+            <div className="htl-head htl-head--wide">
+              <div className="htl-showcase-badge">{t.realSolutionBadge}</div>
+              <h2 className="htl-title-lg">{t.realSolutionTitle}</h2>
+              <p className="htl-sub-lg">{t.realSolutionSub}</p>
+            </div>
+
+            <div className="htl-showcase">
+              <div className="htl-showcase__glow" />
+
+              {/* Browser Mockup */}
+              <div className="htl-browser">
+                <div className="htl-browser__header">
+                  <div className="htl-browser__dots">
+                    <span /> <span /> <span />
+                  </div>
+                  <div className="htl-browser__url">app.rfidia.tn/hospitality-v2</div>
+                </div>
+                <div className="htl-browser__content">
+                  <img src="/a_rfidia/solu_hot.jfif" alt="Real Hotel Solution Dashboard" />
+                </div>
+              </div>
+
+              {/* Floating Data Cards */}
+              <div className="htl-floating-card htl-floating-card--1">
+                <div className="htl-floating-card__icon">📡</div>
+                <div className="htl-floating-card__info">
+                  <strong>324</strong>
+                  <span>Tags Actifs</span>
+                </div>
+              </div>
+
+              <div className="htl-floating-card htl-floating-card--2">
+                <div className="htl-floating-card__icon">✅</div>
+                <div className="htl-floating-card__info">
+                  <strong>99.9%</strong>
+                  <span>Précision</span>
+                </div>
+              </div>
+
+              <div className="htl-floating-card htl-floating-card--3">
+                <div className="htl-floating-card__icon">📊</div>
+                <div className="htl-floating-card__info">
+                  <strong>Real-time</strong>
+                  <span>Analytics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FLOW commented out for now
         <section className="htl-section htl-section--soft">
           <div className="container">
             <div className="htl-head htl-head--wide">
@@ -457,6 +576,131 @@ const SolutionHotellerie = () => {
                       {idx < t.flow.length - 1 && <div className="htl-flow__line" aria-hidden />}
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        */}
+
+        {/* MODULES (SUB-SOLUTIONS) */}
+        <section className="htl-section htl-modules">
+          <div className="container">
+            <div className="htl-head">
+              <h2>{t.modulesTitle}</h2>
+              <p>{t.modulesDesc}</p>
+            </div>
+
+            <div className="row g-4">
+              {false && (
+                <div className="col-lg-12 mb-4">
+                  <div className="htl-module-card htl-module-card--empty">
+                    <div className="htl-module-card__badge">{t.moduleProductsBadge}</div>
+                    <div className="row align-items-center">
+                      <div className="col-md-8">
+                        <h3>{t.moduleProductsTitle}</h3>
+                        <p>{t.moduleProductsDesc}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Cashless Module */}
+              <div className="col-lg-12">
+                <div className="htl-module-card htl-module-card--cashless">
+                  <div className="htl-module-card__badge htl-module-card__badge--active">{t.moduleCashlessBadge}</div>
+                  <div className="row align-items-center g-5">
+                    <div className="col-lg-7">
+                      <h3 className="htl-module-title">{t.moduleCashlessTitle}</h3>
+                      <div className="htl-module-sub">{t.moduleCashlessSub}</div>
+                      <p className="htl-module-desc">{t.moduleCashlessDesc}</p>
+
+                      <div className="htl-cashless-features">
+                        {t.moduleCashlessFeatures.map((f) => (
+                          <div className="htl-feature-pill" key={f}>
+                            <span className="htl-feature-pill__dot" />
+                            {f}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="col-lg-5">
+                      <div className="htl-cashless-visual">
+                        <div className="htl-cashless-visual__frame">
+                          <img src="/a_rfidia/z_rfid/rfid15.png" alt="RFID Cashless" />
+                        </div>
+                        <div className="htl-visual-chip">Cloud POS</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row mt-5 g-4">
+                    <div className="col-lg-6">
+                      <div className="htl-journey-box">
+                        <h4>{t.moduleCashlessJourneyTitle}</h4>
+                        <div className="htl-journey-steps">
+                          {t.moduleCashlessSteps.map((s, idx) => (
+                            <div className="htl-journey-step" key={idx}>
+                              <div className="htl-journey-step__n">{idx + 1}</div>
+                              <div className="htl-journey-step__t">{s}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="htl-benefits-box">
+                        <h4>{t.moduleCashlessBenefitsTitle}</h4>
+                        <div className="htl-benefits-grid">
+                          {t.moduleCashlessBenefits.map((b, idx) => (
+                            <div className="htl-benefit-item" key={idx}>
+                              <div className="htl-benefit-item__icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                  <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </div>
+                              <div className="htl-benefit-item__text">{b}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row mt-4 g-4">
+                    <div className="col-lg-6">
+                      <div className="htl-sectors-box">
+                        <h4>{t.moduleCashlessSectorsTitle}</h4>
+                        <div className="htl-sectors-grid">
+                          {t.moduleCashlessSectors.map((s, idx) => (
+                            <div className="htl-sector-pill" key={idx}>
+                              <span className="htl-sector-pill__dot" />
+                              {s}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="htl-model-box">
+                        <h4>{t.moduleCashlessModelTitle}</h4>
+                        <p className="htl-model-desc">{t.moduleCashlessModelDesc}</p>
+                        <div className="htl-model-items">
+                          {t.moduleCashlessModelItems.map((item, idx) => (
+                            <div className="htl-model-item" key={idx}>
+                              <div className="htl-model-item__icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                  <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </div>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -663,7 +907,7 @@ const SolutionHotellerie = () => {
         }
 
         .htl-section {
-          padding: 74px 0;
+          padding: 74px 0 32px;
         }
         .htl-section--soft {
           background: linear-gradient(180deg, rgba(250, 247, 240, 0.95) 0%, rgba(250, 247, 240, 0.55) 100%);
@@ -949,6 +1193,472 @@ const SolutionHotellerie = () => {
           transform: translateY(-2px);
           border-color: rgba(255, 255, 255, 0.26);
           color: rgba(255, 255, 255, 0.96);
+        }
+
+        /* MODULES SECTION */
+        .htl-modules {
+          padding-top: 16px;
+        }
+
+        .htl-module-card {
+          position: relative;
+          border-radius: 24px;
+          padding: 40px;
+          overflow: hidden;
+          background: #fff;
+          border: 1px solid rgba(18, 23, 39, 0.08);
+          box-shadow: 0 20px 50px rgba(18, 23, 39, 0.05);
+        }
+
+        .htl-module-card--empty {
+          background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+          border: 1px dashed rgba(18, 23, 39, 0.15);
+          opacity: 0.85;
+        }
+
+        .htl-module-card--cashless {
+          background: radial-gradient(circle at top right, rgba(123, 94, 167, 0.05), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(78, 200, 200, 0.03), transparent 30%),
+                      #fff;
+        }
+
+        .htl-module-card__badge {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          padding: 6px 14px;
+          border-radius: 999px;
+          font-size: 0.72rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          background: rgba(18, 23, 39, 0.05);
+          color: rgba(18, 23, 39, 0.5);
+          z-index: 4;
+        }
+        .htl-module-card__badge--active {
+          background: rgba(123, 94, 167, 0.1);
+          color: var(--accent);
+          border: 1px solid rgba(123, 94, 167, 0.15);
+        }
+
+        .htl-module-card h3 {
+          font-size: 1.85rem;
+          font-weight: 900;
+          margin-bottom: 12px;
+          letter-spacing: -0.02em;
+        }
+        .htl-module-title {
+          background: linear-gradient(120deg, var(--ink) 0%, var(--accent) 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .htl-module-sub {
+          font-weight: 800;
+          color: var(--accent);
+          font-size: 0.95rem;
+          margin-bottom: 16px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .htl-module-desc {
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: rgba(18, 23, 39, 0.7);
+          margin-bottom: 24px;
+          max-width: 90%;
+        }
+
+        .htl-cashless-features {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .htl-feature-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 16px;
+          background: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(18, 23, 39, 0.08);
+          border-radius: 99px;
+          font-size: 0.88rem;
+          font-weight: 700;
+          color: rgba(18, 23, 39, 0.8);
+          box-shadow: 0 4px 12px rgba(18, 23, 39, 0.03);
+        }
+        .htl-feature-pill__dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--accent);
+        }
+
+        .htl-cashless-visual {
+          position: relative;
+          z-index: 1;
+        }
+        .htl-cashless-visual__frame {
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 30px 60px rgba(123, 94, 167, 0.15);
+          border: 1px solid rgba(123, 94, 167, 0.1);
+        }
+        .htl-cashless-visual__frame img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+          display: block;
+        }
+        .htl-visual-chip {
+          position: absolute;
+          bottom: -15px;
+          right: 30px;
+          background: var(--ink);
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 12px;
+          font-weight: 800;
+          font-size: 0.85rem;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .htl-journey-box, .htl-benefits-box {
+          height: 100%;
+          padding: 30px;
+          border-radius: 20px;
+          background: rgba(18, 23, 39, 0.02);
+          border: 1px solid rgba(18, 23, 39, 0.04);
+        }
+        .htl-journey-box h4, .htl-benefits-box h4 {
+          font-weight: 900;
+          font-size: 1.15rem;
+          margin-bottom: 20px;
+          color: var(--ink);
+        }
+
+        .htl-journey-steps {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        .htl-journey-step {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .htl-journey-step__n {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          background: var(--accent);
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 900;
+          font-size: 0.85rem;
+          flex-shrink: 0;
+        }
+        .htl-journey-step__t {
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: rgba(18, 23, 39, 0.8);
+        }
+
+        .htl-benefits-grid {
+          display: grid;
+          gap: 12px;
+        }
+        .htl-benefit-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px;
+          background: #fff;
+          border-radius: 12px;
+          border: 1px solid rgba(18, 23, 39, 0.05);
+        }
+        .htl-benefit-item__icon {
+          color: #10b981;
+          display: flex;
+          flex-shrink: 0;
+        }
+        .htl-benefit-item__text {
+          font-size: 0.92rem;
+          font-weight: 700;
+          color: rgba(18, 23, 39, 0.9);
+        }
+
+        @media (max-width: 991px) {
+          .htl-module-card {
+            padding: 30px 20px;
+          }
+          .htl-module-desc {
+            max-width: 100%;
+          }
+          .htl-cashless-visual__frame img {
+            height: 240px;
+          }
+        }
+
+        /* REAL SOLUTION SECTION - REDESIGNED */
+        .htl-showcase-section {
+          background: #fff;
+          padding: 28px 0 34px;
+          overflow: hidden;
+        }
+        .htl-showcase-badge {
+          display: inline-block;
+          padding: 8px 18px;
+          border-radius: 999px;
+          background: rgba(123, 94, 167, 0.08);
+          color: var(--accent);
+          font-weight: 800;
+          font-size: 0.78rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 20px;
+          border: 1px solid rgba(123, 94, 167, 0.15);
+        }
+        .htl-title-lg {
+          font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+          font-weight: 900;
+          margin-bottom: 18px;
+          letter-spacing: -0.02em;
+        }
+        .htl-sub-lg {
+          font-size: 1.15rem;
+          color: rgba(18, 23, 39, 0.65);
+          max-width: 760px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        .htl-showcase {
+          position: relative;
+          margin-top: 18px;
+          padding: 0 40px;
+          z-index: 1;
+        }
+        .htl-showcase__glow {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          height: 60%;
+          background: radial-gradient(circle, rgba(123, 94, 167, 0.15) 0%, transparent 70%);
+          z-index: -1;
+          pointer-events: none;
+        }
+
+        .htl-browser {
+          max-width: 860px;
+          margin: 0 auto;
+          background: #fff;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 50px 100px rgba(18, 23, 39, 0.12), 
+                      0 15px 35px rgba(123, 94, 167, 0.08);
+          border: 1px solid rgba(18, 23, 39, 0.08);
+          transition: transform 0.4s ease;
+        }
+        .htl-browser:hover {
+          transform: translateY(-5px);
+        }
+        .htl-browser__header {
+          background: #f8f9fc;
+          padding: 12px 20px;
+          border-bottom: 1px solid rgba(18, 23, 39, 0.06);
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        .htl-browser__dots {
+          display: flex;
+          gap: 6px;
+        }
+        .htl-browser__dots span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(18, 23, 39, 0.15);
+        }
+        .htl-browser__dots span:nth-child(1) { background: #ff5f56; }
+        .htl-browser__dots span:nth-child(2) { background: #ffbd2e; }
+        .htl-browser__dots span:nth-child(3) { background: #27c93f; }
+        
+        .htl-browser__url {
+          background: #fff;
+          padding: 4px 20px;
+          border-radius: 6px;
+          font-size: 0.75rem;
+          color: rgba(18, 23, 39, 0.4);
+          border: 1px solid rgba(18, 23, 39, 0.05);
+          flex: 1;
+          max-width: 400px;
+          font-family: monospace;
+        }
+
+        .htl-browser__content img {
+          width: 100%;
+          display: block;
+          filter: saturate(1.02);
+        }
+
+        /* FLOATING CARDS */
+        .htl-floating-card {
+          position: absolute;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(12px);
+          padding: 14px 20px;
+          border-radius: 16px;
+          box-shadow: 0 20px 40px rgba(18, 23, 39, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          z-index: 10;
+          transition: transform 0.3s ease;
+          animation: float 6s ease-in-out infinite;
+        }
+        .htl-floating-card:hover {
+          transform: scale(1.05);
+          background: #fff;
+        }
+        .htl-floating-card--1 {
+          top: 15%;
+          left: 5%;
+          animation-delay: 0s;
+        }
+        .htl-floating-card--2 {
+          bottom: 15%;
+          right: 5%;
+          animation-delay: 1s;
+        }
+        .htl-floating-card--3 {
+          top: 40%;
+          right: 2%;
+          animation-delay: 2s;
+        }
+
+        .htl-floating-card__icon {
+          font-size: 1.5rem;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(123, 94, 167, 0.06);
+          border-radius: 10px;
+        }
+        .htl-floating-card__info {
+          display: flex;
+          flex-direction: column;
+        }
+        .htl-floating-card__info strong {
+          font-size: 1.1rem;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+        .htl-floating-card__info span {
+          font-size: 0.75rem;
+          color: rgba(18, 23, 39, 0.5);
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+
+        @media (max-width: 991px) {
+          .htl-showcase {
+            padding: 0 10px;
+            margin-top: 20px;
+          }
+          .htl-floating-card {
+            display: none;
+          }
+          .htl-showcase-section {
+            padding: 48px 0 56px;
+          }
+        }
+
+        /* CASHLESS ENHANCEMENTS */
+        .htl-sectors-box, .htl-model-box {
+          height: 100%;
+          padding: 30px;
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.6);
+          border: 1px solid rgba(18, 23, 39, 0.05);
+          backdrop-filter: blur(5px);
+        }
+        .htl-sectors-box h4, .htl-model-box h4 {
+          font-weight: 900;
+          font-size: 1.15rem;
+          margin-bottom: 20px;
+          color: var(--ink);
+        }
+
+        .htl-sectors-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        .htl-sector-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 16px;
+          background: #fff;
+          border-radius: 99px;
+          font-size: 0.88rem;
+          font-weight: 700;
+          color: rgba(18, 23, 39, 0.75);
+          border: 1px solid rgba(18, 23, 39, 0.06);
+          box-shadow: 0 4px 10px rgba(18, 23, 39, 0.02);
+        }
+        .htl-sector-pill__dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--accent2);
+        }
+
+        .htl-model-desc {
+          font-size: 0.92rem;
+          color: rgba(18, 23, 39, 0.6);
+          margin-bottom: 16px;
+          line-height: 1.5;
+        }
+        .htl-model-items {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .htl-model-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 0.88rem;
+          font-weight: 700;
+          color: rgba(18, 23, 39, 0.85);
+        }
+        .htl-model-item__icon {
+          width: 22px;
+          height: 22px;
+          border-radius: 6px;
+          background: rgba(123, 94, 167, 0.1);
+          color: var(--accent);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
         }
       `}</style>
     </Layout>

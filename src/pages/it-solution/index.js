@@ -826,7 +826,7 @@ const ItSolution = () => {
     },
     {
       id: "hotellerie",
-      image: "/a_rfidia/z_rfid/rfid14.png",
+      image: "/a_rfidia/hotellerie.png",
       accent: "#7B5EA7",
     },
     {
@@ -907,13 +907,13 @@ const ItSolution = () => {
           ? "/it-solution/solution-entrepot"
           : item.id === "textile"
             ? "/it-solution/solution-textile"
-          : item.id === "hotellerie"
-            ? "/it-solution/solution-hotellerie"
-            : item.id === "assets"
-              ? "/it-solution/solution-gestion-actifs"
-              : item.id === "healthcare"
-                ? "/it-solution/solution-sante"
-          : "/contact-us",
+            : item.id === "hotellerie"
+              ? "/it-solution/solution-hotellerie"
+              : item.id === "assets"
+                ? "/it-solution/solution-gestion-actifs"
+                : item.id === "healthcare"
+                  ? "/it-solution/solution-sante"
+                  : "/contact-us",
   }));
 
   const toggleFaq = (idx) => setOpenFaq(openFaq === idx ? null : idx);
@@ -1022,7 +1022,7 @@ const ItSolution = () => {
             <div className="solutions-white-grid">
               {localizedShowcaseSolutions.map((item) => (
                 <Link href={item.href} key={item.id} passHref>
-                  <a 
+                  <a
                     className="solution-card-w"
                     style={{ "--accent": item.accent }}
                   >
@@ -1151,170 +1151,170 @@ const ItSolution = () => {
           `}</style>
         </section>
 
-      {/* ── ABOUT ── */}
-<section className="rl-section rl-about">
-  <div className="container">
-    <div className="rl-section-head">
-      <SectionDivider />
-      <h2>{t.sectionAbout}</h2>
-      <p>{t.sectionAboutSubtitle}</p>
-    </div>
-    <div className="row align-items-center g-5">
-
-      {/* ── Colonne gauche : visuels ── */}
-      <div className="col-lg-6">
-        <div style={{ position: 'relative', padding: '2.5rem 1rem 2.5rem 2rem' }}>
-
-          {/* Image principale */}
-          <div style={{
-            position: 'relative',
-            borderRadius: '1.5rem',
-            overflow: 'hidden',
-            height: '480px',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 25px 50px rgba(0,0,0,0.2)'
-          }}>
-            <img
-              src="/a_rfidia/z_rfid/rfid19.png"
-              alt="Équipe RFIDIA"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block'
-              }}
-            />
-            <div style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(135deg, rgba(17,22,56,0.4) 0%, transparent 60%)'
-            }} />
-          </div>
-
-          {/* Carte flottante haut-gauche — Actif / 32+ */}
-          <div style={{
-            position: 'absolute',
-            top: '8px',
-            left: '-8px',
-            background: '#111638',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderRadius: '1rem',
-            padding: '1rem 1.25rem',
-            width: '176px',
-            boxShadow: '0 8px 32px rgba(26,33,80,0.3)'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-              <span style={{
-                width: '8px', height: '8px', borderRadius: '50%',
-                background: '#4ECDC4', display: 'inline-block', flexShrink: 0
-              }} />
-              <span style={{
-                color: '#4ECDC4', fontSize: '11px',
-                fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase'
-              }}>{t.aboutCards.active}</span>
+        {/* ── ABOUT ── */}
+        <section className="rl-section rl-about">
+          <div className="container">
+            <div className="rl-section-head">
+              <SectionDivider />
+              <h2>{t.sectionAbout}</h2>
+              <p>{t.sectionAboutSubtitle}</p>
             </div>
-            <p style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, margin: 0, lineHeight: 1 }}>32+</p>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '4px 0 0' }}>{t.aboutCards.experts}</p>
-          </div>
+            <div className="row align-items-center g-5">
 
-          {/* Carte flottante bas-droite — Excellence */}
-          <div style={{
-            position: 'absolute',
-            bottom: '8px',
-            right: '-8px',
-            background: '#fff',
-            borderRadius: '1rem',
-            padding: '1.25rem',
-            width: '210px',
-            boxShadow: '0 12px 40px rgba(26,33,80,0.14)',
-            border: '1px solid #E2E6F0'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-              <div style={{
-                width: '36px', height: '36px', borderRadius: '10px',
-                background: 'rgba(232,93,117,0.1)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
-              }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85D75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
+              {/* ── Colonne gauche : visuels ── */}
+              <div className="col-lg-6">
+                <div style={{ position: 'relative', padding: '2.5rem 1rem 2.5rem 2rem' }}>
+
+                  {/* Image principale */}
+                  <div style={{
+                    position: 'relative',
+                    borderRadius: '1.5rem',
+                    overflow: 'hidden',
+                    height: '480px',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    boxShadow: '0 25px 50px rgba(0,0,0,0.2)'
+                  }}>
+                    <img
+                      src="/a_rfidia/z_rfid/rfid19.png"
+                      alt="Équipe RFIDIA"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block'
+                      }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(135deg, rgba(17,22,56,0.4) 0%, transparent 60%)'
+                    }} />
+                  </div>
+
+                  {/* Carte flottante haut-gauche — Actif / 32+ */}
+                  <div style={{
+                    position: 'absolute',
+                    top: '8px',
+                    left: '-8px',
+                    background: '#111638',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '1rem',
+                    padding: '1rem 1.25rem',
+                    width: '176px',
+                    boxShadow: '0 8px 32px rgba(26,33,80,0.3)'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                      <span style={{
+                        width: '8px', height: '8px', borderRadius: '50%',
+                        background: '#4ECDC4', display: 'inline-block', flexShrink: 0
+                      }} />
+                      <span style={{
+                        color: '#4ECDC4', fontSize: '11px',
+                        fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase'
+                      }}>{t.aboutCards.active}</span>
+                    </div>
+                    <p style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, margin: 0, lineHeight: 1 }}>32+</p>
+                    <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '4px 0 0' }}>{t.aboutCards.experts}</p>
+                  </div>
+
+                  {/* Carte flottante bas-droite — Excellence */}
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '8px',
+                    right: '-8px',
+                    background: '#fff',
+                    borderRadius: '1rem',
+                    padding: '1.25rem',
+                    width: '210px',
+                    boxShadow: '0 12px 40px rgba(26,33,80,0.14)',
+                    border: '1px solid #E2E6F0'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                      <div style={{
+                        width: '36px', height: '36px', borderRadius: '10px',
+                        background: 'rgba(232,93,117,0.1)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                      }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85D75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                      </div>
+                      <span style={{ fontSize: '14px', fontWeight: 600, color: '#1A2150' }}>{t.aboutCards.excellence}</span>
+                    </div>
+                    <p style={{ fontSize: '12px', color: '#5A6282', lineHeight: 1.5, margin: 0 }}>
+                      {t.aboutCards.excellenceDesc}
+                    </p>
+                  </div>
+
+                  {/* Badge bas-centre — Équipe RFIDIA de confiance */}
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '56px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: '#1A2150',
+                    color: '#fff',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    padding: '8px 20px',
+                    borderRadius: '999px',
+                    whiteSpace: 'nowrap',
+                    boxShadow: '0 4px 16px rgba(26,33,80,0.3)'
+                  }}>
+                    {t.aboutCards.trustedTeam}
+                  </div>
+
+                </div>
               </div>
-              <span style={{ fontSize: '14px', fontWeight: 600, color: '#1A2150' }}>{t.aboutCards.excellence}</span>
-            </div>
-            <p style={{ fontSize: '12px', color: '#5A6282', lineHeight: 1.5, margin: 0 }}>
-              {t.aboutCards.excellenceDesc}
-            </p>
-          </div>
 
-          {/* Badge bas-centre — Équipe RFIDIA de confiance */}
-          <div style={{
-            position: 'absolute',
-            bottom: '56px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            background: '#1A2150',
-            color: '#fff',
-            fontSize: '13px',
-            fontWeight: 600,
-            padding: '8px 20px',
-            borderRadius: '999px',
-            whiteSpace: 'nowrap',
-            boxShadow: '0 4px 16px rgba(26,33,80,0.3)'
-          }}>
-            {t.aboutCards.trustedTeam}
-          </div>
+              {/* ── Colonne droite : contenu ── */}
+              <div className="col-lg-6">
+                <div className="rl-about-content">
+                  <h2>
+                    {t.sectionAboutTitle}
+                    <span className="rl-gradient-text">{t.sectionAboutAccent}</span>
+                  </h2>
+                  <p>
+                    {t.sectionAboutP1}
+                  </p>
+                  <p>
+                    {t.sectionAboutP2}
+                  </p>
 
-        </div>
-      </div>
+                  <div className="rl-about-actions rl-about-actions--inline">
+                    <Link href="/about-us" passHref>
+                      <a className="rl-btn rl-btn--primary">{t.aboutBtn1}</a>
+                    </Link>
+                    <Link href="/contact-us" passHref>
+                      <a className="rl-btn rl-btn--outline-dark">{t.aboutBtn2}</a>
+                    </Link>
+                  </div>
 
-      {/* ── Colonne droite : contenu ── */}
-      <div className="col-lg-6">
-        <div className="rl-about-content">
-          <h2>
-            {t.sectionAboutTitle}
-            <span className="rl-gradient-text">{t.sectionAboutAccent}</span>
-          </h2>
-          <p>
-            {t.sectionAboutP1}
-          </p>
-          <p>
-            {t.sectionAboutP2}
-          </p>
+                  <div className="rl-about-points">
+                    <div className="rl-about-point">
+                      <h4>{t.aboutPoint1Title}</h4>
+                      <p>{t.aboutPoint1Desc}</p>
+                    </div>
+                    <div className="rl-about-point">
+                      <h4>{t.aboutPoint2Title}</h4>
+                      <p>{t.aboutPoint2Desc}</p>
+                    </div>
+                    <div className="rl-about-point">
+                      <h4>{t.aboutPoint3Title}</h4>
+                      <p>{t.aboutPoint3Desc}</p>
+                    </div>
+                    <div className="rl-about-point">
+                      <h4>{t.aboutPoint4Title}</h4>
+                      <p>{t.aboutPoint4Desc}</p>
+                    </div>
+                  </div>
 
-          <div className="rl-about-actions rl-about-actions--inline">
-            <Link href="/about-us" passHref>
-              <a className="rl-btn rl-btn--primary">{t.aboutBtn1}</a>
-            </Link>
-            <Link href="/contact-us" passHref>
-              <a className="rl-btn rl-btn--outline-dark">{t.aboutBtn2}</a>
-            </Link>
-          </div>
+                </div>
+              </div>
 
-          <div className="rl-about-points">
-            <div className="rl-about-point">
-              <h4>{t.aboutPoint1Title}</h4>
-              <p>{t.aboutPoint1Desc}</p>
-            </div>
-            <div className="rl-about-point">
-              <h4>{t.aboutPoint2Title}</h4>
-              <p>{t.aboutPoint2Desc}</p>
-            </div>
-            <div className="rl-about-point">
-              <h4>{t.aboutPoint3Title}</h4>
-              <p>{t.aboutPoint3Desc}</p>
-            </div>
-            <div className="rl-about-point">
-              <h4>{t.aboutPoint4Title}</h4>
-              <p>{t.aboutPoint4Desc}</p>
             </div>
           </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* ── SERVICES ── */}
         <section className="rl-section rl-services">
@@ -1425,7 +1425,7 @@ const ItSolution = () => {
           </div>
         </section>
 
-         {/* ── PARTNERS BAR ── */}
+        {/* ── PARTNERS BAR ── */}
         <section className="rl-partners">
           <div className="container">
             <div className="rl-partners__head">
