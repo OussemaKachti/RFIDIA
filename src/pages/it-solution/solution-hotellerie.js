@@ -869,7 +869,7 @@ const SolutionHotellerie = () => {
         }
         .htl-visual__frame img {
           width: 100%;
-          height: 440px;
+          height: 520px;
           object-fit: cover;
           display: block;
           filter: saturate(1.02) contrast(1.02);
@@ -964,7 +964,7 @@ const SolutionHotellerie = () => {
             grid-template-columns: 1fr;
           }
           .htl-visual__frame img {
-            height: 360px;
+            height: 420px;
           }
           .htl-hero {
             padding: 100px 0 54px;

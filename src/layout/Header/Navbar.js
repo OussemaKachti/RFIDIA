@@ -61,11 +61,9 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
 
   return (
     <header
-      className={`main-header ${
-        navDark ? 'position-absolute' : ''
-      } w-100 ${classOption} ${
-        insurance && 'ins-header main-header w-100 z-10'
-      }`}
+      className={`main-header ${navDark ? 'position-absolute' : ''
+        } w-100 ${classOption} ${insurance && 'ins-header main-header w-100 z-10'
+        }`}
     >
       <div className="rfidia-topbar d-none d-xl-block">
         <div className="container">
@@ -74,7 +72,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
               <a href="https://maps.google.com/?q=Ariana+1002+Tunisie" target="_blank" rel="noreferrer" className="rfidia-topbar__item">
                 <FaMapMarkerAlt />
                 <span>
-                Africa Mall Avenue Mustapha Hjeij Ariana 1002, Tunisie</span>
+                  Africa Mall Avenue Mustapha Hjeij Ariana 1002, Tunisie</span>
               </a>
               <a href="mailto:commercial@rfidia.com.tn" className="rfidia-topbar__item">
                 <HiOutlineMail />
@@ -97,9 +95,8 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
         </div>
       </div>
       <nav
-        className={`navbar navbar-expand-xl z-50 ${
-          navDark ? 'navbar-dark' : 'navbar-light'
-        } sticky-header ${scroll > headerTop ? 'affix' : ''}`}
+        className={`navbar navbar-expand-xl z-50 ${navDark ? 'navbar-dark' : 'navbar-light'
+          } sticky-header ${scroll > headerTop ? 'affix' : ''}`}
       >
         <div className="container d-flex align-items-center justify-content-lg-between position-relative">
           <Link href="/">
@@ -143,7 +140,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 </Link>
               </li>
               <li>
-                <Link href="about-us">
+                <Link href="/about-us">
                   <a className="nav-link">{navLabels.about}</a>
                 </Link>
               </li>
@@ -201,7 +198,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 </div>
               </li>
               <li>
-                <Link href="services">
+                <Link href="/services">
                   <a className="nav-link">{navLabels.services}</a>
                 </Link>
               </li>
@@ -211,51 +208,53 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                   <a className="nav-link">{navLabels.contact}</a>
                 </Link>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {navLabels.company}
-                </a>
-                <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-                  <div className="dropdown-grid rounded-custom width-full">
-                    <div className="dropdown-grid-item">
-                      <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
-                      {navCompanyLinks.map((navLink, i) => (
-                        <div key={i + 1}>
-                          <Link href={navLink.href}>
-                            <a className="dropdown-link px-0">
-                              <span className="me-2">{navLink.icon}</span>
-                              <span className="drop-title mb-0">
-                                {navLink.title}{' '}
-                              </span>
-                            </a>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="dropdown-grid-item radius-right-side bg-light">
-                      <h6 className="drop-heading">{navLabels.usefulPages}</h6>
-                      {navCompanyPage.map((navPage, i) => (
-                        <div key={i + 1}>
-                          <Link href={navPage.href}>
-                            <a className="dropdown-link">
-                              <span className="me-2">{navPage.icon}</span>
-                              <span className="drop-title mb-0">
-                                {navPage.title}{' '}
-                              </span>
-                            </a>
-                          </Link>
-                        </div>
-                      ))}
+              {false && (
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {navLabels.company}
+                  </a>
+                  <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
+                    <div className="dropdown-grid rounded-custom width-full">
+                      <div className="dropdown-grid-item">
+                        <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
+                        {navCompanyLinks.map((navLink, i) => (
+                          <div key={i + 1}>
+                            <Link href={navLink.href}>
+                              <a className="dropdown-link px-0">
+                                <span className="me-2">{navLink.icon}</span>
+                                <span className="drop-title mb-0">
+                                  {navLink.title}{' '}
+                                </span>
+                              </a>
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="dropdown-grid-item radius-right-side bg-light">
+                        <h6 className="drop-heading">{navLabels.usefulPages}</h6>
+                        {navCompanyPage.map((navPage, i) => (
+                          <div key={i + 1}>
+                            <Link href={navPage.href}>
+                              <a className="dropdown-link">
+                                <span className="me-2">{navPage.icon}</span>
+                                <span className="drop-title mb-0">
+                                  {navPage.title}{' '}
+                                </span>
+                              </a>
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              )}
             </ul>
           </div>
 

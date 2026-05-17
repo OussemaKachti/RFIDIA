@@ -155,59 +155,61 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
             <a className="nav-link">{navLabels.contact}</a>
           </Link>
         </li>
-        <li className="nav-item dropdown">
-          <a
-            className="nav-link dropdown-toggle d-flex justify-content-between"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {navLabels.company}
-          </a>
-          <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-            <div className="dropdown-grid rounded-custom width-full">
-              <div className="dropdown-grid-item">
-                <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
-                {navCompanyLinks.map((navLink, i) => (
-                  <span key={i + 1}>
-                    <Link href={navLink.href}>
-                      <a
-                        className="dropdown-link px-0"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                      >
-                        <span className="me-2">{navLink.icon}</span>
-                        <span className="drop-title mb-0">
-                          {navLink.title}{" "}
-                        </span>
-                      </a>
-                    </Link>
-                  </span>
-                ))}
-              </div>
-              <div className="dropdown-grid-item radius-right-side bg-light">
-                <h6 className="drop-heading">{navLabels.usefulPages}</h6>
-                {navCompanyPage.map((navPage, i) => (
-                  <span key={i + 1}>
-                    <Link href={navPage.href}>
-                      <a
-                        className="dropdown-link"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                      >
-                        <span className="me-2">{navPage.icon}</span>
-                        <span className="drop-title mb-0">
-                          {navPage.title}{" "}
-                        </span>
-                      </a>
-                    </Link>
-                  </span>
-                ))}
+        {false && (
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle d-flex justify-content-between"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {navLabels.company}
+            </a>
+            <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
+              <div className="dropdown-grid rounded-custom width-full">
+                <div className="dropdown-grid-item">
+                  <h6 className="drop-heading">{navLabels.usefulLinks}</h6>
+                  {navCompanyLinks.map((navLink, i) => (
+                    <span key={i + 1}>
+                      <Link href={navLink.href}>
+                        <a
+                          className="dropdown-link px-0"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        >
+                          <span className="me-2">{navLink.icon}</span>
+                          <span className="drop-title mb-0">
+                            {navLink.title}{" "}
+                          </span>
+                        </a>
+                      </Link>
+                    </span>
+                  ))}
+                </div>
+                <div className="dropdown-grid-item radius-right-side bg-light">
+                  <h6 className="drop-heading">{navLabels.usefulPages}</h6>
+                  {navCompanyPage.map((navPage, i) => (
+                    <span key={i + 1}>
+                      <Link href={navPage.href}>
+                        <a
+                          className="dropdown-link"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        >
+                          <span className="me-2">{navPage.icon}</span>
+                          <span className="drop-title mb-0">
+                            {navPage.title}{" "}
+                          </span>
+                        </a>
+                      </Link>
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
+        )}
       </ul>
       <div className="action-btns mt-4 ps-3">
         <div className="dropdown rfidia-lang-dropdown">

@@ -36,7 +36,7 @@ const ContactCard = ({ content }) => {
                 </p>
               </div>
               <a
-                href="mailto:contact@rfidia.tn"
+                href="mailto:contact@rfidia.com"
                 className="btn btn-link mt-auto"
               >
                 {t.writeToUs}
@@ -55,10 +55,10 @@ const ContactCard = ({ content }) => {
                 </p>
               </div>
               <a
-                href="mailto:contact@rfidia.tn"
+                href="mailto:contact@rfidia.com"
                 className="btn btn-primary mt-auto"
               >
-                contact@rfidia.tn
+                contact@rfidia.com
               </a>
             </div>
           </div>

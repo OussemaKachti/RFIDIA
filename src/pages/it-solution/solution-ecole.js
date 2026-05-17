@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
@@ -73,11 +73,11 @@ const footerI18n = {
   },
 };
 
-const pageCopy = {
+const i18n = {
   fr: {
-    metaTitle: "Solution École | RFIDIA",
+    metaTitle: "Solution Textile | RFIDIA",
     metaDesc:
-      "Sécurisez les parcours, maîtrisez le patrimoine pédagogique et simplifiez les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
+      "Traçabilité textile de bout en bout : production, qualité, stock, omnicanal, lutte anti-contrefaçon et expérience client renforcée.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -92,110 +92,76 @@ const pageCopy = {
       english: "English",
       italian: "Italiano",
     },
-    heroBadge: "Éducation & traçabilité",
-    heroTitle1: "Une école plus",
-    heroTitleAccent: "sereine",
-    heroTitle2: "et un patrimoine pédagogique mieux maîtrisé",
+    heroEyebrow: "Textile • Traçabilité & performance",
+    heroTitleA: "Chaque pièce",
+    heroTitleB: "traçable",
+    heroTitleC: "du fil à la vente",
     heroSub:
-      "RFIDIA accompagne les établissements avec des dispositifs respectueux de la communauté éducative : sécurisation des accès, visibilité sur le matériel pédagogique et processus d’inventaire plus fiables — sans surcharge pour les équipes.",
-    heroCtaPrimary: "Échanger sur mon projet",
-    heroCtaSecondary: "Toutes les solutions",
-    challengesTitle: "Des enjeux concrets au quotidien",
-    challengesDesc:
-      "Chaque établissement est unique ; nos déploiements s’alignent sur vos priorités : sécurité, organisation et soutien aux équipes enseignantes et administratives.",
-    challenges: [
+      "RFIDIA connecte vos ateliers, vos entrepôts et vos points de vente avec une traçabilité unitaire fiable. Résultat : inventaires rapides, meilleure disponibilité des tailles/couleurs, réduction des pertes, et une expérience client plus fluide.",
+    heroCta1: "Obtenir une démo",
+    heroCta2: "Voir toutes les solutions",
+    kpis: [
+      { v: "x10", l: "Vitesse d’inventaire" },
+      { v: "+15%", l: "Disponibilité en rayon" },
+      { v: "-35%", l: "Pertes & inconnus" },
+    ],
+    modulesTitle: "Des modules qui couvrent toute la chaîne textile",
+    modulesDesc:
+      "De la production à l’omnicanal : vous déployez par étapes, avec un ROI mesurable à chaque étape.",
+    modules: [
       {
-        title: "Sécurité des personnes et des biens",
-        desc: "Maîtriser les flux aux heures d’affluence, sécuriser les zones sensibles et garder une visibilité claire sur les équipements partagés.",
+        title: "Traçabilité unitaire (EPC)",
+        desc: "Identifiant unique par article, association à vos référentiels (SKU, lot, taille, couleur) et historisation des mouvements.",
       },
       {
-        title: "Patrimoine pédagogique dispersé",
-        desc: "Tablettes, supports numériques, matériel de laboratoire ou de sport : suivre les attributions et limiter les pertes sans multiplier les contrôles manuels.",
+        title: "Contrôle qualité & conformité",
+        desc: "Contrôles en sortie de ligne, détection des écarts, et sécurisation des étapes sensibles (reconditionnement, retours).",
       },
       {
-        title: "Temps administratif précieux",
-        desc: "Réduire les écarts d’inventaire et les recherches d’objets grâce à des relevés rapides et des données centralisées exploitables par votre équipe.",
+        title: "Stock & inventaires rapides",
+        desc: "Inventaires tournants sans immobiliser l’activité, fiabilisation des stocks et réduction des ruptures.",
+      },
+      {
+        title: "Préparation & expédition",
+        desc: "Lecture groupée, contrôle de complétude des colis, réduction des erreurs de préparation et preuve d’expédition.",
+      },
+      {
+        title: "Retail : réception & mise en rayon",
+        desc: "Réception accélérée, localisation en réserve/rayon, et meilleure disponibilité des tailles/couleurs pour le client.",
+      },
+      {
+        title: "Anti-contrefaçon & authenticité",
+        desc: "Mécanismes d’authentification possibles (selon vos choix) et lutte contre les articles non conformes dans la chaîne.",
       },
     ],
-    valueTitle: "Une approche respectueuse et pragmatique",
-    valueDesc: "La technologie au service de l’école, pas l’inverse.",
-    valueP1:
-      "Nous concevons des parcours simples pour les élèves et le personnel, avec une gouvernance des données adaptée au secteur public et aux exigences de protection des personnes. Chaque projet est cadré avec vos équipes : direction, vie scolaire, informatique et partenaires.",
-    valueP2:
-      "L’objectif est clair : renforcer la tranquillité des lieux, améliorer la traçabilité des ressources pédagogiques et offrir des indicateurs utiles pour décider — en restant à l’écoute des contraintes du terrain.",
-    featuresTitle: "Ce que la solution peut couvrir",
-    featuresDesc:
-      "Modules combinables selon votre maturité et vos infrastructures : nous privilégions les étapes pilotes et une montée en charge maîtrisée.",
-    features: [
-      {
-        title: "Contrôle d’accès et flux",
-        desc: "Badges, lecteurs et règles horaires pour fluidifier les entrées-sorties et sécuriser les espaces qui le nécessitent.",
-      },
-      {
-        title: "Inventaire & étiquetage RFID",
-        desc: "Identification unique des ressources, relevés mobiles rapides et réconciliation avec vos listes ou votre logiciel de gestion.",
-      },
-      {
-        title: "Suivi des actifs pédagogiques",
-        desc: "Visibilité sur les attributions, les mouvements entre salles ou sites et l’historique des opérations pour limiter les pertes.",
-      },
-      {
-        title: "Tableaux de bord sobres",
-        desc: "Indicateurs lisibles pour les équipes : état du parc, alertes utiles et exports pour vos reporting internes.",
-      },
-      {
-        title: "Intégration SI",
-        desc: "Échanges contrôlés avec vos outils existants (référentiels, GMAO légère ou solutions métiers) selon vos choix d’architecture.",
-      },
-      {
-        title: "Formation & accompagnement",
-        desc: "Montée en compétence des équipes, documentation claire et support pour ancrer les usages dans la durée.",
-      },
+    journeyTitle: "Un parcours simple, des gains immédiats",
+    journeyDesc:
+      "Une logique “scan & go” pour les équipes : moins de saisie, plus de fiabilité et de pilotage.",
+    journey: [
+      { n: "01", t: "Encoder", d: "Encodage RFID au bon moment (atelier, dépôt, réception) selon votre process." },
+      { n: "02", t: "Synchroniser", d: "Connexion à vos données produit (SKU, variantes, commandes, retours)." },
+      { n: "03", t: "Lire & contrôler", d: "Lectures rapides pour inventaires, expédition et réception, avec règles d’écarts." },
+      { n: "04", t: "Piloter", d: "Dashboards : disponibilité, écarts, rotation, retours, performance opérationnelle." },
     ],
-    useCasesTitle: "Où cela fait la différence",
-    useCasesDesc: "Exemples de contextes où nos clients gagnent en sérénité opérationnelle.",
-    useCases: [
-      "Collèges, lycées et campus : circulations aux heures de pointe, salles spécialisées et espaces mutualisés.",
-      "Bibliothèques et médiathèques : prêts, collections mobiles et inventaires cycliques plus rapides.",
-      "Ateliers, laboratoires et salles techniques : équipements sensibles ou coûteux suivis avec précision.",
-      "Internats et résidences : gestion des accès et des ressources partagées selon vos protocoles.",
+    proofTitle: "Pourquoi vos clients adhèrent",
+    proofDesc:
+      "Parce que la promesse est simple : trouver le bon produit plus vite, avec moins d’erreurs, et un service plus fiable.",
+    proofs: [
+      "Meilleure disponibilité des tailles/couleurs (moins de ventes perdues)",
+      "Réduction des écarts et des pertes (traçabilité unitaire)",
+      "Réception et inventaires plus rapides (efficacité terrain)",
+      "Qualité de données améliorée pour l’omnicanal (click&collect, retours)",
     ],
-    processTitle: "Un déploiement structuré, sans surprise",
-    processDesc: "Quatre étapes éprouvées pour avancer avec clarté et mesurer les bénéfices.",
-    process: [
-      {
-        step: "01",
-        title: "Diagnostic & cadrage",
-        desc: "Ateliers avec vos équipes, identification des priorités, conformité et périmètre fonctionnel.",
-      },
-      {
-        step: "02",
-        title: "Conception & pilote",
-        desc: "Architecture technique, choix des supports RFID et expérimentation sur un site ou un bâtiment pilote.",
-      },
-      {
-        step: "03",
-        title: "Déploiement & intégration",
-        desc: "Installation encadrée, paramétrage, raccordements utiles et validation des flux réels.",
-      },
-      {
-        step: "04",
-        title: "Adoption & amélioration",
-        desc: "Formation, support, indicateurs de suivi et ajustements pour pérenniser les usages.",
-      },
-    ],
-    ctaTitle: "Présentez-nous votre établissement",
+    ctaTitle: "Prêt à rendre votre chaîne textile plus performante ?",
     ctaSub:
-      "Nous vous répondons avec une vision réaliste : objectifs, calendrier et périmètre adaptés à votre communauté scolaire.",
-    ctaBtn: "Contacter RFIDIA",
-    ctaSecondary: "Retour à l’accueil solutions",
-    floatLabel1: "Parcours sécurisés",
-    floatLabel2: "Actifs visibles",
+      "Décrivez vos sites (atelier, dépôt, boutiques), vos volumes et vos objectifs : nous vous proposons un plan de déploiement clair et progressif.",
+    ctaBtn: "Contactez RFIDIA",
+    ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "School Solution | RFIDIA",
+    metaTitle: "Textile Solution | RFIDIA",
     metaDesc:
-      "Secure journeys, master educational assets and streamline inventories with RFID traceability designed for schools and campuses.",
+      "End-to-end textile traceability: production, quality, stock, omnichannel, anti-counterfeit and stronger customer experience.",
     navbar: {
       home: "Home",
       about: "About",
@@ -210,110 +176,73 @@ const pageCopy = {
       english: "English",
       italian: "Italian",
     },
-    heroBadge: "Education & traceability",
-    heroTitle1: "A calmer school",
-    heroTitleAccent: "environment",
-    heroTitle2: "with educational assets under control",
+    heroEyebrow: "Textile • Traceability & performance",
+    heroTitleA: "Every item",
+    heroTitleB: "traceable",
+    heroTitleC: "from production to retail",
     heroSub:
-      "RFIDIA supports schools with respectful, field-proven approaches: access security, visibility on teaching equipment and more reliable inventories — without burdening staff.",
-    heroCtaPrimary: "Discuss my project",
-    heroCtaSecondary: "All solutions",
-    challengesTitle: "Real challenges, every day",
-    challengesDesc:
-      "Each institution is unique. Our rollouts align with your priorities: safety, organization and support for teaching and administrative teams.",
-    challenges: [
+      "RFIDIA connects your factories, warehouses and stores with reliable item-level traceability. Faster inventories, better size/color availability, fewer losses and a smoother customer experience.",
+    heroCta1: "Get a demo",
+    heroCta2: "All solutions",
+    kpis: [
+      { v: "x10", l: "Inventory speed" },
+      { v: "+15%", l: "On-shelf availability" },
+      { v: "-35%", l: "Losses & unknowns" },
+    ],
+    modulesTitle: "Modules covering the entire textile chain",
+    modulesDesc: "From production to omnichannel: roll out step-by-step with measurable ROI.",
+    modules: [
       {
-        title: "People and asset safety",
-        desc: "Manage peak-time flows, secure sensitive areas and keep clear visibility on shared equipment.",
+        title: "Item-level traceability (EPC)",
+        desc: "Unique ID per item, linkage to your master data (SKU, variants) and auditable movement history.",
       },
       {
-        title: "Spread-out teaching assets",
-        desc: "Track assignments for tablets, lab or sports gear and reduce losses without endless manual checks.",
+        title: "Quality & compliance",
+        desc: "End-of-line checks, discrepancy detection and secured sensitive steps (repackaging, returns).",
       },
       {
-        title: "Valuable administrative time",
-        desc: "Shrink inventory gaps and time spent searching for items with fast RFID reads and centralized, actionable data.",
+        title: "Stock & fast counts",
+        desc: "Cycle counts without operational shutdown, improved stock accuracy and fewer stock-outs.",
+      },
+      {
+        title: "Picking & shipping",
+        desc: "Bulk reads, carton completeness checks, fewer picking errors and shipping proof.",
+      },
+      {
+        title: "Retail receiving & shelf",
+        desc: "Faster receiving, backroom/shelf visibility and improved size/color availability for shoppers.",
+      },
+      {
+        title: "Anti-counterfeit & authenticity",
+        desc: "Optional authenticity mechanisms (depending on your choices) to reduce non-compliant items.",
       },
     ],
-    valueTitle: "Respectful, pragmatic delivery",
-    valueDesc: "Technology in service of the school — not the other way around.",
-    valueP1:
-      "We design simple journeys for students and staff, with data governance suited to public-sector expectations. Every project is framed with your teams: leadership, student life, IT and partners.",
-    valueP2:
-      "The goal is clear: strengthen peace of mind on site, improve traceability of teaching resources and provide indicators that help you decide — grounded in real operational constraints.",
-    featuresTitle: "What the solution can cover",
-    featuresDesc:
-      "Composable modules based on your maturity and infrastructure: we favour pilot phases and controlled scale-up.",
-    features: [
-      {
-        title: "Access & flow control",
-        desc: "Badges, readers and time rules to smooth entries and exits and secure spaces that require it.",
-      },
-      {
-        title: "RFID labeling & inventory",
-        desc: "Unique resource IDs, mobile fast counts and reconciliation with your lists or management tools.",
-      },
-      {
-        title: "Teaching asset tracking",
-        desc: "Visibility on assignments, moves between rooms or sites and history to limit losses.",
-      },
-      {
-        title: "Clear dashboards",
-        desc: "Readable indicators for teams: fleet status, meaningful alerts and exports for internal reporting.",
-      },
-      {
-        title: "Systems integration",
-        desc: "Controlled exchanges with your existing stack (directories, lightweight CMMS or business tools).",
-      },
-      {
-        title: "Training & support",
-        desc: "Skills building, clear documentation and support to sustain adoption over time.",
-      },
+    journeyTitle: "Simple journey, fast wins",
+    journeyDesc: "A scan-and-go logic for teams: less typing, more accuracy and control.",
+    journey: [
+      { n: "01", t: "Encode", d: "RFID encoding at the right step (factory, DC, receiving) based on your process." },
+      { n: "02", t: "Sync", d: "Connect to product data (SKU, variants), orders and returns." },
+      { n: "03", t: "Read & control", d: "Fast reads for inventory, shipping and receiving with discrepancy rules." },
+      { n: "04", t: "Operate", d: "Dashboards: availability, gaps, rotation, returns and operational performance." },
     ],
-    useCasesTitle: "Where it matters most",
-    useCasesDesc: "Typical contexts where schools gain operational peace of mind.",
-    useCases: [
-      "Middle schools, high schools and campuses: peak-time circulation, specialized rooms and shared facilities.",
-      "Libraries and media centers: loans, mobile collections and faster cyclical inventories.",
-      "Workshops, labs and technical rooms: sensitive or high-value equipment tracked with precision.",
-      "Boarding and residences: access and shared resources aligned with your protocols.",
+    proofTitle: "Why customers adopt it",
+    proofDesc: "Because the promise is simple: find the right product faster with fewer mistakes.",
+    proofs: [
+      "Better size/color availability (fewer lost sales)",
+      "Lower gaps and losses (item-level traceability)",
+      "Faster receiving and inventories (floor efficiency)",
+      "Cleaner data for omnichannel (click&collect, returns)",
     ],
-    processTitle: "Structured rollout, no surprises",
-    processDesc: "Four proven steps to move forward with clarity and measure benefits.",
-    process: [
-      {
-        step: "01",
-        title: "Discovery & scoping",
-        desc: "Workshops with your teams, priorities, compliance and functional perimeter.",
-      },
-      {
-        step: "02",
-        title: "Design & pilot",
-        desc: "Technical architecture, RFID media choices and pilot on a site or building.",
-      },
-      {
-        step: "03",
-        title: "Deployment & integration",
-        desc: "Supervised installation, configuration, connections as needed and validation in real conditions.",
-      },
-      {
-        step: "04",
-        title: "Adoption & improvement",
-        desc: "Training, support, follow-up metrics and refinements for long-term usage.",
-      },
-    ],
-    ctaTitle: "Tell us about your institution",
+    ctaTitle: "Ready to level up your textile supply chain?",
     ctaSub:
-      "We respond with a realistic view: goals, timeline and scope suited to your school community.",
+      "Share your sites (factory, DC, stores), volumes and objectives — we’ll propose a clear, progressive rollout plan.",
     ctaBtn: "Contact RFIDIA",
-    ctaSecondary: "Back to solutions hub",
-    floatLabel1: "Safer journeys",
-    floatLabel2: "Visible assets",
+    ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Scuola | RFIDIA",
+    metaTitle: "Soluzione Tessile | RFIDIA",
     metaDesc:
-      "Percorsi più sicuri, patrimonio didattico sotto controllo e inventari semplificati con tracciabilità RFID per istituti scolastici.",
+      "Tracciabilità tessile end-to-end: produzione, qualità, stock, omnicanale, anti-contraffazione ed esperienza cliente.",
     navbar: {
       home: "Home",
       about: "Chi siamo",
@@ -328,127 +257,78 @@ const pageCopy = {
       english: "Inglese",
       italian: "Italiano",
     },
-    heroBadge: "Istruzione & tracciabilità",
-    heroTitle1: "Un ambiente scolastico più",
-    heroTitleAccent: "sereno",
-    heroTitle2: "e un patrimonio didattico più controllato",
+    heroEyebrow: "Tessile • Tracciabilità & performance",
+    heroTitleA: "Ogni capo",
+    heroTitleB: "tracciabile",
+    heroTitleC: "dalla produzione alla vendita",
     heroSub:
-      "RFIDIA affianca gli istituti con approcci rispettosi e concreti: sicurezza degli accessi, visibilità sul materiale didattico e inventari più affidabili — senza appesantire il personale.",
-    heroCtaPrimary: "Parliamo del progetto",
-    heroCtaSecondary: "Tutte le soluzioni",
-    challengesTitle: "Sfide reali, ogni giorno",
-    challengesDesc:
-      "Ogni istituto è unico; i nostri progetti seguono le vostre priorità: sicurezza, organizzazione e supporto a docenti e staff amministrativo.",
-    challenges: [
+      "RFIDIA collega fabbriche, magazzini e punti vendita con tracciabilità unitaria affidabile. Inventari più rapidi, migliore disponibilità taglie/colori, meno perdite e un’esperienza cliente più fluida.",
+    heroCta1: "Richiedi una demo",
+    heroCta2: "Tutte le soluzioni",
+    kpis: [
+      { v: "x10", l: "Velocità inventario" },
+      { v: "+15%", l: "Disponibilità a scaffale" },
+      { v: "-35%", l: "Perdite & gap" },
+    ],
+    modulesTitle: "Moduli per tutta la filiera tessile",
+    modulesDesc: "Dalla produzione all’omnicanale: rollout a fasi con ROI misurabile.",
+    modules: [
       {
-        title: "Sicurezza di persone e beni",
-        desc: "Gestire i flussi nei momenti di punta, proteggere le aree sensibili e avere chiarezza sugli strumenti condivisi.",
+        title: "Tracciabilità unitaria (EPC)",
+        desc: "ID unico per capo, collegamento ai dati master (SKU, varianti) e storico movimenti auditabile.",
       },
       {
-        title: "Patrimonio didattico disperso",
-        desc: "Tablet, laboratori, attrezzature sportive: seguire le assegnazioni e ridurre le perdite senza controlli manuali continui.",
+        title: "Qualità & conformità",
+        desc: "Check fine linea, rilevazione scostamenti e sicurezza su fasi sensibili (repack, resi).",
       },
       {
-        title: "Tempo amministrativo prezioso",
-        desc: "Ridurre gap di inventario e ricerche grazie a letture RFID rapide e dati centralizzati utilizzabili dal team.",
+        title: "Stock & inventari rapidi",
+        desc: "Cycle count senza fermo, stock più accurato e meno rotture.",
+      },
+      {
+        title: "Picking & spedizione",
+        desc: "Letture massiva, controllo completezza colli, meno errori di preparazione e prova spedizione.",
+      },
+      {
+        title: "Retail: ricevimento & scaffale",
+        desc: "Ricevimento più veloce, visibilità backroom/scaffale e migliore disponibilità taglie/colori.",
+      },
+      {
+        title: "Anti-contraffazione & autenticità",
+        desc: "Meccanismi opzionali (secondo le scelte) per ridurre articoli non conformi lungo la catena.",
       },
     ],
-    valueTitle: "Un approccio rispettoso e pragmatico",
-    valueDesc: "La tecnologia al servizio della scuola, non il contrario.",
-    valueP1:
-      "Progettiamo percorsi semplici per studenti e personale, con governance dei dati adeguata al settore pubblico. Ogni iniziativa è definita con direzione, vita scolastica, IT e partner.",
-    valueP2:
-      "Obiettivo chiaro: maggiore tranquillità nei luoghi, tracciabilità delle risorse didattiche e indicatori utili per decidere — nel rispetto dei vincoli operativi.",
-    featuresTitle: "Cosa può coprire la soluzione",
-    featuresDesc:
-      "Moduli combinabili in base alla maturità e alle infrastrutture: privilegiamo pilota e scalabilità controllata.",
-    features: [
-      {
-        title: "Controllo accessi e flussi",
-        desc: "Badge, lettori e regole orarie per fluidificare entrate/uscite e proteggere gli spazi necessari.",
-      },
-      {
-        title: "Etichettatura RFID e inventario",
-        desc: "Identificazione univoca, rilevazioni mobili veloci e riconciliazione con elenchi o gestionali.",
-      },
-      {
-        title: "Monitoraggio asset didattici",
-        desc: "Visibilità su assegnazioni, spostamenti tra aule o sedi e storico per limitare le perdite.",
-      },
-      {
-        title: "Dashboard chiare",
-        desc: "Indicatori leggibili: stato parco, alert significativi ed export per reporting interno.",
-      },
-      {
-        title: "Integrazione IT",
-        desc: "Scambi controllati con gli strumenti esistenti (anagrafiche, GMAO leggera o applicazioni di settore).",
-      },
-      {
-        title: "Formazione e supporto",
-        desc: "Aggiornamento del personale, documentazione chiara e assistenza per radicare gli usi nel tempo.",
-      },
+    journeyTitle: "Percorso semplice, benefici immediati",
+    journeyDesc: "Logica scan&go: meno inserimenti manuali, più affidabilità e controllo.",
+    journey: [
+      { n: "01", t: "Codifica", d: "Codifica RFID nel punto giusto (fabbrica, DC, ricevimento) secondo il processo." },
+      { n: "02", t: "Sincronizza", d: "Connessione a dati prodotto (SKU, varianti), ordini e resi." },
+      { n: "03", t: "Leggi & controlla", d: "Letture rapide per inventario, spedizione e ricevimento con regole scostamenti." },
+      { n: "04", t: "Governa", d: "Dashboard: disponibilità, gap, rotazione, resi e performance operative." },
     ],
-    useCasesTitle: "Dove fa la differenza",
-    useCasesDesc: "Contesti tipici in cui si guadagna serenità operativa.",
-    useCases: [
-      "Scuole secondarie e campus: circolazione nelle ore di punta, laboratori e spazi condivisi.",
-      "Biblioteche e mediateche: prestiti, collezioni mobili e inventari ciclici più rapidi.",
-      "Laboratori e aule tecniche: attrezzature sensibili o di valore tracciate con precisione.",
-      "Convitti e residenze: accessi e risorse condivise secondo i vostri protocolli.",
+    proofTitle: "Perché i clienti la adottano",
+    proofDesc: "Promessa semplice: trovare il prodotto giusto più velocemente, con meno errori.",
+    proofs: [
+      "Maggiore disponibilità taglie/colori (meno vendite perse)",
+      "Riduzione gap e perdite (tracciabilità unitaria)",
+      "Ricevimento e inventari più veloci (efficienza)",
+      "Dati migliori per l’omnicanale (click&collect, resi)",
     ],
-    processTitle: "Un rollout strutturato",
-    processDesc: "Quattro fasi collaudate per avanzare con chiarezza e misurare i benefici.",
-    process: [
-      {
-        step: "01",
-        title: "Diagnosi e perimetro",
-        desc: "Workshop con i team, priorità, conformità e ambito funzionale.",
-      },
-      {
-        step: "02",
-        title: "Progetto e pilota",
-        desc: "Architettura, scelta dei supporti RFID e sperimentazione su un sito pilota.",
-      },
-      {
-        step: "03",
-        title: "Deploy e integrazione",
-        desc: "Installazione supervisionata, configurazione, collegamenti utili e validazione sul campo.",
-      },
-      {
-        step: "04",
-        title: "Adozione e miglioramento",
-        desc: "Formazione, supporto, indicatori e affinamenti per durata nel tempo.",
-      },
-    ],
-    ctaTitle: "Raccontaci il tuo istituto",
+    ctaTitle: "Pronto a rendere la filiera tessile più efficiente?",
     ctaSub:
-      "Rispondiamo con una visione realistica: obiettivi, tempi e perimetro adatti alla comunità scolastica.",
+      "Condividi siti (fabbrica, DC, negozi), volumi e obiettivi: proponiamo un piano di rollout chiaro e progressivo.",
     ctaBtn: "Contatta RFIDIA",
-    ctaSecondary: "Torna alle soluzioni",
-    floatLabel1: "Percorsi più sicuri",
-    floatLabel2: "Asset visibili",
+    ctaAlt: "Torna alle soluzioni",
   },
 };
 
-const SectionDivider = () => (
-  <div className="rl-section-divider-wrap">
-    <div className="rl-section-divider">
-      <span className="rl-section-divider__line" />
-      <img src="/a_rfidia/z_rfid/logo-RFIDIA2.png" alt="RFIDIA" className="rl-section-divider__logo" />
-      <span className="rl-section-divider__line" />
-    </div>
-  </div>
-);
-
-const SolutionEcolePage = () => {
+const SolutionTextile = () => {
   const [language, setLanguage] = useState("fr");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem("rfidia_lang");
-    if (saved && ["fr", "en", "it"].includes(saved)) {
-      setLanguage(saved);
-    }
+    if (saved && ["fr", "en", "it"].includes(saved)) setLanguage(saved);
   }, []);
 
   useEffect(() => {
@@ -457,78 +337,69 @@ const SolutionEcolePage = () => {
     document.documentElement.lang = language;
   }, [language]);
 
-  const t = pageCopy[language] || pageCopy.fr;
+  const t = i18n[language] || i18n.fr;
   const footerT = footerI18n[language] || footerI18n.fr;
+
+  const accent = useMemo(
+    () => ({
+      primary: "#E0305A",
+      primary2: "#FF7A94",
+      ink: "#121727",
+      soft: "#FFF6F8",
+      line: "rgba(18, 23, 39, 0.10)",
+    }),
+    []
+  );
 
   return (
     <Layout title={t.metaTitle} desc={t.metaDesc}>
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
-      <main className="rl sol-ecole">
-        <section className="rl-hero sol-ecole-hero">
-          <div className="rl-hero__bg-grid" aria-hidden />
-          <div className="rl-hero__glow rl-hero__glow--left" aria-hidden />
-          <div className="rl-hero__glow rl-hero__glow--right" aria-hidden />
-
-          <div className="container position-relative">
+      <main className="txl">
+        {/* HERO (no blue) */}
+        <section className="txl-hero">
+          <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <span className="rl-badge rl-badge--light">
-                  <span className="rl-badge__dot" />
-                  {t.heroBadge}
-                </span>
-                <h1 className="rl-hero__title">
-                  {t.heroTitle1} <span className="rl-gradient-text">{t.heroTitleAccent}</span>
+                <div className="txl-eyebrow">{t.heroEyebrow}</div>
+                <h1 className="txl-title">
+                  {t.heroTitleA} <span className="txl-title__accent">{t.heroTitleB}</span>
                   <br />
-                  {t.heroTitle2}
+                  {t.heroTitleC}
                 </h1>
-                <p className="rl-hero__sub">{t.heroSub}</p>
-                <div className="rl-hero__actions">
+                <p className="txl-sub">{t.heroSub}</p>
+
+                <div className="txl-actions">
                   <Link href="/contact-us" passHref>
-                    <a className="rl-btn rl-btn--primary">
-                      {t.heroCtaPrimary}
-                      <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
-                        <path
-                          fillRule="evenodd"
-                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
+                    <a className="txl-btn txl-btn--primary">{t.heroCta1}</a>
                   </Link>
                   <Link href="/it-solution" passHref>
-                    <a className="rl-btn rl-btn--ghost">{t.heroCtaSecondary}</a>
+                    <a className="txl-btn txl-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
+
+                <div className="txl-kpis">
+                  {t.kpis.map((k) => (
+                    <div className="txl-kpi" key={k.l}>
+                      <div className="txl-kpi__v">{k.v}</div>
+                      <div className="txl-kpi__l">{k.l}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
+
               <div className="col-lg-6">
-                <div className="rl-hero__visual sol-ecole-hero-visual">
-                  <img
-                    src="/a_rfidia/z_school/school2.png"
-                    alt=""
-                    className="rl-hero__img sol-ecole-hero-img"
-                  />
-                  <div className="rl-hero__float rl-hero__float--tl sol-ecole-float">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-                      <path
-                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span>{t.floatLabel1}</span>
+                <div className="txl-visual">
+                  <div className="txl-visual__frame">
+                    <img src="/a_rfidia/z_rfid/rfid6.png" alt="" />
                   </div>
-                  <div className="rl-hero__float rl-hero__float--br sol-ecole-float sol-ecole-float--secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-                      <path
-                        d="M4 7h16M4 12h10M4 17h16"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span>{t.floatLabel2}</span>
+                  <div className="txl-chip txl-chip--tl">
+                    <span className="txl-chip__dot" />
+                    {t.kpis[1]?.l}
+                  </div>
+                  <div className="txl-chip txl-chip--br">
+                    <span className="txl-chip__dot" />
+                    {t.kpis[0]?.l}
                   </div>
                 </div>
               </div>
@@ -536,144 +407,92 @@ const SolutionEcolePage = () => {
           </div>
         </section>
 
-        <section className="sol-ecole-section sol-ecole-section--muted">
+        {/* MODULES */}
+        <section className="txl-section">
           <div className="container">
-            <div className="rl-section-head">
-              <SectionDivider />
-              <h2>{t.challengesTitle}</h2>
-              <p>{t.challengesDesc}</p>
+            <div className="txl-head">
+              <h2>{t.modulesTitle}</h2>
+              <p>{t.modulesDesc}</p>
             </div>
-            <div className="row g-4">
-              {t.challenges.map((c, i) => (
-                <div className="col-lg-4" key={c.title}>
-                  <article className="sol-ecole-card" style={{ "--delay": `${i * 0.06}s` }}>
-                    <span className="sol-ecole-card__index" aria-hidden>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3>{c.title}</h3>
-                    <p>{c.desc}</p>
-                  </article>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        <section className="sol-ecole-section">
-          <div className="container">
-            <div className="row align-items-center g-5">
-              <div className="col-lg-6 order-lg-2">
-                <div className="sol-ecole-value-visual">
-                  <div className="sol-ecole-value-frame">
-                    <img src="/a_rfidia/z_rfid/rfid4.png" alt="" />
-                  </div>
-                  <div className="sol-ecole-value-badge">
-                    <span className="sol-ecole-value-badge__dot" />
-                    RFIDIA × Éducation
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 order-lg-1">
-                <div className="rl-section-head text-lg-start mx-lg-0">
-                  <SectionDivider />
-                  <h2 className="text-lg-start">{t.valueTitle}</h2>
-                  <p className="text-lg-start mx-lg-0">{t.valueDesc}</p>
-                </div>
-                <p className="sol-ecole-prose">{t.valueP1}</p>
-                <p className="sol-ecole-prose">{t.valueP2}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="sol-ecole-section sol-ecole-section--muted">
-          <div className="container">
-            <div className="rl-section-head">
-              <SectionDivider />
-              <h2>{t.featuresTitle}</h2>
-              <p>{t.featuresDesc}</p>
-            </div>
-            <div className="sol-ecole-feature-grid">
-              {t.features.map((f) => (
-                <article className="sol-ecole-feature" key={f.title}>
-                  <div className="sol-ecole-feature__accent" aria-hidden />
-                  <h3>{f.title}</h3>
-                  <p>{f.desc}</p>
+            <div className="txl-grid">
+              {t.modules.map((m) => (
+                <article className="txl-card" key={m.title}>
+                  <div className="txl-card__top" />
+                  <h3>{m.title}</h3>
+                  <p>{m.desc}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="sol-ecole-section">
+        {/* JOURNEY + PROOF */}
+        <section className="txl-section txl-section--soft">
           <div className="container">
-            <div className="row g-5">
+            <div className="row g-5 align-items-start">
               <div className="col-lg-5">
-                <div className="rl-section-head text-lg-start mx-lg-0">
-                  <SectionDivider />
-                  <h2 className="text-lg-start">{t.useCasesTitle}</h2>
-                  <p className="text-lg-start mx-lg-0">{t.useCasesDesc}</p>
+                <div className="txl-head txl-head--left">
+                  <h2>{t.journeyTitle}</h2>
+                  <p>{t.journeyDesc}</p>
+                </div>
+
+                <div className="txl-proof">
+                  <div className="txl-proof__title">{t.proofTitle}</div>
+                  <div className="txl-proof__desc">{t.proofDesc}</div>
+                  <ul className="txl-list">
+                    {t.proofs.map((x) => (
+                      <li key={x}>
+                        <span className="txl-list__icon" aria-hidden>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M20 6L9 17l-5-5"
+                              stroke="currentColor"
+                              strokeWidth="2.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span>{x}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
+
               <div className="col-lg-7">
-                <ul className="sol-ecole-use-list">
-                  {t.useCases.map((line) => (
-                    <li key={line}>
-                      <span className="sol-ecole-use-list__icon" aria-hidden>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M20 6L9 17l-5-5"
-                            stroke="currentColor"
-                            strokeWidth="2.2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span>{line}</span>
-                    </li>
+                <div className="txl-flow">
+                  {t.journey.map((f, idx) => (
+                    <div className="txl-flow__row" key={f.n}>
+                      <div className="txl-flow__n">{f.n}</div>
+                      <div className="txl-flow__body">
+                        <h3>{f.t}</h3>
+                        <p>{f.d}</p>
+                      </div>
+                      {idx < t.journey.length - 1 && <div className="txl-flow__line" aria-hidden />}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="sol-ecole-section sol-ecole-section--process">
+        {/* CTA */}
+        <section className="txl-cta">
           <div className="container">
-            <div className="rl-section-head">
-              <SectionDivider />
-              <h2>{t.processTitle}</h2>
-              <p>{t.processDesc}</p>
-            </div>
-            <div className="sol-ecole-process">
-              {t.process.map((step, idx) => (
-                <div className="sol-ecole-process__row" key={step.step}>
-                  <div className="sol-ecole-process__step">{step.step}</div>
-                  <div className="sol-ecole-process__body">
-                    <h3>{step.title}</h3>
-                    <p>{step.desc}</p>
-                  </div>
-                  {idx < t.process.length - 1 && <div className="sol-ecole-process__connector" aria-hidden />}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="sol-ecole-cta">
-          <div className="container">
-            <div className="sol-ecole-cta__inner">
+            <div className="txl-cta__inner">
               <div>
                 <h2>{t.ctaTitle}</h2>
                 <p>{t.ctaSub}</p>
               </div>
-              <div className="sol-ecole-cta__actions">
+              <div className="txl-cta__actions">
                 <Link href="/contact-us" passHref>
-                  <a className="rl-btn rl-btn--white">{t.ctaBtn}</a>
+                  <a className="txl-btn txl-btn--dark">{t.ctaBtn}</a>
                 </Link>
                 <Link href="/it-solution" passHref>
-                  <a className="rl-btn rl-btn--ghost-white">{t.ctaSecondary}</a>
+                  <a className="txl-btn txl-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>
             </div>
@@ -684,292 +503,421 @@ const SolutionEcolePage = () => {
       <Footer footerGradient translations={footerT} />
 
       <style jsx>{`
-        .sol-ecole-hero-visual {
-          position: relative;
-        }
-        .sol-ecole-hero-img {
-          border-radius: var(--rl-radius-lg, 22px);
-          box-shadow: var(--rl-shadow-lg, 0 20px 60px rgba(6, 15, 46, 0.15));
-          border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-        .sol-ecole-float {
-          backdrop-filter: blur(10px);
-        }
-        .sol-ecole-float--secondary {
-          border-color: rgba(255, 255, 255, 0.2);
-        }
-        .sol-ecole-section {
-          padding: 72px 0;
+        .txl {
+          --accent: ${accent.primary};
+          --accent2: ${accent.primary2};
+          --ink: ${accent.ink};
+          --soft: ${accent.soft};
+          --line: ${accent.line};
+          color: var(--ink);
+          background: #fff;
           font-family: "Manrope", sans-serif;
         }
-        .sol-ecole-section--muted {
-          background: linear-gradient(
-            to bottom,
-            rgba(170, 205, 220, 0.12),
-            rgba(170, 205, 220, 0.06)
-          );
+
+        /* HERO: white/pink, no blue */
+        .txl-hero {
+          padding: 110px 0 70px;
+          background: radial-gradient(1000px 380px at 15% 10%, rgba(224, 48, 90, 0.16), transparent 60%),
+            radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 200, 0.10), transparent 58%),
+            linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(255, 246, 248, 0.75) 100%);
+          border-bottom: 1px solid rgba(18, 23, 39, 0.06);
         }
-        .sol-ecole-section--process {
-          background: var(--rl-white, #fff);
-        }
-        .sol-ecole-card {
-          background: var(--rl-surface, #fff);
-          border-radius: var(--rl-radius-lg, 22px);
-          padding: 1.75rem 1.75rem 1.5rem;
-          border: 1px solid var(--rl-border, #e1e8f8);
-          box-shadow: var(--rl-shadow-sm, 0 2px 12px rgba(6, 15, 46, 0.06));
-          height: 100%;
-          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
-          animation: sol-ecole-fade-up 0.7s ease both;
-          animation-delay: var(--delay, 0s);
-        }
-        .sol-ecole-card:hover {
-          transform: translateY(-6px);
-          box-shadow: var(--rl-shadow-md, 0 8px 32px rgba(6, 15, 46, 0.1));
-        }
-        .sol-ecole-card__index {
-          font-size: 0.75rem;
-          font-weight: 800;
-          letter-spacing: 0.08em;
-          color: #4ec8c8;
-          display: block;
-          margin-bottom: 0.75rem;
-        }
-        .sol-ecole-card h3 {
-          font-size: 1.15rem;
-          font-weight: 700;
-          color: var(--rl-navy, #1e2a4a);
-          margin-bottom: 0.65rem;
-        }
-        .sol-ecole-card p {
-          margin: 0;
-          color: var(--rl-muted, #4f6289);
-          line-height: 1.6;
-          font-size: 0.98rem;
-        }
-        .sol-ecole-prose {
-          color: var(--rl-muted, #4f6289);
-          line-height: 1.75;
-          font-size: 1.02rem;
-          max-width: 540px;
-        }
-        .sol-ecole-value-visual {
-          position: relative;
-          padding: 1rem 0.5rem 2rem;
-        }
-        .sol-ecole-value-frame {
-          border-radius: var(--rl-radius-xl, 32px);
-          overflow: hidden;
-          border: 1px solid var(--rl-border, #e1e8f8);
-          box-shadow: var(--rl-shadow-md, 0 8px 32px rgba(6, 15, 46, 0.1));
-        }
-        .sol-ecole-value-frame img {
-          width: 100%;
-          height: 420px;
-          object-fit: cover;
-          display: block;
-        }
-        .sol-ecole-value-badge {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          background: var(--rl-navy, #1e2a4a);
-          color: #fff;
-          font-size: 0.82rem;
-          font-weight: 700;
-          padding: 0.65rem 1.35rem;
-          border-radius: 999px;
+
+        .txl-eyebrow {
           display: inline-flex;
           align-items: center;
-          gap: 0.5rem;
-          box-shadow: 0 12px 32px rgba(30, 42, 74, 0.35);
+          gap: 10px;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(18, 23, 39, 0.65);
+          padding: 10px 14px;
+          border-radius: 999px;
+          background: rgba(224, 48, 90, 0.10);
+          border: 1px solid rgba(224, 48, 90, 0.18);
+          width: fit-content;
+          margin-bottom: 18px;
+        }
+
+        .txl-title {
+          font-size: clamp(2.1rem, 4.5vw, 3.85rem);
+          font-weight: 900;
+          line-height: 1.12;
+          margin: 0 0 18px;
+          letter-spacing: -0.02em;
+          color: var(--ink);
+        }
+        .txl-title__accent {
+          background: linear-gradient(120deg, var(--accent) 0%, var(--accent2) 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .txl-sub {
+          color: rgba(18, 23, 39, 0.72);
+          font-size: 1.06rem;
+          line-height: 1.75;
+          max-width: 560px;
+          margin: 0 0 22px;
+        }
+
+        .txl-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 22px;
+        }
+        .txl-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 13px 20px;
+          border-radius: 14px;
+          font-weight: 700;
+          text-decoration: none;
+          transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+          border: 1px solid transparent;
           white-space: nowrap;
         }
-        .sol-ecole-value-badge__dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: #4ec8c8;
+        .txl-btn--primary {
+          background: linear-gradient(120deg, var(--accent) 0%, #b31538 100%);
+          color: #ffffff;
+          box-shadow: 0 16px 34px rgba(224, 48, 90, 0.22);
         }
-        .sol-ecole-feature-grid {
+        .txl-btn--primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 18px 42px rgba(224, 48, 90, 0.28);
+          color: #ffffff;
+        }
+        .txl-btn--ghost {
+          background: rgba(255, 255, 255, 0.55);
+          color: var(--ink);
+          border-color: rgba(18, 23, 39, 0.12);
+          backdrop-filter: blur(10px);
+        }
+        .txl-btn--ghost:hover {
+          transform: translateY(-2px);
+          border-color: rgba(18, 23, 39, 0.18);
+          color: var(--ink);
+        }
+
+        .txl-kpis {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.25rem;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
+          max-width: 520px;
+        }
+        .txl-kpi {
+          border-radius: 16px;
+          padding: 14px 14px;
+          background: rgba(255, 255, 255, 0.65);
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          box-shadow: 0 10px 30px rgba(18, 23, 39, 0.06);
+        }
+        .txl-kpi__v {
+          font-weight: 900;
+          font-size: 1.25rem;
+          color: var(--ink);
+          margin-bottom: 2px;
+          letter-spacing: -0.02em;
+        }
+        .txl-kpi__l {
+          font-size: 0.86rem;
+          color: rgba(18, 23, 39, 0.68);
+          line-height: 1.35;
+        }
+
+        .txl-visual {
+          position: relative;
+          padding: 10px 0 14px;
+        }
+        .txl-visual__frame {
+          border-radius: 26px;
+          overflow: hidden;
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          box-shadow: 0 34px 70px rgba(18, 23, 39, 0.12);
+          background: #fff;
+        }
+        .txl-visual__frame img {
+          width: 100%;
+          height: 440px;
+          object-fit: cover;
+          display: block;
+          filter: saturate(1.02) contrast(1.02);
+        }
+
+        .txl-chip {
+          position: absolute;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 14px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.70);
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          box-shadow: 0 14px 40px rgba(18, 23, 39, 0.10);
+          font-weight: 800;
+          font-size: 0.85rem;
+          color: rgba(18, 23, 39, 0.78);
+          backdrop-filter: blur(10px);
+        }
+        .txl-chip__dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 999px;
+          background: var(--accent);
+          box-shadow: 0 0 0 4px rgba(224, 48, 90, 0.14);
+        }
+        .txl-chip--tl {
+          top: 22px;
+          left: 18px;
+        }
+        .txl-chip--br {
+          bottom: 22px;
+          right: 18px;
+        }
+
+        .txl-section {
+          padding: 74px 0;
+        }
+        .txl-section--soft {
+          background: linear-gradient(180deg, rgba(255, 246, 248, 0.95) 0%, rgba(255, 246, 248, 0.55) 100%);
+          border-top: 1px solid rgba(18, 23, 39, 0.06);
+          border-bottom: 1px solid rgba(18, 23, 39, 0.06);
+        }
+
+        .txl-head {
+          text-align: center;
+          max-width: 780px;
+          margin: 0 auto 34px;
+        }
+        .txl-head--left {
+          text-align: left;
+          margin: 0 0 22px;
+          max-width: 520px;
+        }
+        .txl-head h2 {
+          font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+          font-weight: 900;
+          margin: 0 0 10px;
+          letter-spacing: -0.02em;
+        }
+        .txl-head p {
+          margin: 0;
+          color: rgba(18, 23, 39, 0.68);
+          line-height: 1.65;
+          font-size: 1.02rem;
+        }
+
+        .txl-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
         }
         @media (max-width: 991px) {
-          .sol-ecole-feature-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (max-width: 575px) {
-          .sol-ecole-feature-grid {
+          .txl-grid {
             grid-template-columns: 1fr;
           }
+          .txl-kpis {
+            grid-template-columns: 1fr;
+          }
+          .txl-visual__frame img {
+            height: 360px;
+          }
+          .txl-hero {
+            padding: 100px 0 54px;
+          }
         }
-        .sol-ecole-feature {
+
+        .txl-card {
+          border-radius: 22px;
           background: #fff;
-          border-radius: var(--rl-radius-lg, 22px);
-          padding: 1.5rem 1.35rem 1.35rem;
-          border: 1px solid var(--rl-border, #e1e8f8);
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          box-shadow: 0 18px 46px rgba(18, 23, 39, 0.08);
+          padding: 18px 18px 16px;
           position: relative;
           overflow: hidden;
-          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
-        .sol-ecole-feature:hover {
-          border-color: rgba(78, 200, 200, 0.45);
-          box-shadow: 0 12px 36px rgba(78, 200, 200, 0.12);
-        }
-        .sol-ecole-feature__accent {
+        .txl-card__top {
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
+          inset: 0 0 auto 0;
           height: 3px;
-          background: linear-gradient(90deg, #4ec8c8, #7adddd);
-          opacity: 0.85;
+          background: linear-gradient(90deg, rgba(224, 48, 90, 0.95), rgba(78, 200, 200, 0.45));
         }
-        .sol-ecole-feature h3 {
-          font-size: 1.02rem;
-          font-weight: 700;
-          color: var(--rl-navy, #1e2a4a);
-          margin: 0.35rem 0 0.5rem;
+        .txl-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(224, 48, 90, 0.24);
+          box-shadow: 0 26px 70px rgba(18, 23, 39, 0.10);
         }
-        .sol-ecole-feature p {
+        .txl-card h3 {
+          font-size: 1.06rem;
+          font-weight: 900;
+          margin: 10px 0 8px;
+          letter-spacing: -0.01em;
+        }
+        .txl-card p {
           margin: 0;
-          font-size: 0.92rem;
-          line-height: 1.55;
-          color: var(--rl-muted, #4f6289);
-        }
-        .sol-ecole-use-list {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-        .sol-ecole-use-list li {
-          display: flex;
-          gap: 1rem;
-          align-items: flex-start;
-          padding: 1.1rem 1.25rem;
-          background: #fff;
-          border-radius: 14px;
-          border: 1px solid var(--rl-border, #e1e8f8);
-          margin-bottom: 0.85rem;
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .sol-ecole-use-list li:hover {
-          transform: translateX(4px);
-          box-shadow: var(--rl-shadow-sm, 0 2px 12px rgba(6, 15, 46, 0.06));
-        }
-        .sol-ecole-use-list li:last-child {
-          margin-bottom: 0;
-        }
-        .sol-ecole-use-list__icon {
-          flex-shrink: 0;
-          width: 36px;
-          height: 36px;
-          border-radius: 10px;
-          background: rgba(78, 200, 200, 0.15);
-          color: #2a9d8f;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .sol-ecole-use-list span:last-child {
-          color: var(--rl-text, #0b1640);
-          line-height: 1.55;
+          color: rgba(18, 23, 39, 0.68);
+          line-height: 1.65;
           font-size: 0.98rem;
         }
-        .sol-ecole-process {
-          max-width: 820px;
-          margin: 0 auto;
-          position: relative;
+
+        .txl-proof {
+          margin-top: 18px;
+          border-radius: 22px;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          padding: 18px 18px;
+          box-shadow: 0 18px 50px rgba(18, 23, 39, 0.08);
         }
-        .sol-ecole-process__row {
+        .txl-proof__title {
+          font-weight: 900;
+          font-size: 1.05rem;
+          margin-bottom: 6px;
+          letter-spacing: -0.01em;
+        }
+        .txl-proof__desc {
+          color: rgba(18, 23, 39, 0.70);
+          line-height: 1.65;
+          margin-bottom: 12px;
+        }
+
+        .txl-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
           display: grid;
-          grid-template-columns: 72px 1fr;
-          gap: 1.25rem 1.5rem;
-          position: relative;
-          padding-bottom: 2.5rem;
+          gap: 10px;
         }
-        .sol-ecole-process__step {
-          width: 56px;
-          height: 56px;
+        .txl-list li {
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+          color: rgba(18, 23, 39, 0.78);
+          line-height: 1.55;
+        }
+        .txl-list__icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 10px;
+          background: rgba(224, 48, 90, 0.12);
+          color: rgba(18, 23, 39, 0.85);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-top: 1px;
+          border: 1px solid rgba(224, 48, 90, 0.16);
+        }
+
+        .txl-flow {
+          border-radius: 26px;
+          background: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(18, 23, 39, 0.10);
+          box-shadow: 0 24px 70px rgba(18, 23, 39, 0.10);
+          padding: 18px 16px;
+          position: relative;
+        }
+        .txl-flow__row {
+          display: grid;
+          grid-template-columns: 70px 1fr;
+          gap: 14px;
+          padding: 14px 10px 18px;
+          position: relative;
+        }
+        .txl-flow__n {
+          width: 52px;
+          height: 52px;
           border-radius: 16px;
-          background: linear-gradient(135deg, #4ec8c8, #52b4d8);
-          color: #fff;
-          font-weight: 800;
-          font-size: 0.95rem;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 24px rgba(78, 200, 200, 0.35);
+          font-weight: 900;
+          background: linear-gradient(135deg, rgba(224, 48, 90, 0.95), rgba(255, 122, 148, 0.88));
+          color: rgba(255, 255, 255, 0.96);
+          box-shadow: 0 14px 34px rgba(224, 48, 90, 0.18);
         }
-        .sol-ecole-process__body h3 {
-          font-size: 1.12rem;
-          font-weight: 700;
-          color: var(--rl-navy, #1e2a4a);
-          margin-bottom: 0.4rem;
+        .txl-flow__body h3 {
+          margin: 2px 0 6px;
+          font-weight: 900;
+          font-size: 1.05rem;
         }
-        .sol-ecole-process__body p {
+        .txl-flow__body p {
           margin: 0;
-          color: var(--rl-muted, #4f6289);
-          line-height: 1.6;
+          color: rgba(18, 23, 39, 0.68);
+          line-height: 1.65;
         }
-        .sol-ecole-process__connector {
+        .txl-flow__line {
           position: absolute;
-          left: 27px;
-          top: 58px;
+          left: 36px;
+          top: 64px;
           bottom: 0;
           width: 2px;
-          background: linear-gradient(180deg, rgba(78, 200, 200, 0.5), rgba(78, 200, 200, 0));
+          background: linear-gradient(180deg, rgba(224, 48, 90, 0.36), rgba(224, 48, 90, 0));
         }
-        .sol-ecole-cta {
-          padding: 56px 0 80px;
-          font-family: "Manrope", sans-serif;
+
+        .txl-cta {
+          padding: 62px 0 86px;
+          background: #fff;
         }
-        .sol-ecole-cta__inner {
-          background: linear-gradient(120deg, #1e2a4a 0%, #253764 55%, #1a3a52 100%);
-          border-radius: var(--rl-radius-xl, 32px);
+        .txl-cta__inner {
+          border-radius: 28px;
+          background: radial-gradient(900px 420px at 20% 20%, rgba(224, 48, 90, 0.22), transparent 55%),
+            radial-gradient(900px 420px at 80% 15%, rgba(78, 200, 200, 0.10), transparent 55%),
+            linear-gradient(120deg, #121727 0%, #1b2440 70%, #121727 100%);
           padding: clamp(2rem, 4vw, 3rem);
           display: flex;
           flex-wrap: wrap;
-          align-items: center;
           justify-content: space-between;
-          gap: 1.75rem;
-          box-shadow: var(--rl-shadow-lg, 0 20px 60px rgba(6, 15, 46, 0.15));
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          align-items: center;
+          gap: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.10);
+          box-shadow: 0 28px 80px rgba(18, 23, 39, 0.18);
         }
-        .sol-ecole-cta__inner h2 {
+        .txl-cta__inner h2 {
           color: #fff;
-          font-size: clamp(1.5rem, 2.5vw, 2rem);
-          font-weight: 800;
-          margin-bottom: 0.5rem;
+          font-weight: 900;
+          margin: 0 0 8px;
+          font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+          letter-spacing: -0.02em;
         }
-        .sol-ecole-cta__inner p {
-          color: rgba(255, 255, 255, 0.82);
+        .txl-cta__inner p {
           margin: 0;
-          max-width: 460px;
-          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.80);
+          line-height: 1.65;
+          max-width: 540px;
         }
-        .sol-ecole-cta__actions {
+        .txl-cta__actions {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.75rem;
+          gap: 12px;
         }
-        @keyframes sol-ecole-fade-up {
-          from {
-            opacity: 0;
-            transform: translateY(16px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .txl-btn--dark {
+          background: linear-gradient(120deg, var(--accent) 0%, #b31538 100%);
+          color: #ffffff;
+          box-shadow: 0 18px 46px rgba(224, 48, 90, 0.22);
+        }
+        .txl-btn--dark:hover {
+          transform: translateY(-2px);
+          color: #ffffff;
+        }
+        .txl-btn--ghost-dark {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.18);
+          color: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(10px);
+        }
+        .txl-btn--ghost-dark:hover {
+          transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.26);
+          color: rgba(255, 255, 255, 0.96);
         }
       `}</style>
     </Layout>
   );
 };
 
-export default SolutionEcolePage;
+export default SolutionTextile;
+
