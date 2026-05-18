@@ -516,7 +516,7 @@ const SolutionTextile = () => {
 
         /* HERO: white/pink, no blue */
         .txl-hero {
-          padding: 110px 0 70px;
+          padding: 60px 0 70px;
           background: radial-gradient(1000px 380px at 15% 10%, rgba(224, 48, 90, 0.16), transparent 60%),
             radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 200, 0.10), transparent 58%),
             linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(255, 246, 248, 0.75) 100%);

@@ -744,7 +744,7 @@ const SolutionHotellerie = () => {
 
         /* HERO: white/cream, no blue */
         .htl-hero {
-          padding: 110px 0 70px;
+          padding: 60px 0 70px;
           background: radial-gradient(1000px 380px at 15% 10%, rgba(123, 94, 167, 0.18), transparent 60%),
             radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 200, 0.12), transparent 58%),
             linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(250, 247, 240, 0.6) 100%);

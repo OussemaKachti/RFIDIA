@@ -461,7 +461,7 @@ const SolutionSante = () => {
           font-family: "Manrope", sans-serif;
         }
         .med-hero {
-          padding: 110px 0 70px;
+          padding: 60px 0 70px;
           background: radial-gradient(980px 420px at 15% 10%, rgba(77, 200, 196, 0.22), transparent 60%),
             radial-gradient(900px 420px at 85% 20%, rgba(30, 42, 74, 0.06), transparent 58%),
             linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(245, 255, 254, 0.72) 100%);

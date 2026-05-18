@@ -509,7 +509,7 @@ const SolutionGestionActifs = () => {
         }
 
         .ast-hero {
-          padding: 110px 0 70px;
+          padding: 60px 0 70px;
           background: radial-gradient(980px 420px at 15% 10%, rgba(59, 95, 160, 0.18), transparent 60%),
             radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 200, 0.10), transparent 58%),
             linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(245, 248, 255, 0.55) 100%);

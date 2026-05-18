@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution École | RFIDIA",
+    metaTitle: "Système Entrepôt & Logistique | RFIDIA",
     metaDesc:
-      "Sécurisez les parcours, maîtrisez le patrimoine pédagogique et simplifiez les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
+      "Inventaire en temps réel, automatisation des quais de réception/expédition et pilotage des flux logistiques grâce à la technologie RFID industrielle.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -92,76 +92,76 @@ const i18n = {
       english: "English",
       italian: "Italiano",
     },
-    heroEyebrow: "Éducation & traçabilité",
-    heroTitleA: "Une école plus",
-    heroTitleB: "sereine",
-    heroTitleC: "et un patrimoine pédagogique mieux maîtrisé",
+    heroEyebrow: "Logistique • Traçabilité & temps réel",
+    heroTitleA: "Entrepôt",
+    heroTitleB: "connecté",
+    heroTitleC: "Flux automatisés, zéro erreur",
     heroSub:
-      "RFIDIA accompagne les établissements avec des dispositifs respectueux de la communauté éducative : sécurisation des accès, visibilité sur le matériel pédagogique et inventaires plus fiables — sans surcharge pour les équipes.",
-    heroCta1: "Échanger sur mon projet",
+      "RFIDIA transforme la gestion de votre entrepôt grâce à des portiques RFID et des terminaux mobiles de pointe. Accélérez vos réceptions, fiabilisez vos expéditions et réalisez vos inventaires en un temps record sans bloquer votre exploitation.",
+    heroCta1: "Obtenir une démo",
     heroCta2: "Toutes les solutions",
     kpis: [
-      { v: "100%", l: "Parcours sécurisés" },
-      { v: "-40%", l: "Écarts d’inventaire" },
-      { v: "x5", l: "Relevés rapides" },
+      { v: "x10", l: "Vitesse d'inventaire" },
+      { v: "99.9%", l: "Fiabilité expéditions" },
+      { v: "-50%", l: "Temps de recherche" },
     ],
-    modulesTitle: "Ce que la solution peut couvrir",
+    modulesTitle: "Des modules conçus pour l'excellence logistique",
     modulesDesc:
-      "Modules combinables selon votre maturité et vos infrastructures : pilote puis montée en charge maîtrisée.",
+      "Une couverture complète de vos processus d'entrepôt pour maximiser votre productivité et éliminer les litiges clients.",
     modules: [
       {
-        title: "Contrôle d’accès et flux",
-        desc: "Badges, lecteurs et règles horaires pour fluidifier les entrées-sorties et sécuriser les espaces sensibles.",
+        title: "Réception automatisée (Quais RFID)",
+        desc: "Lecture instantanée et sans contact des palettes et cartons dès leur passage à quai, avec rapprochement automatique des commandes.",
       },
       {
-        title: "Inventaire & étiquetage RFID",
-        desc: "Identification unique des ressources, relevés mobiles rapides et réconciliation avec vos listes ou logiciels.",
+        title: "Gestion dynamique des emplacements",
+        desc: "Suivi précis de la localisation des palettes et conteneurs pour optimiser l'espace de stockage et réduire les temps de recherche.",
       },
       {
-        title: "Suivi des actifs pédagogiques",
-        desc: "Visibilité sur les attributions, les mouvements entre salles ou sites et l’historique pour limiter les pertes.",
+        title: "Inventaire tournant ultra-rapide",
+        desc: "Réalisation d'inventaires fréquents via des terminaux mobiles RFID sans interruption de l'activité logistique.",
       },
       {
-        title: "Tableaux de bord sobres",
-        desc: "Indicateurs lisibles : état du parc, alertes utiles et exports pour vos reporting internes.",
+        title: "Contrôle d'expédition 100% fiable",
+        desc: "Vérification instantanée de la conformité des chargements avant le départ du camion pour éradiquer les erreurs de livraison.",
       },
       {
-        title: "Intégration SI",
-        desc: "Échanges contrôlés avec vos outils existants (référentiels, GMAO légère ou solutions métiers).",
+        title: "Suivi des supports de manutention",
+        desc: "Traçabilité unitaire de vos palettes, rolls, bacs et conteneurs consignés pour éviter les pertes et optimiser les rotations.",
       },
       {
-        title: "Formation & accompagnement",
-        desc: "Montée en compétence des équipes, documentation claire et support pour ancrer les usages dans la durée.",
+        title: "Intégration WMS & ERP fluide",
+        desc: "Interfaçage standardisé avec vos systèmes existants (SAP, Manhattan, Reflex, Oracle) pour un pilotage centralisé en temps réel.",
       },
     ],
-    journeyTitle: "Un déploiement structuré, sans surprise",
+    journeyTitle: "Un déploiement maîtrisé, un ROI rapide",
     journeyDesc:
-      "Quatre étapes éprouvées pour avancer avec clarté et mesurer les bénéfices sur le terrain.",
+      "Une méthodologie éprouvée pour digitaliser vos entrepôts sans perturber vos opérations quotidiennes.",
     journey: [
-      { n: "01", t: "Diagnostic & cadrage", d: "Ateliers avec vos équipes, priorités, conformité et périmètre fonctionnel." },
-      { n: "02", t: "Conception & pilote", d: "Architecture technique, choix des supports RFID et expérimentation sur un site pilote." },
-      { n: "03", t: "Déploiement & intégration", d: "Installation encadrée, paramétrage, raccordements utiles et validation des flux réels." },
-      { n: "04", t: "Adoption & amélioration", d: "Formation, support, indicateurs de suivi et ajustements pour pérenniser les usages." },
+      { n: "01", t: "Audit & Étude de site", d: "Analyse de vos flux, contraintes métalliques/environnementales et définition de l'architecture matérielle RFID." },
+      { n: "02", t: "Installation & Paramétrage", d: "Mise en place des portiques de quai, antennes et configuration des terminaux mobiles selon vos processus." },
+      { n: "03", t: "Interfaçage WMS / ERP", d: "Connexion sécurisée de notre middleware RFIDIA avec votre système d'information pour la remontée automatique des données." },
+      { n: "04", t: "Formation & Exploitation", d: "Accompagnement de vos caristes et opérateurs pour une prise en main immédiate et un pilotage autonome." },
     ],
-    proofTitle: "Où cela fait la différence",
+    proofTitle: "Pourquoi les directeurs logistiques nous choisissent",
     proofDesc:
-      "Des contextes concrets où nos clients gagnent en sérénité opérationnelle au quotidien.",
+      "Parce que l'automatisation RFID apporte une transparence totale et supprime les goulots d'étranglement.",
     proofs: [
-      "Collèges, lycées et campus : circulations aux heures de pointe et espaces mutualisés.",
-      "Bibliothèques et médiathèques : prêts, collections mobiles et inventaires cycliques plus rapides.",
-      "Ateliers, laboratoires et salles techniques : équipements sensibles suivis avec précision.",
-      "Internats et résidences : gestion des accès et des ressources partagées selon vos protocoles.",
+      "Élimination des pénalités clients grâce au contrôle infaillible des expéditions.",
+      "Gain de productivité majeur sur les quais de déchargement et de chargement.",
+      "Fiabilité absolue des stocks évitant les ruptures et les surstockages de sécurité.",
+      "Visibilité en temps réel sur l'ensemble de la chaîne d'approvisionnement.",
     ],
-    ctaTitle: "Présentez-nous votre établissement",
+    ctaTitle: "Prêt à moderniser votre plateforme logistique ?",
     ctaSub:
-      "Nous vous répondons avec une vision réaliste : objectifs, calendrier et périmètre adaptés à votre communauté scolaire.",
-    ctaBtn: "Contacter RFIDIA",
-    ctaAlt: "Retour à l’accueil solutions",
+      "Partagez avec nos ingénieurs la configuration de votre entrepôt et le volume de vos expéditions pour recevoir une étude personnalisée.",
+    ctaBtn: "Contactez un expert RFIDIA",
+    ctaAlt: "Retour à l'accueil solutions",
   },
   en: {
-    metaTitle: "School Solution | RFIDIA",
+    metaTitle: "Warehouse System & Logistics | RFIDIA",
     metaDesc:
-      "Secure journeys, master educational assets and streamline inventories with RFID traceability designed for schools and campuses.",
+      "Real-time inventory, automated dock doors, and streamlined logistics flow using industrial RFID technology.",
     navbar: {
       home: "Home",
       about: "About",
@@ -176,73 +176,76 @@ const i18n = {
       english: "English",
       italian: "Italian",
     },
-    heroEyebrow: "Education & traceability",
-    heroTitleA: "A calmer school",
-    heroTitleB: "environment",
-    heroTitleC: "with educational assets under control",
+    heroEyebrow: "Logistics • Traceability & Real-Time",
+    heroTitleA: "A connected",
+    heroTitleB: "warehouse",
+    heroTitleC: "for automated and error-free workflows",
     heroSub:
-      "RFIDIA supports schools with respectful, field-proven approaches: access security, visibility on teaching equipment and more reliable inventories — without burdening staff.",
-    heroCta1: "Discuss my project",
+      "RFIDIA transforms your warehouse management through industrial RFID portals and advanced mobile terminals. Speed up receiving, ensure 100% shipping accuracy, and perform inventories in record time without stopping operations.",
+    heroCta1: "Get a demo",
     heroCta2: "All solutions",
     kpis: [
-      { v: "100%", l: "Safer journeys" },
-      { v: "-40%", l: "Inventory gaps" },
-      { v: "x5", l: "Fast counts" },
+      { v: "x10", l: "Inventory speed" },
+      { v: "99.9%", l: "Shipping accuracy" },
+      { v: "-50%", l: "Search time" },
     ],
-    modulesTitle: "What the solution can cover",
-    modulesDesc: "Composable modules based on your maturity: we favour pilot phases and controlled scale-up.",
+    modulesTitle: "Modules built for logistics excellence",
+    modulesDesc:
+      "Comprehensive coverage of your warehouse processes to maximize productivity and eliminate shipping disputes.",
     modules: [
       {
-        title: "Access & flow control",
-        desc: "Badges, readers and time rules to smooth entries and exits and secure spaces that require it.",
+        title: "Automated Receiving (RFID Docks)",
+        desc: "Instant, contactless reading of pallets and cartons as they pass through dock doors, with automated PO matching.",
       },
       {
-        title: "RFID labeling & inventory",
-        desc: "Unique resource IDs, mobile fast counts and reconciliation with your lists or management tools.",
+        title: "Dynamic Location Management",
+        desc: "Accurate tracking of pallet and container locations to optimize storage space and minimize search times.",
       },
       {
-        title: "Teaching asset tracking",
-        desc: "Visibility on assignments, moves between rooms or sites and history to limit losses.",
+        title: "Ultra-Fast Cycle Counts",
+        desc: "Frequent inventory audits using RFID mobile terminals without disrupting daily warehouse activity.",
       },
       {
-        title: "Clear dashboards",
-        desc: "Readable indicators for teams: fleet status, meaningful alerts and exports for internal reporting.",
+        title: "100% Reliable Shipping Control",
+        desc: "Instant load verification before the truck leaves the dock to eradicate delivery errors and penalties.",
       },
       {
-        title: "Systems integration",
-        desc: "Controlled exchanges with your existing stack (directories, lightweight CMMS or business tools).",
+        title: "Returnable Transport Item Tracking",
+        desc: "Unit tracking of pallets, roll cages, totes, and containers to prevent losses and optimize rotation.",
       },
       {
-        title: "Training & support",
-        desc: "Skills building, clear documentation and support to sustain adoption over time.",
+        title: "Seamless WMS & ERP Integration",
+        desc: "Standardized interfacing with your existing systems (SAP, Manhattan, Reflex, Oracle) for real-time central management.",
       },
     ],
-    journeyTitle: "Structured rollout, no surprises",
-    journeyDesc: "Four proven steps to move forward with clarity and measure benefits.",
+    journeyTitle: "Controlled rollout, rapid ROI",
+    journeyDesc:
+      "A proven methodology to digitalize your warehouse without disrupting daily operations.",
     journey: [
-      { n: "01", t: "Discovery & scoping", d: "Workshops with your teams, priorities, compliance and functional perimeter." },
-      { n: "02", t: "Design & pilot", d: "Technical architecture, RFID media choices and pilot on a site or building." },
-      { n: "03", t: "Deployment & integration", d: "Supervised installation, configuration, connections as needed and validation in real conditions." },
-      { n: "04", t: "Adoption & improvement", d: "Training, support, follow-up metrics and refinements for long-term usage." },
+      { n: "01", t: "Audit & Site Survey", d: "Analysis of your material flows, environmental constraints, and definition of the optimal RFID hardware architecture." },
+      { n: "02", t: "Installation & Setup", d: "Deployment of dock portals, antennas, and configuration of mobile readers tailored to your standard operating procedures." },
+      { n: "03", t: "WMS / ERP Interfacing", d: "Secure connection of our RFIDIA middleware with your IT system for automated data synchronization." },
+      { n: "04", t: "Training & Operation", d: "Hands-on training for forklift drivers and warehouse staff for immediate adoption and autonomous management." },
     ],
-    proofTitle: "Where it matters most",
-    proofDesc: "Typical contexts where schools gain operational peace of mind.",
+    proofTitle: "Why logistics directors choose us",
+    proofDesc:
+      "Because RFID automation provides total transparency and eliminates operational bottlenecks.",
     proofs: [
-      "Middle schools, high schools and campuses: peak-time circulation and shared facilities.",
-      "Libraries and media centers: loans, mobile collections and faster cyclical inventories.",
-      "Workshops, labs and technical rooms: sensitive or high-value equipment tracked with precision.",
-      "Boarding and residences: access and shared resources aligned with your protocols.",
+      "Elimination of customer penalties through infallible shipping verification.",
+      "Major productivity gains at receiving and shipping docks.",
+      "Absolute stock accuracy preventing stockouts and excess safety buffer stock.",
+      "Real-time visibility across the entire supply chain operations.",
     ],
-    ctaTitle: "Tell us about your institution",
+    ctaTitle: "Ready to modernize your logistics platform?",
     ctaSub:
-      "We respond with a realistic view: goals, timeline and scope suited to your school community.",
-    ctaBtn: "Contact RFIDIA",
+      "Share your warehouse configuration and shipping volumes with our engineers to receive a customized study.",
+    ctaBtn: "Contact an RFIDIA expert",
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Scuola | RFIDIA",
+    metaTitle: "Sistema Magazzino & Logistica | RFIDIA",
     metaDesc:
-      "Percorsi più sicuri, patrimonio didattico sotto controllo e inventari semplificati con tracciabilità RFID per istituti scolastici.",
+      "Inventario in tempo reale, automazione delle baie di carico e gestione dei flussi logistici con tecnologia RFID industriale.",
     navbar: {
       home: "Home",
       about: "Chi siamo",
@@ -257,72 +260,75 @@ const i18n = {
       english: "Inglese",
       italian: "Italiano",
     },
-    heroEyebrow: "Istruzione & tracciabilità",
-    heroTitleA: "Un ambiente scolastico più",
-    heroTitleB: "sereno",
-    heroTitleC: "e un patrimonio didattico più controllato",
+    heroEyebrow: "Logistica • Tracciabilità & Tempo Reale",
+    heroTitleA: "Un magazzino",
+    heroTitleB: "connesso",
+    heroTitleC: "per flussi automatizzati e senza errori",
     heroSub:
-      "RFIDIA affianca gli istituti con approcci rispettosi e concreti: sicurezza degli accessi, visibilità sul materiale didattico e inventari più affidabili — senza appesantire il personale.",
-    heroCta1: "Parliamo del progetto",
+      "RFIDIA trasforma la gestione del tuo magazzino attraverso varchi RFID industriali e terminali mobili avanzati. Accelera le ricezioni, garantisci l'accuratezza delle spedizioni al 100% ed esegui inventari a tempo di record senza interrompere l'attività.",
+    heroCta1: "Richiedi una demo",
     heroCta2: "Tutte le soluzioni",
     kpis: [
-      { v: "100%", l: "Percorsi sicuri" },
-      { v: "-40%", l: "Gap inventario" },
-      { v: "x5", l: "Rilevazioni rapide" },
+      { v: "x10", l: "Velocità inventario" },
+      { v: "99.9%", l: "Accuratezza spedizioni" },
+      { v: "-50%", l: "Tempo di ricerca" },
     ],
-    modulesTitle: "Cosa può coprire la soluzione",
-    modulesDesc: "Moduli combinabili in base alla maturità: privilegiamo pilota e scalabilità controllata.",
+    modulesTitle: "Moduli progettati per l'eccellenza logistica",
+    modulesDesc:
+      "Copertura completa dei processi di magazzino per massimizzare la produttività ed eliminare i contenziosi con i clienti.",
     modules: [
       {
-        title: "Controllo accessi e flussi",
-        desc: "Badge, lettori e regole orarie per fluidificare entrate/uscite e proteggere gli spazi necessari.",
+        title: "Ricezione automatizzata (Baie RFID)",
+        desc: "Lettura istantanea e senza contatto di pallet e cartoni al passaggio dal varco, con riconciliazione automatica degli ordini.",
       },
       {
-        title: "Etichettatura RFID e inventario",
-        desc: "Identificazione univoca, rilevazioni mobili veloci e riconciliazione con elenchi o gestionali.",
+        title: "Gestione dinamica delle ubicazioni",
+        desc: "Tracciamento accurato della posizione di pallet e contenitori per ottimizzare lo spazio di stoccaggio e ridurre i tempi di ricerca.",
       },
       {
-        title: "Monitoraggio asset didattici",
-        desc: "Visibilità su assegnazioni, spostamenti tra aule o sedi e storico per limitare le perdite.",
+        title: "Inventari rotativi ultra-rapidi",
+        desc: "Audit di inventario frequenti tramite terminali mobili RFID senza interrompere l'attività logistica quotidiana.",
       },
       {
-        title: "Dashboard chiare",
-        desc: "Indicatori leggibili: stato parco, alert significativi ed export per reporting interno.",
+        title: "Controllo spedizioni 100% affidabile",
+        desc: "Verifica istantanea del carico prima della partenza del camion per sradicare errori di consegna e penali.",
       },
       {
-        title: "Integrazione IT",
-        desc: "Scambi controllati con gli strumenti esistenti (anagrafiche, GMAO leggera o applicazioni di settore).",
+        title: "Tracciamento supporti logistici (RTI)",
+        desc: "Tracciabilità unitaria di pallet, roll container, cassette e contenitori a rendere per evitare perdite e ottimizzare la rotazione.",
       },
       {
-        title: "Formazione e supporto",
-        desc: "Aggiornamento del personale, documentazione chiara e assistenza per radicare gli usi nel tempo.",
+        title: "Integrazione WMS & ERP fluida",
+        desc: "Interfacciamento standardizzato con i sistemi esistenti (SAP, Manhattan, Reflex, Oracle) per una gestione centralizzata in tempo reale.",
       },
     ],
-    journeyTitle: "Un rollout strutturato",
-    journeyDesc: "Quattro fasi per avanzare con chiarezza e misurare i benefici sul campo.",
+    journeyTitle: "Rollout controllato, ROI rapido",
+    journeyDesc:
+      "Una metodologia collaudata per digitalizzare i tuoi magazzini senza interrompere le normali operazioni.",
     journey: [
-      { n: "01", t: "Analisi e perimetro", d: "Workshop con le squadre, priorità, conformità e ambito funzionale." },
-      { n: "02", t: "Progetto e pilota", d: "Architettura tecnica, scelta supporti RFID e sperimentazione su un sito pilota." },
-      { n: "03", t: "Deploy e integrazione", d: "Installazione guidata, configurazione, collegamenti utili e validazione dei flussi reali." },
-      { n: "04", t: "Adozione e miglioramento", d: "Formazione, supporto, KPI di follow-up e aggiustamenti per consolidare gli usi." },
+      { n: "01", t: "Audit & Site Survey", d: "Analisi dei flussi, vincoli ambientali e definizione dell'architettura hardware RFID ottimale." },
+      { n: "02", t: "Installazione & Setup", d: "Posa di portali di banchina, antenne e configurazione dei lettori mobili secondo le procedure operative." },
+      { n: "03", t: "Interfacciamento WMS / ERP", d: "Connessione sicura del nostro middleware RFIDIA con il tuo sistema informatico per la sincronizzazione automatica dei dati." },
+      { n: "04", t: "Formazione & Gestione", d: "Formazione pratica per carrellisti e operatori per un'adozione immediata e una gestione autonoma." },
     ],
-    proofTitle: "Dove fa la differenza",
-    proofDesc: "Contesti tipici in cui si guadagna serenità operativa.",
+    proofTitle: "Perché i direttori logistici ci scelgono",
+    proofDesc:
+      "Perché l'automazione RFID offre una trasparencia totale ed elimina i colli di bottiglia operativi.",
     proofs: [
-      "Scuole secondarie e campus: circolazione nelle ore di punta e spazi condivisi.",
-      "Biblioteche e mediateche: prestiti, collezioni mobili e inventari ciclici più rapidi.",
-      "Laboratori e aule tecniche: attrezzature sensibili tracciate con precisione.",
-      "Convitti e residenze: accessi e risorse condivise secondo i protocolli.",
+      "Eliminazione delle penali dei clienti grazie alla verifica infallibile delle spedizioni.",
+      "Notevoli guadagni di produttività sulle banchine di carico e scarico.",
+      "Assoluta precisione delle scorte che evita rotture di stock e scorte di sicurezza in eccesso.",
+      "Visibilità in tempo reale sull'intera catena di approvvigionamento.",
     ],
-    ctaTitle: "Presentate il vostro istituto",
+    ctaTitle: "Pronto a modernizzare la tua piattaforma logistica?",
     ctaSub:
-      "Rispondiamo con obiettivi, calendario e perimetro adatti alla vostra comunita scolastica.",
-    ctaBtn: "Contatta RFIDIA",
+      "Condividi la configurazione del tuo magazzino e i volumi di spedizione con i nostri ingegneri per ricevere uno studio personalizzato.",
+    ctaBtn: "Contatta un esperto RFIDIA",
     ctaAlt: "Torna alle soluzioni",
   },
 };
 
-const SolutionEcole = () => {
+const SolutionEntrepot = () => {
   const [language, setLanguage] = useState("fr");
 
   useEffect(() => {
@@ -342,11 +348,11 @@ const SolutionEcole = () => {
 
   const accent = useMemo(
     () => ({
-      primary: "#1E2A4A",
-      primary2: "#4EC8C4",
-      primaryDark: "#121727",
+      primary: "#2563eb",
+      primary2: "#3b82f6",
+      primaryDark: "#1e3a8a",
       ink: "#121727",
-      soft: "#F4F7FC",
+      soft: "#eff6ff",
       line: "rgba(18, 23, 39, 0.10)",
     }),
     []
@@ -357,7 +363,7 @@ const SolutionEcole = () => {
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="txl">
-        {/* HERO (no blue) */}
+        {/* HERO */}
         <section className="txl-hero">
           <div className="container">
             <div className="row align-items-center g-5">
@@ -392,7 +398,7 @@ const SolutionEcole = () => {
               <div className="col-lg-6">
                 <div className="txl-visual">
                   <div className="txl-visual__frame">
-                    <img src="/a_rfidia/z_school/school.png" alt="" />
+                    <img src="/a_rfidia/z_logistique/z_logistique.png" alt="Système Entrepôt RFIDIA" />
                   </div>
                   <div className="txl-chip txl-chip--tl">
                     <span className="txl-chip__dot" />
@@ -515,12 +521,12 @@ const SolutionEcole = () => {
           font-family: "Manrope", sans-serif;
         }
 
-        /* HERO: white/pink, no blue */
+        /* HERO: blue accent */
         .txl-hero {
-          padding: 110px 0 70px;
-          background: radial-gradient(1000px 380px at 15% 10%, rgba(30, 42, 74, 0.14), transparent 60%),
-            radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 196, 0.12), transparent 58%),
-            linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(244, 247, 252, 0.85) 100%);
+          padding: 60px 0 70px;
+          background: radial-gradient(1000px 380px at 15% 10%, rgba(37, 99, 235, 0.12), transparent 60%),
+            radial-gradient(900px 420px at 85% 20%, rgba(59, 130, 246, 0.10), transparent 58%),
+            linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(239, 246, 255, 0.85) 100%);
           border-bottom: 1px solid rgba(18, 23, 39, 0.06);
         }
 
@@ -535,8 +541,8 @@ const SolutionEcole = () => {
           color: rgba(18, 23, 39, 0.65);
           padding: 10px 14px;
           border-radius: 999px;
-          background: rgba(30, 42, 74, 0.08);
-          border: 1px solid rgba(30, 42, 74, 0.16);
+          background: rgba(37, 99, 235, 0.08);
+          border: 1px solid rgba(37, 99, 235, 0.16);
           width: fit-content;
           margin-bottom: 18px;
         }
@@ -584,11 +590,11 @@ const SolutionEcole = () => {
         .txl-btn--primary {
           background: linear-gradient(120deg, var(--accent) 0%, ${accent.primaryDark} 100%);
           color: #ffffff;
-          box-shadow: 0 16px 34px rgba(30, 42, 74, 0.22);
+          box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
         }
         .txl-btn--primary:hover {
           transform: translateY(-2px);
-          box-shadow: 0 18px 42px rgba(30, 42, 74, 0.28);
+          box-shadow: 0 18px 42px rgba(37, 99, 235, 0.28);
           color: #ffffff;
         }
         .txl-btn--ghost {
@@ -668,7 +674,7 @@ const SolutionEcole = () => {
           height: 9px;
           border-radius: 999px;
           background: var(--accent);
-          box-shadow: 0 0 0 4px rgba(30, 42, 74, 0.14);
+          box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
         }
         .txl-chip--tl {
           top: 22px;
@@ -683,7 +689,7 @@ const SolutionEcole = () => {
           padding: 74px 0;
         }
         .txl-section--soft {
-          background: linear-gradient(180deg, rgba(244, 247, 252, 0.95) 0%, rgba(244, 247, 252, 0.55) 100%);
+          background: linear-gradient(180deg, rgba(239, 246, 255, 0.95) 0%, rgba(239, 246, 255, 0.55) 100%);
           border-top: 1px solid rgba(18, 23, 39, 0.06);
           border-bottom: 1px solid rgba(18, 23, 39, 0.06);
         }
@@ -745,11 +751,11 @@ const SolutionEcole = () => {
           position: absolute;
           inset: 0 0 auto 0;
           height: 3px;
-          background: linear-gradient(90deg, rgba(30, 42, 74, 0.95), rgba(78, 200, 196, 0.55));
+          background: linear-gradient(90deg, rgba(37, 99, 235, 0.95), rgba(59, 130, 246, 0.55));
         }
         .txl-card:hover {
           transform: translateY(-6px);
-          border-color: rgba(30, 42, 74, 0.22);
+          border-color: rgba(37, 99, 235, 0.22);
           box-shadow: 0 26px 70px rgba(18, 23, 39, 0.10);
         }
         .txl-card h3 {
@@ -803,14 +809,14 @@ const SolutionEcole = () => {
           width: 30px;
           height: 30px;
           border-radius: 10px;
-          background: rgba(30, 42, 74, 0.10);
+          background: rgba(37, 99, 235, 0.10);
           color: rgba(18, 23, 39, 0.85);
           display: inline-flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
           margin-top: 1px;
-          border: 1px solid rgba(30, 42, 74, 0.14);
+          border: 1px solid rgba(37, 99, 235, 0.14);
         }
 
         .txl-flow {
@@ -836,9 +842,9 @@ const SolutionEcole = () => {
           align-items: center;
           justify-content: center;
           font-weight: 900;
-          background: linear-gradient(135deg, rgba(30, 42, 74, 0.96), rgba(78, 200, 196, 0.88));
+          background: linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(59, 130, 246, 0.88));
           color: rgba(255, 255, 255, 0.96);
-          box-shadow: 0 14px 34px rgba(30, 42, 74, 0.18);
+          box-shadow: 0 14px 34px rgba(37, 99, 235, 0.18);
         }
         .txl-flow__body h3 {
           margin: 2px 0 6px;
@@ -856,7 +862,7 @@ const SolutionEcole = () => {
           top: 64px;
           bottom: 0;
           width: 2px;
-          background: linear-gradient(180deg, rgba(30, 42, 74, 0.32), rgba(30, 42, 74, 0));
+          background: linear-gradient(180deg, rgba(37, 99, 235, 0.32), rgba(37, 99, 235, 0));
         }
 
         .txl-cta {
@@ -865,8 +871,8 @@ const SolutionEcole = () => {
         }
         .txl-cta__inner {
           border-radius: 28px;
-          background: radial-gradient(900px 420px at 20% 20%, rgba(30, 42, 74, 0.28), transparent 55%),
-            radial-gradient(900px 420px at 80% 15%, rgba(78, 200, 196, 0.12), transparent 55%),
+          background: radial-gradient(900px 420px at 20% 20%, rgba(37, 99, 235, 0.28), transparent 55%),
+            radial-gradient(900px 420px at 80% 15%, rgba(59, 130, 246, 0.12), transparent 55%),
             linear-gradient(120deg, #121727 0%, #1b2440 70%, #121727 100%);
           padding: clamp(2rem, 4vw, 3rem);
           display: flex;
@@ -896,9 +902,9 @@ const SolutionEcole = () => {
           gap: 12px;
         }
         .txl-btn--dark {
-          background: linear-gradient(120deg, var(--accent) 0%, #b31538 100%);
+          background: linear-gradient(120deg, var(--accent) 0%, #1e3a8a 100%);
           color: #ffffff;
-          box-shadow: 0 18px 46px rgba(30, 42, 74, 0.22);
+          box-shadow: 0 18px 46px rgba(37, 99, 235, 0.22);
         }
         .txl-btn--dark:hover {
           transform: translateY(-2px);
@@ -920,5 +926,4 @@ const SolutionEcole = () => {
   );
 };
 
-export default SolutionEcole;
-
+export default SolutionEntrepot;

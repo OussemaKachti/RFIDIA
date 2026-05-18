@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution Textile | RFIDIA",
+    metaTitle: "Solution École | RFIDIA",
     metaDesc:
-      "Traçabilité textile de bout en bout : production, qualité, stock, omnicanal, lutte anti-contrefaçon et expérience client renforcée.",
+      "Sécurisez les parcours, maîtrisez le patrimoine pédagogique et simplifiez les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -92,76 +92,76 @@ const i18n = {
       english: "English",
       italian: "Italiano",
     },
-    heroEyebrow: "Textile • Traçabilité & performance",
-    heroTitleA: "Chaque pièce",
-    heroTitleB: "traçable",
-    heroTitleC: "du fil à la vente",
+    heroEyebrow: "Éducation & traçabilité",
+    heroTitleA: "Une école",
+    heroTitleB: "sereine",
+    heroTitleC: "Patrimoine pédagogique maîtrisé",
     heroSub:
-      "RFIDIA connecte vos ateliers, vos entrepôts et vos points de vente avec une traçabilité unitaire fiable. Résultat : inventaires rapides, meilleure disponibilité des tailles/couleurs, réduction des pertes, et une expérience client plus fluide.",
-    heroCta1: "Obtenir une démo",
-    heroCta2: "Voir toutes les solutions",
+      "RFIDIA accompagne les établissements avec des dispositifs respectueux de la communauté éducative : sécurisation des accès, visibilité sur le matériel pédagogique et inventaires plus fiables — sans surcharge pour les équipes.",
+    heroCta1: "Échanger sur mon projet",
+    heroCta2: "Toutes les solutions",
     kpis: [
-      { v: "x10", l: "Vitesse d’inventaire" },
-      { v: "+15%", l: "Disponibilité en rayon" },
-      { v: "-35%", l: "Pertes & inconnus" },
+      { v: "100%", l: "Parcours sécurisés" },
+      { v: "-40%", l: "Écarts d’inventaire" },
+      { v: "x5", l: "Relevés rapides" },
     ],
-    modulesTitle: "Des modules qui couvrent toute la chaîne textile",
+    modulesTitle: "Ce que la solution peut couvrir",
     modulesDesc:
-      "De la production à l’omnicanal : vous déployez par étapes, avec un ROI mesurable à chaque étape.",
+      "Modules combinables selon votre maturité et vos infrastructures : pilote puis montée en charge maîtrisée.",
     modules: [
       {
-        title: "Traçabilité unitaire (EPC)",
-        desc: "Identifiant unique par article, association à vos référentiels (SKU, lot, taille, couleur) et historisation des mouvements.",
+        title: "Contrôle d’accès et flux",
+        desc: "Badges, lecteurs et règles horaires pour fluidifier les entrées-sorties et sécuriser les espaces sensibles.",
       },
       {
-        title: "Contrôle qualité & conformité",
-        desc: "Contrôles en sortie de ligne, détection des écarts, et sécurisation des étapes sensibles (reconditionnement, retours).",
+        title: "Inventaire & étiquetage RFID",
+        desc: "Identification unique des ressources, relevés mobiles rapides et réconciliation avec vos listes ou logiciels.",
       },
       {
-        title: "Stock & inventaires rapides",
-        desc: "Inventaires tournants sans immobiliser l’activité, fiabilisation des stocks et réduction des ruptures.",
+        title: "Suivi des actifs pédagogiques",
+        desc: "Visibilité sur les attributions, les mouvements entre salles ou sites et l’historique pour limiter les pertes.",
       },
       {
-        title: "Préparation & expédition",
-        desc: "Lecture groupée, contrôle de complétude des colis, réduction des erreurs de préparation et preuve d’expédition.",
+        title: "Tableaux de bord sobres",
+        desc: "Indicateurs lisibles : état du parc, alertes utiles et exports pour vos reporting internes.",
       },
       {
-        title: "Retail : réception & mise en rayon",
-        desc: "Réception accélérée, localisation en réserve/rayon, et meilleure disponibilité des tailles/couleurs pour le client.",
+        title: "Intégration SI",
+        desc: "Échanges contrôlés avec vos outils existants (référentiels, GMAO légère ou solutions métiers).",
       },
       {
-        title: "Anti-contrefaçon & authenticité",
-        desc: "Mécanismes d’authentification possibles (selon vos choix) et lutte contre les articles non conformes dans la chaîne.",
+        title: "Formation & accompagnement",
+        desc: "Montée en compétence des équipes, documentation claire et support pour ancrer les usages dans la durée.",
       },
     ],
-    journeyTitle: "Un parcours simple, des gains immédiats",
+    journeyTitle: "Un déploiement structuré, sans surprise",
     journeyDesc:
-      "Une logique “scan & go” pour les équipes : moins de saisie, plus de fiabilité et de pilotage.",
+      "Quatre étapes éprouvées pour avancer avec clarté et mesurer les bénéfices sur le terrain.",
     journey: [
-      { n: "01", t: "Encoder", d: "Encodage RFID au bon moment (atelier, dépôt, réception) selon votre process." },
-      { n: "02", t: "Synchroniser", d: "Connexion à vos données produit (SKU, variantes, commandes, retours)." },
-      { n: "03", t: "Lire & contrôler", d: "Lectures rapides pour inventaires, expédition et réception, avec règles d’écarts." },
-      { n: "04", t: "Piloter", d: "Dashboards : disponibilité, écarts, rotation, retours, performance opérationnelle." },
+      { n: "01", t: "Diagnostic & cadrage", d: "Ateliers avec vos équipes, priorités, conformité et périmètre fonctionnel." },
+      { n: "02", t: "Conception & pilote", d: "Architecture technique, choix des supports RFID et expérimentation sur un site pilote." },
+      { n: "03", t: "Déploiement & intégration", d: "Installation encadrée, paramétrage, raccordements utiles et validation des flux réels." },
+      { n: "04", t: "Adoption & amélioration", d: "Formation, support, indicateurs de suivi et ajustements pour pérenniser les usages." },
     ],
-    proofTitle: "Pourquoi vos clients adhèrent",
+    proofTitle: "Où cela fait la différence",
     proofDesc:
-      "Parce que la promesse est simple : trouver le bon produit plus vite, avec moins d’erreurs, et un service plus fiable.",
+      "Des contextes concrets où nos clients gagnent en sérénité opérationnelle au quotidien.",
     proofs: [
-      "Meilleure disponibilité des tailles/couleurs (moins de ventes perdues)",
-      "Réduction des écarts et des pertes (traçabilité unitaire)",
-      "Réception et inventaires plus rapides (efficacité terrain)",
-      "Qualité de données améliorée pour l’omnicanal (click&collect, retours)",
+      "Collèges, lycées et campus : circulations aux heures de pointe et espaces mutualisés.",
+      "Bibliothèques et médiathèques : prêts, collections mobiles et inventaires cycliques plus rapides.",
+      "Ateliers, laboratoires et salles techniques : équipements sensibles suivis avec précision.",
+      "Internats et résidences : gestion des accès et des ressources partagées selon vos protocoles.",
     ],
-    ctaTitle: "Prêt à rendre votre chaîne textile plus performante ?",
+    ctaTitle: "Présentez-nous votre établissement",
     ctaSub:
-      "Décrivez vos sites (atelier, dépôt, boutiques), vos volumes et vos objectifs : nous vous proposons un plan de déploiement clair et progressif.",
-    ctaBtn: "Contactez RFIDIA",
+      "Nous vous répondons avec une vision réaliste : objectifs, calendrier et périmètre adaptés à votre communauté scolaire.",
+    ctaBtn: "Contacter RFIDIA",
     ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "Textile Solution | RFIDIA",
+    metaTitle: "School Solution | RFIDIA",
     metaDesc:
-      "End-to-end textile traceability: production, quality, stock, omnichannel, anti-counterfeit and stronger customer experience.",
+      "Secure journeys, master educational assets and streamline inventories with RFID traceability designed for schools and campuses.",
     navbar: {
       home: "Home",
       about: "About",
@@ -176,73 +176,73 @@ const i18n = {
       english: "English",
       italian: "Italian",
     },
-    heroEyebrow: "Textile • Traceability & performance",
-    heroTitleA: "Every item",
-    heroTitleB: "traceable",
-    heroTitleC: "from production to retail",
+    heroEyebrow: "Education & traceability",
+    heroTitleA: "A calmer school",
+    heroTitleB: "environment",
+    heroTitleC: "with educational assets under control",
     heroSub:
-      "RFIDIA connects your factories, warehouses and stores with reliable item-level traceability. Faster inventories, better size/color availability, fewer losses and a smoother customer experience.",
-    heroCta1: "Get a demo",
+      "RFIDIA supports schools with respectful, field-proven approaches: access security, visibility on teaching equipment and more reliable inventories — without burdening staff.",
+    heroCta1: "Discuss my project",
     heroCta2: "All solutions",
     kpis: [
-      { v: "x10", l: "Inventory speed" },
-      { v: "+15%", l: "On-shelf availability" },
-      { v: "-35%", l: "Losses & unknowns" },
+      { v: "100%", l: "Safer journeys" },
+      { v: "-40%", l: "Inventory gaps" },
+      { v: "x5", l: "Fast counts" },
     ],
-    modulesTitle: "Modules covering the entire textile chain",
-    modulesDesc: "From production to omnichannel: roll out step-by-step with measurable ROI.",
+    modulesTitle: "What the solution can cover",
+    modulesDesc: "Composable modules based on your maturity: we favour pilot phases and controlled scale-up.",
     modules: [
       {
-        title: "Item-level traceability (EPC)",
-        desc: "Unique ID per item, linkage to your master data (SKU, variants) and auditable movement history.",
+        title: "Access & flow control",
+        desc: "Badges, readers and time rules to smooth entries and exits and secure spaces that require it.",
       },
       {
-        title: "Quality & compliance",
-        desc: "End-of-line checks, discrepancy detection and secured sensitive steps (repackaging, returns).",
+        title: "RFID labeling & inventory",
+        desc: "Unique resource IDs, mobile fast counts and reconciliation with your lists or management tools.",
       },
       {
-        title: "Stock & fast counts",
-        desc: "Cycle counts without operational shutdown, improved stock accuracy and fewer stock-outs.",
+        title: "Teaching asset tracking",
+        desc: "Visibility on assignments, moves between rooms or sites and history to limit losses.",
       },
       {
-        title: "Picking & shipping",
-        desc: "Bulk reads, carton completeness checks, fewer picking errors and shipping proof.",
+        title: "Clear dashboards",
+        desc: "Readable indicators for teams: fleet status, meaningful alerts and exports for internal reporting.",
       },
       {
-        title: "Retail receiving & shelf",
-        desc: "Faster receiving, backroom/shelf visibility and improved size/color availability for shoppers.",
+        title: "Systems integration",
+        desc: "Controlled exchanges with your existing stack (directories, lightweight CMMS or business tools).",
       },
       {
-        title: "Anti-counterfeit & authenticity",
-        desc: "Optional authenticity mechanisms (depending on your choices) to reduce non-compliant items.",
+        title: "Training & support",
+        desc: "Skills building, clear documentation and support to sustain adoption over time.",
       },
     ],
-    journeyTitle: "Simple journey, fast wins",
-    journeyDesc: "A scan-and-go logic for teams: less typing, more accuracy and control.",
+    journeyTitle: "Structured rollout, no surprises",
+    journeyDesc: "Four proven steps to move forward with clarity and measure benefits.",
     journey: [
-      { n: "01", t: "Encode", d: "RFID encoding at the right step (factory, DC, receiving) based on your process." },
-      { n: "02", t: "Sync", d: "Connect to product data (SKU, variants), orders and returns." },
-      { n: "03", t: "Read & control", d: "Fast reads for inventory, shipping and receiving with discrepancy rules." },
-      { n: "04", t: "Operate", d: "Dashboards: availability, gaps, rotation, returns and operational performance." },
+      { n: "01", t: "Discovery & scoping", d: "Workshops with your teams, priorities, compliance and functional perimeter." },
+      { n: "02", t: "Design & pilot", d: "Technical architecture, RFID media choices and pilot on a site or building." },
+      { n: "03", t: "Deployment & integration", d: "Supervised installation, configuration, connections as needed and validation in real conditions." },
+      { n: "04", t: "Adoption & improvement", d: "Training, support, follow-up metrics and refinements for long-term usage." },
     ],
-    proofTitle: "Why customers adopt it",
-    proofDesc: "Because the promise is simple: find the right product faster with fewer mistakes.",
+    proofTitle: "Where it matters most",
+    proofDesc: "Typical contexts where schools gain operational peace of mind.",
     proofs: [
-      "Better size/color availability (fewer lost sales)",
-      "Lower gaps and losses (item-level traceability)",
-      "Faster receiving and inventories (floor efficiency)",
-      "Cleaner data for omnichannel (click&collect, returns)",
+      "Middle schools, high schools and campuses: peak-time circulation and shared facilities.",
+      "Libraries and media centers: loans, mobile collections and faster cyclical inventories.",
+      "Workshops, labs and technical rooms: sensitive or high-value equipment tracked with precision.",
+      "Boarding and residences: access and shared resources aligned with your protocols.",
     ],
-    ctaTitle: "Ready to level up your textile supply chain?",
+    ctaTitle: "Tell us about your institution",
     ctaSub:
-      "Share your sites (factory, DC, stores), volumes and objectives — we’ll propose a clear, progressive rollout plan.",
+      "We respond with a realistic view: goals, timeline and scope suited to your school community.",
     ctaBtn: "Contact RFIDIA",
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Tessile | RFIDIA",
+    metaTitle: "Soluzione Scuola | RFIDIA",
     metaDesc:
-      "Tracciabilità tessile end-to-end: produzione, qualità, stock, omnicanale, anti-contraffazione ed esperienza cliente.",
+      "Percorsi più sicuri, patrimonio didattico sotto controllo e inventari semplificati con tracciabilità RFID per istituti scolastici.",
     navbar: {
       home: "Home",
       about: "Chi siamo",
@@ -257,72 +257,72 @@ const i18n = {
       english: "Inglese",
       italian: "Italiano",
     },
-    heroEyebrow: "Tessile • Tracciabilità & performance",
-    heroTitleA: "Ogni capo",
-    heroTitleB: "tracciabile",
-    heroTitleC: "dalla produzione alla vendita",
+    heroEyebrow: "Istruzione & tracciabilità",
+    heroTitleA: "Un ambiente scolastico più",
+    heroTitleB: "sereno",
+    heroTitleC: "e un patrimonio didattico più controllato",
     heroSub:
-      "RFIDIA collega fabbriche, magazzini e punti vendita con tracciabilità unitaria affidabile. Inventari più rapidi, migliore disponibilità taglie/colori, meno perdite e un’esperienza cliente più fluida.",
-    heroCta1: "Richiedi una demo",
+      "RFIDIA affianca gli istituti con approcci rispettosi e concreti: sicurezza degli accessi, visibilità sul materiale didattico e inventari più affidabili — senza appesantire il personale.",
+    heroCta1: "Parliamo del progetto",
     heroCta2: "Tutte le soluzioni",
     kpis: [
-      { v: "x10", l: "Velocità inventario" },
-      { v: "+15%", l: "Disponibilità a scaffale" },
-      { v: "-35%", l: "Perdite & gap" },
+      { v: "100%", l: "Percorsi sicuri" },
+      { v: "-40%", l: "Gap inventario" },
+      { v: "x5", l: "Rilevazioni rapide" },
     ],
-    modulesTitle: "Moduli per tutta la filiera tessile",
-    modulesDesc: "Dalla produzione all’omnicanale: rollout a fasi con ROI misurabile.",
+    modulesTitle: "Cosa può coprire la soluzione",
+    modulesDesc: "Moduli combinabili in base alla maturità: privilegiamo pilota e scalabilità controllata.",
     modules: [
       {
-        title: "Tracciabilità unitaria (EPC)",
-        desc: "ID unico per capo, collegamento ai dati master (SKU, varianti) e storico movimenti auditabile.",
+        title: "Controllo accessi e flussi",
+        desc: "Badge, lettori e regole orarie per fluidificare entrate/uscite e proteggere gli spazi necessari.",
       },
       {
-        title: "Qualità & conformità",
-        desc: "Check fine linea, rilevazione scostamenti e sicurezza su fasi sensibili (repack, resi).",
+        title: "Etichettatura RFID e inventario",
+        desc: "Identificazione univoca, rilevazioni mobili veloci e riconciliazione con elenchi o gestionali.",
       },
       {
-        title: "Stock & inventari rapidi",
-        desc: "Cycle count senza fermo, stock più accurato e meno rotture.",
+        title: "Monitoraggio asset didattici",
+        desc: "Visibilità su assegnazioni, spostamenti tra aule o sedi e storico per limitare le perdite.",
       },
       {
-        title: "Picking & spedizione",
-        desc: "Letture massiva, controllo completezza colli, meno errori di preparazione e prova spedizione.",
+        title: "Dashboard chiare",
+        desc: "Indicatori leggibili: stato parco, alert significativi ed export per reporting interno.",
       },
       {
-        title: "Retail: ricevimento & scaffale",
-        desc: "Ricevimento più veloce, visibilità backroom/scaffale e migliore disponibilità taglie/colori.",
+        title: "Integrazione IT",
+        desc: "Scambi controllati con gli strumenti esistenti (anagrafiche, GMAO leggera o applicazioni di settore).",
       },
       {
-        title: "Anti-contraffazione & autenticità",
-        desc: "Meccanismi opzionali (secondo le scelte) per ridurre articoli non conformi lungo la catena.",
+        title: "Formazione e supporto",
+        desc: "Aggiornamento del personale, documentazione chiara e assistenza per radicare gli usi nel tempo.",
       },
     ],
-    journeyTitle: "Percorso semplice, benefici immediati",
-    journeyDesc: "Logica scan&go: meno inserimenti manuali, più affidabilità e controllo.",
+    journeyTitle: "Un rollout strutturato",
+    journeyDesc: "Quattro fasi per avanzare con chiarezza e misurare i benefici sul campo.",
     journey: [
-      { n: "01", t: "Codifica", d: "Codifica RFID nel punto giusto (fabbrica, DC, ricevimento) secondo il processo." },
-      { n: "02", t: "Sincronizza", d: "Connessione a dati prodotto (SKU, varianti), ordini e resi." },
-      { n: "03", t: "Leggi & controlla", d: "Letture rapide per inventario, spedizione e ricevimento con regole scostamenti." },
-      { n: "04", t: "Governa", d: "Dashboard: disponibilità, gap, rotazione, resi e performance operative." },
+      { n: "01", t: "Analisi e perimetro", d: "Workshop con le squadre, priorità, conformità e ambito funzionale." },
+      { n: "02", t: "Progetto e pilota", d: "Architettura tecnica, scelta supporti RFID e sperimentazione su un sito pilota." },
+      { n: "03", t: "Deploy e integrazione", d: "Installazione guidata, configurazione, collegamenti utili e validazione dei flussi reali." },
+      { n: "04", t: "Adozione e miglioramento", d: "Formazione, supporto, KPI di follow-up e aggiustamenti per consolidare gli usi." },
     ],
-    proofTitle: "Perché i clienti la adottano",
-    proofDesc: "Promessa semplice: trovare il prodotto giusto più velocemente, con meno errori.",
+    proofTitle: "Dove fa la differenza",
+    proofDesc: "Contesti tipici in cui si guadagna serenità operativa.",
     proofs: [
-      "Maggiore disponibilità taglie/colori (meno vendite perse)",
-      "Riduzione gap e perdite (tracciabilità unitaria)",
-      "Ricevimento e inventari più veloci (efficienza)",
-      "Dati migliori per l’omnicanale (click&collect, resi)",
+      "Scuole secondarie e campus: circolazione nelle ore di punta e spazi condivisi.",
+      "Biblioteche e mediateche: prestiti, collezioni mobili e inventari ciclici più rapidi.",
+      "Laboratori e aule tecniche: attrezzature sensibili tracciate con precisione.",
+      "Convitti e residenze: accessi e risorse condivise secondo i protocolli.",
     ],
-    ctaTitle: "Pronto a rendere la filiera tessile più efficiente?",
+    ctaTitle: "Presentate il vostro istituto",
     ctaSub:
-      "Condividi siti (fabbrica, DC, negozi), volumi e obiettivi: proponiamo un piano di rollout chiaro e progressivo.",
+      "Rispondiamo con obiettivi, calendario e perimetro adatti alla vostra comunita scolastica.",
     ctaBtn: "Contatta RFIDIA",
     ctaAlt: "Torna alle soluzioni",
   },
 };
 
-const SolutionTextile = () => {
+const SolutionEcole = () => {
   const [language, setLanguage] = useState("fr");
 
   useEffect(() => {
@@ -342,10 +342,11 @@ const SolutionTextile = () => {
 
   const accent = useMemo(
     () => ({
-      primary: "#E0305A",
-      primary2: "#FF7A94",
+      primary: "#1E2A4A",
+      primary2: "#4EC8C4",
+      primaryDark: "#121727",
       ink: "#121727",
-      soft: "#FFF6F8",
+      soft: "#F4F7FC",
       line: "rgba(18, 23, 39, 0.10)",
     }),
     []
@@ -391,7 +392,7 @@ const SolutionTextile = () => {
               <div className="col-lg-6">
                 <div className="txl-visual">
                   <div className="txl-visual__frame">
-                    <img src="/a_rfidia/z_rfid/rfid6.png" alt="" />
+                    <img src="/a_rfidia/z_school/school.png" alt="" />
                   </div>
                   <div className="txl-chip txl-chip--tl">
                     <span className="txl-chip__dot" />
@@ -516,10 +517,10 @@ const SolutionTextile = () => {
 
         /* HERO: white/pink, no blue */
         .txl-hero {
-          padding: 110px 0 70px;
-          background: radial-gradient(1000px 380px at 15% 10%, rgba(224, 48, 90, 0.16), transparent 60%),
-            radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 200, 0.10), transparent 58%),
-            linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(255, 246, 248, 0.75) 100%);
+          padding: 60px 0 70px;
+          background: radial-gradient(1000px 380px at 15% 10%, rgba(30, 42, 74, 0.14), transparent 60%),
+            radial-gradient(900px 420px at 85% 20%, rgba(78, 200, 196, 0.12), transparent 58%),
+            linear-gradient(180deg, #ffffff 0%, #ffffff 60%, rgba(244, 247, 252, 0.85) 100%);
           border-bottom: 1px solid rgba(18, 23, 39, 0.06);
         }
 
@@ -534,8 +535,8 @@ const SolutionTextile = () => {
           color: rgba(18, 23, 39, 0.65);
           padding: 10px 14px;
           border-radius: 999px;
-          background: rgba(224, 48, 90, 0.10);
-          border: 1px solid rgba(224, 48, 90, 0.18);
+          background: rgba(30, 42, 74, 0.08);
+          border: 1px solid rgba(30, 42, 74, 0.16);
           width: fit-content;
           margin-bottom: 18px;
         }
@@ -581,13 +582,13 @@ const SolutionTextile = () => {
           white-space: nowrap;
         }
         .txl-btn--primary {
-          background: linear-gradient(120deg, var(--accent) 0%, #b31538 100%);
+          background: linear-gradient(120deg, var(--accent) 0%, ${accent.primaryDark} 100%);
           color: #ffffff;
-          box-shadow: 0 16px 34px rgba(224, 48, 90, 0.22);
+          box-shadow: 0 16px 34px rgba(30, 42, 74, 0.22);
         }
         .txl-btn--primary:hover {
           transform: translateY(-2px);
-          box-shadow: 0 18px 42px rgba(224, 48, 90, 0.28);
+          box-shadow: 0 18px 42px rgba(30, 42, 74, 0.28);
           color: #ffffff;
         }
         .txl-btn--ghost {
@@ -667,7 +668,7 @@ const SolutionTextile = () => {
           height: 9px;
           border-radius: 999px;
           background: var(--accent);
-          box-shadow: 0 0 0 4px rgba(224, 48, 90, 0.14);
+          box-shadow: 0 0 0 4px rgba(30, 42, 74, 0.14);
         }
         .txl-chip--tl {
           top: 22px;
@@ -682,7 +683,7 @@ const SolutionTextile = () => {
           padding: 74px 0;
         }
         .txl-section--soft {
-          background: linear-gradient(180deg, rgba(255, 246, 248, 0.95) 0%, rgba(255, 246, 248, 0.55) 100%);
+          background: linear-gradient(180deg, rgba(244, 247, 252, 0.95) 0%, rgba(244, 247, 252, 0.55) 100%);
           border-top: 1px solid rgba(18, 23, 39, 0.06);
           border-bottom: 1px solid rgba(18, 23, 39, 0.06);
         }
@@ -744,11 +745,11 @@ const SolutionTextile = () => {
           position: absolute;
           inset: 0 0 auto 0;
           height: 3px;
-          background: linear-gradient(90deg, rgba(224, 48, 90, 0.95), rgba(78, 200, 200, 0.45));
+          background: linear-gradient(90deg, rgba(30, 42, 74, 0.95), rgba(78, 200, 196, 0.55));
         }
         .txl-card:hover {
           transform: translateY(-6px);
-          border-color: rgba(224, 48, 90, 0.24);
+          border-color: rgba(30, 42, 74, 0.22);
           box-shadow: 0 26px 70px rgba(18, 23, 39, 0.10);
         }
         .txl-card h3 {
@@ -802,14 +803,14 @@ const SolutionTextile = () => {
           width: 30px;
           height: 30px;
           border-radius: 10px;
-          background: rgba(224, 48, 90, 0.12);
+          background: rgba(30, 42, 74, 0.10);
           color: rgba(18, 23, 39, 0.85);
           display: inline-flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
           margin-top: 1px;
-          border: 1px solid rgba(224, 48, 90, 0.16);
+          border: 1px solid rgba(30, 42, 74, 0.14);
         }
 
         .txl-flow {
@@ -835,9 +836,9 @@ const SolutionTextile = () => {
           align-items: center;
           justify-content: center;
           font-weight: 900;
-          background: linear-gradient(135deg, rgba(224, 48, 90, 0.95), rgba(255, 122, 148, 0.88));
+          background: linear-gradient(135deg, rgba(30, 42, 74, 0.96), rgba(78, 200, 196, 0.88));
           color: rgba(255, 255, 255, 0.96);
-          box-shadow: 0 14px 34px rgba(224, 48, 90, 0.18);
+          box-shadow: 0 14px 34px rgba(30, 42, 74, 0.18);
         }
         .txl-flow__body h3 {
           margin: 2px 0 6px;
@@ -855,7 +856,7 @@ const SolutionTextile = () => {
           top: 64px;
           bottom: 0;
           width: 2px;
-          background: linear-gradient(180deg, rgba(224, 48, 90, 0.36), rgba(224, 48, 90, 0));
+          background: linear-gradient(180deg, rgba(30, 42, 74, 0.32), rgba(30, 42, 74, 0));
         }
 
         .txl-cta {
@@ -864,8 +865,8 @@ const SolutionTextile = () => {
         }
         .txl-cta__inner {
           border-radius: 28px;
-          background: radial-gradient(900px 420px at 20% 20%, rgba(224, 48, 90, 0.22), transparent 55%),
-            radial-gradient(900px 420px at 80% 15%, rgba(78, 200, 200, 0.10), transparent 55%),
+          background: radial-gradient(900px 420px at 20% 20%, rgba(30, 42, 74, 0.28), transparent 55%),
+            radial-gradient(900px 420px at 80% 15%, rgba(78, 200, 196, 0.12), transparent 55%),
             linear-gradient(120deg, #121727 0%, #1b2440 70%, #121727 100%);
           padding: clamp(2rem, 4vw, 3rem);
           display: flex;
@@ -897,7 +898,7 @@ const SolutionTextile = () => {
         .txl-btn--dark {
           background: linear-gradient(120deg, var(--accent) 0%, #b31538 100%);
           color: #ffffff;
-          box-shadow: 0 18px 46px rgba(224, 48, 90, 0.22);
+          box-shadow: 0 18px 46px rgba(30, 42, 74, 0.22);
         }
         .txl-btn--dark:hover {
           transform: translateY(-2px);
@@ -919,5 +920,5 @@ const SolutionTextile = () => {
   );
 };
 
-export default SolutionTextile;
+export default SolutionEcole;
 
