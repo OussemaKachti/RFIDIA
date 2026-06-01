@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import "flag-icons/css/flag-icons.min.css";
 import {
@@ -6,9 +6,49 @@ import {
   navCompanyPage,
   offcanvasMenuData,
 } from "../../utils/data";
-import { getSolutionsNavItems } from "../../utils/solutionsNavData";
+import {
+  getSolutionsCatalog,
+  getSolutionsMeta,
+} from "../../utils/solutionsNavData";
+
+// ── Category-level icons (same as Navbar) ───────────────────────────
+const CATEGORY_ICONS = {
+  industries: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V10l6 4V10l6 4V7l6 4v10H3z" />
+      <path d="M9 21v-4M15 21v-4M19 21v-4" />
+    </svg>
+  ),
+  assets: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
+    </svg>
+  ),
+  security: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  traceability: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" />
+    </svg>
+  ),
+  smart_ops: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M9 3v18M3 9h18" />
+      <circle cx="15" cy="15" r="1.5" />
+    </svg>
+  ),
+};
 
 const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
+  const [openCategory, setOpenCategory] = useState(null);
+
   const navLabels =
     labels ||
     {
@@ -26,9 +66,8 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
       italian: 'Italiano',
     };
 
-  const solutionsNavItems = getSolutionsNavItems(language);
-  const solutionsColLeft = solutionsNavItems.slice(0, 3);
-  const solutionsColRight = solutionsNavItems.slice(3, 6);
+  const solutionsCatalog = getSolutionsCatalog(language);
+  const solutionsMeta = getSolutionsMeta(language);
 
   const languageOptions = [
     { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
@@ -94,53 +133,71 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
             {navLabels.solutions ?? 'Solutions'}
           </a>
           <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white w-100">
-            <div className="dropdown-grid rounded-custom width-solutions">
-              <div className="dropdown-grid-item rfidia-solutions-col">
-                {solutionsColLeft.map((item) => (
-                  <Link href={item.href} key={item.title}>
-                    <a
-                      className="rfidia-solution-dd-link"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
+            <div className="rfidia-mobile-solutions">
+              {solutionsCatalog.map((cat, idx) => {
+                const isOpen = openCategory === idx;
+                return (
+                  <div
+                    key={cat.key}
+                    className={`rfidia-mobile-cat${isOpen ? ' is-open' : ''}`}
+                    style={{ '--cat-accent': cat.accent }}
+                  >
+                    <button
+                      type="button"
+                      className="rfidia-mobile-cat__head"
+                      aria-expanded={isOpen}
+                      onClick={() => setOpenCategory(isOpen ? null : idx)}
                     >
-                      <img
-                        src={item.image}
-                        alt=""
-                        className="rfidia-solution-dd-img"
-                        width={56}
-                        height={44}
-                      />
-                      <div>
-                        <span className="rfidia-solution-dd-title">{item.title}</span>
-                        <span className="rfidia-solution-dd-desc">{item.description}</span>
+                      <span className="rfidia-mobile-cat__ico" aria-hidden>
+                        {CATEGORY_ICONS[cat.key]}
+                      </span>
+                      <span className="rfidia-mobile-cat__title">
+                        <strong>{cat.title}</strong>
+                        <span>{cat.subtitle}</span>
+                      </span>
+                      <span className="rfidia-mobile-cat__chevron" aria-hidden>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div className="rfidia-mobile-cat__list">
+                        {cat.items.map((item) => (
+                          <Link href={item.href} key={item.id}>
+                            <a
+                              className="rfidia-mobile-cat__item"
+                              data-bs-dismiss="offcanvas"
+                              aria-label="Close"
+                            >
+                              <img src={item.image} alt="" />
+                              <span>{item.title}</span>
+                            </a>
+                          </Link>
+                        ))}
                       </div>
-                    </a>
-                  </Link>
-                ))}
-              </div>
-              <div className="dropdown-grid-item rfidia-solutions-col radius-right-side bg-light">
-                {solutionsColRight.map((item) => (
-                  <Link href={item.href} key={item.title}>
-                    <a
-                      className="rfidia-solution-dd-link"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    >
-                      <img
-                        src={item.image}
-                        alt=""
-                        className="rfidia-solution-dd-img"
-                        width={56}
-                        height={44}
-                      />
-                      <div>
-                        <span className="rfidia-solution-dd-title">{item.title}</span>
-                        <span className="rfidia-solution-dd-desc">{item.description}</span>
-                      </div>
-                    </a>
-                  </Link>
-                ))}
-              </div>
+                    )}
+                  </div>
+                );
+              })}
+              <Link href="/it-solution">
+                <a
+                  className="rfidia-mobile-cat__item"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                  style={{
+                    justifyContent: 'center',
+                    background: '#1a2150',
+                    color: '#fff !important',
+                    padding: '12px 14px',
+                    borderRadius: '12px',
+                    fontWeight: 700,
+                    marginTop: '6px',
+                  }}
+                >
+                  <span style={{ color: '#fff' }}>{solutionsMeta.viewAll}</span>
+                </a>
+              </Link>
             </div>
           </div>
         </li>

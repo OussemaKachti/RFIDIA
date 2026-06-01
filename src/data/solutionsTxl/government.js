@@ -1,0 +1,220 @@
+import { buildSolution, makeTheme } from "../buildSolution";
+
+const theme = makeTheme("#059669", "#6EE7B7", "#065F46");
+
+const copy = {
+  fr: {
+    metaTitle: "RFID Gouvernement | RFIDIA",
+    metaDesc:
+      "Maitrise du patrimoine public, securisation des archives et conformite des audits : RFIDIA accompagne ministeres, collectivites et organismes publics dans la traceabilite intelligente.",
+    heroEyebrow: "Gouvernement • Patrimoine, archives, transparence",
+    heroTitleA: "Un service public",
+    heroTitleB: "transparent,",
+    heroTitleC: "des actifs maitrises",
+    heroSub:
+      "Ministeres, collectivites, etablissements publics : la rigueur attendue impose une traceabilite irreprochable. RFIDIA digitalise le patrimoine, les archives et les biens publics — pour des audits sans surprise et des decisions plus eclairees.",
+    heroCta1: "Echanger sur mon administration",
+    heroCta2: "Voir toutes les solutions",
+    kpis: [
+      { v: "100%", l: "Patrimoine inventorie" },
+      { v: "-75%", l: "Temps de recherche" },
+      { v: "Audit", l: "Conformite Cour des comptes" },
+    ],
+    modulesTitle: "Une couverture pensee pour le service public",
+    modulesDesc:
+      "Six axes pour renforcer la rigueur, la securite et la lisibilite des operations publiques.",
+    modules: [
+      { title: "Patrimoine & mobilier", desc: "Inventaire fiable du mobilier, du materiel informatique et des equipements de service, avec affectation site / direction." },
+      { title: "Archives & documents", desc: "Localisation des dossiers physiques, controle d'emprunt et historique pour les archives nationales, prefectorales ou municipales." },
+      { title: "Controle d'acces aux zones sensibles", desc: "Badges agents et visiteurs, regles horaires, journalisation des passages et reporting d'audit." },
+      { title: "Reponse aux urgences", desc: "Identification rapide des equipements de secours, kits d'intervention et ressources mobilisables." },
+      { title: "Conformite et audit", desc: "Generation automatique de rapports d'inventaire conformes aux exigences publiques et exportables." },
+      { title: "Hebergement souverain", desc: "Donnees hebergees en Tunisie ou en Europe, conformite RGPD et chiffrement de bout en bout." },
+    ],
+    journeyTitle: "Une demarche compatible commande publique",
+    journeyDesc:
+      "Nous accompagnons les administrations de la redaction du CCTP a la mise en service operationnelle.",
+    journey: [
+      { n: "01", t: "Cadrage et CCTP", d: "Analyse des besoins, perimetre, contraintes reglementaires et redaction des specifications techniques." },
+      { n: "02", t: "Pilote ciblé", d: "Deploiement sur une direction, un site ou un service pour valider la valeur avant generalisation." },
+      { n: "03", t: "Generalisation", d: "Extension a l'ensemble du patrimoine, montee en charge des operateurs et formation des agents." },
+      { n: "04", t: "Maintien en condition", d: "Maintenance, evolutions reglementaires, audits annuels et reporting de bout en bout." },
+    ],
+    proofTitle: "Acteurs publics avec qui la RFID fait sens",
+    proofDesc: "Quelques exemples ou notre approche s'integre naturellement aux processus publics.",
+    proofs: [
+      "Ministeres et administrations centrales : patrimoine immobilier et mobilier sous controle.",
+      "Collectivites locales et regionales : equipements, vehicules de service et materiel evenementiel traces.",
+      "Archives nationales et bibliotheques : localisation des dossiers et reduction drastique des pertes.",
+      "Hopitaux publics et organismes de defense : actifs sensibles avec preuve d'inventaire.",
+    ],
+    ctaTitle: "Modernisons la gestion publique",
+    ctaSub:
+      "Decrivez-nous votre administration, vos exigences d'audit et votre calendrier — nos experts du secteur public vous accompagnent jusqu'a la mise en service.",
+    ctaBtn: "Contactez RFIDIA",
+    ctaAlt: "Retour aux solutions",
+    applicationsTitle: "Applications RFID dans le service public",
+    applicationsDesc: "Six cas d'usage ou la RFID renforce la rigueur, la securite et la transparence.",
+    applications: [
+      { title: "Inventaire du patrimoine", desc: "Mobilier, materiel et vehicules de service identifies et affectes par direction." },
+      { title: "Archives et dossiers physiques", desc: "Localisation instantanee, controle d'emprunt et journal d'utilisation." },
+      { title: "Gestion documentaire", desc: "Tracabilite des marches publics, pieces juridiques et dossiers sensibles." },
+      { title: "Controle d'acces sensibles", desc: "Badges agents et visiteurs, regles horaires et journalisation auditable." },
+      { title: "Equipements de secours", desc: "Materiel d'urgence, kits intervention et ressources mobilisables traces." },
+      { title: "Conformite et audit", desc: "Generation automatique des rapports d'inventaire pour la Cour des comptes." },
+    ],
+    verticalsTitle: "Acteurs publics que nous accompagnons",
+    verticalsDesc: "Notre approche s'integre aux processus de l'administration et a la commande publique.",
+    verticals: [
+      { name: "Ministeres", desc: "Patrimoine central et direction generale." },
+      { name: "Collectivites locales", desc: "Communes, departements, regions." },
+      { name: "Hopitaux publics", desc: "Equipements medicaux et logistique." },
+      { name: "Archives nationales", desc: "Conservation et acces aux dossiers." },
+      { name: "Defense & securite", desc: "Materiel sensible et armureries." },
+      { name: "Universites publiques", desc: "Materiel pedagogique et logistique." },
+    ],
+  },
+  en: {
+    metaTitle: "RFID in Government | RFIDIA",
+    metaDesc:
+      "Public asset control, secure archives and audit compliance: RFIDIA supports ministries, local authorities and public bodies with smart traceability.",
+    heroEyebrow: "Government • Assets, archives, transparency",
+    heroTitleA: "A transparent",
+    heroTitleB: "public service,",
+    heroTitleC: "controlled assets",
+    heroSub:
+      "Ministries, local authorities, public institutions: the expected rigour calls for flawless traceability. RFIDIA digitises assets, archives and public goods — for audit-ready operations and better-informed decisions.",
+    heroCta1: "Discuss my administration",
+    heroCta2: "All solutions",
+    kpis: [
+      { v: "100%", l: "Assets inventoried" },
+      { v: "-75%", l: "Search time" },
+      { v: "Audit", l: "Compliance ready" },
+    ],
+    modulesTitle: "A coverage designed for the public sector",
+    modulesDesc:
+      "Six axes to reinforce rigour, security and clarity in public operations.",
+    modules: [
+      { title: "Assets & furniture", desc: "Reliable inventory of furniture, IT equipment and service hardware, with site / department allocation." },
+      { title: "Archives & documents", desc: "Locate physical files, control loans and keep history for national, prefectural or municipal archives." },
+      { title: "Sensitive zone access control", desc: "Staff and visitor badges, time rules, entry logs and audit reporting." },
+      { title: "Emergency response", desc: "Fast identification of rescue equipment, intervention kits and mobilisable resources." },
+      { title: "Compliance and audit", desc: "Automatic inventory reports compliant with public-sector requirements and ready to export." },
+      { title: "Sovereign hosting", desc: "Data hosted in Tunisia or Europe, GDPR compliance and end-to-end encryption." },
+    ],
+    journeyTitle: "A public-procurement compatible approach",
+    journeyDesc:
+      "We support administrations from technical specifications to operational go-live.",
+    journey: [
+      { n: "01", t: "Scoping & specs", d: "Needs analysis, perimeter, regulatory constraints and technical specifications drafting." },
+      { n: "02", t: "Targeted pilot", d: "Deployment on a department, site or service to prove value before generalisation." },
+      { n: "03", t: "Generalisation", d: "Extension to the full asset base, operator ramp-up and staff training." },
+      { n: "04", t: "Lifecycle support", d: "Maintenance, regulatory evolutions, annual audits and end-to-end reporting." },
+    ],
+    proofTitle: "Where RFID makes sense in the public sector",
+    proofDesc: "A few cases where our approach fits naturally with public processes.",
+    proofs: [
+      "Ministries and central administrations: controlled real estate and furniture.",
+      "Local and regional authorities: equipment, service vehicles and event material tracked.",
+      "National archives and libraries: file location and dramatic loss reduction.",
+      "Public hospitals and defence bodies: sensitive assets with proof of inventory.",
+    ],
+    ctaTitle: "Let's modernise public management",
+    ctaSub:
+      "Describe your administration, audit requirements and timeline — our public-sector experts support you all the way to go-live.",
+    ctaBtn: "Contact RFIDIA",
+    ctaAlt: "Back to solutions",
+    applicationsTitle: "RFID applications in the public sector",
+    applicationsDesc: "Six use cases where RFID reinforces rigour, security and transparency.",
+    applications: [
+      { title: "Asset inventory", desc: "Furniture, service hardware and vehicles identified and allocated per department." },
+      { title: "Archives and physical files", desc: "Instant location, loan control and usage log." },
+      { title: "Document management", desc: "Traceability of public contracts, legal documents and sensitive files." },
+      { title: "Sensitive access control", desc: "Staff and visitor badges, time rules and auditable logging." },
+      { title: "Emergency equipment", desc: "Emergency gear, intervention kits and mobilisable resources tracked." },
+      { title: "Compliance and audit", desc: "Automatic inventory reports for Court of Auditors and supervisory bodies." },
+    ],
+    verticalsTitle: "Public actors we support",
+    verticalsDesc: "Our approach fits public administration processes and public procurement.",
+    verticals: [
+      { name: "Ministries", desc: "Central assets and general directorates." },
+      { name: "Local authorities", desc: "Municipalities, regions, counties." },
+      { name: "Public hospitals", desc: "Medical equipment and logistics." },
+      { name: "National archives", desc: "Conservation and file access." },
+      { name: "Defence & security", desc: "Sensitive material and armouries." },
+      { name: "Public universities", desc: "Educational hardware and logistics." },
+    ],
+  },
+  it: {
+    metaTitle: "RFID PA | RFIDIA",
+    metaDesc:
+      "Controllo del patrimonio pubblico, archivi sicuri e conformita degli audit: RFIDIA supporta ministeri, enti locali e organismi pubblici con una tracciabilita intelligente.",
+    heroEyebrow: "PA • Patrimonio, archivi, trasparenza",
+    heroTitleA: "Servizio pubblico",
+    heroTitleB: "trasparente,",
+    heroTitleC: "asset sotto controllo",
+    heroSub:
+      "Ministeri, enti locali, istituzioni: il rigore atteso impone una tracciabilita impeccabile. RFIDIA digitalizza patrimonio, archivi e beni pubblici — per audit senza sorprese e decisioni piu informate.",
+    heroCta1: "Parliamo della mia amministrazione",
+    heroCta2: "Tutte le soluzioni",
+    kpis: [
+      { v: "100%", l: "Patrimonio inventariato" },
+      { v: "-75%", l: "Tempo di ricerca" },
+      { v: "Audit", l: "Conformita pronta" },
+    ],
+    modulesTitle: "Una copertura pensata per la PA",
+    modulesDesc:
+      "Sei assi per rinforzare rigore, sicurezza e leggibilita delle operazioni pubbliche.",
+    modules: [
+      { title: "Patrimonio e mobilio", desc: "Inventario affidabile di mobili, attrezzature IT e materiali, con allocazione sito / direzione." },
+      { title: "Archivi e documenti", desc: "Localizzazione di fascicoli fisici, controllo prestiti e storico per archivi nazionali, prefettizi o comunali." },
+      { title: "Controllo accessi zone sensibili", desc: "Badge personale e visitatori, regole orarie, log degli ingressi e reporting di audit." },
+      { title: "Risposta alle emergenze", desc: "Identificazione rapida di attrezzature di soccorso, kit di intervento e risorse mobilizzabili." },
+      { title: "Conformita e audit", desc: "Generazione automatica di report di inventario conformi ai requisiti pubblici ed esportabili." },
+      { title: "Hosting sovrano", desc: "Dati in Tunisia o Europa, conformita GDPR e crittografia end-to-end." },
+    ],
+    journeyTitle: "Un approccio compatibile con le gare pubbliche",
+    journeyDesc: "Accompagniamo gli enti dalla stesura del capitolato al go-live operativo.",
+    journey: [
+      { n: "01", t: "Cadrage e capitolato", d: "Analisi dei bisogni, perimetro, vincoli normativi e stesura delle specifiche tecniche." },
+      { n: "02", t: "Pilota mirato", d: "Deploy su una direzione, sito o servizio per validare il valore prima della generalizzazione." },
+      { n: "03", t: "Generalizzazione", d: "Estensione a tutto il patrimonio, ramp-up degli operatori e formazione del personale." },
+      { n: "04", t: "Mantenimento", d: "Manutenzione, evoluzioni normative, audit annuali e reporting end-to-end." },
+    ],
+    proofTitle: "Dove l'RFID ha senso nel settore pubblico",
+    proofDesc: "Casi in cui il nostro approccio si integra ai processi pubblici.",
+    proofs: [
+      "Ministeri e amministrazioni centrali: patrimonio immobiliare e mobiliare sotto controllo.",
+      "Enti locali e regionali: attrezzature, veicoli di servizio e materiali per eventi tracciati.",
+      "Archivi nazionali e biblioteche: localizzazione fascicoli e riduzione drastica delle perdite.",
+      "Ospedali pubblici e enti di difesa: asset sensibili con prova di inventario.",
+    ],
+    ctaTitle: "Moderniziamo la gestione pubblica",
+    ctaSub:
+      "Indicaci amministrazione, requisiti di audit e calendario — i nostri esperti settore pubblico ti accompagnano fino al go-live.",
+    ctaBtn: "Contatta RFIDIA",
+    ctaAlt: "Torna alle soluzioni",
+    applicationsTitle: "Applicazioni RFID nel settore pubblico",
+    applicationsDesc: "Sei casi d'uso in cui l'RFID rinforza rigore, sicurezza e trasparenza.",
+    applications: [
+      { title: "Inventario patrimonio", desc: "Mobili, attrezzature di servizio e veicoli identificati per direzione." },
+      { title: "Archivi e fascicoli fisici", desc: "Localizzazione istantanea, controllo prestiti e log d'uso." },
+      { title: "Gestione documentale", desc: "Tracciabilita di gare pubbliche, atti legali e fascicoli sensibili." },
+      { title: "Accessi sensibili", desc: "Badge personale e visitatori, regole orarie e log auditabili." },
+      { title: "Attrezzature di soccorso", desc: "Materiale d'emergenza, kit di intervento e risorse mobilizzabili tracciate." },
+      { title: "Conformita e audit", desc: "Generazione automatica di report di inventario per la Corte dei conti." },
+    ],
+    verticalsTitle: "Attori pubblici che supportiamo",
+    verticalsDesc: "Il nostro approccio si integra ai processi della PA e alle gare pubbliche.",
+    verticals: [
+      { name: "Ministeri", desc: "Patrimonio centrale e direzioni generali." },
+      { name: "Enti locali", desc: "Comuni, province, regioni." },
+      { name: "Ospedali pubblici", desc: "Attrezzature mediche e logistica." },
+      { name: "Archivi nazionali", desc: "Conservazione e accesso ai fascicoli." },
+      { name: "Difesa & sicurezza", desc: "Materiale sensibile e armerie." },
+      { name: "Universita pubbliche", desc: "Materiale didattico e logistica." },
+    ],
+  },
+};
+
+export default buildSolution(theme, "/a_rfidia/gouvernement.jpeg", copy);

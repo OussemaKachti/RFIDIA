@@ -1,0 +1,220 @@
+import { buildSolution, makeTheme } from "../buildSolution";
+
+const theme = makeTheme("#D97706", "#FCD34D", "#92400E");
+
+const copy = {
+  fr: {
+    metaTitle: "RFID Oil & Gas | RFIDIA",
+    metaDesc:
+      "Suivi des actifs, securite du personnel et tracabilite reglementaire en environnements ATEX : RFIDIA accompagne les operateurs petroliers, gaziers et de l'energie.",
+    heroEyebrow: "Oil & Gas • Actifs critiques, securite, conformite",
+    heroTitleA: "Des sites",
+    heroTitleB: "tenaces,",
+    heroTitleC: "des actifs sous controle",
+    heroSub:
+      "Plateformes, depots, raffineries, yards : autant d'environnements exigeants ou la moindre perte ralentit les operations et expose les equipes. RFIDIA fiabilise la localisation, l'inspection et l'inventaire de vos actifs critiques.",
+    heroCta1: "Auditer mes sites",
+    heroCta2: "Voir toutes les solutions",
+    kpis: [
+      { v: "ATEX", l: "Zones 0/1/2 prises en charge" },
+      { v: "-70%", l: "Temps de recherche outils" },
+      { v: "100%", l: "Trace d'inspection" },
+    ],
+    modulesTitle: "Cas d'usage cles en Oil, Gas & Energie",
+    modulesDesc:
+      "Six axes pour reduire les pertes, accelerer les inspections et renforcer la securite — dans des conditions toujours severes.",
+    modules: [
+      { title: "Suivi des actifs critiques", desc: "Vannes, brides, raccords, equipements de production : identifies au tag durci et localises a la demande, sur site et en magasin." },
+      { title: "Inspection numerique guidee", desc: "Tournees d'inspection structurees, preuves de passage horodatees et photos terrain — y compris hors connexion." },
+      { title: "Securite & EPI", desc: "Verification d'aptitude, presence en zone, gestion des EPI (harnais, masques, detecteurs) et alerte evacuation." },
+      { title: "Yard & inventaire materiel", desc: "Pilotage du yard : reception, attribution chantier, retour, inventaire rapide et fiabilisation des stocks." },
+      { title: "Drill pipes & equipements de fond", desc: "Suivi des cycles d'utilisation, des controles et de l'historique vie des elements critiques." },
+      { title: "Conformite & traceabilite", desc: "Dossiers d'inspection, rapports normes (API, ISO, autorites locales) et historique exportable a la demande." },
+    ],
+    journeyTitle: "Une approche pragmatique terrain",
+    journeyDesc:
+      "Nous demarrons par les douleurs operationnelles les plus visibles, puis nous etendons le perimetre site par site.",
+    journey: [
+      { n: "01", t: "Visite terrain", d: "Diagnostic de site, zones a risque, parc d'actifs et contraintes ATEX." },
+      { n: "02", t: "POC operationnel", d: "Tagging cible, lecteurs intrinsequement surs et application mobile testes en conditions reelles." },
+      { n: "03", t: "Deploiement par site", d: "Generalisation par yard, depot ou raffinerie, integration aux GMAO / CMMS et formation." },
+      { n: "04", t: "Pilotage continu", d: "Indicateurs securite, conformite et productivite suivis dans la duree, avec evolutions du perimetre." },
+    ],
+    proofTitle: "Sur quels environnements nous travaillons",
+    proofDesc: "Contextes ou la valeur s'installe vite, meme en operation 24/7.",
+    proofs: [
+      "Yards de tubulaires, drill pipes et equipements critiques : reception, attribution et retour fiabilises.",
+      "Raffineries et depots : inspection guidee, traces normalisees et gestion des controles reglementaires.",
+      "Plateformes et sites onshore : suivi des outillages, EPI et personnel en zone restreinte.",
+      "Transport et logistique energie : tracabilite des conteneurs et inventaires multi-sites.",
+    ],
+    ctaTitle: "Securisez vos operations Oil & Gas",
+    ctaSub:
+      "Donnez-nous vos sites, vos contraintes ATEX et vos enjeux d'inspection — nos experts revienne avec une feuille de route claire et certifiable.",
+    ctaBtn: "Contactez RFIDIA",
+    ctaAlt: "Retour aux solutions",
+    applicationsTitle: "Applications RFID sur sites Oil, Gas & Energie",
+    applicationsDesc: "Six cas d'usage qui ameliorent la securite, la conformite et la productivite des operations.",
+    applications: [
+      { title: "Suivi tubulaires et drill pipes", desc: "Tracabilite par tube, cycles d'usage et historique de controles." },
+      { title: "Inspection valves et brides", desc: "Tournee guidee, photos et signatures, reporting normalise pour l'autorite." },
+      { title: "Gestion des EPI", desc: "Verification d'aptitude, dates de controle et alertes d'expiration." },
+      { title: "Suivi du personnel en zone", desc: "Comptage en zone restreinte et alerte evacuation en cas d'incident." },
+      { title: "Yard management", desc: "Reception, attribution chantier et retour des actifs sous controle." },
+      { title: "Maintenance predictive", desc: "Historique d'usage et alertes d'echeance pour les equipements critiques." },
+    ],
+    verticalsTitle: "Sites et acteurs du secteur",
+    verticalsDesc: "Notre offre couvre les operations onshore, offshore et les services associes.",
+    verticals: [
+      { name: "Exploration & production", desc: "Plateformes offshore et puits onshore." },
+      { name: "Raffinage", desc: "Inspections recurrentes et conformite." },
+      { name: "Petrochimie", desc: "Lignes de production et logistique vrac." },
+      { name: "Transport & pipelines", desc: "Inspections lineaires et yards de tubulaires." },
+      { name: "Energies renouvelables", desc: "Parcs eoliens, solaires et stockage." },
+      { name: "Services & maintenance", desc: "Sous-traitants et entreprises de service." },
+    ],
+  },
+  en: {
+    metaTitle: "RFID in Oil & Gas | RFIDIA",
+    metaDesc:
+      "Asset tracking, personnel safety and regulatory traceability in ATEX environments: RFIDIA supports oil, gas and energy operators.",
+    heroEyebrow: "Oil & Gas • Critical assets, safety, compliance",
+    heroTitleA: "Tough sites,",
+    heroTitleB: "controlled",
+    heroTitleC: "critical assets",
+    heroSub:
+      "Platforms, yards, depots, refineries: harsh environments where every loss slows operations and exposes teams. RFIDIA secures the location, inspection and inventory of your critical assets.",
+    heroCta1: "Assess my sites",
+    heroCta2: "All solutions",
+    kpis: [
+      { v: "ATEX", l: "Zones 0/1/2 supported" },
+      { v: "-70%", l: "Time searching for tools" },
+      { v: "100%", l: "Inspection trace" },
+    ],
+    modulesTitle: "Key use cases in Oil, Gas & Energy",
+    modulesDesc:
+      "Six axes to reduce losses, speed up inspections and reinforce safety — in always-severe conditions.",
+    modules: [
+      { title: "Critical asset tracking", desc: "Valves, flanges, fittings, production equipment: identified with rugged tags and located on demand, on-site and in stores." },
+      { title: "Guided digital inspection", desc: "Structured inspection rounds, timestamped proofs of passage and field photos — even offline." },
+      { title: "Safety & PPE", desc: "Eligibility check, zone presence, PPE management (harnesses, masks, detectors) and evacuation alerts." },
+      { title: "Yard & material inventory", desc: "Yard steering: reception, site allocation, return, fast inventory and reliable stock." },
+      { title: "Drill pipes & downhole equipment", desc: "Track usage cycles, controls and lifecycle history of critical items." },
+      { title: "Compliance & traceability", desc: "Inspection records, normative reports (API, ISO, local authorities) and history exportable on demand." },
+    ],
+    journeyTitle: "A pragmatic field approach",
+    journeyDesc:
+      "We start with the most visible operational pains, then extend the scope site by site.",
+    journey: [
+      { n: "01", t: "Field visit", d: "Site diagnostic, risk zones, asset fleet and ATEX constraints." },
+      { n: "02", t: "Operational POC", d: "Targeted tagging, intrinsically safe readers and mobile app tested in real conditions." },
+      { n: "03", t: "Site rollout", d: "Generalisation by yard, depot or refinery, CMMS integration and training." },
+      { n: "04", t: "Continuous steering", d: "Safety, compliance and productivity KPIs followed over time, with scope evolutions." },
+    ],
+    proofTitle: "Environments we work in",
+    proofDesc: "Contexts where value lands quickly, even under 24/7 operations.",
+    proofs: [
+      "Tubular and drill-pipe yards, critical equipment: reliable reception, allocation and return.",
+      "Refineries and depots: guided inspection, normalised traces and regulatory control management.",
+      "Platforms and onshore sites: tooling, PPE and personnel tracking in restricted zones.",
+      "Energy transport and logistics: container traceability and multi-site inventories.",
+    ],
+    ctaTitle: "Secure your Oil & Gas operations",
+    ctaSub:
+      "Share your sites, ATEX constraints and inspection challenges — our experts come back with a clear and certifiable roadmap.",
+    ctaBtn: "Contact RFIDIA",
+    ctaAlt: "Back to solutions",
+    applicationsTitle: "RFID applications on Oil, Gas & Energy sites",
+    applicationsDesc: "Six use cases that improve safety, compliance and productivity of operations.",
+    applications: [
+      { title: "Tubular & drill pipe tracking", desc: "Per-tube traceability, usage cycles and control history." },
+      { title: "Valve & flange inspection", desc: "Guided rounds, photos and signatures, normalised report for authorities." },
+      { title: "PPE management", desc: "Eligibility check, control dates and expiry alerts." },
+      { title: "In-zone personnel tracking", desc: "Restricted-zone counting and evacuation alert in case of incident." },
+      { title: "Yard management", desc: "Reception, site allocation and asset return under control." },
+      { title: "Predictive maintenance", desc: "Usage history and due-date alerts for critical equipment." },
+    ],
+    verticalsTitle: "Sites and actors in the sector",
+    verticalsDesc: "Our offer covers onshore, offshore operations and related services.",
+    verticals: [
+      { name: "Exploration & production", desc: "Offshore platforms and onshore wells." },
+      { name: "Refining", desc: "Recurring inspections and compliance." },
+      { name: "Petrochemicals", desc: "Production lines and bulk logistics." },
+      { name: "Transport & pipelines", desc: "Linear inspections and tubular yards." },
+      { name: "Renewable energy", desc: "Wind, solar and storage parks." },
+      { name: "Services & maintenance", desc: "Subcontractors and service companies." },
+    ],
+  },
+  it: {
+    metaTitle: "RFID Oil & Gas | RFIDIA",
+    metaDesc:
+      "Tracking asset, sicurezza del personale e tracciabilita normativa in ambienti ATEX: RFIDIA supporta gli operatori petroliferi, del gas e dell'energia.",
+    heroEyebrow: "Oil & Gas • Asset critici, sicurezza, conformita",
+    heroTitleA: "Siti severi,",
+    heroTitleB: "asset critici",
+    heroTitleC: "sotto controllo",
+    heroSub:
+      "Piattaforme, depositi, raffinerie, yard: ambienti severi in cui ogni perdita rallenta le operazioni ed espone le squadre. RFIDIA mette in sicurezza la localizzazione, l'ispezione e l'inventario degli asset critici.",
+    heroCta1: "Audit dei miei siti",
+    heroCta2: "Tutte le soluzioni",
+    kpis: [
+      { v: "ATEX", l: "Zone 0/1/2 supportate" },
+      { v: "-70%", l: "Tempo di ricerca utensili" },
+      { v: "100%", l: "Traccia ispezioni" },
+    ],
+    modulesTitle: "Casi d'uso chiave in Oil, Gas & Energia",
+    modulesDesc:
+      "Sei assi per ridurre perdite, accelerare ispezioni e rinforzare la sicurezza — in condizioni sempre dure.",
+    modules: [
+      { title: "Tracking asset critici", desc: "Valvole, flange, raccordi, attrezzature di produzione: identificati con tag rugged e localizzati su richiesta, in campo e a magazzino." },
+      { title: "Ispezione digitale guidata", desc: "Giri di ispezione strutturati, prove di passaggio datate e foto sul campo — anche offline." },
+      { title: "Sicurezza e DPI", desc: "Verifica idoneita, presenza in zona, gestione DPI (imbrachi, maschere, rilevatori) e alert di evacuazione." },
+      { title: "Yard e inventario materiale", desc: "Gestione yard: ricezione, allocazione cantiere, reso, inventario rapido e stock affidabili." },
+      { title: "Drill pipe e attrezzature di fondo", desc: "Cicli d'uso, controlli e storico vita degli elementi critici." },
+      { title: "Conformita e tracciabilita", desc: "Dossier ispezioni, report normativi (API, ISO, autorita locali) e storico esportabile a richiesta." },
+    ],
+    journeyTitle: "Un approccio pragmatico sul campo",
+    journeyDesc: "Partiamo dai pain operativi piu visibili, poi estendiamo sito per sito.",
+    journey: [
+      { n: "01", t: "Visita sul campo", d: "Diagnostica sito, zone a rischio, parco asset e vincoli ATEX." },
+      { n: "02", t: "POC operativo", d: "Tagging mirato, lettori intrinsecamente sicuri e app mobile testati in condizioni reali." },
+      { n: "03", t: "Rollout per sito", d: "Generalizzazione per yard, deposito o raffineria, integrazione CMMS e formazione." },
+      { n: "04", t: "Pilotaggio continuo", d: "KPI sicurezza, conformita e produttivita nel tempo, con evoluzioni di perimetro." },
+    ],
+    proofTitle: "Ambienti in cui operiamo",
+    proofDesc: "Contesti in cui il valore arriva in fretta, anche con operazioni 24/7.",
+    proofs: [
+      "Yard tubolari, drill pipe e attrezzature critiche: ricezione, allocazione e reso affidabili.",
+      "Raffinerie e depositi: ispezione guidata, tracce normalizzate e gestione dei controlli normativi.",
+      "Piattaforme e siti onshore: tracking utensili, DPI e personale in zone ristrette.",
+      "Trasporto e logistica energia: tracciabilita container e inventari multi-sito.",
+    ],
+    ctaTitle: "Metti in sicurezza le operazioni Oil & Gas",
+    ctaSub:
+      "Indicaci siti, vincoli ATEX e obiettivi di ispezione — i nostri esperti rispondono con una roadmap chiara e certificabile.",
+    ctaBtn: "Contatta RFIDIA",
+    ctaAlt: "Torna alle soluzioni",
+    applicationsTitle: "Applicazioni RFID nei siti Oil, Gas & Energia",
+    applicationsDesc: "Sei casi d'uso che migliorano sicurezza, conformita e produttivita delle operazioni.",
+    applications: [
+      { title: "Tracking tubolari e drill pipe", desc: "Tracciabilita per tubo, cicli d'uso e storico controlli." },
+      { title: "Ispezione valvole e flange", desc: "Giri guidati, foto e firme, report normalizzato per le autorita." },
+      { title: "Gestione DPI", desc: "Verifica idoneita, date di controllo e alert di scadenza." },
+      { title: "Personale in zona", desc: "Conteggio in zona ristretta e alert di evacuazione in caso di incidente." },
+      { title: "Yard management", desc: "Ricezione, allocazione cantiere e reso asset sotto controllo." },
+      { title: "Manutenzione predittiva", desc: "Storico uso e alert scadenze per le attrezzature critiche." },
+    ],
+    verticalsTitle: "Siti e attori del settore",
+    verticalsDesc: "La nostra offerta copre operazioni onshore, offshore e i servizi correlati.",
+    verticals: [
+      { name: "Esplorazione & produzione", desc: "Piattaforme offshore e pozzi onshore." },
+      { name: "Raffinazione", desc: "Ispezioni ricorrenti e conformita." },
+      { name: "Petrolchimica", desc: "Linee produttive e logistica sfusa." },
+      { name: "Trasporto & pipeline", desc: "Ispezioni lineari e yard tubolari." },
+      { name: "Energie rinnovabili", desc: "Parchi eolici, solari e stoccaggio." },
+      { name: "Servizi & manutenzione", desc: "Subappaltatori e societa di servizi." },
+    ],
+  },
+};
+
+export default buildSolution(theme, "/a_rfidia/oil.png", copy);

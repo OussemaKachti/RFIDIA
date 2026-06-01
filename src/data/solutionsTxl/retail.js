@@ -1,0 +1,220 @@
+import { buildSolution, makeTheme } from "../buildSolution";
+
+const theme = makeTheme("#EC4899", "#F9A8D4", "#9D174D");
+
+const copy = {
+  fr: {
+    metaTitle: "RFID Retail | RFIDIA",
+    metaDesc:
+      "Inventaire fiable a 98%, demarque reduite et experience client connectee : RFIDIA equipe les enseignes de mode, beaute, sport, bijouterie, luxe et grande distribution.",
+    heroEyebrow: "Retail • Inventaire, demarque, experience client",
+    heroTitleA: "Le retail",
+    heroTitleB: "precis",
+    heroTitleC: "du back-office a la caisse",
+    heroSub:
+      "Trop d'ecarts entre votre stock theorique et la realite du magasin ? La RFID redonne aux equipes une vision juste, en temps reel, sur chaque article — pour mieux servir, mieux vendre et mieux decider.",
+    heroCta1: "Diagnostiquer mon point de vente",
+    heroCta2: "Voir toutes les solutions",
+    kpis: [
+      { v: "+98%", l: "Precision d'inventaire" },
+      { v: "+8%", l: "Ventes additionnelles" },
+      { v: "-60%", l: "Demarque inconnue" },
+    ],
+    modulesTitle: "Ce que la RFID change vraiment en magasin",
+    modulesDesc:
+      "Six leviers complementaires pour fiabiliser les flux, securiser la marchandise et fluidifier le parcours client.",
+    modules: [
+      { title: "Inventaire fiable au quotidien", desc: "Cycles de comptage rapides et non bloquants. Aligner les stocks theoriques sur ceux en rayon, et garder cette precision dans le temps." },
+      { title: "Reapprovisionnement en rayon", desc: "Detecter en continu les manquants en lineaire et declencher les re-implantations avant que la vente soit perdue." },
+      { title: "Lutte contre la demarque", desc: "Detection en sortie, journaux de sortie et alertes intelligentes pour reduire le vol, la fraude et les erreurs de caisse." },
+      { title: "Omnicanal sans rupture", desc: "Stock magasin + e-commerce unifie : Click & Collect, ship-from-store et retours securises sans surcharge operationnelle." },
+      { title: "Caisse et passage rapide", desc: "Lecture multi-articles en quelques secondes, controle automatique des paniers et passage en caisse plus serein en heures de pointe." },
+      { title: "Tableaux de bord retail", desc: "Indicateurs lisibles par magasin, region ou enseigne pour piloter les performances et arbitrer plus vite." },
+    ],
+    journeyTitle: "Une mise en place progressive et mesurable",
+    journeyDesc:
+      "Nous demarrons toujours par un cadrage fin du terrain, puis nous etendons la solution magasin par magasin.",
+    journey: [
+      { n: "01", t: "Diagnostic & cadrage", d: "Visite des points de vente, choix du perimetre pilote, indicateurs cibles et plan de tagging." },
+      { n: "02", t: "Pilote en magasin", d: "Deploiement encadre sur 1 a 2 points de vente : materiel, etiquettes, integrations et formation des equipes." },
+      { n: "03", t: "Industrialisation", d: "Roll-out multi-sites, harmonisation des procedures et raccordement aux outils existants (ERP, caisse, e-commerce)." },
+      { n: "04", t: "Adoption & amelioration", d: "Suivi terrain, ajustements, montee en competences et nouveaux cas d'usage actives au fil de l'eau." },
+    ],
+    proofTitle: "Ou nos clients voient la difference",
+    proofDesc: "Quelques contextes ou la valeur apparait des les premieres semaines d'usage.",
+    proofs: [
+      "Mode, pret-a-porter et chaussures : inventaire rapide et fiabilisation des tailles en lineaire.",
+      "Bijouterie et produits de valeur : securisation des vitrines et tracabilite unitaire de chaque piece.",
+      "Sport et electronique : disponibilite reelle en rayon et preparation web depuis le stock magasin.",
+      "Grande distribution et libre-service : controle des sorties et lutte contre la demarque inconnue.",
+    ],
+    ctaTitle: "Parlons de votre reseau de magasins",
+    ctaSub:
+      "Donnez-nous votre format, vos enjeux et votre perimetre — nous revenons avec un plan progressif, des indicateurs clairs et un ROI mesurable.",
+    ctaBtn: "Contactez RFIDIA",
+    ctaAlt: "Retour aux solutions",
+    applicationsTitle: "Applications RFID concretes en magasin",
+    applicationsDesc: "Au-dela des grands chantiers, voici les cas d'usage qui changent vraiment le quotidien des equipes terrain.",
+    applications: [
+      { title: "Inventaire continu", desc: "Comptage cyclique non bloquant, jusqu'a 10x plus rapide qu'un inventaire annuel manuel." },
+      { title: "Suivi des actifs en magasin", desc: "Cintres connectes, vitrines bijouterie, antivol mobile : visibilite des actifs de valeur." },
+      { title: "Tracabilite supply chain", desc: "Suivre la marchandise de l'entrepot a la cintre, avec validation a chaque passage de portique." },
+      { title: "Passage en caisse accelere", desc: "Lecture multi-articles sans contact pour reduire les files d'attente en heures de pointe." },
+      { title: "Lutte contre la demarque", desc: "Portiques de sortie intelligents, alertes ciblees et historique des incidents." },
+      { title: "Experience client personnalisee", desc: "Cabine d'essayage connectee et recommandations en rayon basees sur le panier." },
+    ],
+    verticalsTitle: "Sous-secteurs retail que nous equipons",
+    verticalsDesc: "Notre approche s'adapte aux contraintes de chaque format : du concept-store haut de gamme a l'hypermarche.",
+    verticals: [
+      { name: "Mode & textile", desc: "Pret-a-porter, sportswear, accessoires." },
+      { name: "Bijouterie & luxe", desc: "Tracabilite unitaire et vitrines protegees." },
+      { name: "Electronique grand public", desc: "Anti-demarque et stocks SAV." },
+      { name: "Sport & loisirs", desc: "Stocks tailles, pic de saison et essayage." },
+      { name: "Grande distribution", desc: "Hypers, supers et hard-discount." },
+      { name: "Pharmacies & parapharmacies", desc: "Tracabilite lot et alertes peremption." },
+    ],
+  },
+  en: {
+    metaTitle: "RFID in Retail | RFIDIA",
+    metaDesc:
+      "98%+ inventory accuracy, lower shrinkage and a connected store experience: RFIDIA equips fashion, beauty, sports, jewellery, luxury and mass-retail brands.",
+    heroEyebrow: "Retail • Accuracy, loss prevention, customer experience",
+    heroTitleA: "Retail that",
+    heroTitleB: "stays accurate",
+    heroTitleC: "from back-office to checkout",
+    heroSub:
+      "Too many gaps between your system stock and what is actually on the shelf? RFID gives your teams a clear, real-time view of every item — to serve better, sell more and decide faster.",
+    heroCta1: "Assess my store",
+    heroCta2: "All solutions",
+    kpis: [
+      { v: "+98%", l: "Inventory accuracy" },
+      { v: "+8%", l: "Sales uplift" },
+      { v: "-60%", l: "Shrinkage" },
+    ],
+    modulesTitle: "What RFID truly changes in-store",
+    modulesDesc:
+      "Six complementary levers to make flows reliable, secure the merchandise and smooth the customer journey.",
+    modules: [
+      { title: "Reliable daily inventory", desc: "Quick, non-blocking cycle counts. Align book stock with the floor and keep that accuracy over time." },
+      { title: "Smarter shelf replenishment", desc: "Continuously detect missing facings and trigger re-merchandising before the sale is lost." },
+      { title: "Stronger loss prevention", desc: "Exit detection, audit logs and intelligent alerts to reduce theft, fraud and checkout errors." },
+      { title: "Seamless omnichannel", desc: "Unified store + e-commerce stock: click & collect, ship-from-store and safer returns without extra workload." },
+      { title: "Faster checkout", desc: "Multi-item read in seconds, automatic basket control and calmer peak hours at the till." },
+      { title: "Retail dashboards", desc: "Readable KPIs by store, region or brand to steer performance and arbitrate faster." },
+    ],
+    journeyTitle: "A progressive, measurable rollout",
+    journeyDesc: "We always start with a careful field scoping, then expand the solution store by store.",
+    journey: [
+      { n: "01", t: "Discovery & scoping", d: "Store visits, pilot perimeter, target KPIs and tagging plan." },
+      { n: "02", t: "In-store pilot", d: "Supervised rollout on 1-2 locations: hardware, tags, integrations and team enablement." },
+      { n: "03", t: "Multi-site rollout", d: "Industrialised deployment, standardised procedures and connections with ERP, POS and e-commerce." },
+      { n: "04", t: "Adoption & improvement", d: "Field follow-up, adjustments, upskilling and new use cases activated over time." },
+    ],
+    proofTitle: "Where customers feel the difference",
+    proofDesc: "A few contexts where value shows up within the first weeks.",
+    proofs: [
+      "Fashion, apparel and footwear: fast inventories and reliable size availability on the floor.",
+      "Jewellery and high-value goods: secured displays and unit-level traceability of every piece.",
+      "Sports and electronics: real shelf availability and web order prep from store stock.",
+      "Hypermarkets and self-service: exit control and reduction of unknown shrinkage.",
+    ],
+    ctaTitle: "Let's talk about your store network",
+    ctaSub:
+      "Share your format, challenges and perimeter — we'll come back with a progressive plan, clear KPIs and a measurable ROI.",
+    ctaBtn: "Contact RFIDIA",
+    ctaAlt: "Back to solutions",
+    applicationsTitle: "Concrete RFID applications in stores",
+    applicationsDesc: "Beyond large initiatives, these are the use cases that truly change the daily life of in-store teams.",
+    applications: [
+      { title: "Continuous inventory", desc: "Non-blocking cycle counts, up to 10x faster than a manual yearly inventory." },
+      { title: "In-store asset tracking", desc: "Smart hangers, jewellery displays, mobile anti-theft: visibility of high-value assets." },
+      { title: "Supply chain traceability", desc: "Track merchandise from warehouse to hanger, with gate validation at every step." },
+      { title: "Faster checkout", desc: "Multi-item contactless reading to shorten queues at peak hours." },
+      { title: "Reinforced loss prevention", desc: "Smart exit gates, targeted alerts and incident history." },
+      { title: "Personalised shopping experience", desc: "Smart fitting rooms and aisle recommendations driven by the basket." },
+    ],
+    verticalsTitle: "Retail sub-sectors we equip",
+    verticalsDesc: "Our approach adapts to each format: from upscale concept stores to hypermarkets.",
+    verticals: [
+      { name: "Fashion & apparel", desc: "Ready-to-wear, sportswear, accessories." },
+      { name: "Jewellery & luxury", desc: "Unit-level traceability and protected displays." },
+      { name: "Consumer electronics", desc: "Loss prevention and service stock." },
+      { name: "Sports & leisure", desc: "Size stocks, seasonal peaks, fitting." },
+      { name: "Mass retail", desc: "Hypers, supers and hard-discount." },
+      { name: "Pharmacies & drugstores", desc: "Lot traceability and expiry alerts." },
+    ],
+  },
+  it: {
+    metaTitle: "RFID Retail | RFIDIA",
+    metaDesc:
+      "Inventario al 98%, riduzione delle perdite ed esperienza connessa: RFIDIA equipaggia moda, beauty, sport, gioielleria, lusso e GDO.",
+    heroEyebrow: "Retail • Accuratezza, anti-perdite, customer experience",
+    heroTitleA: "Un retail",
+    heroTitleB: "preciso",
+    heroTitleC: "dal back-office alla cassa",
+    heroSub:
+      "Troppi scarti tra stock teorico e stock reale? L'RFID restituisce ai team una visione fedele, in tempo reale, su ogni articolo — per servire meglio, vendere di piu e decidere piu velocemente.",
+    heroCta1: "Diagnostica il mio punto vendita",
+    heroCta2: "Tutte le soluzioni",
+    kpis: [
+      { v: "+98%", l: "Accuratezza inventario" },
+      { v: "+8%", l: "Vendite incrementali" },
+      { v: "-60%", l: "Perdite sconosciute" },
+    ],
+    modulesTitle: "Cio che l'RFID cambia davvero in negozio",
+    modulesDesc:
+      "Sei leve complementari per rendere affidabili i flussi, proteggere la merce e fluidificare l'esperienza cliente.",
+    modules: [
+      { title: "Inventario affidabile ogni giorno", desc: "Cycle count rapidi e non bloccanti. Riallineare stock teorico e reale e mantenerlo nel tempo." },
+      { title: "Riassortimento intelligente", desc: "Rilevare mancanze a scaffale e avviare i ri-allestimenti prima di perdere la vendita." },
+      { title: "Anti-taccheggio rafforzato", desc: "Rilevazione in uscita, log dettagliati e alert intelligenti per ridurre furti e errori di cassa." },
+      { title: "Omnicanale senza attriti", desc: "Stock store + e-commerce unificato: click & collect, ship-from-store e resi sicuri senza aggravare il personale." },
+      { title: "Cassa piu veloce", desc: "Letture multi-articolo in pochi secondi, controllo automatico del carrello e ore di punta piu serene." },
+      { title: "Dashboard retail", desc: "KPI leggibili per negozio, area o insegna per pilotare le performance e decidere piu in fretta." },
+    ],
+    journeyTitle: "Un rollout progressivo e misurabile",
+    journeyDesc:
+      "Partiamo sempre da un cadrage di campo accurato, poi estendiamo punto vendita per punto vendita.",
+    journey: [
+      { n: "01", t: "Analisi e cadrage", d: "Visite store, perimetro pilota, KPI target e piano di tagging." },
+      { n: "02", t: "Pilota in store", d: "Deploy guidato su 1-2 punti vendita: hardware, etichette, integrazioni e formazione." },
+      { n: "03", t: "Rollout multi-sito", d: "Industrializzazione, procedure armonizzate e collegamento con ERP, cassa, e-commerce." },
+      { n: "04", t: "Adozione e miglioramento", d: "Follow-up sul campo, aggiustamenti, formazione continua e nuovi casi d'uso attivati nel tempo." },
+    ],
+    proofTitle: "Dove i clienti sentono la differenza",
+    proofDesc: "Contesti in cui il valore emerge nelle prime settimane.",
+    proofs: [
+      "Moda, abbigliamento e calzature: inventari rapidi e affidabilita delle taglie a scaffale.",
+      "Gioielleria e prodotti di valore: protezione delle vetrine e tracciabilita unitaria.",
+      "Sport ed elettronica: disponibilita reale a scaffale e preparazione ordini web da stock store.",
+      "GDO e self-service: controllo uscite e riduzione delle perdite sconosciute.",
+    ],
+    ctaTitle: "Parliamo della tua rete di negozi",
+    ctaSub:
+      "Indicaci formato, obiettivi e perimetro — torniamo con un piano progressivo, KPI chiari e ROI misurabile.",
+    ctaBtn: "Contatta RFIDIA",
+    ctaAlt: "Torna alle soluzioni",
+    applicationsTitle: "Applicazioni RFID concrete in negozio",
+    applicationsDesc: "Oltre ai grandi progetti, ecco i casi d'uso che cambiano davvero il quotidiano dei team di store.",
+    applications: [
+      { title: "Inventario continuo", desc: "Cycle count non bloccanti, fino a 10x piu rapidi di un inventario annuale manuale." },
+      { title: "Tracking asset in store", desc: "Stampelle smart, vetrine gioielleria, antifurto mobile: visibilita degli asset di valore." },
+      { title: "Tracciabilita supply chain", desc: "Seguire la merce dal magazzino alla stampella, con validazione ai varchi." },
+      { title: "Cassa piu rapida", desc: "Lettura multi-articolo contactless per ridurre le code nelle ore di punta." },
+      { title: "Anti-perdite rinforzato", desc: "Varchi di uscita intelligenti, alert mirati e storico degli incidenti." },
+      { title: "Esperienza cliente personalizzata", desc: "Camerini smart e raccomandazioni in corsia basate sul carrello." },
+    ],
+    verticalsTitle: "Sotto-settori retail che equipaggiamo",
+    verticalsDesc: "Il nostro approccio si adatta a ogni formato: dal concept-store di alta gamma all'ipermercato.",
+    verticals: [
+      { name: "Moda & tessile", desc: "Pret-a-porter, sportswear, accessori." },
+      { name: "Gioielleria & lusso", desc: "Tracciabilita unitaria e vetrine protette." },
+      { name: "Elettronica consumer", desc: "Anti-perdite e stock di servizio." },
+      { name: "Sport & tempo libero", desc: "Stock taglie, picchi stagionali, prova." },
+      { name: "GDO", desc: "Iper, super e hard-discount." },
+      { name: "Farmacie e parafarmacie", desc: "Tracciabilita lotti e alert scadenza." },
+    ],
+  },
+};
+
+export default buildSolution(theme, "/a_rfidia/retail.jpeg", copy);

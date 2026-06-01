@@ -829,7 +829,6 @@ const SolutionHotellerie = () => {
           border-color: rgba(18, 23, 39, 0.18);
           color: var(--ink);
         }
-
         .htl-kpis {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1666,4 +1665,5 @@ const SolutionHotellerie = () => {
 };
 
 export default SolutionHotellerie;
+
 

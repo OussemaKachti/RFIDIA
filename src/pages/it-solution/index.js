@@ -3,6 +3,156 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import {
+  getSolutionsCatalog,
+  getSolutionsMeta,
+} from "../../utils/solutionsNavData";
+
+// ── Per-solution icons used on the showcase grid ────────────────────
+const SOLUTION_ICONS = {
+  retail: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 9l1.5-5h15L21 9M3 9v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9M3 9h18M8 13h8" />
+    </svg>
+  ),
+  healthcare: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    </svg>
+  ),
+  hospitality: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 12h.01M9 15h.01M13 9h.01M13 12h.01M13 15h.01" />
+    </svg>
+  ),
+  manufacturing: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V10l6 4V10l6 4V7l6 4v10H3z" />
+      <path d="M9 21v-4M15 21v-4M19 21v-4" />
+    </svg>
+  ),
+  oil_gas: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+      <path d="M12 14a3 3 0 0 0 3-3" />
+    </svg>
+  ),
+  government: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21h18M5 21V11M19 21V11M9 21v-6M15 21v-6M2 11l10-7 10 7" />
+    </svg>
+  ),
+  education: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+    </svg>
+  ),
+  asset_tracking: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
+    </svg>
+  ),
+  it_asset: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="12" rx="2" />
+      <path d="M2 20h20M8 16v4M16 16v4" />
+    </svg>
+  ),
+  warehouse: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-7h6v7M9 14V9h6v5" />
+    </svg>
+  ),
+  data_center: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="3" width="20" height="6" rx="2" />
+      <rect x="2" y="11" width="20" height="6" rx="2" />
+      <path d="M6 6h.01M6 14h.01M2 19v2h20v-2" />
+    </svg>
+  ),
+};
+
+// ── Category icons used on the Solutions page ───────────────────────
+const PAGE_CAT_ICONS = {
+  industries: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V10l6 4V10l6 4V7l6 4v10H3z" />
+      <path d="M9 21v-4M15 21v-4M19 21v-4" />
+    </svg>
+  ),
+  assets: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
+    </svg>
+  ),
+  security: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  traceability: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" />
+    </svg>
+  ),
+  smart_ops: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M9 3v18M3 9h18" />
+      <circle cx="15" cy="15" r="1.5" />
+    </svg>
+  ),
+};
+
+const PAGE_HEAD = {
+  fr: {
+    eyebrow: "Catalogue Solutions",
+    title: "Toutes nos solutions RFID, sur une seule page",
+    desc: "Onze solutions concrètes, organisées par enjeu métier — pour identifier en quelques secondes celle qui répond à votre besoin.",
+    tabAll: "Toutes",
+    ctaLabel: "Découvrir la solution",
+    statSolutions: "Solutions disponibles",
+    statCategories: "Catégories métiers",
+    statLanguages: "Langues supportées",
+    solutionsSingular: "solution",
+    solutionsPlural: "solutions",
+    featured: "Phare",
+    aboutBtn: "En savoir plus sur RFIDIA",
+  },
+  en: {
+    eyebrow: "Solutions Catalog",
+    title: "All RFID solutions, on a single page",
+    desc: "Eleven concrete solutions, organised by business outcome — to identify the right fit in seconds.",
+    tabAll: "All",
+    ctaLabel: "Explore solution",
+    statSolutions: "Available solutions",
+    statCategories: "Business categories",
+    statLanguages: "Languages supported",
+    solutionsSingular: "solution",
+    solutionsPlural: "solutions",
+    featured: "Flagship",
+    aboutBtn: "About RFIDIA",
+  },
+  it: {
+    eyebrow: "Catalogo Soluzioni",
+    title: "Tutte le soluzioni RFID, su una sola pagina",
+    desc: "Undici soluzioni concrete, organizzate per esigenza di business — per identificare in pochi secondi quella giusta.",
+    tabAll: "Tutte",
+    ctaLabel: "Esplora soluzione",
+    statSolutions: "Soluzioni disponibili",
+    statCategories: "Categorie di business",
+    statLanguages: "Lingue supportate",
+    solutionsSingular: "soluzione",
+    solutionsPlural: "soluzioni",
+    featured: "Punta di diamante",
+    aboutBtn: "Scopri RFIDIA",
+  },
+};
 
 const stats = [
   { value: "500+", label: "Projets déployés" },
@@ -807,6 +957,7 @@ const i18nContent = {
 const ItSolution = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [language, setLanguage] = useState('fr');
+  const [activeCatTab, setActiveCatTab] = useState('industries');
 
   const showcaseSolutionsBase = [
     {
@@ -821,7 +972,7 @@ const ItSolution = () => {
     },
     {
       id: "textile",
-      image: "/a_rfidia/z_rfid/rfid6.png",
+      image: "/a_rfidia/z_rfid/retail.png",
       accent: "#E0305A",
     },
     {
@@ -893,6 +1044,10 @@ const ItSolution = () => {
     question: t.faqTexts[idx]?.question || item.question,
     answer: t.faqTexts[idx]?.answer || item.answer,
   }));
+
+  const solutionsCatalog = getSolutionsCatalog(language);
+  const solutionsMeta = getSolutionsMeta(language);
+  const pageHead = PAGE_HEAD[language] || PAGE_HEAD.fr;
 
   const localizedShowcaseSolutions = showcaseSolutionsBase.map((item, idx) => ({
     ...item,
@@ -1010,145 +1165,109 @@ const ItSolution = () => {
           </div>
         </section>
 
-        {/* ── NEW WHITE SOLUTIONS ── */}
-        <section className="solutions-section-white">
-          <div className="container">
-            <div className="solutions-white-header rl-section-head">
-              <SectionDivider />
-              <h2>{t.sections.solutionsTitle}</h2>
-              <p>{t.sections.solutionsDesc}</p>
-            </div>
-
-            <div className="solutions-white-grid">
-              {localizedShowcaseSolutions.map((item) => (
-                <Link href={item.href} key={item.id} passHref>
-                  <a
-                    className="solution-card-w"
-                    style={{ "--accent": item.accent }}
-                  >
-                    <img src={item.image} alt={item.title} className="solution-w-img" />
-                    <div className="solution-w-content">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  </a>
-                </Link>
-              ))}
-            </div>
+        {/* ── SOLUTIONS GRID — Navy showcase, all 11 in one view ── */}
+        <section className="sg-section">
+          <div className="sg-section__bg" aria-hidden>
+            <span className="sg-section__pattern" />
+            <span className="sg-section__glow sg-section__glow--a" />
+            <span className="sg-section__glow sg-section__glow--b" />
           </div>
 
-          <style jsx>{`
-            .solutions-section-white {
-              position: relative;
-              padding: 4rem 0;
-              background: #FFFFFF; /* blanc comme les autres */
-            }
+          <div className="container position-relative">
+            <header className="sg-head rl-section-head">
+              <SectionDivider />
+              <span className="sg-kicker">{pageHead.eyebrow}</span>
+              <h2 className="sg-title">{pageHead.title}</h2>
+              <p className="sg-lead">{pageHead.desc}</p>
 
-            .solutions-white-header {
-              text-align: center;
-              margin-bottom: 3.5rem;
-            }
+              <div className="sg-stats">
+                <div className="sg-stat">
+                  <strong>{solutionsCatalog.reduce((n, c) => n + c.items.length, 0)}</strong>
+                  <span>{pageHead.statSolutions}</span>
+                </div>
+                <span className="sg-stats__sep" aria-hidden />
+                <div className="sg-stat">
+                  <strong>{solutionsCatalog.length}</strong>
+                  <span>{pageHead.statCategories}</span>
+                </div>
+                <span className="sg-stats__sep" aria-hidden />
+                <div className="sg-stat">
+                  <strong>3</strong>
+                  <span>{pageHead.statLanguages}</span>
+                </div>
+              </div>
+            </header>
 
-            .solutions-white-header h2 {
-              font-family: 'Manrope', sans-serif;
-              font-size: clamp(1.75rem, 3vw, 2.5rem);
-              font-weight: 700;
-              color: var(--rl-navy);
-              margin-bottom: 1rem;
-              line-height: 1.2;
-            }
+            {/* Category triggers */}
+            <div className="sg-tabs" role="tablist">
+              {solutionsCatalog.map((cat) => {
+                const isActive = activeCatTab === cat.key;
+                return (
+                  <button
+                    type="button"
+                    key={cat.key}
+                    role="tab"
+                    aria-selected={isActive}
+                    className={`sg-tab${isActive ? ' is-active' : ''}`}
+                    style={{ '--accent': cat.accent }}
+                    onMouseEnter={() => setActiveCatTab(cat.key)}
+                    onFocus={() => setActiveCatTab(cat.key)}
+                    onClick={() => setActiveCatTab(cat.key)}
+                  >
+                    <span className="sg-tab__ico" aria-hidden>
+                      {PAGE_CAT_ICONS[cat.key]}
+                    </span>
+                    <span className="sg-tab__body">
+                      <span className="sg-tab__title">{cat.title}</span>
+                      <span className="sg-tab__sub">{cat.subtitle}</span>
+                    </span>
+                    <span className="sg-tab__count">{cat.items.length}</span>
+                  </button>
+                );
+              })}
+            </div>
 
-            .solutions-white-header p {
-              color: #5A6282;
-              font-size: 1.1rem;
-              max-width: 600px;
-              margin: 0 auto;
-            }
+            {/* Animated pane revealing the active category's cards */}
+            {solutionsCatalog.map((cat) => {
+              const isActive = activeCatTab === cat.key;
+              if (!isActive) return null;
+              return (
+                <div
+                  key={cat.key}
+                  className={`sg-pane sg-pane--cols-${cat.items.length}`}
+                  role="tabpanel"
+                  style={{ '--accent': cat.accent }}
+                >
+                  {cat.items.map((item, i) => (
+                    <Link href={item.href} key={item.id} passHref>
+                      <a
+                        className="sg-card"
+                        style={{
+                          '--accent': cat.accent,
+                          '--delay': `${i * 60}ms`,
+                        }}
+                      >
+                        <span className="sg-card__ico" aria-hidden>
+                          {SOLUTION_ICONS[item.id] || PAGE_CAT_ICONS[cat.key]}
+                        </span>
+                        <span className="sg-card__chip">{cat.title}</span>
+                        <h3 className="sg-card__title">{item.title}</h3>
+                        <p className="sg-card__desc">{item.description}</p>
+                        <span className="sg-card__link">
+                          {pageHead.ctaLabel}
+                          <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </span>
+                      </a>
+                    </Link>
+                  ))}
+                </div>
+              );
+            })}
 
-            .solutions-white-grid {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 1.5rem;
-            }
-
-            .solution-card-w {
-              background: #fff;
-              border-radius: 12px;
-              overflow: hidden;
-              box-shadow: 0 4px 6px -1px rgba(26, 33, 80, 0.05), 0 2px 4px -1px rgba(26, 33, 80, 0.03);
-              transition: all 0.3s ease;
-              text-decoration: none;
-              display: flex;
-              flex-direction: column;
-              border: 1px solid #E2E6F0;
-              position: relative;
-            }
-
-            .solution-card-w:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 20px 25px -5px rgba(26, 33, 80, 0.1), 0 10px 10px -5px rgba(26, 33, 80, 0.04);
-            }
-
-            .solution-card-w::after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 0%;
-              height: 4px;
-              background: var(--accent);
-              transition: width 0.3s ease;
-            }
-
-            .solution-card-w:hover::after {
-              width: 100%;
-            }
-
-            .solution-w-img {
-              height: 160px;
-              width: 100%;
-              object-fit: cover;
-              border-bottom: 1px solid #E2E6F0;
-            }
-
-            .solution-w-content {
-              padding: 1.5rem;
-              flex-grow: 1;
-              display: flex;
-              flex-direction: column;
-            }
-
-            .solution-w-content h3 {
-              color: #1A2150;
-              font-size: 1.25rem;
-              font-weight: 700;
-              margin-bottom: 0.5rem;
-              transition: color 0.3s;
-            }
-
-            .solution-w-content p {
-              color: #5A6282;
-              font-size: 0.95rem;
-              line-height: 1.5;
-              margin: 0;
-            }
-
-            .solution-card-w:hover .solution-w-content h3 {
-              color: var(--accent);
-            }
-
-            @media (max-width: 991px) {
-              .solutions-white-grid {
-                grid-template-columns: repeat(2, 1fr);
-              }
-            }
-
-            @media (max-width: 576px) {
-              .solutions-white-grid {
-                grid-template-columns: 1fr;
-              }
-            }
-          `}</style>
+            
+          </div>
         </section>
 
         {/* ── ABOUT ── */}

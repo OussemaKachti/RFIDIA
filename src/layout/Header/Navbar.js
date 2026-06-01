@@ -10,12 +10,51 @@ import {
   navCompanyLinks,
   navCompanyPage,
 } from '../../utils/data';
-import { getSolutionsNavItems } from '../../utils/solutionsNavData';
+import {
+  getSolutionsCatalog,
+  getSolutionsMeta,
+} from '../../utils/solutionsNavData';
 import dynamic from 'next/dynamic';
+
+// ── Category-level icons used in the mega-menu sidebar ───────────────
+const CATEGORY_ICONS = {
+  industries: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V10l6 4V10l6 4V7l6 4v10H3z" />
+      <path d="M9 21v-4M15 21v-4M19 21v-4" />
+    </svg>
+  ),
+  assets: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
+    </svg>
+  ),
+  security: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  traceability: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" />
+    </svg>
+  ),
+  smart_ops: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M9 3v18M3 9h18" />
+      <circle cx="15" cy="15" r="1.5" />
+    </svg>
+  ),
+};
 
 const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageChange, labels }) => {
   const [scroll, setScroll] = useState(0);
   const [headerTop, setHeaderTop] = useState(0);
+  const [activeCategory, setActiveCategory] = useState(0);
 
   const navLabels =
     labels ||
@@ -34,9 +73,10 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
       italian: 'Italiano',
     };
 
-  const solutionsNavItems = getSolutionsNavItems(language);
-  const solutionsColLeft = solutionsNavItems.slice(0, 3);
-  const solutionsColRight = solutionsNavItems.slice(3, 6);
+  const solutionsCatalog = getSolutionsCatalog(language);
+  const solutionsMeta = getSolutionsMeta(language);
+  const safeActive = Math.min(activeCategory, solutionsCatalog.length - 1);
+  const currentCategory = solutionsCatalog[safeActive] || solutionsCatalog[0];
 
   const languageOptions = [
     { key: 'fr', label: navLabels.french, flagSrc: '/a_rfidia/z_rfid/fr.png' },
@@ -144,7 +184,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                   <a className="nav-link">{navLabels.about}</a>
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown sm-mega">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -154,45 +194,66 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 >
                   {navLabels.solutions ?? 'Solutions'}
                 </a>
-                <div className="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-                  <div className="dropdown-grid rounded-custom width-solutions">
-                    <div className="dropdown-grid-item rfidia-solutions-col">
-                      {solutionsColLeft.map((item) => (
-                        <Link href={item.href} key={item.title}>
-                          <a className="rfidia-solution-dd-link">
-                            <img
-                              src={item.image}
-                              alt=""
-                              className="rfidia-solution-dd-img"
-                              width={56}
-                              height={44}
-                            />
+                <div className="dropdown-menu border-0 py-0 sm-mega__menu">
+                  <div className="sm-mega__inner">
+                    <div className="sm-mega__cols">
+                      {solutionsCatalog.map((cat) => (
+                        <div className="sm-mega__col" key={cat.key}>
+                          <div className="sm-mega__col-head">
+                            <span
+                              className="sm-mega__col-ico"
+                              style={{ '--cat-accent': cat.accent }}
+                              aria-hidden
+                            >
+                              {CATEGORY_ICONS[cat.key]}
+                            </span>
                             <div>
-                              <span className="rfidia-solution-dd-title">{item.title}</span>
-                              <span className="rfidia-solution-dd-desc">{item.description}</span>
+                              <span className="sm-mega__col-title">{cat.title}</span>
+                              <span className="sm-mega__col-sub">{cat.subtitle}</span>
                             </div>
-                          </a>
-                        </Link>
+                          </div>
+                          <ul className="sm-mega__list">
+                            {cat.items.map((item) => (
+                              <li key={item.id}>
+                                <Link href={item.href} passHref>
+                                  <a
+                                    className="sm-mega__link"
+                                    style={{ '--cat-accent': cat.accent }}
+                                  >
+                                    <span className="sm-mega__link-title">{item.title}</span>
+                                    <span className="sm-mega__link-desc">{item.description}</span>
+                                  </a>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
                     </div>
-                    <div className="dropdown-grid-item rfidia-solutions-col radius-right-side bg-light">
-                      {solutionsColRight.map((item) => (
-                        <Link href={item.href} key={item.title}>
-                          <a className="rfidia-solution-dd-link">
-                            <img
-                              src={item.image}
-                              alt=""
-                              className="rfidia-solution-dd-img"
-                              width={56}
-                              height={44}
-                            />
-                            <div>
-                              <span className="rfidia-solution-dd-title">{item.title}</span>
-                              <span className="rfidia-solution-dd-desc">{item.description}</span>
-                            </div>
+
+                    <div className="sm-mega__footer">
+                      <div className="sm-mega__footer-text">
+                        <strong>{solutionsMeta.cta.title}</strong>
+                        <span>{solutionsMeta.cta.desc}</span>
+                      </div>
+                      <div className="sm-mega__footer-actions">
+                        <Link href="/it-solution" passHref>
+                          <a className="sm-mega__link-all">
+                            {solutionsMeta.viewAll}
+                            <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
                           </a>
                         </Link>
-                      ))}
+                        <Link href="/contact-us" passHref>
+                          <a className="sm-mega__cta-btn">
+                            {solutionsMeta.cta.btn}
+                            <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

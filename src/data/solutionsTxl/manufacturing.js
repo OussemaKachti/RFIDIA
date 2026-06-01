@@ -1,0 +1,220 @@
+import { buildSolution, makeTheme } from "../buildSolution";
+
+const theme = makeTheme("#EA580C", "#FDBA74", "#9A3412");
+
+const copy = {
+  fr: {
+    metaTitle: "RFID Manufacturing | RFIDIA",
+    metaDesc:
+      "Suivi WIP, tracabilite production et gestion des outillages : RFIDIA aide les sites industriels a fiabiliser leurs flux, securiser leur qualite et gagner en productivite.",
+    heroEyebrow: "Manufacturing • WIP, outillage, qualite",
+    heroTitleA: "L'atelier",
+    heroTitleB: "sous controle,",
+    heroTitleC: "phase par phase",
+    heroSub:
+      "Vos lignes enchainent des etapes precises, sur des matieres et des outillages couteux. RFIDIA vous donne une visibilite continue sur le WIP, les actifs et la qualite — sans complexifier le poste de travail.",
+    heroCta1: "Discuter de mon site",
+    heroCta2: "Voir toutes les solutions",
+    kpis: [
+      { v: "+15%", l: "OEE de ligne" },
+      { v: "-40%", l: "Erreurs de montage" },
+      { v: "100%", l: "Tracabilite serie" },
+    ],
+    modulesTitle: "Une couverture pensee pour l'industrie",
+    modulesDesc:
+      "Six briques qu'on assemble selon votre site : production a la commande, serie, environnements sales, propres ou contraints.",
+    modules: [
+      { title: "Suivi WIP temps reel", desc: "Identifier chaque OF, kit ou sous-ensemble, et suivre son passage de poste en poste sans saisie manuelle." },
+      { title: "Tracabilite produit & serie", desc: "Constituer le dossier de fabrication numerique : matieres, parametres, controles et signatures, exportable pour audit ou rappel." },
+      { title: "Anti-erreur de montage", desc: "Verification automatique de la conformite kit / OF au moment du montage pour eviter les retours qualite." },
+      { title: "Gestion des outillages", desc: "Localisation des moules, gabarits et outils critiques, suivi des usages et plans de maintenance preventive." },
+      { title: "Contenants & kits retournables", desc: "Piloter la rotation des bacs, palettes et chariots pour reduire l'immobilisation et les pertes." },
+      { title: "Integration ERP / MES", desc: "Connexion fluide avec SAP, Oracle, MES et solutions de qualite : l'RFID enrichit vos outils, sans les remplacer." },
+    ],
+    journeyTitle: "Du POC ligne pilote au deploiement multi-sites",
+    journeyDesc:
+      "Nos demarrages sont courts et concrets, pour valider la promesse avant d'industrialiser.",
+    journey: [
+      { n: "01", t: "Cadrage & valeur cible", d: "Visite atelier, choix d'une ligne ou cellule pilote, indicateurs de gain et architecture cible." },
+      { n: "02", t: "POC industriel", d: "Tags, lecteurs, integrations minimales et formation des operateurs sur 4 a 8 semaines." },
+      { n: "03", t: "Deploiement", d: "Roll-out par ligne, atelier ou site, avec procedures harmonisees et raccordements ERP/MES." },
+      { n: "04", t: "Pilotage continu", d: "Indicateurs OEE, qualite et tracabilite suivis dans la duree, ajustements et nouveaux cas d'usage." },
+    ],
+    proofTitle: "Contextes industriels typiques",
+    proofDesc: "Quelques environnements ou la valeur s'installe rapidement.",
+    proofs: [
+      "Automobile & equipementiers : tracabilite serie, anti-erreur kit, suivi de ligne.",
+      "Aeronautique & defense : conformite, dossier de fabrication numerique et audit prêt en quelques clics.",
+      "Pharma, cosmetique et agroalimentaire : tracabilite lots, environnements proprietes et conformite reglementaire.",
+      "Mecanique & process : outillage critique, contenants retournables, maintenance preventive.",
+    ],
+    ctaTitle: "Connectons votre atelier au reel",
+    ctaSub:
+      "Decrivez-nous vos lignes, vos contraintes (ATEX, hautes temperatures, environnement propre) et vos objectifs — nous batissons un plan industriel realiste.",
+    ctaBtn: "Contactez RFIDIA",
+    ctaAlt: "Retour aux solutions",
+    applicationsTitle: "Applications RFID en environnement industriel",
+    applicationsDesc: "Six cas d'usage concrets qui transforment l'atelier sans bouleverser les postes de travail.",
+    applications: [
+      { title: "Tracabilite WIP en ligne", desc: "Suivi automatique des OF de poste en poste, sans saisie ni douchette." },
+      { title: "Suivi qualite produit", desc: "Constitution numerique du dossier de fabrication, exportable pour audit ou rappel." },
+      { title: "Anti-erreur de montage", desc: "Verification automatique de la conformite kit / OF avant assemblage." },
+      { title: "Gestion des outillages", desc: "Moules, gabarits et tools critiques localises et maintenus en condition." },
+      { title: "Pilotage des contenants", desc: "Palettes, bacs et chariots retournables suivis en boucle, sans pertes." },
+      { title: "Cycle matieres et MP", desc: "Reception, stockage tampon et consommation poste : sortie automatique du stock." },
+    ],
+    verticalsTitle: "Industries qui choisissent RFIDIA",
+    verticalsDesc: "Du serie a la commande, nos solutions s'adaptent aux contraintes du process et des produits.",
+    verticals: [
+      { name: "Automobile & equipementiers", desc: "Tracabilite serie et kits anti-erreur." },
+      { name: "Aeronautique & defense", desc: "Conformite et dossier de fabrication." },
+      { name: "Pharma & cosmetique", desc: "Tracabilite lots, environnements proprietes." },
+      { name: "Agroalimentaire", desc: "Tracabilite produit et chaine du froid." },
+      { name: "Mecanique generale", desc: "Outillage critique, contenants retournables." },
+      { name: "Electronique & electrique", desc: "Composants et conformite reglementaire." },
+    ],
+  },
+  en: {
+    metaTitle: "RFID in Manufacturing | RFIDIA",
+    metaDesc:
+      "WIP tracking, production traceability and tooling management: RFIDIA helps industrial sites stabilise flows, secure quality and gain productivity.",
+    heroEyebrow: "Manufacturing • WIP, tooling, quality",
+    heroTitleA: "Your shop floor",
+    heroTitleB: "under control,",
+    heroTitleC: "phase after phase",
+    heroSub:
+      "Your lines run precise sequences on expensive materials and tooling. RFIDIA brings continuous visibility on WIP, assets and quality — without making the workstation more complex.",
+    heroCta1: "Discuss my site",
+    heroCta2: "All solutions",
+    kpis: [
+      { v: "+15%", l: "Line OEE" },
+      { v: "-40%", l: "Assembly errors" },
+      { v: "100%", l: "Serial traceability" },
+    ],
+    modulesTitle: "A coverage built for industry",
+    modulesDesc:
+      "Six building blocks we combine to your site: make-to-order, serial production, dirty, clean or constrained environments.",
+    modules: [
+      { title: "Real-time WIP tracking", desc: "Identify every work order, kit or sub-assembly and follow its journey from station to station with no manual input." },
+      { title: "Product & serial traceability", desc: "Build a digital manufacturing file: materials, parameters, controls and signatures, exportable for audit or recall." },
+      { title: "Assembly mistake-proofing", desc: "Automatic kit / work-order conformity check at the assembly step to avoid quality returns." },
+      { title: "Tooling management", desc: "Locate molds, jigs and critical tools, track usage and run preventive maintenance plans." },
+      { title: "Returnable bins & kits", desc: "Steer the rotation of bins, pallets and trolleys to lower tied-up capital and losses." },
+      { title: "ERP / MES integration", desc: "Seamless link with SAP, Oracle, MES and quality apps: RFID enriches your tools, never replaces them." },
+    ],
+    journeyTitle: "From pilot line POC to multi-site rollout",
+    journeyDesc:
+      "Our starts are short and concrete, validating the promise before industrialising.",
+    journey: [
+      { n: "01", t: "Scoping & target value", d: "Shop visit, pilot line or cell, target KPIs and architecture." },
+      { n: "02", t: "Industrial POC", d: "Tags, readers, minimum integrations and operator training over 4–8 weeks." },
+      { n: "03", t: "Rollout", d: "Line, workshop or site deployment, with harmonised procedures and ERP/MES wiring." },
+      { n: "04", t: "Continuous steering", d: "OEE, quality and traceability KPIs followed over time, adjustments and new use cases." },
+    ],
+    proofTitle: "Typical industrial contexts",
+    proofDesc: "Environments where value lands quickly.",
+    proofs: [
+      "Automotive & tier suppliers: serial traceability, kit mistake-proofing, line monitoring.",
+      "Aerospace & defence: compliance, digital manufacturing file and audit-ready in a few clicks.",
+      "Pharma, cosmetics and food: lot traceability, controlled environments and regulatory compliance.",
+      "Mechanical & process: critical tooling, returnable containers, preventive maintenance.",
+    ],
+    ctaTitle: "Let's connect your shop floor to reality",
+    ctaSub:
+      "Describe your lines, constraints (ATEX, high temperatures, clean rooms) and goals — we'll build a realistic industrial plan.",
+    ctaBtn: "Contact RFIDIA",
+    ctaAlt: "Back to solutions",
+    applicationsTitle: "RFID applications on the shop floor",
+    applicationsDesc: "Six concrete use cases that transform the plant without disrupting workstations.",
+    applications: [
+      { title: "On-line WIP traceability", desc: "Automatic work-order tracking from station to station — no manual scan." },
+      { title: "Product quality control", desc: "Digital manufacturing file, exportable for audit or recall." },
+      { title: "Assembly mistake-proofing", desc: "Automatic kit / work-order conformity check before assembly." },
+      { title: "Tooling management", desc: "Molds, jigs and critical tools located and maintained in condition." },
+      { title: "Returnable containers", desc: "Pallets, bins and trolleys tracked in loop with no losses." },
+      { title: "Raw material cycle", desc: "Reception, buffer storage and workstation consumption: automatic stock out." },
+    ],
+    verticalsTitle: "Industries that choose RFIDIA",
+    verticalsDesc: "From mass production to make-to-order, our solutions fit process and product constraints.",
+    verticals: [
+      { name: "Automotive & tier suppliers", desc: "Serial traceability and mistake-proof kits." },
+      { name: "Aerospace & defence", desc: "Compliance and manufacturing file." },
+      { name: "Pharma & cosmetics", desc: "Lot traceability, controlled environments." },
+      { name: "Food & beverage", desc: "Product traceability and cold chain." },
+      { name: "Mechanical engineering", desc: "Critical tooling, returnable containers." },
+      { name: "Electronics & electrical", desc: "Components and regulatory compliance." },
+    ],
+  },
+  it: {
+    metaTitle: "RFID Manufacturing | RFIDIA",
+    metaDesc:
+      "Tracking WIP, tracciabilita produzione e gestione attrezzature: RFIDIA aiuta i siti industriali a stabilizzare i flussi, garantire la qualita e guadagnare produttivita.",
+    heroEyebrow: "Manufacturing • WIP, attrezzature, qualita",
+    heroTitleA: "L'officina",
+    heroTitleB: "sotto controllo,",
+    heroTitleC: "fase dopo fase",
+    heroSub:
+      "Le linee eseguono sequenze precise su materiali e attrezzature costosi. RFIDIA porta visibilita continua su WIP, asset e qualita — senza complicare la postazione di lavoro.",
+    heroCta1: "Parliamo del mio sito",
+    heroCta2: "Tutte le soluzioni",
+    kpis: [
+      { v: "+15%", l: "OEE di linea" },
+      { v: "-40%", l: "Errori di montaggio" },
+      { v: "100%", l: "Tracciabilita seriale" },
+    ],
+    modulesTitle: "Una copertura pensata per l'industria",
+    modulesDesc:
+      "Sei blocchi che combiniamo per il tuo sito: produzione a commessa, serie, ambienti sporchi, puliti o vincolati.",
+    modules: [
+      { title: "WIP in tempo reale", desc: "Identifica ogni ordine, kit o sottogruppo e segui il passaggio tra le stazioni senza input manuale." },
+      { title: "Tracciabilita prodotto & seriale", desc: "Costruisci il fascicolo di fabbricazione digitale: materiali, parametri, controlli e firme, esportabile per audit o richiamo." },
+      { title: "Anti-errore montaggio", desc: "Verifica automatica della conformita kit/ordine al momento del montaggio per evitare resi qualita." },
+      { title: "Gestione attrezzature", desc: "Localizza stampi, dime e utensili critici, monitora gli usi e i piani di manutenzione preventiva." },
+      { title: "Contenitori & kit a rendere", desc: "Pilota la rotazione di cassette, pallet e carrelli per ridurre immobilizzo e perdite." },
+      { title: "Integrazione ERP / MES", desc: "Collegamento fluido con SAP, Oracle, MES e applicazioni qualita: l'RFID arricchisce i tuoi strumenti, non li sostituisce." },
+    ],
+    journeyTitle: "Dal POC linea pilota al rollout multi-sito",
+    journeyDesc: "Avvii brevi e concreti, per validare prima di industrializzare.",
+    journey: [
+      { n: "01", t: "Cadrage & valore target", d: "Visita officina, linea o cellula pilota, KPI target e architettura." },
+      { n: "02", t: "POC industriale", d: "Tag, lettori, integrazioni minime e formazione operatori in 4-8 settimane." },
+      { n: "03", t: "Rollout", d: "Deploy per linea, reparto o sito, con procedure armonizzate e collegamento ERP/MES." },
+      { n: "04", t: "Pilotaggio continuo", d: "KPI OEE, qualita e tracciabilita nel tempo, aggiustamenti e nuovi casi d'uso." },
+    ],
+    proofTitle: "Contesti industriali tipici",
+    proofDesc: "Ambienti in cui il valore si manifesta rapidamente.",
+    proofs: [
+      "Automotive & fornitori: tracciabilita seriale, anti-errore kit, monitoraggio di linea.",
+      "Aeronautica & difesa: conformita, fascicolo digitale di fabbricazione e audit pronto in pochi clic.",
+      "Pharma, cosmetica e alimentare: tracciabilita lotti, ambienti controllati e conformita normativa.",
+      "Meccanica & processo: attrezzature critiche, imballi a rendere, manutenzione preventiva.",
+    ],
+    ctaTitle: "Colleghiamo la tua officina al reale",
+    ctaSub:
+      "Raccontaci linee, vincoli (ATEX, alte temperature, camere bianche) e obiettivi — costruiamo un piano industriale realistico.",
+    ctaBtn: "Contatta RFIDIA",
+    ctaAlt: "Torna alle soluzioni",
+    applicationsTitle: "Applicazioni RFID in officina",
+    applicationsDesc: "Sei casi d'uso concreti che trasformano lo stabilimento senza alterare le postazioni di lavoro.",
+    applications: [
+      { title: "Tracciabilita WIP in linea", desc: "Tracking automatico degli ordini di lavoro da stazione a stazione, senza scan manuale." },
+      { title: "Controllo qualita prodotto", desc: "Fascicolo digitale di fabbricazione esportabile per audit o richiamo." },
+      { title: "Anti-errore montaggio", desc: "Verifica automatica conformita kit / ordine prima dell'assemblaggio." },
+      { title: "Gestione attrezzature", desc: "Stampi, dime e utensili critici localizzati e mantenuti in efficienza." },
+      { title: "Imballi a rendere", desc: "Pallet, cassette e carrelli tracciati in loop, zero perdite." },
+      { title: "Ciclo materie prime", desc: "Ricezione, stoccaggio buffer e consumo a postazione: prelievo automatico." },
+    ],
+    verticalsTitle: "Industrie che scelgono RFIDIA",
+    verticalsDesc: "Dalla serie alla commessa, le nostre soluzioni si adattano a processo e prodotto.",
+    verticals: [
+      { name: "Automotive & fornitori", desc: "Tracciabilita seriale e kit anti-errore." },
+      { name: "Aeronautica & difesa", desc: "Conformita e fascicolo di fabbricazione." },
+      { name: "Pharma & cosmetica", desc: "Tracciabilita lotti, ambienti controllati." },
+      { name: "Alimentare", desc: "Tracciabilita prodotto e catena del freddo." },
+      { name: "Meccanica generale", desc: "Attrezzature critiche, imballi a rendere." },
+      { name: "Elettronica & elettrico", desc: "Componenti e conformita normativa." },
+    ],
+  },
+};
+
+export default buildSolution(theme, "/a_rfidia/z_industriel/z_industriel.png", copy);
