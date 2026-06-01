@@ -7,14 +7,14 @@
 
 .rfidia-topbar {
   background: linear-gradient(90deg, rgba($dark, 0.95) 0%, rgba(#133c4c, 0.96) 100%);
-.sg-section {
+  color: rgba($white, 0.92);
+  border-bottom: 1px solid rgba($white, 0.08);
   position: relative;
-  padding: 6rem 0 5rem;
-  background: linear-gradient(to bottom, rgba(170,205,220,0.10), rgba(170,205,220,0.07));
-  color: #1E2A4A;
-  overflow: hidden;
-  isolation: isolate;
+  z-index: 11;
 }
+
+.rfidia-topbar__inner {
+  min-height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 .rfidia-topbar__left {
-  color: #1E2A4A;
+  display: flex;
   align-items: center;
   gap: 18px;
   flex-wrap: wrap;
@@ -30,20 +30,20 @@
 
 .rfidia-topbar__item {
   display: inline-flex;
-  color: #1E2A4A;
+  align-items: center;
   gap: 8px;
   color: rgba($white, 0.88);
   text-decoration: none;
   font-size: 0.82rem;
-  color: rgba(30,42,74,0.72);
+  font-weight: 500;
   line-height: 1.2;
   transition: color 0.2s ease;
 
   svg {
     color: #4dc8c4;
     font-size: 0.8rem;
-  background: rgba(30,42,74,0.06);
-  border: 1px solid rgba(30,42,74,0.12);
+    flex-shrink: 0;
+  }
 
   &:hover {
     color: $white;
@@ -51,59 +51,59 @@
 }
 
 .rfidia-topbar__right {
-  color: #1E2A4A; line-height: 1; letter-spacing: -0.02em;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.72rem; color: rgba(30,42,74,0.62);
+}
 
 .rfidia-topbar__social {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: rgba(30,42,74,0.18);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  --accent: #1E2A4A;
+  color: rgba($white, 0.9);
   text-decoration: none;
   background: rgba($white, 0.07);
-  --accent: #1E2A4A;
+  border: 1px solid rgba($white, 0.12);
   transition: all 0.2s ease;
-  background: rgba(30, 42, 74, 0.06);
-  border: 1px solid rgba(30, 42, 74, 0.12);
+
+  &:hover {
     color: $white;
     transform: translateY(-1px);
-  background: rgba(30, 42, 74, 0.12);
+    border-color: rgba(#4dc8c4, 0.55);
     background: rgba(#4dc8c4, 0.16);
   }
-  box-shadow: 0 18px 40px -20px rgba(30, 42, 74, 0.35);
+}
 
 .affix {
-  background: rgba(30, 42, 74, 0.12);
-  border: 1px solid rgba(30, 42, 74, 0.2);
-  color: #1E2A4A;
+  top: 0;
+  left: 0;
+  margin: auto;
   position: fixed;
   width: 100%;
-  color: #1E2A4A;
+  z-index: 9;
   animation: 300ms ease-in-out fadeInDown;
   background: $dark;
   padding: 10px 0;
-  color: rgba(30, 42, 74, 0.7);
+  transition: $transition-base;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-  --accent: #1E2A4A;
+/*dropdown menu css*/
 .dropdown-grid {
   display: grid;
-  background: rgba(30,42,74,0.06);
-  border: 1px solid rgba(30,42,74,0.12);
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   background: $white;
 }
 .dropdown-grid.width-half {
-  color: #1E2A4A;
+  grid-template-columns: 1fr;
   width: 320px;
 }
 
-  color: rgba(30,42,74,0.72);
+.dropdown-grid.width-full {
   grid-template-columns: 1fr 1fr;
   width: 650px;
 }
