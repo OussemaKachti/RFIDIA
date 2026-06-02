@@ -634,30 +634,17 @@ const AboutUs = () => {
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
-          gap: 16px;
+          gap: 20px;
+          color: #fff;
         }
-        .rf-about-cta-inner h2 {
+        .rf-about-cta-inner :global(h2) {
           color: #fff;
           margin: 0 0 8px;
-          font-weight: 900;
+          font-weight: 800;
         }
-        .rf-about-cta-inner p {
-          color: rgba(255, 255, 255, 0.86);
+        .rf-about-cta-inner :global(p) {
+          color: rgba(255,255,255,0.78);
           margin: 0;
-          max-width: 560px;
-          line-height: 1.7;
-        }
-        @media (max-width: 991px) {
-          .rf-about :global(.ptb-120) {
-            padding-top: 64px !important;
-            padding-bottom: 64px !important;
-          }
-          .rf-about :global(.pt-120) {
-            padding-top: 64px !important;
-          }
-          .rf-check-list {
-            grid-template-columns: 1fr;
-          }
         }
       `}</style>
     </Layout>
@@ -665,4 +652,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
