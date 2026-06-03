@@ -1105,10 +1105,10 @@ const ItSolution = () => {
           <div className="container position-relative">
             <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <span className="rl-badge">
+                {/* <span className="rl-badge">
                   <span className="rl-badge__dot" />
                   {t.heroBadge}
-                </span>
+                </span> */}
                 <h1 className="rl-hero__title">
                   {t.heroTitlePrefix} <span className="rl-gradient-text">{t.heroTitleAccent}</span><br />
                   {t.heroTitleSuffix}
