@@ -112,7 +112,7 @@ const PAGE_CAT_ICONS = {
 const PAGE_HEAD = {
   fr: {
     eyebrow: "Catalogue Solutions",
-    title: "Toutes nos solutions RFID, sur une seule page",
+    title: "Nos Solutions",
     desc: "Onze solutions concrètes, organisées par enjeu métier — pour identifier en quelques secondes celle qui répond à votre besoin.",
     tabAll: "Toutes",
     ctaLabel: "Découvrir la solution",
@@ -126,7 +126,7 @@ const PAGE_HEAD = {
   },
   en: {
     eyebrow: "Solutions Catalog",
-    title: "All RFID solutions, on a single page",
+    title: "Our Solutions",
     desc: "Eleven concrete solutions, organised by business outcome — to identify the right fit in seconds.",
     tabAll: "All",
     ctaLabel: "Explore solution",
@@ -140,7 +140,7 @@ const PAGE_HEAD = {
   },
   it: {
     eyebrow: "Catalogo Soluzioni",
-    title: "Tutte le soluzioni RFID, su una sola pagina",
+    title: "Le Nostre Soluzioni",
     desc: "Undici soluzioni concrete, organizzate per esigenza di business — per identificare in pochi secondi quella giusta.",
     tabAll: "Tutte",
     ctaLabel: "Esplora soluzione",
@@ -374,7 +374,7 @@ const i18nContent = {
       about: "À Propos",
       solutions: "Nos Solutions",
       sectors: "Secteurs d'Activité",
-      projects: "Nos Réalisations",
+      services: "Nos Services",
       contact: "Contact",
       contactTitle: "Contactez-nous",
       address: "Adresse",
@@ -509,7 +509,7 @@ const i18nContent = {
       about: "About",
       solutions: "Our Solutions",
       sectors: "Industry Sectors",
-      projects: "Our Projects",
+      services: "Our Services",
       contact: "Contact",
       contactTitle: "Contact us",
       address: "Address",
@@ -741,7 +741,7 @@ const i18nContent = {
       about: "Chi siamo",
       solutions: "Le nostre soluzioni",
       sectors: "Settori",
-      projects: "I nostri progetti",
+      services: "I nostri servizi",
       contact: "Contatto",
       contactTitle: "Contattaci",
       address: "Indirizzo",
@@ -957,7 +957,7 @@ const i18nContent = {
 const ItSolution = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [language, setLanguage] = useState('fr');
-  const [activeCatTab, setActiveCatTab] = useState('industries');
+  const [activeSolutionId, setActiveSolutionId] = useState(null);
 
   const showcaseSolutionsBase = [
     {
@@ -1165,113 +1165,202 @@ const ItSolution = () => {
           </div>
         </section>
 
-        {/* ── SOLUTIONS GRID — Navy showcase, all 11 in one view ── */}
-        <section className="sg-section">
-          <div className="sg-section__bg" aria-hidden>
-            <span className="sg-section__pattern" />
-            <span className="sg-section__glow sg-section__glow--a" />
-            <span className="sg-section__glow sg-section__glow--b" />
-          </div>
+        {/* ── SOLUTIONS — Explorer split view (.rfx-*) ── */}
+        {(() => {
+          const flatSolutions = solutionsCatalog.flatMap((cat) =>
+            cat.items.map((item) => ({
+              ...item,
+              catKey: cat.key,
+              catTitle: cat.title,
+              catSubtitle: cat.subtitle,
+            }))
+          );
+          const activeSolution =
+            flatSolutions.find((s) => s.id === activeSolutionId) || flatSolutions[0];
 
-          <div className="container position-relative">
-            <header className="sg-head rl-section-head">
-              <SectionDivider />
-              <span className="sg-kicker">{pageHead.eyebrow}</span>
-              <h2 className="sg-title">{pageHead.title}</h2>
-              <p className="sg-lead">{pageHead.desc}</p>
+          const leftCatalog = solutionsCatalog.filter((c) => c.key === "industries");
+          const rightCatalog = solutionsCatalog.filter(
+            (c) => c.key === "assets" || c.key === "traceability"
+          );
 
-              <div className="sg-stats">
-                <div className="sg-stat">
-                  <strong>{solutionsCatalog.reduce((n, c) => n + c.items.length, 0)}</strong>
-                  <span>{pageHead.statSolutions}</span>
-                </div>
-                <span className="sg-stats__sep" aria-hidden />
-                <div className="sg-stat">
-                  <strong>{solutionsCatalog.length}</strong>
-                  <span>{pageHead.statCategories}</span>
-                </div>
-                <span className="sg-stats__sep" aria-hidden />
-                <div className="sg-stat">
-                  <strong>3</strong>
-                  <span>{pageHead.statLanguages}</span>
-                </div>
-              </div>
-            </header>
-
-            {/* Category triggers */}
-            <div className="sg-tabs" role="tablist">
-              {solutionsCatalog.map((cat) => {
-                const isActive = activeCatTab === cat.key;
-                return (
-                  <button
-                    type="button"
-                    key={cat.key}
-                    role="tab"
-                    aria-selected={isActive}
-                    className={`sg-tab${isActive ? ' is-active' : ''}`}
-                    style={{ '--accent': cat.accent }}
-                    onMouseEnter={() => setActiveCatTab(cat.key)}
-                    onFocus={() => setActiveCatTab(cat.key)}
-                    onClick={() => setActiveCatTab(cat.key)}
-                  >
-                    <span className="sg-tab__ico" aria-hidden>
-                      {PAGE_CAT_ICONS[cat.key]}
-                    </span>
-                    <span className="sg-tab__body">
-                      <span className="sg-tab__title">{cat.title}</span>
-                      <span className="sg-tab__sub">{cat.subtitle}</span>
-                    </span>
-                    <span className="sg-tab__count">{cat.items.length}</span>
-                  </button>
-                );
-              })}
+          const renderRailGroup = (cat) => (
+            <div className="rfx-rail__group" key={cat.key} style={{ "--accent": cat.accent }}>
+              <header className="rfx-rail__group-head">
+                <span className="rfx-rail__group-ico" aria-hidden>
+                  {PAGE_CAT_ICONS[cat.key]}
+                </span>
+                <span className="rfx-rail__group-text">
+                  <span className="rfx-rail__group-name">{cat.title}</span>
+                  <span className="rfx-rail__group-sub">{cat.subtitle}</span>
+                </span>
+                <span className="rfx-rail__group-count">{cat.items.length}</span>
+              </header>
+              <ul className="rfx-rail__list">
+                {cat.items.map((item) => (
+                  <li key={item.id}>
+                    <button
+                      type="button"
+                      className={`rfx-rail__item${
+                        activeSolution.id === item.id ? " is-active" : ""
+                      }`}
+                      onClick={() => setActiveSolutionId(item.id)}
+                      onMouseEnter={() => setActiveSolutionId(item.id)}
+                      style={{ "--accent": cat.accent }}
+                    >
+                      <span className="rfx-rail__item-ico" aria-hidden>
+                        {SOLUTION_ICONS[item.id] || PAGE_CAT_ICONS[cat.key]}
+                      </span>
+                      <span className="rfx-rail__item-name">{item.title}</span>
+                      <span className="rfx-rail__item-arrow" aria-hidden>
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                          <path
+                            fillRule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
+          );
 
-            {/* Animated pane revealing the active category's cards */}
-            {solutionsCatalog.map((cat) => {
-              const isActive = activeCatTab === cat.key;
-              if (!isActive) return null;
-              return (
-                <div
-                  key={cat.key}
-                  className={`sg-pane sg-pane--cols-${cat.items.length}`}
-                  role="tabpanel"
-                  style={{ '--accent': cat.accent }}
-                >
-                  {cat.items.map((item, i) => (
-                    <Link href={item.href} key={item.id} passHref>
-                      <a
-                        className="sg-card"
-                        style={{
-                          '--accent': cat.accent,
-                          '--delay': `${i * 60}ms`,
-                        }}
-                      >
-                        <span className="sg-card__ico" aria-hidden>
-                          {SOLUTION_ICONS[item.id] || PAGE_CAT_ICONS[cat.key]}
+          return (
+            <section id="solutions" className="rfx-section">
+              <div className="rfx-section__bg" aria-hidden>
+                <div className="rfx-section__orb rfx-section__orb--a" />
+                <div className="rfx-section__orb rfx-section__orb--b" />
+              </div>
+
+              <div className="container position-relative">
+                <header className="rfx-head">
+                  <SectionDivider />
+                  <h2 className="rfx-title">{pageHead.title}</h2>
+                  <p className="rfx-lead">{pageHead.desc}</p>
+
+                  <div className="rfx-stats">
+                    <div className="rfx-stat">
+                      <strong>{flatSolutions.length}</strong>
+                      <span>{pageHead.statSolutions}</span>
+                    </div>
+                    <span className="rfx-stats__sep" aria-hidden />
+                    <div className="rfx-stat">
+                      <strong>{solutionsCatalog.length}</strong>
+                      <span>{pageHead.statCategories}</span>
+                    </div>
+                    <span className="rfx-stats__sep" aria-hidden />
+                    <div className="rfx-stat">
+                      <strong>3</strong>
+                      <span>{pageHead.statLanguages}</span>
+                    </div>
+                  </div>
+                </header>
+
+                <div className="rfx-explorer">
+                  {/* LEFT — Industries */}
+                  <aside
+                    className="rfx-rail rfx-rail--left"
+                    aria-label={leftCatalog[0]?.title || pageHead.title}
+                  >
+                    {leftCatalog.map(renderRailGroup)}
+                  </aside>
+
+                  {/* CENTER — Live preview */}
+                  <article
+                    className="rfx-panel"
+                    style={{ '--accent': activeSolution.accent }}
+                    key={activeSolution.id}
+                  >
+                    <div className="rfx-panel__media">
+                      <img
+                        src={activeSolution.image}
+                        alt={activeSolution.title}
+                        loading="lazy"
+                      />
+                      <span className="rfx-panel__chip">
+                        <span className="rfx-panel__chip-ico" aria-hidden>
+                          {PAGE_CAT_ICONS[activeSolution.catKey]}
                         </span>
-                        <span className="sg-card__chip">{cat.title}</span>
-                        <h3 className="sg-card__title">{item.title}</h3>
-                        <p className="sg-card__desc">{item.description}</p>
-                        <span className="sg-card__link">
-                          {pageHead.ctaLabel}
-                          <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
-                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </Link>
-                  ))}
+                        {activeSolution.catTitle}
+                      </span>
+                    </div>
+
+                    <div className="rfx-panel__body">
+                      <h3 className="rfx-panel__title">{activeSolution.title}</h3>
+                      <p className="rfx-panel__desc">{activeSolution.description}</p>
+
+                      <div className="rfx-panel__actions">
+                        <Link href={activeSolution.href} passHref>
+                          <a className="rfx-panel__btn rfx-panel__btn--primary">
+                            {pageHead.ctaLabel}
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </a>
+                        </Link>
+                        <Link href="/contact-us" passHref>
+                          <a className="rfx-panel__btn rfx-panel__btn--ghost">
+                            {solutionsMeta.cta.btn}
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+
+                  {/* RIGHT — Actifs & Suivi / traçabilité */}
+                  <aside
+                    className="rfx-rail rfx-rail--right"
+                    aria-label={
+                      rightCatalog.map((c) => c.title).join(" · ") || pageHead.title
+                    }
+                  >
+                    {rightCatalog.map(renderRailGroup)}
+                  </aside>
                 </div>
-              );
-            })}
 
-            
-          </div>
-        </section>
+                {/* <div className="rfx-cta">
+                  <div className="rfx-cta__text">
+                    <strong>{solutionsMeta.cta.title}</strong>
+                    <span>{solutionsMeta.cta.desc}</span>
+                  </div>
+                  <Link href="/contact-us" passHref>
+                    <a className="rfx-cta__btn">
+                      {solutionsMeta.cta.btn}
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </Link>
+                </div> */}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* ── ABOUT ── */}
-        <section className="rl-section rl-about">
+        <section id="about" className="rl-section rl-about">
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
@@ -1436,7 +1525,7 @@ const ItSolution = () => {
         </section>
 
         {/* ── SERVICES ── */}
-        <section className="rl-section rl-services">
+        <section id="services" className="rl-section rl-services">
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />
@@ -1474,7 +1563,7 @@ const ItSolution = () => {
         </section>
 
         {/* ── SECTORS ── */}
-        <section className="rl-section">
+        <section id="sectors" className="rl-section">
           <div className="container">
             <div className="rl-section-head">
               <SectionDivider />

@@ -20,31 +20,31 @@
 const CATEGORIES_BASE = [
   {
     key: "industries",
-    accent: "#2563eb",
+    accent: "#1E2A4A",
     items: [
       { id: "retail", slug: "rfid-retail", image: "/a_rfidia/z_rfid/retail.png" },
       { id: "healthcare", slug: "solution-sante", image: "/a_rfidia/z_medical/z_medical3.png" },
       { id: "hospitality", slug: "solution-hotellerie", image: "/a_rfidia/hotellerie.png" },
       { id: "manufacturing", slug: "rfid-manufacturing", image: "/a_rfidia/z_industriel/z_industriel.png" },
-      { id: "oil_gas", slug: "rfid-oil-gas", image: "/a_rfidia/z_rfid/rfid11.png" },
-      { id: "government", slug: "rfid-government", image: "/a_rfidia/z_rfid/rfid22.png" },
+      { id: "oil_gas", slug: "rfid-oil-gas", image: "/a_rfidia/oil.png" },
+      { id: "government", slug: "rfid-government", image: "/a_rfidia/gouvernement.jpeg" },
       { id: "education", slug: "solution-ecole", image: "/a_rfidia/z_school/school.png" },
     ],
   },
   {
     key: "assets",
-    accent: "#7c3aed",
+    accent: "#4EC8C4",
     items: [
       { id: "asset_tracking", slug: "solution-gestion-actifs", image: "/a_rfidia/z_rfid/z_assets.png" },
-      { id: "it_asset", slug: "rfid-it-asset-management", image: "/a_rfidia/z_rfid/rfid23.png" },
+      { id: "it_asset", slug: "rfid-it-asset-management", image: "/a_rfidia/it.jpeg" },
     ],
   },
   {
     key: "traceability",
-    accent: "#0ea5e9",
+    accent: "#E85D75",
     items: [
       { id: "warehouse", slug: "solution-entrepot", image: "/a_rfidia/z_logistique/z_logistique.png" },
-      { id: "data_center", slug: "rfid-data-center", image: "/a_rfidia/z_rfid/rfid12.png" },
+      { id: "data_center", slug: "rfid-data-center", image: "/a_rfidia/data.jpeg" },
     ],
   },
 ];

@@ -19,24 +19,24 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
     {
       followUs: 'Suivez-nous :',
       companyTitle: 'Notre Entreprise',
-      about: 'A Propos',
+      about: 'À Propos',
       solutions: 'Nos Solutions',
-      sectors: "Secteurs d'Activite",
-      projects: 'Nos Realisations',
+      services: 'Nos Services',
+      sectors: "Secteurs d'Activité",
       contact: 'Contact',
       contactTitle: 'Contactez-nous',
       address: 'Adresse',
       email: 'Email',
-      phone: 'Telephone',
+      phone: 'Téléphone',
       newsletter: 'Newsletter',
-      newsletterDesc: 'Restez informe sur les dernieres innovations en tracabilite et IoT.',
+      newsletterDesc: 'Restez informé sur les dernières innovations en traçabilité et IoT.',
       newsletterPlaceholder: 'Votre adresse email',
       newsletterAria: "S'abonner",
-      copyright: 'Tous droits reserves.',
-      privacy: 'Politique de confidentialite',
-      legal: 'Mentions legales',
+      copyright: 'Tous droits réservés.',
+      privacy: 'Politique de confidentialité',
+      legal: 'Mentions légales',
       brandDesc:
-        'Leader tunisien de la tracabilite intelligente. Nous accompagnons les entreprises dans leur transformation digitale grace a nos solutions RFID, IoT et codes-barres haute performance.',
+        "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     };
   return (
     <>
@@ -88,10 +88,10 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
                 <div className="rfidia-footer-links">
                   <h3>{t.companyTitle}</h3>
                   <ul className="list-unstyled mb-0">
-                    <li><Link href="/about-us"><a>{t.about}</a></Link></li>
-                    <li><Link href="/services"><a>{t.solutions}</a></Link></li>
-                    <li><Link href="/it-solution"><a>{t.sectors}</a></Link></li>
-                    <li><Link href="/blogs"><a>{t.projects}</a></Link></li>
+                    <li><Link href="/it-solution#about"><a>{t.about}</a></Link></li>
+                    <li><Link href="/it-solution#solutions"><a>{t.solutions}</a></Link></li>
+                    <li><Link href="/it-solution#services"><a>{t.services}</a></Link></li>
+                    <li><Link href="/it-solution#sectors"><a>{t.sectors}</a></Link></li>
                     <li><Link href="/contact-us"><a>{t.contact}</a></Link></li>
                   </ul>
                 </div>

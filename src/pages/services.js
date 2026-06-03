@@ -640,7 +640,7 @@ const Services = () => {
         </section>
 
         {/* 5. Minimalist Elegant CTA */}
-        <section className="srv-cta-section py-80 bg-white">
+        {/* <section className="srv-cta-section py-80 bg-white">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10">
@@ -665,7 +665,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer translations={t.footer} />
@@ -746,49 +746,72 @@ const Services = () => {
           margin-right: auto;
         }
 
-        /* Button design */
+        /* Button design — brand teal pill (matches the header "Langue" button) */
         .srv-btn-cyan {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 14px 30px;
-          border-radius: 12px;
-          font-weight: 800;
-          font-size: 1rem;
-          background-color: #4DC8C4;
-          color: #0f1a3d !important;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          box-shadow: 0 8px 24px rgba(77, 200, 196, 0.25);
-          cursor: pointer;
-        }
-
-        .srv-btn-cyan:hover {
-          background-color: #3bb5b1;
-          transform: translateY(-2px);
-          box-shadow: 0 12px 32px rgba(77, 200, 196, 0.35);
-        }
-
-        .srv-btn-outline {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 14px 30px;
-          border-radius: 12px;
-          font-weight: 800;
-          font-size: 1rem;
-          background-color: transparent;
-          color: #0f1a3d !important;
-          text-decoration: none;
-          border: 1px solid #0f1a3d;
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
-
-        .srv-btn-outline:hover {
-          background-color: #0f1a3d;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          padding: 12px 26px !important;
+          border-radius: 999px !important;
+          font-weight: 700 !important;
+          font-size: 0.95rem !important;
+          line-height: 1 !important;
+          background: #4EC8C8 !important;
+          background-image: none !important;
+          background-color: #4EC8C8 !important;
+          border: 1px solid #4EC8C8 !important;
           color: #ffffff !important;
-          transform: translateY(-2px);
+          text-decoration: none !important;
+          transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+          box-shadow: 0 8px 20px rgba(78, 200, 200, 0.28) !important;
+          cursor: pointer !important;
+        }
+
+        .srv-btn-cyan :global(svg) {
+          color: #ffffff !important;
+        }
+
+        .srv-btn-cyan:hover,
+        .srv-btn-cyan:focus,
+        .srv-btn-cyan:active {
+          background: #36B8B8 !important;
+          background-image: none !important;
+          background-color: #36B8B8 !important;
+          border-color: #36B8B8 !important;
+          color: #ffffff !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 12px 28px rgba(78, 200, 200, 0.38) !important;
+        }
+
+        /* Outline pill — same shape/size as .srv-btn-cyan, ghost variant */
+        .srv-btn-outline {
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          padding: 12px 26px !important;
+          border-radius: 999px !important;
+          font-weight: 700 !important;
+          font-size: 0.95rem !important;
+          line-height: 1 !important;
+          background: transparent !important;
+          background-image: none !important;
+          background-color: transparent !important;
+          color: #0f1a3d !important;
+          text-decoration: none !important;
+          border: 1px solid #0f1a3d !important;
+          transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+          box-shadow: none !important;
+          cursor: pointer !important;
+        }
+
+        .srv-btn-outline:hover,
+        .srv-btn-outline:focus,
+        .srv-btn-outline:active {
+          background-color: #0f1a3d !important;
+          border-color: #0f1a3d !important;
+          color: #ffffff !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 12px 28px rgba(15, 26, 61, 0.18) !important;
         }
 
         /* Pillars layout */
