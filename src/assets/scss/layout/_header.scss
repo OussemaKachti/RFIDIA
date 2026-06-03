@@ -346,20 +346,58 @@
   vertical-align: middle;
 }
 
+/* ── Language switcher trigger — compact, clean, professional ── */
 .rfidia-lang-dropdown {
-  .btn.dropdown-toggle,
-  .ins-btn.dropdown-toggle {
-    font-family: $headings-font-family;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    min-width: 170px;
-  }
+  position: relative;
 }
 
-.rfidia-lang-current {
+.rfidia-lang-trigger {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 14px 8px 10px;
+  background: #ffffff;
+  border: 1px solid rgba(30, 42, 74, 0.14);
+  border-radius: 10px;
+  color: #1E2A4A;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 42, 74, 0.06);
+  white-space: nowrap;
+
+  /* Remove Bootstrap dropdown-toggle caret */
+  &::after { display: none !important; }
+
+  &:hover, &:focus {
+    border-color: rgba(78, 200, 200, 0.55);
+    box-shadow: 0 4px 14px rgba(78, 200, 200, 0.16);
+    outline: none;
+  }
+
+  &[aria-expanded="true"] {
+    border-color: #4EC8C8;
+    box-shadow: 0 0 0 3px rgba(78, 200, 200, 0.18);
+  }
+}
+
+.rfidia-lang-trigger__label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  color: #1E2A4A;
+}
+
+.rfidia-lang-trigger__chevron {
+  color: rgba(30, 42, 74, 0.45);
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+}
+.rfidia-lang-trigger[aria-expanded="true"] .rfidia-lang-trigger__chevron {
+  transform: rotate(180deg);
+  color: #4EC8C8;
 }
 
 .rfidia-lang-flag-img {
@@ -368,37 +406,52 @@
   display: block;
   flex: 0 0 auto;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+/* Dropdown menu */
 .rfidia-lang-menu {
-  min-width: 190px;
-  padding: 8px;
-  border-radius: 14px !important;
+  min-width: 160px;
+  padding: 8px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(30, 42, 74, 0.1) !important;
+  box-shadow: 0 16px 40px -12px rgba(17, 22, 56, 0.22) !important;
+  background: #ffffff !important;
+  margin-top: 6px !important;
 }
 
 .rfidia-lang-item {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
   font-family: $headings-font-family;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: $body-color;
-  padding: 10px 12px;
-  transition: all 0.2s ease;
+  color: #1E2A4A;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+  text-align: left;
+  line-height: 1;
 
   &:hover {
-    background: rgba($primary, 0.08);
-    color: $primary;
+    background: rgba(78, 200, 200, 0.08);
+    color: #1E2A4A;
   }
 
-  &.active,
-  &:active {
-    background: rgba($primary, 0.16) !important;
-    color: $primary !important;
-    font-weight: 600;
+  &.active {
+    background: rgba(78, 200, 200, 0.12);
+    color: #1E2A4A;
+    font-weight: 700;
+
+    .rfidia-lang-flag-img {
+      box-shadow: 0 0 0 2px #4EC8C8;
+    }
   }
 }
 

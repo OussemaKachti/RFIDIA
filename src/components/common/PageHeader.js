@@ -51,10 +51,7 @@ const PageHeader = ({ title, desc, integration, blogtags, backgroundImage, eyebr
       </div>
       <div className="container position-relative">
         <div className="ph-hero__inner">
-          <span className="ph-hero__eyebrow">
-            <span className="ph-hero__eyebrow-dot" aria-hidden />
-            {eyebrow || 'RFIDIA'}
-          </span>
+         
           <h1 className="ph-hero__title">{title}</h1>
           {desc && <p className="ph-hero__lead">{desc}</p>}
 

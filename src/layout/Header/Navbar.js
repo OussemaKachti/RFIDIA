@@ -322,30 +322,31 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
           <div className="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
             <div className="dropdown rfidia-lang-dropdown">
               <button
-                className={insurance ? 'ins-btn ins-primary-btn dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                className="rfidia-lang-trigger dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <span className="rfidia-lang-current">
-                  {selectedLanguage.flagClass ? (
-                    <span className={`${selectedLanguage.flagClass} rfidia-lang-flag-img`}></span>
-                  ) : (
-                    <img
-                      src={selectedLanguage.flagSrc}
-                      alt={selectedLanguage.label}
-                      className="rfidia-lang-flag-img"
-                    />
-                  )}
-                  <span>{navLabels.language}: {selectedLanguage.key.toUpperCase()}</span>
-                </span>
+                {selectedLanguage.flagClass ? (
+                  <span className={`${selectedLanguage.flagClass} rfidia-lang-flag-img`}></span>
+                ) : (
+                  <img
+                    src={selectedLanguage.flagSrc}
+                    alt={selectedLanguage.label}
+                    className="rfidia-lang-flag-img"
+                  />
+                )}
+                <span className="rfidia-lang-trigger__label">{selectedLanguage.key.toUpperCase()}</span>
+                <svg className="rfidia-lang-trigger__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </button>
-              <ul className="dropdown-menu dropdown-menu-end shadow border-0 rounded-custom rfidia-lang-menu">
+              <ul className="dropdown-menu dropdown-menu-end rfidia-lang-menu">
                 {languageOptions.map((option) => (
                   <li key={option.key}>
                     <button
                       type="button"
-                      className={`dropdown-item rfidia-lang-item${language === option.key ? ' active' : ''}`}
+                      className={`rfidia-lang-item${language === option.key ? ' active' : ''}`}
                       onClick={() => onLanguageChange && onLanguageChange(option.key)}
                     >
                       {option.flagClass ? (
