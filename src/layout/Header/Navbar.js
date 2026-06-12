@@ -114,13 +114,15 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 <span>
                   Africa Mall Avenue Mustapha Hjeij Ariana 1002, Tunisie</span>
               </a>
-              <a href="mailto:contact@rfidia.com" className="rfidia-topbar__item">
+              <a href="mailto:C.seif@rfidia.com
+" className="rfidia-topbar__item">
                 <HiOutlineMail />
-                <span>contact@rfidia.com</span>
+                <span>C.seif@rfidia.com
+</span>
               </a>
-              <a href="tel:+21694103351" className="rfidia-topbar__item">
+              <a href="tel:+216 27 224 949" className="rfidia-topbar__item">
                 <FaPhoneAlt />
-                <span>+216 94 103 351</span>
+                <span>+216 27 224 949</span>
               </a>
             </div>
             <div className="rfidia-topbar__right">

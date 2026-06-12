@@ -113,14 +113,16 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
                       <div className="icon-box"><HiOutlineMail /></div>
                       <div className="text-box">
                         <strong>{t.email}</strong>
-                        <a href="mailto:contact@rfidia.com">contact@rfidia.com</a>
+                        <a href="mailto:C.seif@rfidia.com
+">C.seif@rfidia.com
+</a>
                       </div>
                     </li>
                     <li>
                       <div className="icon-box"><FaPhoneAlt /></div>
                       <div className="text-box">
                         <strong>{t.phone}</strong>
-                        <a href="tel:+21671234567">+216 71 234 567</a>
+                        <a href="tel:+216 27 224 949">+216 71 234 567</a>
                       </div>
                     </li>
                   </ul>

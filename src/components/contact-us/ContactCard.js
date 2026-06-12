@@ -36,7 +36,8 @@ const ContactCard = ({ content }) => {
                 </p>
               </div>
               <a
-                href="mailto:contact@rfidia.com"
+                href="mailto:C.seif@rfidia.com
+"
                 className="btn btn-link mt-auto"
               >
                 {t.writeToUs}
@@ -55,10 +56,12 @@ const ContactCard = ({ content }) => {
                 </p>
               </div>
               <a
-                href="mailto:contact@rfidia.com"
+                href="mailto:C.seif@rfidia.com
+"
                 className="btn btn-primary mt-auto"
               >
-                contact@rfidia.com
+                C.seif@rfidia.com
+
               </a>
             </div>
           </div>
@@ -74,7 +77,7 @@ const ContactCard = ({ content }) => {
                 </p>
               </div>
               <a href="tel:+21600000000" className="btn btn-link mt-auto">
-                +216 94 103 351
+                +216 27 224 949
               </a>
             </div>
           </div>
