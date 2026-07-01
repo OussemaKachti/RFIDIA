@@ -90,7 +90,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
     const stickyheader = document.querySelector('.main-header');
     setHeaderTop(stickyheader.offsetTop);
     window.addEventListener('scroll', handleScroll);
-    return () => {
+    return () => { 
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
