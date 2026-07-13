@@ -29,8 +29,8 @@ const IconComponent = ({ name, className }) => {
 
 const i18nContent = {
   fr: {
-    metaTitle: "Services & Ingénierie RFID & IoT | RFIDIA",
-    metaDesc: "Audit de site, intégration matérielle, middleware sur-mesure et support 24/7. RFIDIA conçoit votre architecture de traçabilité de A à Z.",
+    metaTitle: "Services RFID & IoT en Tunisie | Ingénierie & Intégration | RFIDIA",
+    metaDesc: "Expert RFID Tunisie : audit de site, intégration matérielle, middleware sur-mesure et support 24/7. RFIDIA conçoit votre architecture de traçabilité RFID et IoT de A à Z.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -68,13 +68,13 @@ const i18nContent = {
     },
     heroTag: "Nos Services & Expertise",
     heroTitle: "L'ingénierie de précision pour vos flux physiques.",
-    heroDesc: "De la phase de conseil initiale à la maintenance opérationnelle continue, RFIDIA conçoit et intègre des solutions de traçabilité RFID & IoT sur mesure pour fiabiliser et automatiser vos opérations industrielles.",
+    heroDesc: "De la phase de conseil initiale à la maintenance opérationnelle continue, RFIDIA conçoit et intègre en Tunisie des solutions de traçabilité RFID & IoT sur mesure pour fiabiliser et automatiser vos opérations industrielles.",
     heroCta: "Parler à un ingénieur",
     heroSubCta: "Nos solutions",
 
     sectionServicesTag: "Champs d'intervention",
     sectionServicesTitle: "Des prestations conçues pour la performance terrain",
-    sectionServicesDesc: "Nous intervenons sur l'ensemble de la chaîne de valeur pour transformer vos défis physiques en flux de données fiables.",
+    sectionServicesDesc: "Spécialiste de la traçabilité RFID en Tunisie, nous intervenons sur l'ensemble de la chaîne de valeur pour transformer vos défis physiques en flux de données fiables.",
 
     servicesList: [
       {
@@ -161,13 +161,13 @@ const i18nContent = {
 
     ctaTag: "Lancez votre projet",
     ctaTitle: "Prêt à connecter vos opérations ?",
-    ctaDesc: "Contactez nos ingénieurs pour planifier un audit préliminaire ou une démonstration personnalisée dans vos locaux.",
+    ctaDesc: "Contactez nos ingénieurs RFID & IoT en Tunisie pour planifier un audit préliminaire ou une démonstration personnalisée dans vos locaux.",
     ctaBtnPrimary: "Prendre RDV avec un expert",
     ctaBtnSecondary: "Parcourir nos solutions"
   },
   en: {
-    metaTitle: "Services & RFID/IoT Engineering | RFIDIA",
-    metaDesc: "Site survey, hardware integration, custom middleware, and 24/7 support. RFIDIA designs your traceability architecture from A to Z.",
+    metaTitle: "RFID & IoT Services in Tunisia | Engineering & Integration | RFIDIA",
+    metaDesc: "RFID expert in Tunisia: site survey, hardware integration, custom middleware, and 24/7 support. RFIDIA designs your RFID and IoT traceability architecture from A to Z.",
     navbar: {
       home: "Home",
       about: "About",
