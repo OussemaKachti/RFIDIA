@@ -67,16 +67,13 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
                     <span>{t.followUs}</span>
                     <ul className="list-unstyled list-inline mb-0">
                       <li className="list-inline-item">
-                        <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+                        <a href="https://www.linkedin.com/in/rfidtunisie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
                       </li>
                       <li className="list-inline-item">
-                        <a href="#" aria-label="Twitter"><FaTwitter /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61569189391534" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
                       </li>
                       <li className="list-inline-item">
-                        <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                      </li>
-                      <li className="list-inline-item">
-                        <a href="#" aria-label="YouTube"><FaYoutube /></a>
+                        <a href="https://www.youtube.com/@rfidiai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
                       </li>
                     </ul>
                   </div>
