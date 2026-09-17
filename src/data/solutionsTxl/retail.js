@@ -4,7 +4,7 @@ const theme = makeTheme("#EC4899", "#F9A8D4", "#9D174D");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Retail | RFIDIA",
+    metaTitle: "RFID Retail Tunisie | RFIDIA",
     metaDesc:
       "Inventaire fiable a 98%, demarque reduite et experience client connectee : RFIDIA equipe les enseignes de mode, beaute, sport, bijouterie, luxe et grande distribution.",
     heroEyebrow: "Retail • Inventaire, demarque, experience client",
@@ -75,7 +75,7 @@ const copy = {
     ],
   },
   en: {
-    metaTitle: "RFID in Retail | RFIDIA",
+    metaTitle: "RFID Retail Tunisia | RFIDIA",
     metaDesc:
       "98%+ inventory accuracy, lower shrinkage and a connected store experience: RFIDIA equips fashion, beauty, sports, jewellery, luxury and mass-retail brands.",
     heroEyebrow: "Retail • Accuracy, loss prevention, customer experience",
@@ -145,7 +145,7 @@ const copy = {
     ],
   },
   it: {
-    metaTitle: "RFID Retail | RFIDIA",
+    metaTitle: "RFID Retail Tunisia | RFIDIA",
     metaDesc:
       "Inventario al 98%, riduzione delle perdite ed esperienza connessa: RFIDIA equipaggia moda, beauty, sport, gioielleria, lusso e GDO.",
     heroEyebrow: "Retail • Accuratezza, anti-perdite, customer experience",

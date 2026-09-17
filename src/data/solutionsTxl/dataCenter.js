@@ -4,7 +4,7 @@ const theme = makeTheme("#0EA5E9", "#7DD3FC", "#0369A1");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Data Center | RFIDIA",
+    metaTitle: "RFID Data Center Tunisie | RFIDIA",
     metaDesc:
       "Inventaire automatise, securite physique et audit en quelques minutes : RFIDIA modernise la gestion des actifs de votre data center, sans perturber l'exploitation.",
     heroEyebrow: "Data Center • Inventaire, securite, audit",
@@ -75,7 +75,7 @@ const copy = {
     ],
   },
   en: {
-    metaTitle: "RFID in Data Center | RFIDIA",
+    metaTitle: "RFID Data Center Tunisia | RFIDIA",
     metaDesc:
       "Automated inventory, physical security and audit in minutes: RFIDIA modernises your data center asset management without disrupting operations.",
     heroEyebrow: "Data Center • Inventory, security, audit",
@@ -145,7 +145,7 @@ const copy = {
     ],
   },
   it: {
-    metaTitle: "RFID Data Center | RFIDIA",
+    metaTitle: "RFID Data Center Tunisia | RFIDIA",
     metaDesc:
       "Inventario automatico, sicurezza fisica e audit in pochi minuti: RFIDIA moderniza la gestione asset del tuo data center senza interrompere l'esercizio.",
     heroEyebrow: "Data Center • Inventario, sicurezza, audit",

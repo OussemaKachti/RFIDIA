@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution Hôtellerie | RFIDIA",
+    metaTitle: "RFID Tunisie : Solution Hôtellerie | RFIDIA",
     metaDesc:
-      "Expérience client fluide, opérations maîtrisées : traçabilité RFID et automatisation pour l’hôtellerie (linge, équipements, accès, maintenance).",
+      "RFIDIA, expert RFID en Tunisie : expérience client fluide, opérations maîtrisées, traçabilité RFID et automatisation pour l’hôtellerie (linge, équipements, accès, maintenance).",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -173,9 +173,9 @@ const i18n = {
     moduleCashlessModelItems: ["Cloud sécurisé", "Abonnement flexible", "Multi-sites", "Support technique local"],
   },
   en: {
-    metaTitle: "Hospitality Solution | RFIDIA",
+    metaTitle: "RFID Tunisia: Hospitality Solution | RFIDIA",
     metaDesc:
-      "Smooth guest experience, controlled operations: RFID traceability & automation for hospitality (linen, equipment, access, maintenance).",
+      "RFIDIA, RFID expert in Tunisia: smooth guest experience, controlled operations, RFID traceability & automation for hospitality (linen, equipment, access, maintenance).",
     navbar: {
       home: "Home",
       about: "About",
@@ -271,9 +271,9 @@ const i18n = {
     moduleCashlessModelItems: ["Secure Cloud", "Flexible Subscription", "Multi-site Support", "Local Technical Support"],
   },
   it: {
-    metaTitle: "Soluzione Ospitalità | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Ospitalità | RFIDIA",
     metaDesc:
-      "Esperienza ospite fluida, operazioni sotto controllo: tracciabilità RFID e automazione per ospitalità (biancheria, attrezzature, accessi, manutenzione).",
+      "RFIDIA, esperto RFID in Tunisia: esperienza ospite fluida, operazioni sotto controllo, tracciabilità RFID e automazione per ospitalità (biancheria, attrezzature, accessi, manutenzione).",
     navbar: {
       home: "Home",
       about: "Chi siamo",

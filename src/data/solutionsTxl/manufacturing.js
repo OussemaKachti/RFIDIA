@@ -4,7 +4,7 @@ const theme = makeTheme("#EA580C", "#FDBA74", "#9A3412");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Manufacturing | RFIDIA",
+    metaTitle: "RFID Manufacturing Tunisie | RFIDIA",
     metaDesc:
       "Suivi WIP, tracabilite production et gestion des outillages : RFIDIA aide les sites industriels a fiabiliser leurs flux, securiser leur qualite et gagner en productivite.",
     heroEyebrow: "Manufacturing • WIP, outillage, qualite",
@@ -75,7 +75,7 @@ const copy = {
     ],
   },
   en: {
-    metaTitle: "RFID in Manufacturing | RFIDIA",
+    metaTitle: "RFID Manufacturing Tunisia | RFIDIA",
     metaDesc:
       "WIP tracking, production traceability and tooling management: RFIDIA helps industrial sites stabilise flows, secure quality and gain productivity.",
     heroEyebrow: "Manufacturing • WIP, tooling, quality",
@@ -146,7 +146,7 @@ const copy = {
     ],
   },
   it: {
-    metaTitle: "RFID Manufacturing | RFIDIA",
+    metaTitle: "RFID Manufacturing Tunisia | RFIDIA",
     metaDesc:
       "Tracking WIP, tracciabilita produzione e gestione attrezzature: RFIDIA aiuta i siti industriali a stabilizzare i flussi, garantire la qualita e guadagnare produttivita.",
     heroEyebrow: "Manufacturing • WIP, attrezzature, qualita",

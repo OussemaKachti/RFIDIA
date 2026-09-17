@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Gestion des Actifs | RFIDIA",
+    metaTitle: "RFID Tunisie : Gestion des Actifs | RFIDIA",
     metaDesc:
-      "Localisez, sécurisez et optimisez vos équipements critiques grâce à la traçabilité RFID/IoT : inventaires rapides, réduction des pertes et pilotage du parc.",
+      "RFIDIA, expert RFID en Tunisie, vous aide à localiser, sécuriser et optimiser vos équipements critiques grâce à la traçabilité RFID/IoT : inventaires rapides, réduction des pertes et pilotage du parc.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -166,9 +166,9 @@ const i18n = {
     ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "Asset Management | RFIDIA",
+    metaTitle: "RFID Tunisia: Asset Management Solution | RFIDIA",
     metaDesc:
-      "Locate, secure and optimize critical equipment with RFID/IoT traceability: faster inventories, fewer losses and better fleet control.",
+      "RFIDIA, RFID expert in Tunisia, helps you locate, secure and optimize critical equipment with RFID/IoT traceability: faster inventories, fewer losses and better fleet control.",
     navbar: {
       home: "Home",
       about: "About",
@@ -255,9 +255,9 @@ const i18n = {
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Gestione Asset | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Gestione Asset | RFIDIA",
     metaDesc:
-      "Localizza, proteggi e ottimizza attrezzature critiche con tracciabilità RFID/IoT: inventari rapidi, meno perdite e governance del parco.",
+      "RFIDIA, esperto RFID in Tunisia, ti aiuta a localizzare, proteggere e ottimizzare attrezzature critiche con tracciabilità RFID/IoT: inventari rapidi, meno perdite e governance del parco.",
     navbar: {
       home: "Home",
       about: "Chi siamo",

@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution Textile | RFIDIA",
+    metaTitle: "RFID Tunisie : Traçabilité Textile | RFIDIA",
     metaDesc:
-      "Traçabilité textile de bout en bout : production, qualité, stock, omnicanal, lutte anti-contrefaçon et expérience client renforcée.",
+      "RFIDIA, expert RFID en Tunisie : traçabilité textile de bout en bout, production, qualité, stock, omnicanal, lutte anti-contrefaçon et expérience client renforcée.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -159,9 +159,9 @@ const i18n = {
     ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "Textile Solution | RFIDIA",
+    metaTitle: "RFID Tunisia: Textile Traceability Solution | RFIDIA",
     metaDesc:
-      "End-to-end textile traceability: production, quality, stock, omnichannel, anti-counterfeit and stronger customer experience.",
+      "RFIDIA, RFID expert in Tunisia: end-to-end textile traceability, production, quality, stock, omnichannel, anti-counterfeit and stronger customer experience.",
     navbar: {
       home: "Home",
       about: "About",
@@ -240,9 +240,9 @@ const i18n = {
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Tessile | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Tracciabilità Tessile | RFIDIA",
     metaDesc:
-      "Tracciabilità tessile end-to-end: produzione, qualità, stock, omnicanale, anti-contraffazione ed esperienza cliente.",
+      "RFIDIA, esperto RFID in Tunisia: tracciabilità tessile end-to-end, produzione, qualità, stock, omnicanale, anti-contraffazione ed esperienza cliente.",
     navbar: {
       home: "Home",
       about: "Chi siamo",

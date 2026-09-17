@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Système Entrepôt & Logistique | RFIDIA",
+    metaTitle: "RFID Tunisie : Entrepôt & Logistique | RFIDIA",
     metaDesc:
-      "Inventaire en temps réel, automatisation des quais de réception/expédition et pilotage des flux logistiques grâce à la technologie RFID industrielle.",
+      "RFIDIA, expert RFID en Tunisie : inventaire en temps réel, automatisation des quais de réception/expédition et pilotage des flux logistiques grâce à la technologie RFID industrielle.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -159,9 +159,9 @@ const i18n = {
     ctaAlt: "Retour à l'accueil solutions",
   },
   en: {
-    metaTitle: "Warehouse System & Logistics | RFIDIA",
+    metaTitle: "RFID Tunisia: Warehouse & Logistics Solution | RFIDIA",
     metaDesc:
-      "Real-time inventory, automated dock doors, and streamlined logistics flow using industrial RFID technology.",
+      "RFIDIA, RFID expert in Tunisia: real-time inventory, automated dock doors, and streamlined logistics flow using industrial RFID technology.",
     navbar: {
       home: "Home",
       about: "About",
@@ -243,9 +243,9 @@ const i18n = {
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Sistema Magazzino & Logistica | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Magazzino & Logistica | RFIDIA",
     metaDesc:
-      "Inventario in tempo reale, automazione delle baie di carico e gestione dei flussi logistici con tecnologia RFID industriale.",
+      "RFIDIA, esperto RFID in Tunisia: inventario in tempo reale, automazione delle baie di carico e gestione dei flussi logistici con tecnologia RFID industriale.",
     navbar: {
       home: "Home",
       about: "Chi siamo",

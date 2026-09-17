@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution Santé | RFIDIA",
+    metaTitle: "RFID Tunisie : Solution Santé | RFIDIA",
     metaDesc:
-      "Traçabilité et sécurité en santé : suivi des dispositifs médicaux, maîtrise des stocks sensibles, réduction des pertes et meilleure continuité de service.",
+      "RFIDIA, expert RFID en Tunisie : traçabilité et sécurité en santé, suivi des dispositifs médicaux, maîtrise des stocks sensibles, réduction des pertes et meilleure continuité de service.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -150,9 +150,9 @@ const i18n = {
     ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "Healthcare Solution | RFIDIA",
+    metaTitle: "RFID Tunisia: Healthcare Solution | RFIDIA",
     metaDesc:
-      "Traceability and security in healthcare: track devices, control sensitive inventory, reduce losses and improve continuity of service.",
+      "RFIDIA, RFID expert in Tunisia: traceability and security in healthcare, tracking devices, controlling sensitive inventory, reducing losses and improving continuity of service.",
     navbar: {
       home: "Home",
       about: "About",
@@ -224,9 +224,9 @@ const i18n = {
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Sanità | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Sanità | RFIDIA",
     metaDesc:
-      "Tracciabilità e sicurezza in sanità: tracking dispositivi, controllo scorte sensibili, meno perdite e continuità di servizio.",
+      "RFIDIA, esperto RFID in Tunisia: tracciabilità e sicurezza in sanità, tracking dispositivi, controllo scorte sensibili, meno perdite e continuità di servizio.",
     navbar: {
       home: "Home",
       about: "Chi siamo",

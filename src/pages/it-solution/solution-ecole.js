@@ -75,9 +75,9 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "Solution École | RFIDIA",
+    metaTitle: "RFID Tunisie : Solution Traçabilité pour Écoles | RFIDIA",
     metaDesc:
-      "Sécurisez les parcours, maîtrisez le patrimoine pédagogique et simplifiez les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
+      "RFIDIA, expert RFID en Tunisie, sécurise les parcours, maîtrise le patrimoine pédagogique et simplifie les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -159,9 +159,9 @@ const i18n = {
     ctaAlt: "Retour à l’accueil solutions",
   },
   en: {
-    metaTitle: "School Solution | RFIDIA",
+    metaTitle: "RFID Tunisia: School Traceability Solution | RFIDIA",
     metaDesc:
-      "Secure journeys, master educational assets and streamline inventories with RFID traceability designed for schools and campuses.",
+      "RFIDIA, RFID expert in Tunisia, secures journeys, masters educational assets and streamlines inventories with RFID traceability designed for schools and campuses.",
     navbar: {
       home: "Home",
       about: "About",
@@ -240,9 +240,9 @@ const i18n = {
     ctaAlt: "Back to solutions hub",
   },
   it: {
-    metaTitle: "Soluzione Scuola | RFIDIA",
+    metaTitle: "RFID Tunisia: Soluzione Tracciabilità Scuole | RFIDIA",
     metaDesc:
-      "Percorsi più sicuri, patrimonio didattico sotto controllo e inventari semplificati con tracciabilità RFID per istituti scolastici.",
+      "RFIDIA, esperto RFID in Tunisia, offre percorsi più sicuri, patrimonio didattico sotto controllo e inventari semplificati con tracciabilità RFID per istituti scolastici.",
     navbar: {
       home: "Home",
       about: "Chi siamo",

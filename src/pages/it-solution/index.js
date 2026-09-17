@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
@@ -351,6 +352,21 @@ const faqs = [
       "Oui. Nous appliquons les bonnes pratiques de sécurité à chaque étape : architecture sécurisée, contrôle des accès, chiffrement des échanges de données et maintenance régulière pour assurer la continuité de service.",
   },
 ];
+
+// Matches the FAQ section rendered below (French, the language served to crawlers
+// on first load) so the structured data stays consistent with the visible content.
+const FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.answer,
+    },
+  })),
+};
 
 const i18nContent = {
   fr: {
@@ -1092,6 +1108,12 @@ const ItSolution = () => {
       title={t.pageTitle}
       desc={t.pageDesc}
     >
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+        />
+      </Head>
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="rl">

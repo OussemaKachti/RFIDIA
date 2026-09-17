@@ -4,7 +4,7 @@ const theme = makeTheme("#059669", "#6EE7B7", "#065F46");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Gouvernement | RFIDIA",
+    metaTitle: "RFID Gouvernement Tunisie | RFIDIA",
     metaDesc:
       "Maitrise du patrimoine public, securisation des archives et conformite des audits : RFIDIA accompagne ministeres, collectivites et organismes publics dans la traceabilite intelligente.",
     heroEyebrow: "Gouvernement • Patrimoine, archives, transparence",
@@ -75,7 +75,7 @@ const copy = {
     ],
   },
   en: {
-    metaTitle: "RFID in Government | RFIDIA",
+    metaTitle: "RFID Government Tunisia | RFIDIA",
     metaDesc:
       "Public asset control, secure archives and audit compliance: RFIDIA supports ministries, local authorities and public bodies with smart traceability.",
     heroEyebrow: "Government • Assets, archives, transparency",
@@ -146,7 +146,7 @@ const copy = {
     ],
   },
   it: {
-    metaTitle: "RFID PA | RFIDIA",
+    metaTitle: "RFID Pubblica Amministrazione Tunisia | RFIDIA",
     metaDesc:
       "Controllo del patrimonio pubblico, archivi sicuri e conformita degli audit: RFIDIA supporta ministeri, enti locali e organismi pubblici con una tracciabilita intelligente.",
     heroEyebrow: "PA • Patrimonio, archivi, trasparenza",

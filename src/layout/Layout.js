@@ -5,25 +5,67 @@ import { useRouter } from "next/router";
 const SITE_URL = "https://www.rfidia.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/a_rfidia/z_rfid/logo-RFIDIA-final.png`;
 
+// Kept in sync with the Google Business Profile (name, address, phone, hours, rating).
+// If any of these values change on Google Business Profile, update them here too.
 const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": `${SITE_URL}/#organization`,
   name: "RFIDIA",
   url: SITE_URL,
   logo: DEFAULT_OG_IMAGE,
+  image: DEFAULT_OG_IMAGE,
   description:
     "RFIDIA, leader tunisien des solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Africa Mall Avenue Mustapha Hjeij Ariana 1002",
+    streetAddress: "Africa Mall, Avenue Mostapha Hjaij",
     addressLocality: "Ariana",
+    postalCode: "1002",
     addressCountry: "TN",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 36.857962,
+    longitude: 10.1843812,
+  },
+  telephone: "+216-27-224-949",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+216-94-103-351",
+    telephone: "+216-27-224-949",
     contactType: "customer service",
     email: "contact@rfidia.com",
+    areaServed: ["TN", "LY", "MA", "FR", "IT", "ES", "DZ"],
+    availableLanguage: ["French", "English", "Italian", "Arabic"],
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "08:00",
+      closes: "13:30",
+    },
+  ],
+  areaServed: [
+    "Tunisie",
+    "Libye",
+    "Maroc",
+    "France",
+    "Italie",
+    "Espagne",
+    "Algérie",
+    "Afrique de l'Ouest",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "3",
   },
   sameAs: [
     "https://www.facebook.com/profile.php?id=61569189391534",

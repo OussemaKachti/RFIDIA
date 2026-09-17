@@ -4,7 +4,7 @@ const theme = makeTheme("#D97706", "#FCD34D", "#92400E");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Oil & Gas | RFIDIA",
+    metaTitle: "RFID Oil & Gas Tunisie | RFIDIA",
     metaDesc:
       "Suivi des actifs, securite du personnel et tracabilite reglementaire en environnements ATEX : RFIDIA accompagne les operateurs petroliers, gaziers et de l'energie.",
     heroEyebrow: "Oil & Gas • Actifs critiques, securite, conformite",
@@ -75,7 +75,7 @@ const copy = {
     ],
   },
   en: {
-    metaTitle: "RFID in Oil & Gas | RFIDIA",
+    metaTitle: "RFID Oil & Gas Tunisia | RFIDIA",
     metaDesc:
       "Asset tracking, personnel safety and regulatory traceability in ATEX environments: RFIDIA supports oil, gas and energy operators.",
     heroEyebrow: "Oil & Gas • Critical assets, safety, compliance",
@@ -146,7 +146,7 @@ const copy = {
     ],
   },
   it: {
-    metaTitle: "RFID Oil & Gas | RFIDIA",
+    metaTitle: "RFID Oil & Gas Tunisia | RFIDIA",
     metaDesc:
       "Tracking asset, sicurezza del personale e tracciabilita normativa in ambienti ATEX: RFIDIA supporta gli operatori petroliferi, del gas e dell'energia.",
     heroEyebrow: "Oil & Gas • Asset critici, sicurezza, conformita",
