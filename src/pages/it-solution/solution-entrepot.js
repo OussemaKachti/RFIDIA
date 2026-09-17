@@ -76,6 +76,7 @@ const footerI18n = {
 const i18n = {
   fr: {
     metaTitle: "RFID Tunisie : Entrepôt & Logistique | RFIDIA",
+    breadcrumbLabel: "Entrepôt & Logistique",
     metaDesc:
       "RFIDIA, expert RFID en Tunisie : inventaire en temps réel, automatisation des quais de réception/expédition et pilotage des flux logistiques grâce à la technologie RFID industrielle.",
     navbar: {
@@ -160,6 +161,7 @@ const i18n = {
   },
   en: {
     metaTitle: "RFID Tunisia: Warehouse & Logistics Solution | RFIDIA",
+    breadcrumbLabel: "Warehouse & Logistics",
     metaDesc:
       "RFIDIA, RFID expert in Tunisia: real-time inventory, automated dock doors, and streamlined logistics flow using industrial RFID technology.",
     navbar: {
@@ -244,6 +246,7 @@ const i18n = {
   },
   it: {
     metaTitle: "RFID Tunisia: Soluzione Magazzino & Logistica | RFIDIA",
+    breadcrumbLabel: "Magazzino & Logistica",
     metaDesc:
       "RFIDIA, esperto RFID in Tunisia: inventario in tempo reale, automazione delle baie di carico e gestione dei flussi logistici con tecnologia RFID industriale.",
     navbar: {
@@ -358,8 +361,14 @@ const SolutionEntrepot = () => {
     []
   );
 
+  const breadcrumbs = [
+    { name: t.navbar.home, path: "/" },
+    { name: t.navbar.solutions, path: "/it-solution" },
+    { name: t.breadcrumbLabel || t.metaTitle },
+  ];
+
   return (
-    <Layout title={t.metaTitle} desc={t.metaDesc}>
+    <Layout title={t.metaTitle} desc={t.metaDesc} breadcrumbs={breadcrumbs}>
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="txl">

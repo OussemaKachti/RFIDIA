@@ -76,6 +76,7 @@ const footerI18n = {
 const i18n = {
   fr: {
     metaTitle: "RFID Tunisie : Gestion des Actifs | RFIDIA",
+    breadcrumbLabel: "Gestion des Actifs",
     metaDesc:
       "RFIDIA, expert RFID en Tunisie, vous aide à localiser, sécuriser et optimiser vos équipements critiques grâce à la traçabilité RFID/IoT : inventaires rapides, réduction des pertes et pilotage du parc.",
     navbar: {
@@ -167,6 +168,7 @@ const i18n = {
   },
   en: {
     metaTitle: "RFID Tunisia: Asset Management Solution | RFIDIA",
+    breadcrumbLabel: "Asset Management",
     metaDesc:
       "RFIDIA, RFID expert in Tunisia, helps you locate, secure and optimize critical equipment with RFID/IoT traceability: faster inventories, fewer losses and better fleet control.",
     navbar: {
@@ -256,6 +258,7 @@ const i18n = {
   },
   it: {
     metaTitle: "RFID Tunisia: Soluzione Gestione Asset | RFIDIA",
+    breadcrumbLabel: "Gestione Asset",
     metaDesc:
       "RFIDIA, esperto RFID in Tunisia, ti aiuta a localizzare, proteggere e ottimizzare attrezzature critiche con tracciabilità RFID/IoT: inventari rapidi, meno perdite e governance del parco.",
     navbar: {
@@ -371,8 +374,14 @@ const SolutionGestionActifs = () => {
     []
   );
 
+  const breadcrumbs = [
+    { name: t.navbar.home, path: "/" },
+    { name: t.navbar.solutions, path: "/it-solution" },
+    { name: t.breadcrumbLabel || t.metaTitle },
+  ];
+
   return (
-    <Layout title={t.metaTitle} desc={t.metaDesc}>
+    <Layout title={t.metaTitle} desc={t.metaDesc} breadcrumbs={breadcrumbs}>
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="ast">

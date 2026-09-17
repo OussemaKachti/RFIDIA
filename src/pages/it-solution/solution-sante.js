@@ -76,6 +76,7 @@ const footerI18n = {
 const i18n = {
   fr: {
     metaTitle: "RFID Tunisie : Solution Santé | RFIDIA",
+    breadcrumbLabel: "Santé",
     metaDesc:
       "RFIDIA, expert RFID en Tunisie : traçabilité et sécurité en santé, suivi des dispositifs médicaux, maîtrise des stocks sensibles, réduction des pertes et meilleure continuité de service.",
     navbar: {
@@ -151,6 +152,7 @@ const i18n = {
   },
   en: {
     metaTitle: "RFID Tunisia: Healthcare Solution | RFIDIA",
+    breadcrumbLabel: "Healthcare",
     metaDesc:
       "RFIDIA, RFID expert in Tunisia: traceability and security in healthcare, tracking devices, controlling sensitive inventory, reducing losses and improving continuity of service.",
     navbar: {
@@ -225,6 +227,7 @@ const i18n = {
   },
   it: {
     metaTitle: "RFID Tunisia: Soluzione Sanità | RFIDIA",
+    breadcrumbLabel: "Sanità",
     metaDesc:
       "RFIDIA, esperto RFID in Tunisia: tracciabilità e sicurezza in sanità, tracking dispositivi, controllo scorte sensibili, meno perdite e continuità di servizio.",
     navbar: {
@@ -325,8 +328,14 @@ const SolutionSante = () => {
     []
   );
 
+  const breadcrumbs = [
+    { name: t.navbar.home, path: "/" },
+    { name: t.navbar.solutions, path: "/it-solution" },
+    { name: t.breadcrumbLabel || t.metaTitle },
+  ];
+
   return (
-    <Layout title={t.metaTitle} desc={t.metaDesc}>
+    <Layout title={t.metaTitle} desc={t.metaDesc} breadcrumbs={breadcrumbs}>
       <Navbar language={language} onLanguageChange={setLanguage} labels={t.navbar} />
 
       <main className="med">

@@ -74,13 +74,32 @@ const ORGANIZATION_JSON_LD = {
   ],
 };
 
-const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex }) => {
+const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex, breadcrumbs }) => {
   const router = useRouter();
   const canonicalUrl = `${SITE_URL}${router.asPath.split("?")[0].split("#")[0]}`;
   const pageTitle = title ? title : "RFIDIA";
   const pageDesc =
     desc ||
     "RFIDIA, leader tunisien des solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.";
+
+  // `breadcrumbs`: ordered array of { name, path } describing the trail to this
+  // page (e.g. [{ name: "Accueil", path: "/" }, { name: "Solutions", path: "/it-solution" },
+  // { name: "Retail" }]). `path` can be omitted on the last entry — it then falls back to
+  // the current URL, so callers don't need to know their own route. Optional — only pages
+  // with a real hierarchy below the homepage need it.
+  const breadcrumbJsonLd =
+    breadcrumbs && breadcrumbs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: crumb.name,
+            item: crumb.path ? `${SITE_URL}${crumb.path}` : canonicalUrl,
+          })),
+        }
+      : null;
 
   return (
     <div
@@ -117,6 +136,14 @@ const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex })
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
         />
+
+        {/* Breadcrumb structured data — helps Google show the page's position in the site (rich snippet) */}
+        {breadcrumbJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+          />
+        )}
       </Head>
 
       {children}

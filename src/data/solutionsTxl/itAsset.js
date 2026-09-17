@@ -5,6 +5,7 @@ const theme = makeTheme("#6366F1", "#A5B4FC", "#3730A3");
 const copy = {
   fr: {
     metaTitle: "RFID IT Asset Management Tunisie | RFIDIA",
+    breadcrumbLabel: "Gestion du Parc IT",
     metaDesc:
       "Fini les laptops perdus et les audits ITAM qui s'eternisent : RFIDIA digitalise le parc informatique en temps reel, pour des DSI sereins et un CMDB fiable.",
     heroEyebrow: "IT Asset Management • Parc IT, audit, securite",
@@ -76,6 +77,7 @@ const copy = {
   },
   en: {
     metaTitle: "RFID IT Asset Management Tunisia | RFIDIA",
+    breadcrumbLabel: "IT Asset Management",
     metaDesc:
       "No more lost laptops and endless ITAM audits: RFIDIA digitises the IT fleet in real time, for calm IT teams and a reliable CMDB.",
     heroEyebrow: "IT Asset Management • Fleet, audit, security",
@@ -147,6 +149,7 @@ const copy = {
   },
   it: {
     metaTitle: "RFID IT Asset Management Tunisia | RFIDIA",
+    breadcrumbLabel: "Gestione Parco IT",
     metaDesc:
       "Basta laptop persi e audit ITAM interminabili: RFIDIA digitalizza il parco IT in tempo reale, per IT sereni e CMDB affidabile.",
     heroEyebrow: "IT Asset Management • Parco, audit, sicurezza",

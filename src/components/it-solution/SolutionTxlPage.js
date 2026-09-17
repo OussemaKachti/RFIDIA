@@ -79,8 +79,14 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
   const applications = t.applications || [];
   const verticals = t.verticals || [];
 
+  const breadcrumbs = [
+    { name: navbarLabels.home, path: "/" },
+    { name: navbarLabels.solutions, path: "/it-solution" },
+    { name: t.breadcrumbLabel || t.metaTitle },
+  ];
+
   return (
-    <Layout title={t.metaTitle} desc={t.metaDesc}>
+    <Layout title={t.metaTitle} desc={t.metaDesc} breadcrumbs={breadcrumbs}>
       <Navbar language={language} onLanguageChange={setLanguage} labels={navbarLabels} />
 
       <main className="med">
