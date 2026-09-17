@@ -25,7 +25,11 @@ const ORGANIZATION_JSON_LD = {
     contactType: "customer service",
     email: "contact@rfidia.com",
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61569189391534",
+    "https://www.linkedin.com/in/rfidtunisie/",
+    "https://www.youtube.com/@rfidiai",
+  ],
 };
 
 const Layout = ({ children, title, desc, hasClass, classOpt, ogImage }) => {

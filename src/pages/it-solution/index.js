@@ -390,9 +390,9 @@ const i18nContent = {
       brandDesc:
         "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     },
-    pageTitle: "RFIDIA",
+    pageTitle: "RFID Tunisie | Solutions RFID & IoT pour Entreprises | RFIDIA",
     pageDesc:
-      "RFIDIA, leader tunisien en solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.",
+      "RFIDIA, expert RFID Tunisie : solutions de traçabilité intelligente RFID, IoT, codes-barres et systèmes embarqués pour entreprises en Tunisie et à l'international.",
     heroBadge: "Solutions de Traçabilité Intelligente",
     heroTitlePrefix: "Technologie",
     heroTitleAccent: "RFID & IoT",
@@ -525,9 +525,9 @@ const i18nContent = {
       brandDesc:
         "Tunisian leader in smart traceability. We support companies in their digital transformation through high-performance RFID, IoT and barcode solutions.",
     },
-    pageTitle: "RFIDIA",
+    pageTitle: "RFID Tunisia | RFID & IoT Solutions for Businesses | RFIDIA",
     pageDesc:
-      "RFIDIA, Tunisian leader in smart traceability solutions: RFID, IoT, barcodes and embedded systems.",
+      "RFIDIA, RFID Tunisia expert: smart traceability solutions with RFID, IoT, barcodes and embedded systems for businesses in Tunisia and abroad.",
     heroBadge: "Smart Traceability Solutions",
     heroTitlePrefix: "Technology",
     heroTitleAccent: "RFID & IoT",
@@ -757,9 +757,9 @@ const i18nContent = {
       brandDesc:
         "Leader tunisino nella tracciabilita intelligente. Supportiamo le aziende nella trasformazione digitale con soluzioni RFID, IoT e codici a barre ad alte prestazioni.",
     },
-    pageTitle: "RFIDIA",
+    pageTitle: "RFID Tunisia | Soluzioni RFID & IoT per Aziende | RFIDIA",
     pageDesc:
-      "RFIDIA, leader tunisino nelle soluzioni di tracciabilita intelligente: RFID, IoT, codici a barre e sistemi embedded.",
+      "RFIDIA, esperto RFID Tunisia: soluzioni di tracciabilita intelligente RFID, IoT, codici a barre e sistemi embedded per aziende in Tunisia e all'estero.",
     heroBadge: "Soluzioni di Tracciabilita Intelligente",
     heroTitlePrefix: "Tecnologia",
     heroTitleAccent: "RFID & IoT",
