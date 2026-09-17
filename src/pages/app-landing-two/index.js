@@ -15,7 +15,7 @@ import FeatureImgContentSeven from '@components/feature-img-content/FeatureImgCo
 
 const AppLandingTwoHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionEight />
       <FeatureFive />

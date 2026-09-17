@@ -14,7 +14,7 @@ import InsuranceBlog from "@components/blogs/InsuranceBlog";
 
 const QuietyInsurance = () => {
   return (
-    <Layout classOpt="bg-soft-blue">
+    <Layout noindex classOpt="bg-soft-blue">
       <Navbar insurance />
       <HeroSixteen />
       <InsuranceService />

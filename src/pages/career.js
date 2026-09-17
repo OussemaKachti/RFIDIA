@@ -11,7 +11,7 @@ import CareerFeature from '@components/career/CareerFeature';
 
 const Career = () => {
   return (
-    <Layout title="Career" desc="This is career page">
+    <Layout noindex title="Career" desc="This is career page">
       <Navbar classOption="navbar-light" />
       <PageHeader
         title="Career"

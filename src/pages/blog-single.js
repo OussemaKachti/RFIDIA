@@ -11,7 +11,7 @@ import BlogSingleFeature from '@components/blogs/BlogSingleFeature';
 
 const BlogSingle = () => {
   return (
-    <Layout title="Blog Single" desc="This is blog single page">
+    <Layout noindex title="Blog Single" desc="This is blog single page">
       <Navbar classOption="navbar-light" />
       <PageHeader title="Why customer retention is the ultimate growth strategy" />
       <BlogSingleFeature />

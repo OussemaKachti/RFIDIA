@@ -16,7 +16,7 @@ import React from 'react';
 
 const Conference = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar classOption="position-absolute" />
       <HeroFifteen />
       <UpcomingEvent />

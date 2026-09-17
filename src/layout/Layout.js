@@ -32,7 +32,7 @@ const ORGANIZATION_JSON_LD = {
   ],
 };
 
-const Layout = ({ children, title, desc, hasClass, classOpt, ogImage }) => {
+const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex }) => {
   const router = useRouter();
   const canonicalUrl = `${SITE_URL}${router.asPath.split("?")[0].split("#")[0]}`;
   const pageTitle = title ? title : "RFIDIA";
@@ -49,6 +49,7 @@ const Layout = ({ children, title, desc, hasClass, classOpt, ogImage }) => {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
+        {noindex && <meta name="robots" content="noindex, nofollow" />}
         <link rel="canonical" href={canonicalUrl} />
         <link rel="icon" href="/a_rfidia/z_rfid/logo-RFIDIA2.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

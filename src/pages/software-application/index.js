@@ -16,7 +16,7 @@ import HeroSectionSix from "@components/hero-section/HeroSectionSix";
 
 const SoftwareApplicationHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar />
       <HeroSectionSix />
       <PromoTwo />

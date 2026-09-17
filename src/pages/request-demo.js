@@ -7,7 +7,7 @@ import SingleServiceRegister from "@components/services/SingleServiceRegister";
 
 const RequestDemo = () => {
   return (
-    <Layout title="Request Demo" desc="This is request demo page">
+    <Layout noindex title="Request Demo" desc="This is request demo page">
       <Navbar navDark />
       <SingleServiceRegister />
 

@@ -13,7 +13,7 @@ import PaymentCta from "@components/cta/PaymentCta";
 
 const PaymentGateway = () => {
   return (
-    <Layout title="Payment Gateway">
+    <Layout noindex title="Payment Gateway">
       <Navbar navDark />
       <HeroThirteen />
       <PaymentCustomer />

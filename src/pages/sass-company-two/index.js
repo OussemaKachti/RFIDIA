@@ -13,7 +13,7 @@ import HeroSectionThree from "@components/hero-section/HeroSectionThree";
 
 const SassCompanyTwoHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar />
       <HeroSectionThree />
       <ReviewOne />

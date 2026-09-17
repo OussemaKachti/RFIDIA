@@ -10,7 +10,7 @@ import CareerSingleHeader from '@components/career/CareerSingleHeader';
 
 const CareerSingle = () => {
   return (
-    <Layout title="Career Single" desc="This is career single page">
+    <Layout noindex title="Career Single" desc="This is career single page">
       <Navbar classOption="navbar-light" />
       <CareerSingleHeader />
       <JobDetails />

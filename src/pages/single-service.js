@@ -13,7 +13,7 @@ import SingleServiceFeatureTwo from '@components/services/SingleServiceFeatureTw
 
 const SingleService = () => {
   return (
-    <Layout title="Services" desc="This is services single page">
+    <Layout noindex title="Services" desc="This is services single page">
       <Navbar />
       <PageHeader
         title="Quality Software Services"

@@ -13,7 +13,7 @@ import Layout from "@layout/Layout";
 
 const GameSolution = () => {
   return (
-    <Layout title="Game Server" classOpt="bg-black">
+    <Layout noindex title="Game Server" classOpt="bg-black">
       <Navbar navDark />
       <HeroTwelve />
       <GameServer />

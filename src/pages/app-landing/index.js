@@ -16,7 +16,7 @@ import WorkProcessThree from "@components/workprocess/WorkProcessThree";
 
 const AppLandingOne = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionFive />
       <FeatureFour />

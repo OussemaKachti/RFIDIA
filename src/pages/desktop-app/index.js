@@ -14,7 +14,7 @@ import FeatureImgContentThree from "@components/feature-img-content/FeatureImgCo
 
 const DesktopAppHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar />
       <HeroSectionFourth />
       <Customer />

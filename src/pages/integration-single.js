@@ -10,7 +10,7 @@ import RelatedIntegration from '@components/integration/RelatedIntegration';
 
 const IntegrationSingle = () => {
   return (
-    <Layout title="Integration Single" desc="This is integration single page">
+    <Layout noindex title="Integration Single" desc="This is integration single page">
       <Navbar />
       <PageHeader
         title="Connect with Google"

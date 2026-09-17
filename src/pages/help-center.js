@@ -9,7 +9,7 @@ import HelpCenterHeader from '@components/help-center/HelpCenterHeader';
 
 const HelpCenter = () => {
   return (
-    <Layout title="Help Center" desc="This is help center page">
+    <Layout noindex title="Help Center" desc="This is help center page">
       <Navbar />
       <HelpCenterHeader />
       <HelpCenterDetails />

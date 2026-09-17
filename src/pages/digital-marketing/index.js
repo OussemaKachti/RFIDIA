@@ -14,7 +14,7 @@ import React from "react";
 
 const DigitalMarketing = () => {
   return (
-    <Layout title="Digital Marketing">
+    <Layout noindex title="Digital Marketing">
       <Navbar />
       <HeroFourteen />
       <CustomerBrand />

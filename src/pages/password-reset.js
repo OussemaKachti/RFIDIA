@@ -5,7 +5,7 @@ import Layout from '@layout/Layout';
 
 const PasswordReset = () => {
   return (
-    <Layout title="Password Reset" desc="This is password reset page">
+    <Layout noindex title="Password Reset" desc="This is password reset page">
       <section
         className="sign-up-in-section bg-dark ptb-60"
         style={{

@@ -6,7 +6,7 @@ import Layout from '@layout/Layout';
 
 const Login = () => {
   return (
-    <Layout title="Login" desc="This is login page">
+    <Layout noindex title="Login" desc="This is login page">
       <section
         className="sign-up-in-section bg-dark ptb-60"
         style={{

@@ -9,7 +9,7 @@ import { registerTestimonial, registerTestimonialTarget } from '@utils/data';
 
 const Register = () => {
   return (
-    <Layout title="Sign Up" desc="This is sign up page">
+    <Layout noindex title="Sign Up" desc="This is sign up page">
       <section
         className="sign-up-in-section bg-dark ptb-60"
         style={{

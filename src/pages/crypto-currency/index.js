@@ -18,7 +18,7 @@ import CryptoBlog from '@components/blogs/CryptoBlog';
 
 const CryptoLanding = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionEleven />
       <CryptoPromo />

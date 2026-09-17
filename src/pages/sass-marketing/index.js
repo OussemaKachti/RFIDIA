@@ -16,7 +16,7 @@ import React from "react";
 
 const SassMarketing = () => {
   return (
-    <Layout classOpt="bg-soft-blue">
+    <Layout noindex classOpt="bg-soft-blue">
       <Navbar />
       <HeroSeventeen />
       <FeatureNine />

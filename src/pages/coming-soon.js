@@ -1,10 +1,15 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaDribbble, FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const ComingSoon = () => {
   return (
+    <>
+    <Head>
+      <meta name="robots" content="noindex, nofollow" />
+    </Head>
     <section
       className="coming-soon-section min-vh-100 ptb-120 overflow-hidden position-relative w-100 d-flex flex-column justify-content-center"
       style={{
@@ -83,6 +88,7 @@ const ComingSoon = () => {
         </ul>
       </div>
     </section>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import TestimonialTwo from "@components/testimonial/TestimonialTwo";
 
 const Pricing = () => {
   return (
-    <Layout title="Pricing" desc="this is pricing page">
+    <Layout noindex title="Pricing" desc="this is pricing page">
       <Navbar classOption="navbar-light" />
       <PageHeader
         title="Price Suit to Your Business"

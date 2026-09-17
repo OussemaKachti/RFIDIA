@@ -8,7 +8,7 @@ import PageHeader from '@components/common/PageHeader';
 
 const Blogs = () => {
   return (
-    <Layout title="Blog" desc="This is blog page">
+    <Layout noindex title="Blog" desc="This is blog page">
       <Navbar />
       <PageHeader
         title="Our Latest News and Blogs"

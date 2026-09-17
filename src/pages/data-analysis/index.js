@@ -14,7 +14,7 @@ import FeatureImgContentFour from "@components/feature-img-content/FeatureImgCon
 //this is for data analysis demo
 const DataAnalysisHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionSeven />
       <FeatureFour />

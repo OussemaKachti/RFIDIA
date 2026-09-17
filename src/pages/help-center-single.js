@@ -8,7 +8,7 @@ import HelpCenterSingleDetails from '@components/help-center/HelpCenterSingleDet
 
 const HelpCenterSingle = () => {
   return (
-    <Layout title="Help Center Single" desc="This is help center single">
+    <Layout noindex title="Help Center Single" desc="This is help center single">
       <Navbar />
       <HelpCenterSingleDetails />
       <Footer />

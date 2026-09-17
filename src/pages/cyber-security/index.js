@@ -18,7 +18,7 @@ import FaqFour from "@components/faq/FaqFour";
 
 const CyberSecurity = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionTen />
       <CustomerLogoSlider />

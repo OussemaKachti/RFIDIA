@@ -15,7 +15,7 @@ import FeatureImgContentTwo from "@components/feature-img-content/FeatureImgCont
 
 const StartUpAgencyHome = () => {
   return (
-    <Layout>
+    <Layout noindex>
       <Navbar navDark />
       <HeroSectionFourth bgDark />
       <Customer gray />
