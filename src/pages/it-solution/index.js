@@ -474,8 +474,8 @@ const i18nContent = {
         description: "Inventaire en temps réel et pilotage des flux pour une logistique performante.",
       },
       {
-        title: "Textile",
-        description: "Traçabilité de bout en bout des vêtements, de la production à la vente.",
+        title: "RFIDIA-TEX",
+        description: "Traçabilité de chaque vêtement, du fil à la vente : inventaires 10x plus rapides.",
       },
       {
         title: "Hôtellerie",
@@ -608,8 +608,8 @@ const i18nContent = {
         description: "Real-time inventory and flow control for modern logistics operations.",
       },
       {
-        title: "Textile",
-        description: "End-to-end garment traceability from production to retail.",
+        title: "RFIDIA-TEX",
+        description: "Traceability of every garment, from thread to sale: inventories 10x faster.",
       },
       {
         title: "Hospitality",
@@ -840,8 +840,8 @@ const i18nContent = {
         description: "Inventario in tempo reale e gestione dei flussi per una logistica moderna.",
       },
       {
-        title: "Tessile",
-        description: "Tracciabilita end-to-end dei capi dalla produzione alla vendita.",
+        title: "RFIDIA-TEX",
+        description: "Tracciabilita di ogni capo, dal filo alla vendita: inventari 10 volte piu rapidi.",
       },
       {
         title: "Ospitalita",
@@ -988,8 +988,8 @@ const ItSolution = () => {
     },
     {
       id: "textile",
-      image: "/a_rfidia/z_rfid/retail.png",
-      accent: "#E0305A",
+      image: "/a_rfidia/z_textile/rfidia-tex.png",
+      accent: "#A16207",
     },
     {
       id: "hotellerie",
@@ -1077,7 +1077,7 @@ const ItSolution = () => {
         : item.id === "warehouse"
           ? "/it-solution/solution-entrepot"
           : item.id === "textile"
-            ? "/it-solution/solution-textile"
+            ? "/it-solution/rfidia-tex"
             : item.id === "hotellerie"
               ? "/it-solution/solution-hotellerie"
               : item.id === "assets"

@@ -9,6 +9,7 @@ import oilGas from "./oilGas";
 import dataCenter from "./dataCenter";
 import government from "./government";
 import itAsset from "./itAsset";
+import rfidiaTex from "./rfidiaTex";
 
 const SOLUTIONS = {
   "solution-ecole": education,
@@ -22,6 +23,7 @@ const SOLUTIONS = {
   "rfid-data-center": dataCenter,
   "rfid-government": government,
   "rfid-it-asset-management": itAsset,
+  "rfidia-tex": rfidiaTex,
 };
 
 export function getSolution(slug) {

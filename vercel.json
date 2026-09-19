@@ -1,6 +1,19 @@
 {
   "redirects": [
-    { "source": "/Contact", "destination": "/contact-us", "permanent": true },
-    { "source": "/contact", "destination": "/contact-us", "permanent": true }
+    {
+      "source": "/Contact",
+      "destination": "/contact-us",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact-us",
+      "permanent": true
+    },
+    {
+      "source": "/it-solution/solution-textile",
+      "destination": "/it-solution/rfidia-tex",
+      "permanent": true
+    }
   ]
 }
