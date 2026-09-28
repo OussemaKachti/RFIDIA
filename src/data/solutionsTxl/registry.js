@@ -26,8 +26,11 @@ const SOLUTIONS = {
   "rfidia-tex": rfidiaTex,
 };
 
+// Returns a copy (callers may override fields such as heroImage) tagged with its
+// slug, used by <SolutionTxlPage /> to load the page's local SEO content.
 export function getSolution(slug) {
-  return SOLUTIONS[slug];
+  const solution = SOLUTIONS[slug];
+  return solution ? { ...solution, slug } : undefined;
 }
 
 export default SOLUTIONS;

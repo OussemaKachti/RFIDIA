@@ -4,6 +4,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 import {
   getSolutionsCatalog,
   getSolutionsMeta,
@@ -113,8 +114,8 @@ const PAGE_CAT_ICONS = {
 const PAGE_HEAD = {
   fr: {
     eyebrow: "Catalogue Solutions",
-    title: "Nos Solutions",
-    desc: "Onze solutions concrètes, organisées par enjeu métier — pour identifier en quelques secondes celle qui répond à votre besoin.",
+    title: "Nos Solutions RFID en Tunisie",
+    desc: "Des solutions RFID et IoT concrètes, organisées par secteur et par enjeu métier — pour identifier en quelques secondes celle qui répond à votre besoin.",
     tabAll: "Toutes",
     ctaLabel: "Découvrir la solution",
     statSolutions: "Solutions disponibles",
@@ -209,6 +210,8 @@ const sectors = [
     description:
       "Traçabilité de production, suivi d'équipements, contrôle qualité et pilotage des opérations en usine.",
     image: "/a_rfidia/z_industriel/z_industriel.png",
+    alt: "RFID industrie en Tunisie : traçabilité de la production en usine",
+    href: "/it-solution/rfid-manufacturing",
     tag: "Industrie",
   },
   {
@@ -217,6 +220,8 @@ const sectors = [
     description:
       "Visibilité de bout en bout des flux, inventaires fiables et réduction des pertes sur la chaîne logistique.",
     image: "/a_rfidia/z_logistique/z_logistique.png",
+    alt: "RFID entrepôt et logistique en Tunisie : inventaire en temps réel",
+    href: "/it-solution/solution-entrepot",
     tag: "Logistique",
   },
   {
@@ -225,6 +230,8 @@ const sectors = [
     description:
       "Suivi des dispositifs médicaux, sécurisation des stocks sensibles et amélioration des parcours internes.",
     image: "/a_rfidia/z_medical/z_medical3.png",
+    alt: "RFID santé en Tunisie : suivi des dispositifs médicaux",
+    href: "/it-solution/solution-sante",
     tag: "Médical",
   },
   {
@@ -233,6 +240,8 @@ const sectors = [
     description:
       "Gestion de l'accès aux établissements, suivi de présence du matériel, et sécurisation du parcours étudiant.",
     image: "/a_rfidia/z_school/school.png",
+    alt: "RFID pour écoles en Tunisie : contrôle d'accès et suivi du matériel",
+    href: "/it-solution/solution-ecole",
     tag: "Éducation",
   },
 ];
@@ -351,6 +360,21 @@ const faqs = [
     answer:
       "Oui. Nous appliquons les bonnes pratiques de sécurité à chaque étape : architecture sécurisée, contrôle des accès, chiffrement des échanges de données et maintenance régulière pour assurer la continuité de service.",
   },
+  {
+    question: "Quel est le prix d'une solution RFID en Tunisie ?",
+    answer:
+      "Le coût dépend du périmètre : nombre d'articles ou d'équipements à étiqueter, type d'étiquettes RFID, nombre de lecteurs, portiques ou terminaux mobiles, et intégrations logicielles (ERP, WMS, GMAO). RFIDIA établit un devis détaillé après un audit de vos besoins et propose souvent un pilote pour mesurer le retour sur investissement avant de généraliser.",
+  },
+  {
+    question: "Quelle est la différence entre la RFID et le code-barres ?",
+    answer:
+      "Le code-barres doit être scanné article par article, en ligne de vue. La RFID identifie sans contact des dizaines ou des centaines d'étiquettes en une seule lecture, même à travers un carton. Les inventaires, réceptions et expéditions sont ainsi beaucoup plus rapides et fiables.",
+  },
+  {
+    question: "Où se trouve RFIDIA et intervenez-vous partout en Tunisie ?",
+    answer:
+      "RFIDIA est basée à l'Africa Mall, Avenue Mustapha Hjeij, Ariana 1002 (Grand Tunis). Nos équipes interviennent sur site dans toute la Tunisie — Tunis, Ariana, Ben Arous, Sfax, Sousse, Monastir, Nabeul, Bizerte — ainsi qu'à l'international.",
+  },
 ];
 
 // Matches the FAQ section rendered below (French, the language served to crawlers
@@ -406,16 +430,17 @@ const i18nContent = {
       brandDesc:
         "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     },
-    pageTitle: "RFID Tunisie | Solutions RFID & IoT pour Entreprises | RFIDIA",
+    pageTitle: "RFID Tunisie | Solutions RFID & IoT pour Entreprises – RFIDIA",
     pageDesc:
-      "RFIDIA, expert RFID Tunisie : solutions de traçabilité intelligente RFID, IoT, codes-barres et systèmes embarqués pour entreprises en Tunisie et à l'international.",
+      "RFIDIA, fournisseur et intégrateur RFID en Tunisie : étiquettes, lecteurs RFID, IoT et logiciels de traçabilité. 500+ projets, 10+ ans d'expérience. Demandez un audit.",
     heroBadge: "Solutions de Traçabilité Intelligente",
     heroTitlePrefix: "Technologie",
-    heroTitleAccent: "RFID & IoT",
+    heroTitleAccent: "RFID Tunisie & IoT",
     heroTitleSuffix: "pour votre entreprise",
     heroSub:
-      "RFIDIA accompagne les entreprises dans leur transformation digitale avec des solutions fiables, évolutives et adaptées à la réalité terrain.",
-    heroBtnPrimary: "Découvrir nos solutions",
+      "RFIDIA accompagne les entreprises en Tunisie dans leur transformation digitale avec des solutions RFID fiables, évolutives et adaptées à la réalité du terrain.",
+    heroImgAlt: "Solution RFID Tunisie : traçabilité en temps réel dans un entrepôt logistique",
+    heroBtnPrimary: "Découvrir nos solutions RFID",
     heroBtnGhost: "Nous contacter",
     heroFloatRealtime: "Traçabilité temps réel",
     heroFloatFast: "Déploiement rapide",
@@ -424,9 +449,9 @@ const i18nContent = {
     sectionAboutTitle: "Là où les services IT rencontrent l'",
     sectionAboutAccent: "innovation",
     sectionAboutP1:
-      "RFIDIA accompagne les entreprises dans leur transformation digitale grâce à des solutions RFID, IoT et logicielles fiables, évolutives et orientées résultats.",
+      "Fournisseur et intégrateur RFID en Tunisie depuis plus de 10 ans, RFIDIA accompagne les entreprises dans leur transformation digitale grâce à des solutions RFID, IoT et logicielles fiables, évolutives et orientées résultats.",
     sectionAboutP2:
-      "Notre équipe combine expertise métier, intégration système et accompagnement opérationnel pour transformer vos processus en avantages compétitifs durables.",
+      "Depuis Ariana, notre équipe d'experts et d'ingénieurs combine expertise métier, intégration système et accompagnement opérationnel pour transformer vos processus en avantages compétitifs durables, partout en Tunisie.",
     aboutBtn1: "En savoir plus",
     aboutBtn2: "Parlons de votre projet",
     aboutPoint1Title: "Intégration fluide",
@@ -438,21 +463,21 @@ const i18nContent = {
     aboutPoint4Title: "Scalabilité",
     aboutPoint4Desc: "Architecture pensée pour accompagner votre croissance future.",
     sections: {
-      solutionsTitle: "Nos Solutions Clés",
+      solutionsTitle: "Nos Solutions RFID Clés",
       solutionsDesc:
         "Trois piliers complémentaires pour renforcer votre performance : identification, visibilité temps réel et contrôle d'accès.",
       servicesTitle: "Nos Services de Virtualisation",
       servicesDesc:
         "De l'évaluation à la maintenance, nous optimisons votre infrastructure IT avec une approche fiable et évolutive.",
-      sectorsTitle: "Secteurs & Cas d'Usage",
-      sectorsDesc: "Découvrez comment nos solutions s'adaptent à vos processus métiers.",
+      sectorsTitle: "Secteurs & Cas d'Usage RFID en Tunisie",
+      sectorsDesc: "Découvrez comment nos solutions RFID s'adaptent aux processus métiers des entreprises tunisiennes.",
       testimonialsTitle: "Témoignages clients",
       testimonialsDesc:
         "Ils nous font confiance pour leurs projets de traçabilité et d'automatisation.",
       partnersTitle: "Ils nous font confiance",
       partnersDesc:
         "RFIDIA collabore avec des acteurs reconnus pour vous garantir des solutions technologiques de premier plan.",
-      faqTitle: "Questions fréquentes",
+      faqTitle: "Questions fréquentes sur la RFID en Tunisie",
       faqDesc: "Besoin de plus d'info sur nos solutions RFID et IoT ?",
       faqBtn: "Contactez-nous",
     },
@@ -462,7 +487,7 @@ const i18nContent = {
       stepLabel: "Étape",
       caseUsage: "Cas d'usage",
       rfidiaSolutions: "Solutions RFIDIA",
-      discover: "Découvrir",
+      discover: "Découvrir la solution",
     },
     showcaseSolutions: [
       {
@@ -550,6 +575,7 @@ const i18nContent = {
     heroTitleSuffix: "for your business",
     heroSub:
       "RFIDIA helps companies accelerate digital transformation with reliable, scalable solutions adapted to real field operations.",
+    heroImgAlt: "RFID solution in Tunisia: real-time traceability in a logistics warehouse",
     heroBtnPrimary: "Discover our solutions",
     heroBtnGhost: "Contact us",
     heroFloatRealtime: "Real-time traceability",
@@ -734,6 +760,21 @@ const i18nContent = {
         answer:
           "Yes. We apply security best practices at every stage: secure architecture, access control, encrypted data exchange and regular maintenance for service continuity.",
       },
+      {
+        question: "How much does an RFID solution cost in Tunisia?",
+        answer:
+          "Cost depends on scope: number of items or assets to tag, tag type, number of readers, gates or handhelds, and software integrations (ERP, WMS, CMMS). RFIDIA provides a detailed quote after assessing your needs and often recommends a pilot to measure ROI before scaling.",
+      },
+      {
+        question: "What is the difference between RFID and barcodes?",
+        answer:
+          "Barcodes must be scanned one by one, in line of sight. RFID reads dozens or hundreds of tags at once without contact, even through a box, making inventories, receiving and shipping much faster and more reliable.",
+      },
+      {
+        question: "Where is RFIDIA located and do you work across Tunisia?",
+        answer:
+          "RFIDIA is based at Africa Mall, Avenue Mustapha Hjeij, Ariana 1002 (Greater Tunis). Our teams work on site across Tunisia — Tunis, Ariana, Ben Arous, Sfax, Sousse, Monastir, Nabeul, Bizerte — and abroad.",
+      },
     ],
   },
   it: {
@@ -782,6 +823,7 @@ const i18nContent = {
     heroTitleSuffix: "per la tua azienda",
     heroSub:
       "RFIDIA accompagna le aziende nella trasformazione digitale con soluzioni affidabili, scalabili e adatte alla realta operativa.",
+    heroImgAlt: "Soluzione RFID in Tunisia: tracciabilita in tempo reale in un magazzino logistico",
     heroBtnPrimary: "Scopri le nostre soluzioni",
     heroBtnGhost: "Contattaci",
     heroFloatRealtime: "Tracciabilita in tempo reale",
@@ -966,6 +1008,21 @@ const i18nContent = {
         answer:
           "Si. Applichiamo best practice di sicurezza in ogni fase: architettura sicura, controllo accessi, cifratura degli scambi e manutenzione regolare.",
       },
+      {
+        question: "Quanto costa una soluzione RFID in Tunisia?",
+        answer:
+          "Il costo dipende dal perimetro: numero di articoli o asset da etichettare, tipo di tag, numero di lettori, varchi o terminali e integrazioni software (ERP, WMS, CMMS). RFIDIA fornisce un preventivo dettagliato dopo l'analisi delle esigenze e propone spesso un pilota per misurare il ROI.",
+      },
+      {
+        question: "Qual e la differenza tra RFID e codice a barre?",
+        answer:
+          "Il codice a barre va letto articolo per articolo, in linea di vista. La RFID legge decine o centinaia di tag in una sola volta senza contatto, anche attraverso un cartone: inventari, ricevimenti e spedizioni diventano molto piu rapidi e affidabili.",
+      },
+      {
+        question: "Dove si trova RFIDIA e intervenite in tutta la Tunisia?",
+        answer:
+          "RFIDIA ha sede presso l'Africa Mall, Avenue Mustapha Hjeij, Ariana 1002 (Grande Tunisi). I nostri team intervengono in loco in tutta la Tunisia — Tunisi, Ariana, Ben Arous, Sfax, Sousse, Monastir, Nabeul, Biserta — e all'estero.",
+      },
     ],
   },
 };
@@ -1107,6 +1164,7 @@ const ItSolution = () => {
     <Layout
       title={t.pageTitle}
       desc={t.pageDesc}
+      canonicalPath="/"
     >
       <Head>
         <script
@@ -1139,7 +1197,7 @@ const ItSolution = () => {
                   {t.heroSub}
                 </p>
                 <div className="rl-hero__actions">
-                  <Link href="/contact-us" passHref>
+                  <Link href="#solutions" passHref>
                     <a className="rl-btn rl-btn--primary">
                       {t.heroBtnPrimary}
                       <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
@@ -1165,7 +1223,7 @@ const ItSolution = () => {
                 <div className="rl-hero__visual">
                   <img
                     src="/a_rfidia/z_rfid/rfid7.png"
-                    alt="Technologie RFID en entreprise"
+                    alt={t.heroImgAlt}
                     className="rl-hero__img"
                   />
                   <div className="rl-hero__float rl-hero__float--tl">
@@ -1406,7 +1464,7 @@ const ItSolution = () => {
                   }}>
                     <img
                       src="/a_rfidia/z_rfid/rfid19.png"
-                      alt="Équipe RFIDIA"
+                      alt="Équipe d'ingénieurs RFIDIA, intégrateur RFID en Tunisie"
                       style={{
                         width: '100%',
                         height: '100%',
@@ -1611,13 +1669,13 @@ const ItSolution = () => {
                     <br />
                     <br />
                     <div className="rl-case-card__action-btn">
-                      <Link href="/contact-us" passHref>
+                      <Link href={item.href} passHref>
                         <a className="rl-btn rl-btn--primary" style={{ borderRadius: "8px", fontSize: "0.95rem" }}>{t.misc.discover}</a>
                       </Link>
                     </div>
                   </div>
                   <div className="rl-case-card__media">
-                    <img src={item.image} alt={item.title} className="rl-case-card__img" />
+                    <img src={item.image} alt={item.alt || item.title} className="rl-case-card__img" loading="lazy" />
                   </div>
                 </article>
               ))}
@@ -1679,6 +1737,9 @@ const ItSolution = () => {
             <div className="rl-partners__divider" aria-hidden />
           </div>
         </section>
+
+        {/* ── RFID EN TUNISIE (contenu SEO local, FR uniquement) ── */}
+        {language === "fr" && <SolutionSeoSection slug="home" accent="#4ECDC4" />}
 
         {/* ── FAQ ── */}
         <section className="rl-section rl-faq">

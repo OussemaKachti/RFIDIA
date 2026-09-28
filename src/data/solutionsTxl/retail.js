@@ -4,16 +4,17 @@ const theme = makeTheme("#EC4899", "#F9A8D4", "#9D174D");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Retail Tunisie | RFIDIA",
-    breadcrumbLabel: "Retail",
+    metaTitle: "RFID Retail Tunisie : Inventaire Magasin & Anti-démarque | RFIDIA",
+    breadcrumbLabel: "RFID Retail",
     metaDesc:
-      "Inventaire fiable a 98%, demarque reduite et experience client connectee : RFIDIA equipe les enseignes de mode, beaute, sport, bijouterie, luxe et grande distribution.",
-    heroEyebrow: "Retail • Inventaire, demarque, experience client",
-    heroTitleA: "Le retail",
-    heroTitleB: "precis",
-    heroTitleC: "du back-office a la caisse",
+      "Solution RFID retail en Tunisie : inventaire magasin fiable, réassort en rayon, anti-démarque et omnicanal pour enseignes mode, sport, bijouterie et distribution.",
+    heroEyebrow: "Retail • Inventaire, démarque, expérience client",
+    heroTitleA: "RFID retail",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "un stock précis, du back-office à la caisse",
+    heroImgAlt: "Solution RFID retail en Tunisie : inventaire magasin et anti-démarque",
     heroSub:
-      "Trop d'ecarts entre votre stock theorique et la realite du magasin ? La RFID redonne aux equipes une vision juste, en temps reel, sur chaque article — pour mieux servir, mieux vendre et mieux decider.",
+      "Trop d'écarts entre votre stock théorique et la réalité du magasin ? La RFID redonne aux équipes des enseignes en Tunisie une vision juste, en temps réel, sur chaque article — pour mieux servir, mieux vendre et mieux décider.",
     heroCta1: "Diagnostiquer mon point de vente",
     heroCta2: "Voir toutes les solutions",
     kpis: [

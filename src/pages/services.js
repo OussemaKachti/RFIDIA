@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 import { 
   FiSearch, 
   FiCpu, 
@@ -29,8 +30,8 @@ const IconComponent = ({ name, className }) => {
 
 const i18nContent = {
   fr: {
-    metaTitle: "Services RFID & IoT en Tunisie | Ingénierie & Intégration | RFIDIA",
-    metaDesc: "Expert RFID Tunisie : audit de site, intégration matérielle, middleware sur-mesure et support 24/7. RFIDIA conçoit votre architecture de traçabilité RFID et IoT de A à Z.",
+    metaTitle: "RFID IoT Tunisie : Ingénierie & Intégration RFID | RFIDIA",
+    metaDesc: "Intégrateur RFID IoT en Tunisie : audit de site, intégration matérielle, middleware sur mesure et support. RFIDIA conçoit votre projet de traçabilité de A à Z.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -67,7 +68,7 @@ const i18nContent = {
       brandDesc: "Leader tunisien de la traçabilité intelligente. Nous accompagnons les entreprises dans leur transformation digitale grâce à nos solutions RFID, IoT et codes-barres haute performance.",
     },
     heroTag: "Nos Services & Expertise",
-    heroTitle: "L'ingénierie de précision pour vos flux physiques.",
+    heroTitle: "Ingénierie et intégration RFID IoT en Tunisie pour vos flux physiques",
     heroDesc: "De la phase de conseil initiale à la maintenance opérationnelle continue, RFIDIA conçoit et intègre en Tunisie des solutions de traçabilité RFID & IoT sur mesure pour fiabiliser et automatiser vos opérations industrielles.",
     heroCta: "Parler à un ingénieur",
     heroSubCta: "Nos solutions",
@@ -479,7 +480,7 @@ const Services = () => {
                       <FiArrowRight className="ms-2" />
                     </a>
                   </Link>
-                  <Link href="/it-solution">
+                  <Link href="/#solutions">
                     <a className="srv-btn-outline">
                       {t.heroSubCta}
                     </a>
@@ -639,6 +640,9 @@ const Services = () => {
           </div>
         </section>
 
+        {/* RFID IoT en Tunisie (contenu SEO local, FR uniquement) */}
+        {language === "fr" && <SolutionSeoSection slug="services" accent="#4DC8C4" />}
+
         {/* 5. Minimalist Elegant CTA */}
         {/* <section className="srv-cta-section py-80 bg-white">
           <div className="container">
@@ -655,7 +659,7 @@ const Services = () => {
                         <FiArrowRight className="ms-2" />
                       </a>
                     </Link>
-                    <Link href="/it-solution">
+                    <Link href="/#solutions">
                       <a className="srv-btn-outline">
                         {t.ctaBtnSecondary}
                       </a>

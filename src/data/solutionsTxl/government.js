@@ -4,16 +4,17 @@ const theme = makeTheme("#059669", "#6EE7B7", "#065F46");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Gouvernement Tunisie | RFIDIA",
-    breadcrumbLabel: "Secteur Public",
+    metaTitle: "RFID Gouvernement Tunisie : Patrimoine & Archives | RFIDIA",
+    breadcrumbLabel: "RFID Secteur Public",
     metaDesc:
-      "Maitrise du patrimoine public, securisation des archives et conformite des audits : RFIDIA accompagne ministeres, collectivites et organismes publics dans la traceabilite intelligente.",
+      "Solution RFID gouvernement en Tunisie : inventaire du patrimoine public, gestion des archives et contrôle d'accès pour ministères, collectivités et organismes publics.",
     heroEyebrow: "Gouvernement • Patrimoine, archives, transparence",
-    heroTitleA: "Un service public",
-    heroTitleB: "transparent,",
-    heroTitleC: "des actifs maitrises",
+    heroTitleA: "RFID gouvernement",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "un service public transparent, des actifs maîtrisés",
+    heroImgAlt: "Solution RFID gouvernement en Tunisie : gestion du patrimoine public et des archives",
     heroSub:
-      "Ministeres, collectivites, etablissements publics : la rigueur attendue impose une traceabilite irreprochable. RFIDIA digitalise le patrimoine, les archives et les biens publics — pour des audits sans surprise et des decisions plus eclairees.",
+      "Ministères, collectivités, établissements publics : la rigueur attendue impose une traçabilité irréprochable. RFIDIA digitalise le patrimoine, les archives et les biens publics en Tunisie — pour des audits sans surprise et des décisions plus éclairées.",
     heroCta1: "Echanger sur mon administration",
     heroCta2: "Voir toutes les solutions",
     kpis: [

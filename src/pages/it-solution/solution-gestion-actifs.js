@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 const footerI18n = {
   fr: {
@@ -75,10 +76,10 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "RFID Tunisie : Gestion des Actifs | RFIDIA",
-    breadcrumbLabel: "Gestion des Actifs",
+    metaTitle: "RFID Tunisie Gestion des Actifs : Suivi du Parc | RFIDIA",
+    breadcrumbLabel: "RFID Gestion des Actifs",
     metaDesc:
-      "RFIDIA, expert RFID en Tunisie, vous aide à localiser, sécuriser et optimiser vos équipements critiques grâce à la traçabilité RFID/IoT : inventaires rapides, réduction des pertes et pilotage du parc.",
+      "Gestion des actifs par RFID en Tunisie : inventaire des immobilisations, suivi de l'outillage et des équipements critiques, moins de pertes. Auditez votre parc.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -94,11 +95,11 @@ const i18n = {
       italian: "Italiano",
     },
     heroTag: "Asset Management • Traçabilité & contrôle",
-    heroTitleA: "Vos actifs,",
-    heroTitleB: "toujours",
-    heroTitleC: "au bon endroit",
+    heroTitleA: "Gestion des actifs",
+    heroTitleB: "par RFID en Tunisie",
+    heroTitleC: "vos équipements toujours au bon endroit",
     heroSub:
-      "RFIDIA vous apporte une visibilité fiable sur vos équipements (outillage, IT, maintenance, instruments, contenants). Moins de pertes, moins de temps de recherche, et des inventaires rapides — avec des indicateurs concrets pour piloter le parc et la disponibilité.",
+      "En Tunisie, RFIDIA vous apporte une visibilité fiable sur vos équipements (outillage, IT, maintenance, instruments, contenants). Moins de pertes, moins de temps de recherche, et des inventaires rapides — avec des indicateurs concrets pour piloter le parc et la disponibilité.",
     heroCta1: "Auditer mon parc",
     heroCta2: "Voir toutes les solutions",
     stats: [
@@ -376,7 +377,6 @@ const SolutionGestionActifs = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -400,7 +400,7 @@ const SolutionGestionActifs = () => {
                   <Link href="/contact-us" passHref>
                     <a className="ast-btn ast-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="ast-btn ast-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -418,7 +418,7 @@ const SolutionGestionActifs = () => {
               <div className="col-lg-6">
                 <div className="ast-visual">
                   <div className="ast-visual__frame">
-                    <img src="/a_rfidia/z_rfid/z_assets.png" alt="" />
+                    <img src="/a_rfidia/z_rfid/z_assets.png" alt="Gestion des actifs par RFID en Tunisie : inventaire des équipements" />
                   </div>
                   <div className="ast-visual__ring" aria-hidden />
                 </div>
@@ -485,6 +485,8 @@ const SolutionGestionActifs = () => {
           </div>
         </section>
 
+        {language === "fr" && <SolutionSeoSection slug="solution-gestion-actifs" accent="#3B5FA0" />}
+
         <section className="ast-cta">
           <div className="container">
             <div className="ast-cta__inner">
@@ -496,7 +498,7 @@ const SolutionGestionActifs = () => {
                 <Link href="/contact-us" passHref>
                   <a className="ast-btn ast-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="ast-btn ast-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

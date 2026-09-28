@@ -320,7 +320,7 @@ const AboutUs = () => {
                     <Link href="/contact-us">
                       <a className="btn rounded-pill bg-orange me-3">{t.heroBtnPrimary}</a>
                     </Link>
-                    <Link href="/it-solution">
+                    <Link href="/#solutions">
                       <a className="btn rounded-pill btn-outline-primary">{t.heroBtnSecondary}</a>
                     </Link>
                   </div>
@@ -480,7 +480,7 @@ const AboutUs = () => {
                 <Link href="/contact-us">
                   <a className="btn rounded-pill bg-orange">{t.ctaPrimary}</a>
                 </Link>
-                <Link href="/it-solution">
+                <Link href="/#solutions">
                   <a className="btn rounded-pill btn-outline-light">{t.ctaSecondary}</a>
                 </Link>
               </div>

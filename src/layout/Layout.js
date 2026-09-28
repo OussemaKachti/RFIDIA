@@ -12,11 +12,23 @@ const ORGANIZATION_JSON_LD = {
   "@type": ["Organization", "LocalBusiness"],
   "@id": `${SITE_URL}/#organization`,
   name: "RFIDIA",
+  alternateName: "RFIDIA Technology",
   url: SITE_URL,
   logo: DEFAULT_OG_IMAGE,
   image: DEFAULT_OG_IMAGE,
   description:
-    "RFIDIA, leader tunisien des solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.",
+    "RFIDIA, fournisseur et intégrateur RFID en Tunisie : solutions de traçabilité intelligente RFID, IoT, codes-barres et systèmes embarqués pour les entreprises.",
+  knowsAbout: [
+    "RFID",
+    "RFID UHF",
+    "NFC",
+    "IoT",
+    "Traçabilité",
+    "Inventaire RFID",
+    "Étiquettes RFID",
+    "Lecteurs RFID",
+    "Gestion des actifs",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Africa Mall, Avenue Mostapha Hjaij",
@@ -74,18 +86,30 @@ const ORGANIZATION_JSON_LD = {
   ],
 };
 
-const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex, breadcrumbs }) => {
+const WEBSITE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "RFIDIA",
+  alternateName: "RFIDIA Technology",
+  url: SITE_URL,
+  inLanguage: "fr-TN",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
+
+// `canonicalPath`: forces the canonical URL when the same content is reachable
+// under several routes (e.g. the homepage component also served at /it-solution).
+const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex, breadcrumbs, canonicalPath }) => {
   const router = useRouter();
-  const canonicalUrl = `${SITE_URL}${router.asPath.split("?")[0].split("#")[0]}`;
+  const canonicalUrl = `${SITE_URL}${canonicalPath || router.asPath.split("?")[0].split("#")[0]}`;
   const pageTitle = title ? title : "RFIDIA";
   const pageDesc =
     desc ||
-    "RFIDIA, leader tunisien des solutions de traçabilité intelligente : RFID, IoT, codes-barres et systèmes embarqués.";
+    "RFIDIA, fournisseur et intégrateur RFID en Tunisie : solutions de traçabilité RFID, IoT, codes-barres et systèmes embarqués pour les entreprises.";
 
   // `breadcrumbs`: ordered array of { name, path } describing the trail to this
-  // page (e.g. [{ name: "Accueil", path: "/" }, { name: "Solutions", path: "/it-solution" },
-  // { name: "Retail" }]). `path` can be omitted on the last entry — it then falls back to
-  // the current URL, so callers don't need to know their own route. Optional — only pages
+  // page (e.g. [{ name: "Accueil", path: "/" }, { name: "Retail" }]). `path` can be
+  // omitted on the last entry — it then falls back to the current URL, so callers don't need to know their own route. Optional — only pages
   // with a real hierarchy below the homepage need it.
   const breadcrumbJsonLd =
     breadcrumbs && breadcrumbs.length > 0
@@ -119,6 +143,7 @@ const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex, b
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fr_TN" />
         <meta property="og:site_name" content="RFIDIA" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
@@ -135,6 +160,10 @@ const Layout = ({ children, title, desc, hasClass, classOpt, ogImage, noindex, b
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_JSON_LD) }}
         />
 
         {/* Breadcrumb structured data — helps Google show the page's position in the site (rich snippet) */}

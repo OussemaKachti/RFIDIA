@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 const footerI18n = {
   fr: {
@@ -75,10 +76,10 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "RFID Tunisie : Entrepôt & Logistique | RFIDIA",
-    breadcrumbLabel: "Entrepôt & Logistique",
+    metaTitle: "RFID Tunisie Entrepôt & Logistique : Inventaire | RFIDIA",
+    breadcrumbLabel: "RFID Entrepôt & Logistique",
     metaDesc:
-      "RFIDIA, expert RFID en Tunisie : inventaire en temps réel, automatisation des quais de réception/expédition et pilotage des flux logistiques grâce à la technologie RFID industrielle.",
+      "Solution RFID entrepôt et logistique en Tunisie : inventaire en temps réel, portiques de quai, contrôle des expéditions et intégration WMS. Obtenez une démo RFIDIA.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -94,11 +95,11 @@ const i18n = {
       italian: "Italiano",
     },
     heroEyebrow: "Logistique • Traçabilité & temps réel",
-    heroTitleA: "Entrepôt",
-    heroTitleB: "connecté",
-    heroTitleC: "Flux automatisés, zéro erreur",
+    heroTitleA: "RFID entrepôt",
+    heroTitleB: "& logistique en Tunisie",
+    heroTitleC: "flux automatisés, inventaire en temps réel",
     heroSub:
-      "RFIDIA transforme la gestion de votre entrepôt grâce à des portiques RFID et des terminaux mobiles de pointe. Accélérez vos réceptions, fiabilisez vos expéditions et réalisez vos inventaires en un temps record sans bloquer votre exploitation.",
+      "RFIDIA transforme la gestion de votre entrepôt en Tunisie grâce à des portiques RFID et des terminaux mobiles de pointe. Accélérez vos réceptions, fiabilisez vos expéditions et réalisez vos inventaires en un temps record sans bloquer votre exploitation.",
     heroCta1: "Obtenir une démo",
     heroCta2: "Toutes les solutions",
     kpis: [
@@ -363,7 +364,6 @@ const SolutionEntrepot = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -389,7 +389,7 @@ const SolutionEntrepot = () => {
                   <Link href="/contact-us" passHref>
                     <a className="txl-btn txl-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="txl-btn txl-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -407,7 +407,7 @@ const SolutionEntrepot = () => {
               <div className="col-lg-6">
                 <div className="txl-visual">
                   <div className="txl-visual__frame">
-                    <img src="/a_rfidia/z_logistique/z_logistique.png" alt="Système Entrepôt RFIDIA" />
+                    <img src="/a_rfidia/z_logistique/z_logistique.png" alt="Solution RFID entrepôt et logistique en Tunisie : portiques et inventaire temps réel" />
                   </div>
                   <div className="txl-chip txl-chip--tl">
                     <span className="txl-chip__dot" />
@@ -496,6 +496,8 @@ const SolutionEntrepot = () => {
         </section>
 
         {/* CTA */}
+        {language === "fr" && <SolutionSeoSection slug="solution-entrepot" accent="#2563EB" />}
+
         <section className="txl-cta">
           <div className="container">
             <div className="txl-cta__inner">
@@ -507,7 +509,7 @@ const SolutionEntrepot = () => {
                 <Link href="/contact-us" passHref>
                   <a className="txl-btn txl-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="txl-btn txl-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

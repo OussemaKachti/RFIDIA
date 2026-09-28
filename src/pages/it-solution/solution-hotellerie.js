@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 const footerI18n = {
   fr: {
@@ -75,10 +76,10 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "RFID Tunisie : Solution Hôtellerie | RFIDIA",
-    breadcrumbLabel: "Hôtellerie",
+    metaTitle: "RFID Tunisie Hôtellerie : Linge, Cashless & Accès | RFIDIA",
+    breadcrumbLabel: "RFID Hôtellerie",
     metaDesc:
-      "RFIDIA, expert RFID en Tunisie : expérience client fluide, opérations maîtrisées, traçabilité RFID et automatisation pour l’hôtellerie (linge, équipements, accès, maintenance).",
+      "Solution RFID hôtellerie en Tunisie : gestion du linge, bracelets cashless, contrôle d'accès et inventaire des équipements pour hôtels et resorts. Parlez à un expert.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -94,11 +95,11 @@ const i18n = {
       italian: "Italiano",
     },
     heroEyebrow: "Hôtellerie • Excellence opérationnelle",
-    heroTitleA: "Des opérations",
-    heroTitleB: "invisibles",
-    heroTitleC: "pour un service remarquable",
+    heroTitleA: "Solution RFID",
+    heroTitleB: "hôtellerie en Tunisie",
+    heroTitleC: "des opérations invisibles pour un service remarquable",
     heroSub:
-      "RFIDIA aide les hôtels à gagner en qualité et en rapidité : gestion du linge, traçabilité des équipements, inventaires rapides et indicateurs utiles — avec un déploiement discret, pensé pour l’expérience client.",
+      "RFIDIA aide les hôtels en Tunisie à gagner en qualité et en rapidité : gestion du linge, traçabilité des équipements, inventaires rapides et indicateurs utiles — avec un déploiement discret, pensé pour l’expérience client.",
     heroCta1: "Parler à un expert",
     heroCta2: "Voir toutes les solutions",
     kpis: [
@@ -404,7 +405,6 @@ const SolutionHotellerie = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -430,7 +430,7 @@ const SolutionHotellerie = () => {
                   <Link href="/contact-us" passHref>
                     <a className="htl-btn htl-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="htl-btn htl-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -448,7 +448,7 @@ const SolutionHotellerie = () => {
               <div className="col-lg-6">
                 <div className="htl-visual">
                   <div className="htl-visual__frame">
-                    <img src="/a_rfidia/hotellerie.png" alt="" />
+                    <img src="/a_rfidia/hotellerie.png" alt="Solution RFID hôtellerie en Tunisie : gestion du linge et des accès" />
                   </div>
                   <div className="htl-chip htl-chip--tl">
                     <span className="htl-chip__dot" />
@@ -507,7 +507,7 @@ const SolutionHotellerie = () => {
                   <div className="htl-browser__url">app.rfidia.tn/hospitality-v2</div>
                 </div>
                 <div className="htl-browser__content">
-                  <img src="/a_rfidia/solu_hot.jfif" alt="Real Hotel Solution Dashboard" />
+                  <img src="/a_rfidia/solu_hot.jfif" alt="Tableau de bord de la solution RFID hôtellerie RFIDIA" />
                 </div>
               </div>
 
@@ -637,7 +637,7 @@ const SolutionHotellerie = () => {
                     <div className="col-lg-5">
                       <div className="htl-cashless-visual">
                         <div className="htl-cashless-visual__frame">
-                          <img src="/a_rfidia/z_rfid/rfid15.png" alt="RFID Cashless" />
+                          <img src="/a_rfidia/z_rfid/rfid15.png" alt="Bracelet RFID cashless pour hôtels en Tunisie" />
                         </div>
                         <div className="htl-visual-chip">Cloud POS</div>
                       </div>
@@ -717,6 +717,8 @@ const SolutionHotellerie = () => {
         </section>
 
         {/* CTA */}
+        {language === "fr" && <SolutionSeoSection slug="solution-hotellerie" accent="#7B5EA7" />}
+
         <section className="htl-cta">
           <div className="container">
             <div className="htl-cta__inner">
@@ -728,7 +730,7 @@ const SolutionHotellerie = () => {
                 <Link href="/contact-us" passHref>
                   <a className="htl-btn htl-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="htl-btn htl-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

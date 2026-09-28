@@ -4,16 +4,17 @@ const theme = makeTheme("#6366F1", "#A5B4FC", "#3730A3");
 
 const copy = {
   fr: {
-    metaTitle: "RFID IT Asset Management Tunisie | RFIDIA",
-    breadcrumbLabel: "Gestion du Parc IT",
+    metaTitle: "RFID IT Asset Management Tunisie : Parc Informatique | RFIDIA",
+    breadcrumbLabel: "RFID IT Asset Management",
     metaDesc:
-      "Fini les laptops perdus et les audits ITAM qui s'eternisent : RFIDIA digitalise le parc informatique en temps reel, pour des DSI sereins et un CMDB fiable.",
-    heroEyebrow: "IT Asset Management • Parc IT, audit, securite",
-    heroTitleA: "Votre parc IT",
-    heroTitleB: "audite",
-    heroTitleC: "en quelques heures",
+      "Solution RFID IT Asset Management en Tunisie : inventaire automatisé du parc informatique, suivi des affectations et intégration ITAM/CMDB pour DSI et administrations.",
+    heroEyebrow: "IT Asset Management • Parc IT, audit, sécurité",
+    heroTitleA: "RFID IT Asset Management",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "votre parc informatique audité en quelques heures",
+    heroImgAlt: "Solution RFID IT Asset Management en Tunisie : inventaire du parc informatique",
     heroSub:
-      "Laptops, ecrans, smartphones, serveurs, peripheriques : RFIDIA equipe vos actifs IT pour rendre l'inventaire continu, automatique et fiable — sans alourdir vos equipes ni vos utilisateurs.",
+      "Laptops, écrans, smartphones, serveurs, périphériques : RFIDIA équipe vos actifs IT pour rendre l'inventaire continu, automatique et fiable — sans alourdir vos équipes ni vos utilisateurs.",
     heroCta1: "Auditer mon parc IT",
     heroCta2: "Voir toutes les solutions",
     kpis: [

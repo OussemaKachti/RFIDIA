@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 const footerI18n = {
   fr: {
@@ -75,10 +76,10 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "RFID Tunisie : Solution Traçabilité pour Écoles | RFIDIA",
-    breadcrumbLabel: "École",
+    metaTitle: "RFID Tunisie Écoles : Contrôle d'Accès & Inventaire | RFIDIA",
+    breadcrumbLabel: "RFID Écoles",
     metaDesc:
-      "RFIDIA, expert RFID en Tunisie, sécurise les parcours, maîtrise le patrimoine pédagogique et simplifie les inventaires grâce à la traçabilité RFID adaptée aux établissements scolaires.",
+      "Solution RFID pour écoles en Tunisie : badges d'accès, suivi des entrées et sorties et inventaire du matériel pédagogique pour écoles et universités. Demandez une démo.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -94,11 +95,11 @@ const i18n = {
       italian: "Italiano",
     },
     heroEyebrow: "Éducation & traçabilité",
-    heroTitleA: "Une école",
-    heroTitleB: "sereine",
-    heroTitleC: "Patrimoine pédagogique maîtrisé",
+    heroTitleA: "Solution RFID",
+    heroTitleB: "pour écoles en Tunisie",
+    heroTitleC: "accès sécurisés et patrimoine pédagogique maîtrisé",
     heroSub:
-      "RFIDIA accompagne les établissements avec des dispositifs respectueux de la communauté éducative : sécurisation des accès, visibilité sur le matériel pédagogique et inventaires plus fiables — sans surcharge pour les équipes.",
+      "RFIDIA accompagne les établissements scolaires en Tunisie avec des dispositifs respectueux de la communauté éducative : sécurisation des accès, visibilité sur le matériel pédagogique et inventaires plus fiables — sans surcharge pour les équipes.",
     heroCta1: "Échanger sur mon projet",
     heroCta2: "Toutes les solutions",
     kpis: [
@@ -357,7 +358,6 @@ const SolutionEcole = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -383,7 +383,7 @@ const SolutionEcole = () => {
                   <Link href="/contact-us" passHref>
                     <a className="txl-btn txl-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="txl-btn txl-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -401,7 +401,7 @@ const SolutionEcole = () => {
               <div className="col-lg-6">
                 <div className="txl-visual">
                   <div className="txl-visual__frame">
-                    <img src="/a_rfidia/z_school/school.png" alt="" />
+                    <img src="/a_rfidia/z_school/school.png" alt="Solution RFID pour écoles en Tunisie : badge d'accès et suivi du matériel" />
                   </div>
                   <div className="txl-chip txl-chip--tl">
                     <span className="txl-chip__dot" />
@@ -490,6 +490,8 @@ const SolutionEcole = () => {
         </section>
 
         {/* CTA */}
+        {language === "fr" && <SolutionSeoSection slug="solution-ecole" accent="#F59E0B" />}
+
         <section className="txl-cta">
           <div className="container">
             <div className="txl-cta__inner">
@@ -501,7 +503,7 @@ const SolutionEcole = () => {
                 <Link href="/contact-us" passHref>
                   <a className="txl-btn txl-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="txl-btn txl-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

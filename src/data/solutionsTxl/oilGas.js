@@ -4,16 +4,17 @@ const theme = makeTheme("#D97706", "#FCD34D", "#92400E");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Oil & Gas Tunisie | RFIDIA",
-    breadcrumbLabel: "Oil & Gas",
+    metaTitle: "RFID Oil & Gas Tunisie : Actifs Critiques & Sécurité | RFIDIA",
+    breadcrumbLabel: "RFID Oil & Gas",
     metaDesc:
-      "Suivi des actifs, securite du personnel et tracabilite reglementaire en environnements ATEX : RFIDIA accompagne les operateurs petroliers, gaziers et de l'energie.",
-    heroEyebrow: "Oil & Gas • Actifs critiques, securite, conformite",
-    heroTitleA: "Des sites",
-    heroTitleB: "tenaces,",
-    heroTitleC: "des actifs sous controle",
+      "Solution RFID Oil & Gas en Tunisie : tags durcis, inspection des équipements critiques, sécurité du personnel et traçabilité réglementaire pour sites énergétiques.",
+    heroEyebrow: "Oil & Gas • Actifs critiques, sécurité, conformité",
+    heroTitleA: "RFID Oil & Gas",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "des actifs critiques sous contrôle",
+    heroImgAlt: "Solution RFID Oil & Gas en Tunisie : suivi des actifs critiques sur site",
     heroSub:
-      "Plateformes, depots, raffineries, yards : autant d'environnements exigeants ou la moindre perte ralentit les operations et expose les equipes. RFIDIA fiabilise la localisation, l'inspection et l'inventaire de vos actifs critiques.",
+      "Plateformes, dépôts, raffineries, yards : autant d'environnements exigeants où la moindre perte ralentit les opérations et expose les équipes. RFIDIA fiabilise la localisation, l'inspection et l'inventaire de vos actifs critiques en Tunisie.",
     heroCta1: "Auditer mes sites",
     heroCta2: "Voir toutes les solutions",
     kpis: [

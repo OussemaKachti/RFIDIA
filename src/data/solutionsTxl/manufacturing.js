@@ -4,16 +4,17 @@ const theme = makeTheme("#EA580C", "#FDBA74", "#9A3412");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Manufacturing Tunisie | RFIDIA",
-    breadcrumbLabel: "Industrie & Manufacturing",
+    metaTitle: "RFID Manufacturing Tunisie : Traçabilité Production | RFIDIA",
+    breadcrumbLabel: "RFID Industrie & Manufacturing",
     metaDesc:
-      "Suivi WIP, tracabilite production et gestion des outillages : RFIDIA aide les sites industriels a fiabiliser leurs flux, securiser leur qualite et gagner en productivite.",
-    heroEyebrow: "Manufacturing • WIP, outillage, qualite",
-    heroTitleA: "L'atelier",
-    heroTitleB: "sous controle,",
-    heroTitleC: "phase par phase",
+      "Solution RFID manufacturing en Tunisie : suivi des en-cours (WIP), traçabilité des lots, gestion des outillages et contenants pour vos usines. Étudions votre site.",
+    heroEyebrow: "Manufacturing • WIP, outillage, qualité",
+    heroTitleA: "RFID manufacturing",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "l'atelier sous contrôle, phase par phase",
+    heroImgAlt: "Solution RFID manufacturing en Tunisie : traçabilité de la production en usine",
     heroSub:
-      "Vos lignes enchainent des etapes precises, sur des matieres et des outillages couteux. RFIDIA vous donne une visibilite continue sur le WIP, les actifs et la qualite — sans complexifier le poste de travail.",
+      "Vos lignes enchaînent des étapes précises, sur des matières et des outillages coûteux. RFIDIA donne aux industriels en Tunisie une visibilité continue sur le WIP, les actifs et la qualité — sans complexifier le poste de travail.",
     heroCta1: "Discuter de mon site",
     heroCta2: "Voir toutes les solutions",
     kpis: [

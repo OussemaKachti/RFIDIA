@@ -4,14 +4,15 @@ const theme = makeTheme("#A16207", "#FDE68A", "#713F12");
 
 const copy = {
   fr: {
-    metaTitle: "RFIDIA-TEX : Solution RFID Textile Tunisie | RFIDIA",
-    breadcrumbLabel: "RFIDIA-TEX",
+    metaTitle: "RFID Tunisie Traçabilité Textile : RFIDIA-TEX | RFIDIA",
+    breadcrumbLabel: "RFIDIA-TEX Textile",
     metaDesc:
-      "RFIDIA-TEX, la solution RFID textile de RFIDIA en Tunisie : traçabilité unitaire du fil à la vente, inventaires 10x plus rapides, contrôle qualité et lutte anti-contrefaçon pour ateliers, usines et enseignes.",
+      "RFIDIA-TEX, solution de traçabilité textile RFID en Tunisie : suivi à la pièce du fil à la vente, inventaires 10x plus rapides et anti-contrefaçon pour ateliers et enseignes.",
     heroEyebrow: "RFIDIA-TEX • Textile & habillement",
-    heroTitleA: "Chaque pièce",
-    heroTitleB: "traçable,",
-    heroTitleC: "du fil à la vente",
+    heroTitleA: "Traçabilité textile",
+    heroTitleB: "RFID en Tunisie,",
+    heroTitleC: "chaque pièce suivie du fil à la vente",
+    heroImgAlt: "RFIDIA-TEX : traçabilité textile RFID en Tunisie, étiquette RFID sur vêtement",
     heroSub:
       "RFIDIA-TEX connecte vos ateliers, vos entrepôts et vos boutiques avec une traçabilité unitaire fiable. Résultat : inventaires en quelques minutes, tailles et couleurs toujours disponibles, moins de pertes et une expérience client plus fluide.",
     heroCta1: "Demander une démo RFIDIA-TEX",

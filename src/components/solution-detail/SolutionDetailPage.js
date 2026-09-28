@@ -87,7 +87,7 @@ const SolutionDetailPage = ({ getLocalized, fallbackLang = "fr" }) => {
           <div className="container position-relative">
             {/* Breadcrumb */}
             <nav className="sd-crumbs" aria-label="Breadcrumb">
-              <Link href="/it-solution"><a>{NAV_LABELS[language].solutions}</a></Link>
+              <Link href="/#solutions"><a>{NAV_LABELS[language].solutions}</a></Link>
               <span aria-hidden> / </span>
               <span className="sd-crumbs__current">{data.title}</span>
             </nav>
@@ -108,7 +108,7 @@ const SolutionDetailPage = ({ getLocalized, fallbackLang = "fr" }) => {
                       <CtaArrow />
                     </a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="sd-btn sd-btn--ghost">{data.cta.secondary}</a>
                   </Link>
                 </div>
@@ -312,7 +312,7 @@ const SolutionDetailPage = ({ getLocalized, fallbackLang = "fr" }) => {
                     {data.cta.primary} <CtaArrow />
                   </a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="sd-btn sd-btn--ghost-light">{data.cta.secondary}</a>
                 </Link>
               </div>

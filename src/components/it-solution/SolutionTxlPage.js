@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 /*
  * Generic premium template for any RFIDIA solution detail page.
@@ -12,6 +13,7 @@ import Link from "next/link";
  *   theme    = { primary, secondary, dark, softTint, glow }
  *   heroImage = "/path/to/image.png"
  *   copy     = { fr, en, it } with the shape produced by buildSolution
+ *   slug     = page slug, used to render the local SEO block (see data/seoLocal.js)
  */
 
 const NAVBAR_I18N = {
@@ -36,7 +38,7 @@ function hexToRgba(hex, alpha) {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-const SolutionTxlPage = ({ theme, heroImage, copy }) => {
+const SolutionTxlPage = ({ theme, heroImage, copy, slug }) => {
   const [language, setLanguage] = useState("fr");
 
   useEffect(() => {
@@ -81,7 +83,6 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
 
   const breadcrumbs = [
     { name: navbarLabels.home, path: "/" },
-    { name: navbarLabels.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -108,7 +109,7 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
                   <Link href="/contact-us" passHref>
                     <a className="med-btn med-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="med-btn med-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -128,7 +129,7 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
               <div className="col-lg-6">
                 <div className="med-visual">
                   <div className="med-visual__frame">
-                    <img src={heroImage} alt={t.heroTitleA || ""} />
+                    <img src={heroImage} alt={t.heroImgAlt || t.heroTitleA || ""} />
                   </div>
                   <div className="med-visual__glass" aria-hidden />
                 </div>
@@ -248,6 +249,9 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
           </section>
         )}
 
+        {/* ── RFID EN TUNISIE (contenu SEO local, FR uniquement) ── */}
+        {language === "fr" && slug && <SolutionSeoSection slug={slug} accent={palette.primary} />}
+
         {/* ── CTA ──────────────────────────────────────────────── */}
         <section className="med-cta">
           <div className="container">
@@ -260,7 +264,7 @@ const SolutionTxlPage = ({ theme, heroImage, copy }) => {
                 <Link href="/contact-us" passHref>
                   <a className="med-btn med-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="med-btn med-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

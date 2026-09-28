@@ -3,6 +3,7 @@ import Layout from "@layout/Layout";
 import Navbar from "@layout/Header/Navbar";
 import Footer from "@layout/Footer/Footer";
 import Link from "next/link";
+import SolutionSeoSection from "@components/seo/SolutionSeoSection";
 
 const footerI18n = {
   fr: {
@@ -75,10 +76,10 @@ const footerI18n = {
 
 const i18n = {
   fr: {
-    metaTitle: "RFID Tunisie : Solution Santé | RFIDIA",
-    breadcrumbLabel: "Santé",
+    metaTitle: "RFID Tunisie Santé : Traçabilité Hôpitaux & Cliniques | RFIDIA",
+    breadcrumbLabel: "RFID Santé",
     metaDesc:
-      "RFIDIA, expert RFID en Tunisie : traçabilité et sécurité en santé, suivi des dispositifs médicaux, maîtrise des stocks sensibles, réduction des pertes et meilleure continuité de service.",
+      "Solution RFID santé en Tunisie : suivi des équipements biomédicaux, stocks de pharmacie et inventaires rapides pour hôpitaux et cliniques. Contactez RFIDIA.",
     navbar: {
       home: "Accueil",
       about: "À propos",
@@ -94,11 +95,11 @@ const i18n = {
       italian: "Italiano",
     },
     heroTag: "Santé • Traçabilité & sécurité",
-    heroTitleA: "La traçabilité",
-    heroTitleB: "qui rassure",
-    heroTitleC: "et qui protège la continuité de soins",
+    heroTitleA: "Solution RFID",
+    heroTitleB: "santé en Tunisie",
+    heroTitleC: "une traçabilité qui protège la continuité des soins",
     heroSub:
-      "RFIDIA aide les établissements de santé à mieux localiser les équipements, sécuriser les stocks sensibles et fiabiliser les mouvements. Objectif : moins de pertes, des inventaires plus rapides et des données exploitables pour améliorer la disponibilité au bon moment.",
+      "RFIDIA aide les hôpitaux et cliniques en Tunisie à mieux localiser les équipements, sécuriser les stocks sensibles et fiabiliser les mouvements. Objectif : moins de pertes, des inventaires plus rapides et des données exploitables pour améliorer la disponibilité au bon moment.",
     heroCta1: "Évaluer mon établissement",
     heroCta2: "Voir toutes les solutions",
     stats: [
@@ -330,7 +331,6 @@ const SolutionSante = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -354,7 +354,7 @@ const SolutionSante = () => {
                   <Link href="/contact-us" passHref>
                     <a className="med-btn med-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="med-btn med-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -372,7 +372,7 @@ const SolutionSante = () => {
               <div className="col-lg-6">
                 <div className="med-visual">
                   <div className="med-visual__frame">
-                    <img src="/a_rfidia/z_medical/z_medical3.png" alt="" />
+                    <img src="/a_rfidia/z_medical/z_medical3.png" alt="Solution RFID santé en Tunisie : traçabilité des équipements médicaux" />
                   </div>
                   <div className="med-visual__glass" aria-hidden />
                 </div>
@@ -438,6 +438,8 @@ const SolutionSante = () => {
           </div>
         </section>
 
+        {language === "fr" && <SolutionSeoSection slug="solution-sante" accent="#4DC8C4" />}
+
         <section className="med-cta">
           <div className="container">
             <div className="med-cta__inner">
@@ -449,7 +451,7 @@ const SolutionSante = () => {
                 <Link href="/contact-us" passHref>
                   <a className="med-btn med-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="med-btn med-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/it-solution",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/it-solution/solution-textile",
       "destination": "/it-solution/rfidia-tex",
       "permanent": true

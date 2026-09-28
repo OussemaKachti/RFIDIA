@@ -180,7 +180,7 @@ const OffCanvasMenu = ({ language = 'fr', onLanguageChange, labels }) => {
                   </div>
                 );
               })}
-              <Link href="/it-solution">
+              <Link href="/#solutions">
                 <a
                   className="rfidia-mobile-cat__item"
                   data-bs-dismiss="offcanvas"

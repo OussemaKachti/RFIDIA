@@ -356,7 +356,6 @@ const SolutionTextile = () => {
 
   const breadcrumbs = [
     { name: t.navbar.home, path: "/" },
-    { name: t.navbar.solutions, path: "/it-solution" },
     { name: t.breadcrumbLabel || t.metaTitle },
   ];
 
@@ -382,7 +381,7 @@ const SolutionTextile = () => {
                   <Link href="/contact-us" passHref>
                     <a className="txl-btn txl-btn--primary">{t.heroCta1}</a>
                   </Link>
-                  <Link href="/it-solution" passHref>
+                  <Link href="/#solutions" passHref>
                     <a className="txl-btn txl-btn--ghost">{t.heroCta2}</a>
                   </Link>
                 </div>
@@ -500,7 +499,7 @@ const SolutionTextile = () => {
                 <Link href="/contact-us" passHref>
                   <a className="txl-btn txl-btn--dark">{t.ctaBtn}</a>
                 </Link>
-                <Link href="/it-solution" passHref>
+                <Link href="/#solutions" passHref>
                   <a className="txl-btn txl-btn--ghost-dark">{t.ctaAlt}</a>
                 </Link>
               </div>

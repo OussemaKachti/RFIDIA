@@ -4,16 +4,17 @@ const theme = makeTheme("#0EA5E9", "#7DD3FC", "#0369A1");
 
 const copy = {
   fr: {
-    metaTitle: "RFID Data Center Tunisie | RFIDIA",
-    breadcrumbLabel: "Data Center",
+    metaTitle: "RFID Data Center Tunisie : Inventaire Serveurs & Baies | RFIDIA",
+    breadcrumbLabel: "RFID Data Center",
     metaDesc:
-      "Inventaire automatise, securite physique et audit en quelques minutes : RFIDIA modernise la gestion des actifs de votre data center, sans perturber l'exploitation.",
-    heroEyebrow: "Data Center • Inventaire, securite, audit",
-    heroTitleA: "Votre data center",
-    heroTitleB: "toujours",
-    heroTitleC: "a jour, jusqu'au U pres",
+      "Solution RFID data center en Tunisie : inventaire automatisé des serveurs et baies, suivi des mouvements, sécurité physique et synchronisation CMDB/DCIM.",
+    heroEyebrow: "Data Center • Inventaire, sécurité, audit",
+    heroTitleA: "RFID data center",
+    heroTitleB: "en Tunisie",
+    heroTitleC: "un inventaire à jour, jusqu'au U près",
+    heroImgAlt: "Solution RFID data center en Tunisie : inventaire des serveurs et baies",
     heroSub:
-      "Serveurs, switches, baies, cables : votre inventaire change tous les jours. RFIDIA automatise le tracking physique et complete votre DCIM/CMDB avec une realite terrain fiable, en continu.",
+      "Serveurs, switches, baies, câbles : votre inventaire change tous les jours. RFIDIA automatise le suivi physique et complète votre DCIM/CMDB avec une réalité terrain fiable, en continu.",
     heroCta1: "Planifier une demo data center",
     heroCta2: "Voir toutes les solutions",
     kpis: [

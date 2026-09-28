@@ -126,7 +126,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
               </a>
             </div>
             <div className="rfidia-topbar__right">
-              <a href="https://www.linkedin.com/in/rfidtunisie/" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">
+              <a href="https://www.facebook.com/profile.php?id=61569189391534" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">
                 <FaFacebookF />
               </a>
               <a href="https://www.linkedin.com/in/rfidtunisie/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rfidia-topbar__social">
@@ -177,7 +177,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
           <div className="collapse navbar-collapse justify-content-center">
             <ul className="nav col-12 col-md-auto justify-content-center main-menu">
               <li>
-                <Link href="/it-solution">
+                <Link href="/">
                   <a className="nav-link">{navLabels.home}</a>
                 </Link>
               </li>
@@ -239,7 +239,7 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                         <span>{solutionsMeta.cta.desc}</span>
                       </div>
                       <div className="sm-mega__footer-actions">
-                        <Link href="/it-solution" passHref>
+                        <Link href="/#solutions" passHref>
                           <a className="sm-mega__link-all">
                             {solutionsMeta.viewAll}
                             <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor">
