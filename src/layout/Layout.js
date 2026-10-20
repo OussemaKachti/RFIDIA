@@ -41,15 +41,17 @@ const ORGANIZATION_JSON_LD = {
     latitude: 36.857962,
     longitude: 10.1843812,
   },
-  telephone: "+216-27-224-949",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+216-27-224-949",
-    contactType: "customer service",
-    email: "contact@rfidia.com",
-    areaServed: ["TN", "LY", "MA", "FR", "IT", "ES", "DZ"],
-    availableLanguage: ["French", "English", "Italian", "Arabic"],
-  },
+  telephone: "+216-71-705-535",
+  contactPoint: ["+216-71-705-535", "+216-94-098-875", "+216-94-103-351"].map(
+    (telephone) => ({
+      "@type": "ContactPoint",
+      telephone,
+      contactType: "customer service",
+      email: "contact@rfidia.com",
+      areaServed: ["TN", "LY", "MA", "FR", "IT", "ES", "DZ"],
+      availableLanguage: ["French", "English", "Italian", "Arabic"],
+    })
+  ),
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

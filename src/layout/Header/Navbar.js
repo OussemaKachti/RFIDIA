@@ -120,10 +120,14 @@ const Navbar = ({ navDark, insurance, classOption, language = 'fr', onLanguageCh
                 <span>C.seif@rfidia.com
 </span>
               </a>
-              <a href="tel:+216 27 224 949" className="rfidia-topbar__item">
+              <span className="rfidia-topbar__item">
                 <FaPhoneAlt />
-                <span>+216 27 224 949</span>
-              </a>
+                <a href="tel:+21671705535">+216 71 705 535</a>
+                <span> / </span>
+                <a href="tel:+21694098875">+216 94 098 875</a>
+                <span> / </span>
+                <a href="tel:+21694103351">+216 94 103 351</a>
+              </span>
             </div>
             <div className="rfidia-topbar__right">
               <a href="https://www.facebook.com/profile.php?id=61569189391534" target="_blank" rel="noreferrer" aria-label="Facebook" className="rfidia-topbar__social">

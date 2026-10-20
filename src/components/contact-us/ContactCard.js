@@ -76,9 +76,17 @@ const ContactCard = ({ content }) => {
                   {t.callDesc}
                 </p>
               </div>
-              <a href="tel:+21600000000" className="btn btn-link mt-auto">
-                +216 27 224 949
-              </a>
+              <div className="mt-auto d-flex flex-column">
+                <a href="tel:+21671705535" className="btn btn-link">
+                  +216 71 705 535
+                </a>
+                <a href="tel:+21694098875" className="btn btn-link">
+                  +216 94 098 875
+                </a>
+                <a href="tel:+21694103351" className="btn btn-link">
+                  +216 94 103 351
+                </a>
+              </div>
             </div>
           </div>
         </div>

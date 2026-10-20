@@ -119,7 +119,11 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
                       <div className="icon-box"><FaPhoneAlt /></div>
                       <div className="text-box">
                         <strong>{t.phone}</strong>
-                        <a href="tel:+216 27 224 949">+216 27 224 949</a>
+                        <a href="tel:+21671705535">+216 71 705 535</a>
+                        <br />
+                        <a href="tel:+21694098875">+216 94 098 875</a>
+                        <br />
+                        <a href="tel:+21694103351">+216 94 103 351</a>
                       </div>
                     </li>
                   </ul>
