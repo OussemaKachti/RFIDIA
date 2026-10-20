@@ -45,6 +45,16 @@
     flex-shrink: 0;
   }
 
+  // Items holding several links (e.g. phone numbers) keep the topbar colour
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   &:hover {
     color: $white;
   }
