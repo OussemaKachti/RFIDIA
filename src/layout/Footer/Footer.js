@@ -110,8 +110,8 @@ const Footer = ({ footerLight, style, footerGradient, translations }) => {
                       <div className="icon-box"><HiOutlineMail /></div>
                       <div className="text-box">
                         <strong>{t.email}</strong>
-                        <a href="mailto:C.seif@rfidia.com
-">C.seif@rfidia.com
+                        <a href="mailto:rfidia@rfidia.com
+">rfidia@rfidia.com
 </a>
                       </div>
                     </li>
