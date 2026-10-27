@@ -333,7 +333,7 @@ const testimonials = [
   {
     image: "/a_rfidia/z_rfid/samia.jfif",
     quote:
-      "RFIDIA nous accompagne depuis plus de trois ans. Leur approche au cas par cas et leurs solutions sur mesure se sont parfaitement intégrées à notre environnement. Nous avons réduit nos coûts et gagné en agilité, grâce à la sécurisation de nos flux logistiques et l'automatisation des tâches chronophages.",
+      "Grâce à la solution RFID de RFIDIA, nos inventaires qui prenaient plusieurs jours se font désormais en quelques heures. La visibilité en temps réel sur nos stocks a considérablement réduit les erreurs de préparation et les ruptures. Une équipe réactive et à l'écoute, du cadrage jusqu'au support.",
     name: "Samia Ben Mahmoud",
     company: "Responsable Logistique",
   },
